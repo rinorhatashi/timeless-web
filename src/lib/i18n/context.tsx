@@ -20,7 +20,13 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined)
 const loadTranslations = async (locale: Locale) => {
   try {
     const response = await fetch(`/locales/${locale}/common.json`)
-    return await response.json()
+    if (!response.ok) {
+      console.error(`Failed to fetch translations for ${locale}:`, response.status, response.statusText)
+      return {}
+    }
+    const data = await response.json()
+    console.log(`Loaded translations for ${locale}:`, Object.keys(data))
+    return data
   } catch (error) {
     console.error(`Failed to load translations for ${locale}`, error)
     return {}
@@ -92,6 +98,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
       if (value && typeof value === 'object' && k in value) {
         value = value[k as keyof typeof value]
       } else {
+        console.warn(`Translation not found for key: ${key} at ${k}`)
         return key // Return key if translation not found
       }
     }
