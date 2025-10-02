@@ -2,14 +2,24 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import Link from 'next/link'
 import { ArrowRight, Download, Calendar, Clock } from 'lucide-react'
 
-const reports = [
+interface Report {
+  title: string
+  description: string
+  category: string
+  publishDate: string
+  readTime: string
+  pageUrl?: string
+  downloadUrl?: string
+}
+
+const reports: Report[] = [
   {
     title: "State of Enterprise AI 2024",
     description: "Comprehensive analysis of AI adoption trends across enterprise organizations.",
     category: "Industry Report",
     publishDate: "March 2024",
     readTime: "15 min read",
-    downloadUrl: "/reports/state-of-enterprise-ai-2024.pdf"
+    pageUrl: "/insights/reports/state-of-enterprise-ai-2024"
   },
   {
     title: "AI Safety in Production Systems",
@@ -17,7 +27,7 @@ const reports = [
     category: "Technical Guide", 
     publishDate: "February 2024",
     readTime: "12 min read",
-    downloadUrl: "/reports/ai-safety-production-systems.pdf"
+    pageUrl: "/insights/reports/ai-safety-production-systems"
   },
   {
     title: "ROI Analysis: AI Implementation",
@@ -25,7 +35,7 @@ const reports = [
     category: "Business Analysis",
     publishDate: "January 2024", 
     readTime: "10 min read",
-    downloadUrl: "/reports/roi-analysis-ai-implementation.pdf"
+    pageUrl: "/insights/reports/roi-analysis-ai-implementation"
   },
   {
     title: "Compliance Frameworks for AI",
@@ -33,7 +43,7 @@ const reports = [
     category: "Compliance Guide",
     publishDate: "December 2023",
     readTime: "18 min read", 
-    downloadUrl: "/reports/compliance-frameworks-ai.pdf"
+    pageUrl: "/insights/reports/compliance-frameworks-ai"
   },
   {
     title: "Edge AI Deployment Strategies",
@@ -41,7 +51,7 @@ const reports = [
     category: "Technical Guide",
     publishDate: "November 2023",
     readTime: "14 min read",
-    downloadUrl: "/reports/edge-ai-deployment-strategies.pdf"
+    pageUrl: "/insights/reports/edge-ai-deployment-strategies"
   },
   {
     title: "AI Talent & Skills Gap Analysis",
@@ -49,7 +59,7 @@ const reports = [
     category: "Market Research",
     publishDate: "October 2023", 
     readTime: "8 min read",
-    downloadUrl: "/reports/ai-talent-skills-gap-analysis.pdf"
+    pageUrl: "/insights/reports/ai-talent-skills-gap-analysis"
   }
 ]
 
@@ -96,16 +106,18 @@ export default function ReportsPage() {
               
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                 <Link 
-                  href={report.downloadUrl}
+                  href={report.pageUrl || report.downloadUrl || '#'}
                   className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors duration-300 flex items-center gap-2 group"
                 >
                   Read report
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
-                <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  <Download className="w-4 h-4" />
-                  Download PDF
-                </button>
+                {report.downloadUrl && (
+                  <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                    <Download className="w-4 h-4" />
+                    Download PDF
+                  </button>
+                )}
               </div>
             </div>
           ))}

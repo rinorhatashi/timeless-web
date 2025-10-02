@@ -6,16 +6,16 @@ import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import { ArrowLeft, AlertCircle, Lightbulb, Layers, TrendingUp } from 'lucide-react'
 
-const Case02PageContent = () => {
+const Case04PageContent = () => {
   const { t } = useI18n()
 
   return (
     <PageLayout
-      title={t('pages.caseStudies.case02.title')}
-      description={t('pages.caseStudies.case02.description')}
+      title={t('pages.caseStudies.case04.title')}
+      description={t('pages.caseStudies.case04.description')}
       breadcrumbs={[
         { label: t('navigation.caseStudies'), href: '/case-studies' },
-        { label: t('pages.caseStudies.case02.breadcrumb'), href: '/case-studies/case-02' }
+        { label: t('pages.caseStudies.case04.breadcrumb'), href: '/case-studies/case-04' }
       ]}
     >
       <Section>
@@ -31,7 +31,7 @@ const Case02PageContent = () => {
 
         <div className="flex items-center gap-4 mb-12">
           <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200">
-            {t('common.industry.automotive')}
+            {t('common.industry.utility')}
           </span>
           <span className="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium border border-green-200">
             {t('common.delivered')}
@@ -47,7 +47,7 @@ const Case02PageContent = () => {
               <h3 className="text-xl font-medium text-gray-900">{t('common.problem')}</h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              {t('pages.caseStudies.case02.problem')}
+              {t('pages.caseStudies.case04.problem')}
             </p>
           </div>
 
@@ -59,7 +59,7 @@ const Case02PageContent = () => {
               <h3 className="text-xl font-medium text-gray-900">{t('common.approach')}</h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              {t('pages.caseStudies.case02.approach')}
+              {t('pages.caseStudies.case04.approach')}
             </p>
           </div>
 
@@ -71,7 +71,7 @@ const Case02PageContent = () => {
               <h3 className="text-xl font-medium text-gray-900">{t('common.stack')}</h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              {t('pages.caseStudies.case02.stack')}
+              {t('pages.caseStudies.case04.stack')}
             </p>
           </div>
 
@@ -83,7 +83,7 @@ const Case02PageContent = () => {
               <h3 className="text-xl font-medium text-gray-900">{t('common.impact')}</h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              {t('pages.caseStudies.case02.impact')}
+              {t('pages.caseStudies.case04.impact')}
             </p>
           </div>
         </div>
@@ -92,17 +92,17 @@ const Case02PageContent = () => {
       <Section variant="dark">
         <div className="text-center">
           <h2 className="text-3xl font-normal mb-6 text-white">
-            {t('pages.caseStudies.case02.ctaTitle')}
+            {t('pages.caseStudies.case04.ctaTitle')}
           </h2>
           <p className="text-xl text-white opacity-90 max-w-2xl mx-auto mb-8">
-            {t('pages.caseStudies.case02.ctaSubtitle')}
+            {t('pages.caseStudies.case04.ctaSubtitle')}
           </p>
           <Link 
             href="/contact" 
             className="btn-primary"
             style={{ background: 'var(--primary-white)', color: 'var(--primary-black)' }}
           >
-            {t('pages.caseStudies.case02.ctaButton')}
+            {t('pages.caseStudies.case04.ctaButton')}
           </Link>
         </div>
       </Section>
@@ -110,10 +110,10 @@ const Case02PageContent = () => {
   )
 }
 
-export default function Case02Page() {
+export default function Case04Page() {
   return (
     <ContentLoader>
-      <Case02PageContent />
+      <Case04PageContent />
     </ContentLoader>
   )
 } 

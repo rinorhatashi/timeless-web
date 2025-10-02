@@ -7,8 +7,10 @@
     "research": "Research",
     "ventures": "Ventures",
     "insights": "Insights",
+    "reports": "Reports",
     "about": "About",
     "contact": "Contact",
+    "caseStudies": "Case Studies",
     "search": "Search",
     "searchPlaceholder": "Search capabilities, industries, research...",
     "menu": {
@@ -686,6 +688,148 @@
         "ctaSubtitle": "Learn more about our privacy-preserving AI research or explore collaboration opportunities.",
         "ctaButton": "Join the partner program →"
       }
+    },
+    "caseStudies": {
+      "case01": {
+        "title": "Global Bank - RAG for research",
+        "description": "How we helped a global bank improve research analysis with RAG technology.",
+        "breadcrumb": "Case 01",
+        "problem": "Analysts spend time reconciling facts from many sources. Citations are inconsistent.",
+        "approach": "RAG+ Orchestrator with query rewriting and semantic routing. Golden sets for evaluation. Policy gateway to screen unsafe content.",
+        "stack": "Vector and BM25 hybrid, policy engine, evaluation harness, and lineage.",
+        "impact": "Faster turnaround and consistent citations. Lower rework. A clear path to further automation.",
+        "ctaTitle": "Ready for a similar solution?",
+        "ctaSubtitle": "Request a reference architecture for your RAG implementation.",
+        "ctaButton": "Request reference architecture →"
+      },
+      "case02": {
+        "title": "Automaker - Engineering copilot for SDV",
+        "description": "Engineering copilot solution for software-defined vehicle development.",
+        "breadcrumb": "Case 02",
+        "problem": "Documentation is large and scattered. Defects escape reviews.",
+        "approach": "Agentic search and code copilots. Tools limited by policy and approvals. Integration with PLM and repositories.",
+        "stack": "Agent Platform with policy controls and PLM integration.",
+        "impact": "Shorter cycles and earlier catches. Traceability improves with lineage.",
+        "ctaTitle": "Need engineering acceleration?",
+        "ctaSubtitle": "Discover how agentic systems can accelerate your engineering workflows.",
+        "ctaButton": "Request reference architecture →"
+      },
+      "case03": {
+        "title": "Healthcare Payer - Utilization management",
+        "description": "AI-powered utilization management for healthcare payer operations.",
+        "breadcrumb": "Case 03",
+        "problem": "High review volume and variable documentation quality.",
+        "approach": "Clinical NLP support with grounded retrieval. Human in the loop approval. Clear escalation paths.",
+        "stack": "RAG+ with medical vocabulary and human review workflows.",
+        "impact": "Higher throughput and better consistency. Easier audits.",
+        "ctaTitle": "Transform healthcare operations?",
+        "ctaSubtitle": "Learn how AI can improve healthcare utilization management.",
+        "ctaButton": "Request reference architecture →"
+      },
+      "case04": {
+        "title": "Utility - Field inspection",
+        "description": "Edge AI solution for utility field inspection operations.",
+        "breadcrumb": "Case 04",
+        "problem": "Asset inspection is slow and inconsistent. Remote conditions make connectivity difficult.",
+        "approach": "Edge inference with twin based triage. Sync to central systems. Policy gating for actuation.",
+        "stack": "Edge-to-cloud architecture with digital twin synchronization.",
+        "impact": "Faster inspection and safer operations.",
+        "ctaTitle": "Optimize field operations?",
+        "ctaSubtitle": "Explore edge AI solutions for utility and energy operations.",
+        "ctaButton": "Request reference architecture →"
+      },
+      "case05": {
+        "title": "SaaS Platform - Support deflection",
+        "description": "AI assistant for customer support deflection and automation.",
+        "breadcrumb": "Case 05",
+        "problem": "Ticket volume overloads teams and repeats known answers.",
+        "approach": "Grounded assistants with intent routing and content governance. Policy controls for public answers.",
+        "stack": "RAG with documentation and community content.",
+        "impact": "Deflection improves and CSAT rises. Agents help create better articles.",
+        "ctaTitle": "Reduce support load?",
+        "ctaSubtitle": "See how AI assistants can deflect support tickets effectively.",
+        "ctaButton": "Request reference architecture →"
+      },
+      "case06": {
+        "title": "Manufacturer - Quality and MRO",
+        "description": "Visual QA and MRO copilot for manufacturing operations.",
+        "breadcrumb": "Case 06",
+        "problem": "Quality checks and parts lookup slow down production.",
+        "approach": "Visual QA with retrieval and scripted actions. MRO copilots with parts and vendor knowledge.",
+        "stack": "Vision models with parts database integration.",
+        "impact": "Fewer reworks and lower downtime.",
+        "ctaTitle": "Improve manufacturing quality?",
+        "ctaSubtitle": "Discover AI solutions for quality control and maintenance.",
+        "ctaButton": "Request reference architecture →"
+      }
+    },
+    "reports": {
+      "report01": {
+        "title": "State of Enterprise AI 2024",
+        "description": "Comprehensive analysis of AI adoption trends across enterprise organizations.",
+        "breadcrumb": "State of Enterprise AI 2024",
+        "executiveSummary": "Our comprehensive 2024 analysis reveals a transformative year for enterprise AI adoption, with organizations achieving unprecedented scale and ROI. This report examines 500+ enterprises across industries, documenting successful strategies, common challenges, and emerging trends shaping the future of AI in business.",
+        "keyFindings": "Enterprise AI adoption has accelerated dramatically, with 78% of surveyed organizations now running AI systems in production—up from 54% in 2023. The data reveals three critical success factors: executive commitment, cross-functional collaboration, and robust governance frameworks. Organizations reporting positive ROI within 12 months share common characteristics: clear business objectives, dedicated AI teams, and systematic evaluation processes. The report also identifies emerging trends including the rise of agentic systems, increased focus on AI safety, and growing demand for sovereign AI solutions.",
+        "methodology": "This report is based on quantitative surveys of 512 enterprise organizations, qualitative interviews with 87 AI leaders, and analysis of deployment data from our client engagements. Survey participants represent organizations with 1,000+ employees across North America, Europe, and Asia-Pacific. Data collection occurred between January and March 2024, with supplementary case study research extending through May 2024.",
+        "ctaTitle": "Want the full report?",
+        "ctaSubtitle": "Download the complete State of Enterprise AI 2024 report with detailed analysis and actionable insights.",
+        "ctaButton": "Request full report →"
+      },
+      "report02": {
+        "title": "AI Safety in Production Systems",
+        "description": "Best practices and frameworks for deploying safe AI in production environments.",
+        "breadcrumb": "AI Safety in Production",
+        "executiveSummary": "As AI systems move from experimentation to production, safety becomes paramount. This technical guide provides comprehensive frameworks and best practices for deploying AI systems that are reliable, monitored, and safe. Based on real-world production deployments across industries, we outline practical approaches to AI safety.",
+        "keyFindings": "Production AI systems require multi-layered safety approaches including input validation, output monitoring, fallback mechanisms, and human oversight. Organizations with mature AI safety practices report 89% fewer incidents and 72% faster incident resolution. Key safety components include continuous evaluation, anomaly detection, automated rollback capabilities, and comprehensive logging and observability.",
+        "methodology": "This guide synthesizes learnings from 200+ production AI deployments, safety incident analyses, and interviews with 45 AI operations teams. We analyzed safety frameworks, monitoring strategies, and incident response procedures across organizations operating mission-critical AI systems.",
+        "ctaTitle": "Need help with AI safety?",
+        "ctaSubtitle": "Consult with our experts to implement robust safety frameworks for your AI systems.",
+        "ctaButton": "Schedule consultation →"
+      },
+      "report03": {
+        "title": "ROI Analysis: AI Implementation",
+        "description": "Data-driven insights on measuring and maximizing ROI from AI initiatives.",
+        "breadcrumb": "ROI Analysis",
+        "executiveSummary": "Understanding and demonstrating ROI from AI investments remains a critical challenge for organizations. This analysis examines ROI measurement approaches, typical investment profiles, and factors that drive positive returns. We provide frameworks for establishing baselines, measuring impact, and optimizing AI investments for maximum business value.",
+        "keyFindings": "Successful AI implementations show average ROI of 3.2x within 18 months, with top performers achieving 5x or higher. ROI is highest when AI targets clear business problems with measurable baselines. Organizations that establish comprehensive metrics before implementation achieve 2.4x better ROI than those measuring retrospectively. Quick wins in automation and decision support typically show positive ROI within 6 months.",
+        "methodology": "Analysis based on financial data from 87 AI implementations across enterprise organizations, combined with surveys of 156 business leaders and detailed case studies of 23 high-ROI AI projects. ROI calculations include direct cost savings, revenue increases, and efficiency gains.",
+        "ctaTitle": "Maximize your AI ROI",
+        "ctaSubtitle": "Work with us to identify high-ROI AI opportunities and measure business impact.",
+        "ctaButton": "Start ROI assessment →"
+      },
+      "report04": {
+        "title": "Compliance Frameworks for AI",
+        "description": "Navigating regulatory requirements for AI systems across industries.",
+        "breadcrumb": "AI Compliance",
+        "executiveSummary": "The regulatory landscape for AI is evolving rapidly, with new requirements emerging across jurisdictions and industries. This guide provides practical frameworks for ensuring AI systems meet compliance requirements including data privacy, algorithmic fairness, transparency, and accountability. We cover major regulations including EU AI Act, GDPR, sector-specific requirements, and emerging standards.",
+        "keyFindings": "Organizations proactively addressing AI compliance report 65% fewer regulatory challenges and faster time-to-market. Key compliance areas include data governance, model documentation, bias testing, explainability, and audit trails. Successful compliance strategies integrate requirements early in development rather than retrofitting. Cross-functional compliance teams including legal, ethics, and technical experts achieve better outcomes.",
+        "methodology": "Based on compliance framework analysis across 12 jurisdictions, legal review of 34 AI-specific regulations, and interviews with 52 compliance officers managing AI systems in regulated industries including financial services, healthcare, and government.",
+        "ctaTitle": "Ensure AI compliance",
+        "ctaSubtitle": "Get expert guidance on meeting regulatory requirements for your AI systems.",
+        "ctaButton": "Compliance consultation →"
+      },
+      "report05": {
+        "title": "Edge AI Deployment Strategies",
+        "description": "Technical strategies for deploying AI systems on edge devices and infrastructure.",
+        "breadcrumb": "Edge AI Deployment",
+        "executiveSummary": "Edge AI enables real-time inference with reduced latency, improved privacy, and offline capabilities. This technical guide covers strategies for deploying AI models on edge devices including optimization techniques, hardware selection, deployment patterns, and operational considerations. We examine successful edge AI implementations across IoT, mobile, and embedded systems.",
+        "keyFindings": "Edge AI deployments achieve 10-100x latency reduction compared to cloud inference, with significant cost savings at scale. Model optimization through quantization and pruning can reduce model size by 75% while maintaining 95%+ accuracy. Hybrid edge-cloud architectures balance performance with flexibility. Key success factors include robust device management, over-the-air updates, and edge-to-cloud synchronization strategies.",
+        "methodology": "Technical analysis of 78 edge AI deployments across industrial IoT, autonomous systems, and mobile applications. Performance benchmarks from 12 edge hardware platforms, and architecture reviews of production edge AI systems processing over 10 billion inferences monthly.",
+        "ctaTitle": "Deploy AI at the edge",
+        "ctaSubtitle": "Learn how to optimize and deploy AI models for edge devices and infrastructure.",
+        "ctaButton": "Explore edge AI solutions →"
+      },
+      "report06": {
+        "title": "AI Talent & Skills Gap Analysis",
+        "description": "Current state and future projections for AI talent needs in the market.",
+        "breadcrumb": "AI Talent Analysis",
+        "executiveSummary": "The rapid growth of AI adoption has created unprecedented demand for AI talent, while supply struggles to keep pace. This market research examines the current state of AI talent availability, skill requirements, compensation trends, and strategies organizations use to build AI capabilities. We project future talent needs and provide recommendations for talent acquisition and development.",
+        "keyFindings": "Demand for AI talent grew 74% year-over-year, with median time-to-fill for AI roles at 87 days compared to 42 days for general tech roles. Critical skill gaps exist in MLOps, AI safety, and production deployment. Organizations increasingly adopt build-and-buy strategies, combining external hiring with internal upskilling. Successful AI teams blend deep technical expertise with domain knowledge and business acumen.",
+        "methodology": "Analysis of 15,000+ AI job postings, salary data from 2,400+ placements, surveys of 230 hiring managers, and skills assessments from 1,100+ AI practitioners. Market data covers North America, Europe, and Asia-Pacific markets.",
+        "ctaTitle": "Build your AI team",
+        "ctaSubtitle": "Partner with us for AI talent strategy and team enablement programs.",
+        "ctaButton": "Discuss talent needs →"
+      }
     }
   },
   "homepage": {
@@ -796,6 +940,30 @@
     "activeResearch": "Active Research",
     "whitepaper": "Whitepaper",
     "researchOverview": "Research Overview",
-    "backToResearch": "Back to Research"
+    "backToResearch": "Back to Research",
+    "problem": "Problem",
+    "approach": "Approach",
+    "stack": "Stack",
+    "impact": "Impact",
+    "delivered": "Delivered",
+    "backToCaseStudies": "Back to Case Studies",
+    "backToReports": "Back to Reports",
+    "reports": "Reports",
+    "industryReport": "Industry Report",
+    "technicalGuide": "Technical Guide",
+    "businessAnalysis": "Business Analysis",
+    "complianceGuide": "Compliance Guide",
+    "marketResearch": "Market Research",
+    "executiveSummary": "Executive Summary",
+    "keyFindings": "Key Findings",
+    "methodology": "Methodology",
+    "industry": {
+      "banking": "Banking",
+      "automotive": "Automotive",
+      "healthcare": "Healthcare",
+      "utility": "Utility & Energy",
+      "saas": "SaaS Platform",
+      "manufacturing": "Manufacturing"
+    }
   }
 }
