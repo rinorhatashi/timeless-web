@@ -436,6 +436,101 @@
           "desc": "Usage analytics and feature optimization tied to business metrics."
         }
       }
+    },
+    "deepTechResearch": {
+      "title": "Deep Tech Research",
+      "description": "Ambitious work in neural architectures, retrieval, program synthesis, safety, and efficient training. Reference implementations, datasets, and open benchmarks with a Bell Labs ethos.",
+      "breadcrumb": "Deep Tech Research"
+    },
+    "enterpriseSoftware": {
+      "title": "Enterprise Software Engineering",
+      "description": "Cloud-native services, event-driven systems, API platforms, data mesh, zero-downtime delivery. Architecture patterns, reference stacks, SLOs, and governance for enterprise scale.",
+      "breadcrumb": "Enterprise Software"
+    },
+    "gameSystems": {
+      "title": "Game Systems & Real-Time",
+      "description": "We develop multiplayer games and real-time backends across mobile, PC, and console - including blockchain gaming. Authoritative netcode, personalization, economies, and live ops at scale.",
+      "breadcrumb": "Game Systems"
+    },
+    "hardwarePrototyping": {
+      "title": "Hardware Prototyping",
+      "description": "We design, iterate, and qualify hardware systems with partners for fabrication and assembly. Risk-driven decisions, fast loops, and compliance-ready artifacts.",
+      "breadcrumb": "Hardware Prototyping"
+    },
+    "responsibleAI": {
+      "title": "Responsible AI & Governance",
+      "description": "Policy kits, model risk registry, lineage, audits, red-team harnesses, and incident playbooks. Governance that enables delivery, not blocks it.",
+      "breadcrumb": "Responsible AI"
+    },
+    "roboticsRPA": {
+      "title": "Robotics & RPA",
+      "description": "We build perception-to-actuation stacks and pragmatic RPA. Simulate fast, ship safely, and keep humans-in-the-loop with audit and governance.",
+      "breadcrumb": "Robotics & RPA"
+    },
+    "securityCompliance": {
+      "title": "Security & Compliance",
+      "description": "Security isn't a gate at the end, it's paved into the road: identity, secrets, SBOM/SLSA, threat models, red teams, and continuous compliance.",
+      "breadcrumb": "Security & Compliance"
+    },
+    "sovereignPrivateAI": {
+      "title": "Sovereign and Private AI",
+      "description": "Local/air-gapped LLMs, confidential computing, enclaves, and policy-aware tool use. Residency and control for regulated workloads without losing capability.",
+      "breadcrumb": "Sovereign & Private AI"
+    },
+    "talentEnablement": {
+      "title": "Talent & Enablement",
+      "description": "Role maps and enablement sprints build the skills to operate AI.",
+      "breadcrumb": "Talent & Enablement"
+    },
+    "ragKnowledge": {
+      "title": "RAG & Knowledge Orchestration",
+      "description": "Retrieval-augmented generation systems that connect LLMs to enterprise knowledge with precision and reliability.",
+      "breadcrumb": "RAG & Knowledge"
+    },
+    "llmops": {
+      "title": "LLMOps & Observability",
+      "description": "Operations platform for LLMs with monitoring, evaluation, and deployment pipelines at scale.",
+      "breadcrumb": "LLMOps & Observability"
+    },
+    "embeddedEdgeAI": {
+      "title": "Embedded & Edge AI",
+      "description": "AI models optimized for edge devices and embedded systems with efficient inference and real-time performance.",
+      "breadcrumb": "Embedded & Edge AI"
+    },
+    "dataPlatforms": {
+      "title": "Data Platforms",
+      "description": "Modern data infrastructure for AI workloads with streaming, batch processing, and feature stores.",
+      "breadcrumb": "Data Platforms"
+    },
+    "platformEngineering": {
+      "title": "Platform Engineering",
+      "description": "Developer platforms and internal tools that accelerate delivery and ensure consistency.",
+      "breadcrumb": "Platform Engineering"
+    },
+    "blockchainCrypto": {
+      "title": "Blockchain & Cryptography",
+      "description": "Decentralized systems, smart contracts, and cryptographic protocols for secure and transparent operations.",
+      "breadcrumb": "Blockchain & Cryptography"
+    },
+    "agentPlatform": {
+      "title": "Agent Platform",
+      "description": "Multi-agent orchestration platform for coordinated AI automation with human oversight.",
+      "breadcrumb": "Agent Platform"
+    },
+    "ragOrchestrator": {
+      "title": "RAG Orchestrator",
+      "description": "Advanced retrieval-augmented generation platform for enterprise knowledge systems.",
+      "breadcrumb": "RAG Orchestrator"
+    },
+    "raiSafetyStack": {
+      "title": "RAI Safety Stack",
+      "description": "Comprehensive safety and governance framework for responsible AI deployment.",
+      "breadcrumb": "RAI Safety Stack"
+    },
+    "sovereignAIBlueprint": {
+      "title": "Sovereign AI Blueprint",
+      "description": "Complete architecture for deploying AI systems with data residency and sovereignty requirements.",
+      "breadcrumb": "Sovereign AI Blueprint"
     }
   },
   "homepage": {

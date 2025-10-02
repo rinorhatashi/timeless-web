@@ -215,6 +215,101 @@
       "title": "KI-Strategie & Wert",
       "description": "Wertbäume, die an Geschäftsarchitektur gebunden sind, finanzierbare Roadmaps und KPI-Modelle, die ROI beweisen, wenn Systeme ausgeliefert werden - kein Theater.",
       "breadcrumb": "KI-Strategie & Wert"
+    },
+    "deepTechResearch": {
+      "title": "Deep-Tech-Forschung",
+      "description": "Ehrgeizige Arbeit in neuronalen Architekturen, Retrieval, Programmsynthese, Sicherheit und effizientem Training. Referenzimplementierungen, Datensätze und offene Benchmarks mit Bell-Labs-Ethos.",
+      "breadcrumb": "Deep-Tech-Forschung"
+    },
+    "enterpriseSoftware": {
+      "title": "Unternehmenssoftware-Engineering",
+      "description": "Cloud-native Services, ereignisgesteuerte Systeme, API-Plattformen, Data Mesh, Zero-Downtime-Delivery. Architekturmuster, Referenz-Stacks, SLOs und Governance für Unternehmensmaßstab.",
+      "breadcrumb": "Unternehmenssoftware"
+    },
+    "gameSystems": {
+      "title": "Game-Systeme & Echtzeit",
+      "description": "Wir entwickeln Multiplayer-Spiele und Echtzeit-Backends für Mobilgeräte, PC und Konsolen - einschließlich Blockchain-Gaming. Autoritativer Netcode, Personalisierung, Wirtschaftssysteme und Live-Ops im großen Maßstab.",
+      "breadcrumb": "Game-Systeme"
+    },
+    "hardwarePrototyping": {
+      "title": "Hardware-Prototyping",
+      "description": "Wir entwerfen, iterieren und qualifizieren Hardware-Systeme mit Partnern für Fertigung und Montage. Risikobasierte Entscheidungen, schnelle Schleifen und compliance-fähige Artefakte.",
+      "breadcrumb": "Hardware-Prototyping"
+    },
+    "responsibleAI": {
+      "title": "Verantwortungsvolle KI & Governance",
+      "description": "Policy-Kits, Modellrisikoregister, Lineage, Audits, Red-Team-Harnesses und Incident-Playbooks. Governance, die Lieferung ermöglicht, nicht blockiert.",
+      "breadcrumb": "Verantwortungsvolle KI"
+    },
+    "roboticsRPA": {
+      "title": "Robotik & RPA",
+      "description": "Wir bauen Perception-to-Actuation-Stacks und pragmatische RPA. Schnell simulieren, sicher ausliefern und Menschen mit Audit und Governance in der Schleife halten.",
+      "breadcrumb": "Robotik & RPA"
+    },
+    "securityCompliance": {
+      "title": "Sicherheit & Compliance",
+      "description": "Sicherheit ist kein Gate am Ende, sie ist in den Weg eingebaut: Identität, Secrets, SBOM/SLSA, Bedrohungsmodelle, Red Teams und kontinuierliche Compliance.",
+      "breadcrumb": "Sicherheit & Compliance"
+    },
+    "sovereignPrivateAI": {
+      "title": "Souveräne und Private KI",
+      "description": "Lokale/Air-Gapped LLMs, Confidential Computing, Enclaves und Policy-bewusste Tool-Nutzung. Residenz und Kontrolle für regulierte Workloads ohne Fähigkeitsverlust.",
+      "breadcrumb": "Souveräne & Private KI"
+    },
+    "talentEnablement": {
+      "title": "Talent & Befähigung",
+      "description": "Rollenkarten und Befähigungs-Sprints bauen die Fähigkeiten auf, um KI zu betreiben.",
+      "breadcrumb": "Talent & Befähigung"
+    },
+    "ragKnowledge": {
+      "title": "RAG & Wissensorchestration",
+      "description": "Retrieval-augmentierte Generierungssysteme, die LLMs mit Unternehmenswissen präzise und zuverlässig verbinden.",
+      "breadcrumb": "RAG & Wissen"
+    },
+    "llmops": {
+      "title": "LLMOps & Observability",
+      "description": "Operations-Plattform für LLMs mit Monitoring, Evaluierung und Deployment-Pipelines im großen Maßstab.",
+      "breadcrumb": "LLMOps & Observability"
+    },
+    "embeddedEdgeAI": {
+      "title": "Embedded & Edge KI",
+      "description": "KI-Modelle optimiert für Edge-Geräte und Embedded-Systeme mit effizienter Inferenz und Echtzeit-Performance.",
+      "breadcrumb": "Embedded & Edge KI"
+    },
+    "dataPlatforms": {
+      "title": "Datenplattformen",
+      "description": "Moderne Dateninfrastruktur für KI-Workloads mit Streaming, Batch-Verarbeitung und Feature Stores.",
+      "breadcrumb": "Datenplattformen"
+    },
+    "platformEngineering": {
+      "title": "Platform Engineering",
+      "description": "Entwicklerplattformen und interne Tools, die die Lieferung beschleunigen und Konsistenz gewährleisten.",
+      "breadcrumb": "Platform Engineering"
+    },
+    "blockchainCrypto": {
+      "title": "Blockchain & Kryptographie",
+      "description": "Dezentrale Systeme, Smart Contracts und kryptographische Protokolle für sichere und transparente Operationen.",
+      "breadcrumb": "Blockchain & Kryptographie"
+    },
+    "agentPlatform": {
+      "title": "Agent-Plattform",
+      "description": "Multi-Agenten-Orchestrierungsplattform für koordinierte KI-Automatisierung mit menschlicher Aufsicht.",
+      "breadcrumb": "Agent-Plattform"
+    },
+    "ragOrchestrator": {
+      "title": "RAG-Orchestrator",
+      "description": "Fortschrittliche Retrieval-Augmented-Generation-Plattform für Unternehmenswissenssysteme.",
+      "breadcrumb": "RAG-Orchestrator"
+    },
+    "raiSafetyStack": {
+      "title": "RAI Safety Stack",
+      "description": "Umfassendes Sicherheits- und Governance-Framework für verantwortungsvolle KI-Bereitstellung.",
+      "breadcrumb": "RAI Safety Stack"
+    },
+    "sovereignAIBlueprint": {
+      "title": "Sovereign AI Blueprint",
+      "description": "Vollständige Architektur für die Bereitstellung von KI-Systemen mit Datenresidenz- und Souveränitätsanforderungen.",
+      "breadcrumb": "Sovereign AI Blueprint"
     }
   }
 }
