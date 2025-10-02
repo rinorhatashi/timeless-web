@@ -532,7 +532,86 @@
     "sovereignAIBlueprint": {
       "title": "Sovereign AI Blueprint",
       "description": "Complete architecture for deploying AI systems with data residency and sovereignty requirements.",
-      "breadcrumb": "Sovereign AI Blueprint"
+      "breadcrumb": "Sovereign AI Blueprint",
+      "intro": {
+        "title": "AI Systems with Full Data Sovereignty",
+        "subtitle": "Deploy AI infrastructure that meets strict data residency, privacy, and sovereignty requirements while maintaining full capability and performance."
+      },
+      "features": {
+        "dataResidency": {
+          "title": "Data Residency Control",
+          "desc": "Complete control over where your data is stored and processed, ensuring compliance with regional regulations."
+        },
+        "privateInfra": {
+          "title": "Private Infrastructure",
+          "desc": "Deploy on your own infrastructure or in isolated cloud environments with full control and visibility."
+        },
+        "compliance": {
+          "title": "Regulatory Compliance",
+          "desc": "Built-in compliance frameworks for GDPR, data sovereignty laws, and industry-specific regulations."
+        },
+        "transparency": {
+          "title": "Full Transparency",
+          "desc": "Complete visibility into model behavior, data flows, and system operations for audit and governance."
+        }
+      },
+      "components": {
+        "title": "Blueprint Components",
+        "subtitle": "Complete architecture covering all layers of a sovereign AI deployment",
+        "item1": "Private LLM deployment with local inference",
+        "item2": "On-premises or air-gapped infrastructure options",
+        "item3": "Encrypted data pipelines and secure storage",
+        "item4": "Regional data residency enforcement",
+        "item5": "Audit logging and compliance reporting",
+        "item6": "Model governance and version control",
+        "item7": "Secure API gateways and access controls",
+        "item8": "Monitoring and observability stack"
+      },
+      "useCases": {
+        "title": "Key Use Cases",
+        "subtitle": "Sovereign AI solutions for regulated industries and sensitive applications",
+        "government": {
+          "title": "Government & Public Sector",
+          "desc": "Deploy AI systems that meet government data sovereignty and security requirements."
+        },
+        "finance": {
+          "title": "Financial Services",
+          "desc": "Banking and financial AI with strict regulatory compliance and data protection."
+        },
+        "healthcare": {
+          "title": "Healthcare & Life Sciences",
+          "desc": "Medical AI systems with HIPAA compliance and patient data sovereignty."
+        },
+        "defense": {
+          "title": "Defense & Critical Infrastructure",
+          "desc": "Air-gapped AI deployments for national security and critical infrastructure protection."
+        }
+      },
+      "benefits": {
+        "title": "Key Benefits",
+        "subtitle": "Why organizations choose our Sovereign AI Blueprint",
+        "control": {
+          "title": "Full Control",
+          "desc": "Maintain complete control over your AI systems, data, and infrastructure."
+        },
+        "compliance": {
+          "title": "Regulatory Compliance",
+          "desc": "Meet strict regulatory requirements for data residency and sovereignty."
+        },
+        "security": {
+          "title": "Enhanced Security",
+          "desc": "Reduced attack surface with isolated, private AI infrastructure."
+        },
+        "independence": {
+          "title": "Vendor Independence",
+          "desc": "Avoid vendor lock-in with portable, standards-based architecture."
+        }
+      },
+      "cta": {
+        "title": "Ready to deploy Sovereign AI?",
+        "subtitle": "Let's discuss how our blueprint can help you meet your data sovereignty and compliance requirements.",
+        "button": "Get Started"
+      }
     },
     "industries": {
       "agriculture": {

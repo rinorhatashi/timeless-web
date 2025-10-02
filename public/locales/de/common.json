@@ -7,8 +7,10 @@
     "research": "Forschung",
     "ventures": "Ventures",
     "insights": "Einblicke",
+    "reports": "Berichte",
     "about": "Über uns",
     "contact": "Kontakt",
+    "caseStudies": "Fallstudien",
     "search": "Suchen",
     "searchPlaceholder": "Fähigkeiten, Branchen, Forschung suchen...",
     "menu": {
@@ -31,7 +33,8 @@
         "enterpriseSoftware": "Unternehmenssoftware",
         "blockchainCrypto": "Blockchain & Kryptographie",
         "gameSystems": "Game-Systeme",
-        "deepTechResearch": "Deep-Tech-Forschung"
+        "deepTechResearch": "Deep-Tech-Forschung",
+        "hardwarePrototyping": "Hardware-Prototyping"
       },
       "platforms": {
         "title": "Plattformen",
@@ -200,7 +203,31 @@
     "activeResearch": "Aktive Forschung",
     "whitepaper": "Whitepaper",
     "researchOverview": "Forschungsübersicht",
-    "backToResearch": "Zurück zur Forschung"
+    "backToResearch": "Zurück zur Forschung",
+    "problem": "Problem",
+    "approach": "Ansatz",
+    "stack": "Stack",
+    "impact": "Auswirkung",
+    "delivered": "Geliefert",
+    "backToCaseStudies": "Zurück zu Fallstudien",
+    "backToReports": "Zurück zu Berichten",
+    "reports": "Berichte",
+    "industryReport": "Branchenbericht",
+    "technicalGuide": "Technischer Leitfaden",
+    "businessAnalysis": "Geschäftsanalyse",
+    "complianceGuide": "Compliance-Leitfaden",
+    "marketResearch": "Marktforschung",
+    "executiveSummary": "Zusammenfassung",
+    "keyFindings": "Wichtigste Erkenntnisse",
+    "methodology": "Methodik",
+    "industry": {
+      "banking": "Bankwesen",
+      "automotive": "Automobilindustrie",
+      "healthcare": "Gesundheitswesen",
+      "utility": "Versorgungs & Energie",
+      "saas": "SaaS-Plattform",
+      "manufacturing": "Fertigung"
+    }
   },
   "pages": {
     "agenticSystems": {
@@ -212,17 +239,340 @@
         "subtitle": "Bauen Sie autonome Agenten, die sicher in der Produktion agieren, lernen und skalieren",
         "p1": "Wir entwerfen und implementieren agentische Systeme, die wahrnehmen, denken und autonom handeln können, während sie Sicherheit, Erklärbarkeit und Ausrichtung auf Geschäftsziele beibehalten. Unser Ansatz kombiniert fortschrittliche KI-Techniken mit robusten Engineering-Praktiken, um Agenten zu erstellen, die zuverlässig in realen Umgebungen arbeiten.",
         "p2": "Jeder von uns gebaute Agent umfasst umfassendes Monitoring, menschliche Überwachungsmechanismen und Fail-Safe-Protokolle. Wir konzentrieren uns auf schrittweise Fähigkeitserweiterung und stellen sicher, dass Agenten zunehmend komplexe Aufgaben bewältigen können, während sie vorhersehbare und sichere Verhaltensmuster beibehalten."
+      },
+      "architecture": {
+        "title": "Agentenarchitektur",
+        "subtitle": "Modulares, skalierbares Design für zuverlässigen autonomen Betrieb",
+        "perception": {
+          "title": "Wahrnehmungsschicht",
+          "desc": "Multimodale Erfassung und Umgebungsverständnis mit Kontextbewusstsein in Echtzeit."
+        },
+        "reasoning": {
+          "title": "Reasoning-Engine",
+          "desc": "Entscheidungsrahmen, die Ziele, Einschränkungen und Risikofaktoren ausbalancieren."
+        },
+        "actionSpace": {
+          "title": "Aktionsraum",
+          "desc": "Kontrollierte Schnittstellen für Agenteninteraktionen mit Systemen, APIs und menschlichen Stakeholdern."
+        },
+        "memory": {
+          "title": "Speichersysteme",
+          "desc": "Persistenter Wissensspeicher und Abruf für Lernen und Kontexterhaltung."
+        },
+        "safety": {
+          "title": "Sicherheitsmonitore",
+          "desc": "Kontinuierliche Validierung des Agentenverhaltens gegen Sicherheitsrichtlinien und Einschränkungen."
+        },
+        "humanInterface": {
+          "title": "Mensch-Schnittstelle",
+          "desc": "Transparente Kommunikations- und Überwachungsmechanismen für Mensch-Agenten-Zusammenarbeit."
+        }
+      },
+      "implementation": {
+        "title": "Implementierungsansatz",
+        "subtitle": "Vom Prototyp zu produktionsreifen autonomen Systemen",
+        "discovery": {
+          "title": "Entdeckung",
+          "duration": "Agentenumfang definieren",
+          "items": [
+            "Aufgabenanalyse und -zerlegung",
+            "Umgebungskartierung",
+            "Definition von Sicherheitsanforderungen",
+            "Festlegung von Erfolgsmetriken"
+          ]
+        },
+        "development": {
+          "title": "Entwicklung",
+          "duration": "Bauen und validieren",
+          "items": [
+            "Agentenarchitekturdesign",
+            "Implementierung der Kernfähigkeiten",
+            "Integration des Sicherheitssystems",
+            "Testen und Validierung"
+          ]
+        },
+        "deployment": {
+          "title": "Bereitstellung",
+          "duration": "Sicher skalieren",
+          "items": [
+            "Stufenweiser Rollout-Plan",
+            "Leistungsüberwachung",
+            "Einrichtung kontinuierlichen Lernens",
+            "Optimierung der Feedback-Schleife"
+          ]
+        }
+      },
+      "safety": {
+        "title": "Sicherheit & Zuverlässigkeit",
+        "subtitle": "Eingebaute Sicherheitsvorkehrungen für autonomen Betrieb",
+        "behavioral": {
+          "title": "Verhaltenseinschränkungen",
+          "desc": "Harte Grenzen und weiche Richtlinien, die die Entscheidungsfindung von Agenten prägen.",
+          "features": [
+            "Durchsetzungsmechanismen für Richtlinien",
+            "Ethische Entscheidungsrahmen",
+            "Risikobewertungsprotokolle",
+            "Eskalationsverfahren"
+          ]
+        },
+        "monitoring": {
+          "title": "Überwachung & Kontrolle",
+          "desc": "Echtzeit-Überwachung und Interventionsmöglichkeiten.",
+          "features": [
+            "Kontinuierliche Verhaltensanalyse",
+            "Anomalieerkennungssysteme",
+            "Manuelle Überschreibungsmechanismen",
+            "Audit-Trail-Wartung"
+          ]
+        }
+      },
+      "useCases": {
+        "title": "Anwendungsfälle",
+        "subtitle": "Bewährte Anwendungen über Branchen und Funktionen hinweg",
+        "customerService": {
+          "title": "Kundenservice",
+          "desc": "Intelligente Support-Agenten, die komplexe Anfragen mit Eskalation an Menschen bei Bedarf bearbeiten."
+        },
+        "processAutomation": {
+          "title": "Prozessautomatisierung",
+          "desc": "End-to-End-Workflow-Management mit adaptiver Entscheidungsfindung und Ausnahmebehandlung."
+        },
+        "operations": {
+          "title": "Betriebsmanagement",
+          "desc": "Ressourcenzuweisung und -optimierung mit Echtzeitanpassung an sich ändernde Bedingungen."
+        },
+        "research": {
+          "title": "Forschung & Analyse",
+          "desc": "Autonome Untersuchung und Berichterstattung mit Synthese komplexer Informationsquellen."
+        }
       }
     },
     "genaiApps": {
       "title": "GenAI-Anwendungen",
       "description": "Maßgeschneiderte generative KI-Anwendungen für Unternehmensmaßstab und Compliance.",
-      "breadcrumb": "GenAI-Anwendungen"
+      "breadcrumb": "GenAI-Anwendungen",
+      "intro": {
+        "title": "Generative KI für Unternehmen",
+        "subtitle": "Erstellen und implementieren Sie maßgeschneiderte generative KI-Anwendungen, die die Art und Weise transformieren, wie Ihr Unternehmen Inhalte erstellt, verarbeitet und analysiert."
+      },
+      "features": {
+        "customModel": {
+          "title": "Maßgeschneiderte Modellentwicklung",
+          "desc": "Speziell entwickelte generative Modelle, die auf Ihre spezifischen Anwendungsfälle und Daten zugeschnitten sind."
+        },
+        "integration": {
+          "title": "Unternehmensintegration",
+          "desc": "Nahtlose Integration in bestehende Unternehmenssysteme und Workflows."
+        },
+        "safety": {
+          "title": "Sicherheit & Governance",
+          "desc": "Eingebaute Sicherheitsmaßnahmen und Governance-Frameworks für verantwortungsvolle KI-Bereitstellung."
+        },
+        "performance": {
+          "title": "Leistungsoptimierung",
+          "desc": "Optimiert für Produktionsleistung mit effizienter Inferenz und Skalierung."
+        }
+      },
+      "useCases": {
+        "title": "Anwendungsfälle",
+        "subtitle": "Transformieren Sie Ihre Geschäftsprozesse mit generativen KI-Anwendungen",
+        "items": [
+          "Inhaltsgenerierung und -automatisierung",
+          "Code-Generierung und Entwicklungsassistenz",
+          "Dokumentenverarbeitung und -analyse",
+          "Kundenservice-Automatisierung",
+          "Wissensdatenbankerstellung",
+          "Sprachübersetzung und Lokalisierung",
+          "Kreative Designunterstützung",
+          "Datensynthese und -erweiterung"
+        ]
+      },
+      "approach": {
+        "title": "Implementierungsansatz",
+        "intro": "Unsere GenAI-Anwendungen werden mit einem systematischen Ansatz entwickelt, der Zuverlässigkeit, Sicherheit und Leistung gewährleistet. Wir beginnen mit dem Verständnis Ihrer spezifischen Anforderungen und erstellen maßgeschneiderte Lösungen, die sich nahtlos in Ihre bestehende Infrastruktur integrieren.",
+        "discovery": {
+          "title": "Entdeckung & Planung",
+          "desc": "Wir arbeiten mit Ihrem Team zusammen, um die besten Möglichkeiten für generative KI zu identifizieren, Ihre Datenbereitschaft zu bewerten und eine Implementierungs-Roadmap zu entwerfen, die schnell Wert liefert und gleichzeitig langfristige Ziele aufbaut."
+        },
+        "development": {
+          "title": "Maßgeschneiderte Entwicklung",
+          "desc": "Unser Team entwickelt maßgeschneiderte generative Modelle und Anwendungen, die auf Ihre spezifischen Anwendungsfälle zugeschnitten sind. Wir verwenden bewährte Architekturen und Best Practices, um sicherzustellen, dass Ihre Anwendungen zuverlässig, sicher und skalierbar sind."
+        },
+        "deployment": {
+          "title": "Bereitstellung & Optimierung",
+          "desc": "Wir stellen Ihre Anwendungen mit umfassenden Überwachungs- und Optimierungsframeworks bereit. Unsere Systeme lernen und verbessern sich kontinuierlich und stellen sicher, dass Ihre KI-Anwendungen im Laufe der Zeit steigenden Wert liefern."
+        }
+      },
+      "benefits": {
+        "title": "Hauptvorteile",
+        "subtitle": "Warum Organisationen unsere GenAI-Anwendungen für ihre kritischen Geschäftsprozesse wählen",
+        "accelerated": {
+          "title": "Beschleunigte Entwicklung",
+          "desc": "Reduzieren Sie die Markteinführungszeit mit vorgefertigten Komponenten und bewährten Architekturen."
+        },
+        "security": {
+          "title": "Unternehmens-Sicherheit",
+          "desc": "Eingebaute Sicherheitsmaßnahmen und Compliance-Frameworks für Unternehmensbereitstellung."
+        },
+        "scalable": {
+          "title": "Skalierbare Infrastruktur",
+          "desc": "Auto-Scaling-Infrastruktur, die variierende Arbeitslasten effizient bewältigt."
+        },
+        "improvement": {
+          "title": "Kontinuierliche Verbesserung",
+          "desc": "Modelle, die mit Feedback und neuen Daten im Laufe der Zeit lernen und sich verbessern."
+        }
+      },
+      "cta": {
+        "title": "Bereit, Ihre GenAI-Anwendung zu erstellen?",
+        "subtitle": "Lassen Sie uns besprechen, wie generative KI Ihre Geschäftsprozesse transformieren und neue Möglichkeiten erschließen kann.",
+        "button": "Starten Sie Ihr Projekt"
+      }
     },
     "aiStrategy": {
       "title": "KI-Strategie & Wert",
       "description": "Wertbäume, die an Geschäftsarchitektur gebunden sind, finanzierbare Roadmaps und KPI-Modelle, die ROI beweisen, wenn Systeme ausgeliefert werden - kein Theater.",
-      "breadcrumb": "KI-Strategie & Wert"
+      "breadcrumb": "KI-Strategie & Wert",
+      "overview": {
+        "title": "Übersicht",
+        "subtitle": "Übersetzen Sie KI in ein Portfolio finanzierter Wetten mit messbarem Auftrieb",
+        "p1": "Wir verbinden KI-Möglichkeiten mit Geschäftsarchitektur und Datenrealitäten. Das Ergebnis ist ein Portfolio priorisierter Plays, ermöglichender Plattformen und Änderungen des Betriebsmodells - gestaffelt, um sich selbst zu finanzieren, wenn Wert landet. Jedes Play hat eine Referenzarchitektur, Eigentümer, Evidence Gates und KPIs, die in die Lieferung eingebunden sind, sodass der ROI kontinuierlich beobachtet wird, nicht nachträglich.",
+        "p2": "Unsere Engagements vermeiden Theater. Wir definieren Ausstiegskriterien pro Phase, verknüpfen Annahmen und Risiken mit Metriken und entwerfen Experimente, die schnell zur Wahrheit konvergieren. Wenn Voraussetzungen fehlen (Daten, Infrastruktur, Kontrollen), werden sie als Roadmap-Elemente mit klarer Wertkopplung erfasst, nicht als vage Abhängigkeiten."
+      },
+      "method": {
+        "title": "Methode",
+        "subtitle": "Von der Diagnose zur finanzierten Ausführung mit Evidence Gates",
+        "diagnose": {
+          "title": "Diagnostizieren",
+          "duration": "Wert und Einschränkungen kartieren",
+          "items": [
+            "Wertbaum- und Treiberanalyse",
+            "Geschäftsfähigkeits- und Prozesskartierung",
+            "Dateninventar und Machbarkeit"
+          ]
+        },
+        "prioritize": {
+          "title": "Priorisieren",
+          "duration": "Die richtigen Wetten auswählen",
+          "items": [
+            "Auswirkung x Machbarkeitsbewertung",
+            "Risiko-/Annahmeregister",
+            "Referenzarchitekturen"
+          ]
+        },
+        "stage": {
+          "title": "Staffeln & finanzieren",
+          "duration": "Mit Ausstiegskriterien investieren",
+          "items": [
+            "Jetzt/Nächstes/Später-Roadmap",
+            "Evidence Gates und Eigentümer",
+            "Budget- und Run-Rate-Pläne"
+          ]
+        }
+      },
+      "valueTree": {
+        "title": "Value-Tree-Mapping",
+        "subtitle": "KI-Plays an Hebel, Prozesse und Systeme binden",
+        "business": {
+          "title": "Geschäftsarchitektur",
+          "desc": "Treiber → Hebel → Metriken; Fähigkeits-Heatmaps und Schmerzpunkte."
+        },
+        "valueStreams": {
+          "title": "Wertströme",
+          "desc": "Prozesskarten mit Engpässen; Durchlaufzeit, Nacharbeit und Fehlerbedarf."
+        },
+        "systems": {
+          "title": "Systeme",
+          "desc": "Anwendungs-/Datenlineage und Eigentümerschaft; Änderungsfenster und Kontrollen."
+        },
+        "data": {
+          "title": "Daten",
+          "desc": "Quellqualität, Zugriffsbeschränkungen und Datenschutz-/Compliance-Grenzen."
+        },
+        "opportunities": {
+          "title": "Möglichkeiten",
+          "desc": "Kandidaten-KI-Plays mit Hypothesen, Annahmen und Bewertungsplänen."
+        },
+        "dependencies": {
+          "title": "Abhängigkeiten",
+          "desc": "Plattform-, Daten- und Betriebsmodell-Enabler, die mit Wert verbunden sind."
+        }
+      },
+      "roadmap": {
+        "title": "Roadmap & Investition",
+        "subtitle": "Sequenz für zusammengesetzten Wert und Derisking",
+        "now": {
+          "title": "Jetzt",
+          "duration": "90-Tage-Proofs",
+          "items": [
+            "Experimente mit höchster Hebelwirkung",
+            "Daten-/Plattform-Quick-Wins",
+            "Eigentümer und Ausstiegskriterien"
+          ]
+        },
+        "next": {
+          "title": "Nächstes",
+          "duration": "Die Gewinne skalieren",
+          "items": [
+            "Härtungs- und Rollout-Pläne",
+            "Teamübergreifende Befähigung",
+            "Budgetfreigaben durch Evidenz"
+          ]
+        },
+        "later": {
+          "title": "Später",
+          "duration": "Grundlegende Wetten",
+          "items": [
+            "Strategische Plattformen",
+            "Änderungen des Betriebsmodells",
+            "Risiko-/Kontrollen eingebaut"
+          ]
+        }
+      },
+      "evidence": {
+        "title": "Evidenz & Messung",
+        "subtitle": "Beweispunkte, die Signal von Rauschen trennen",
+        "leading": {
+          "title": "Leading-Indikatoren",
+          "desc": "Metriken, die Wert vorhersagen, bevor er sich in Finanzen materialisiert.",
+          "items": [
+            "Prozesseffizienzgewinne",
+            "Datenqualitätsverbesserungen",
+            "Benutzerakzeptanzraten",
+            "Systemleistungsmetriken"
+          ]
+        },
+        "lagging": {
+          "title": "Lagging-Indikatoren",
+          "desc": "Geschäftsergebnisse, die strategische Wetten im Laufe der Zeit validieren.",
+          "items": [
+            "Umsatzauswirkungen",
+            "Kostenreduzierung",
+            "Risikominderung",
+            "Marktposition"
+          ]
+        }
+      },
+      "patterns": {
+        "title": "Gängige Muster",
+        "subtitle": "Wiederholbare Plays über Branchen und Funktionen hinweg",
+        "customer": {
+          "title": "Kundenintelligenz",
+          "desc": "Verhaltensmodelle für Retention, Upsell und Akquisition mit klarer Attribution."
+        },
+        "operations": {
+          "title": "Betriebsoptimierung",
+          "desc": "Lieferkette, Arbeitskräfte und Asset-Effizienz mit Echtzeitanpassung."
+        },
+        "risk": {
+          "title": "Risiko & Compliance",
+          "desc": "Automatisierte Kontrollen und Überwachung mit Prüfbarkeit und Erklärbarkeit."
+        },
+        "product": {
+          "title": "Produktintelligenz",
+          "desc": "Nutzungsanalysen und Feature-Optimierung, die an Geschäftsmetriken gebunden sind."
+        }
+      }
     },
     "deepTechResearch": {
       "title": "Deep-Tech-Forschung",
@@ -317,7 +667,86 @@
     "sovereignAIBlueprint": {
       "title": "Sovereign AI Blueprint",
       "description": "Vollständige Architektur für die Bereitstellung von KI-Systemen mit Datenresidenz- und Souveränitätsanforderungen.",
-      "breadcrumb": "Sovereign AI Blueprint"
+      "breadcrumb": "Sovereign AI Blueprint",
+      "intro": {
+        "title": "KI-Systeme mit vollständiger Datensouveränität",
+        "subtitle": "Stellen Sie KI-Infrastruktur bereit, die strenge Anforderungen an Datenresidenz, Datenschutz und Souveränität erfüllt, während volle Leistungsfähigkeit erhalten bleibt."
+      },
+      "features": {
+        "dataResidency": {
+          "title": "Datenresidenz-Kontrolle",
+          "desc": "Vollständige Kontrolle darüber, wo Ihre Daten gespeichert und verarbeitet werden, um die Einhaltung regionaler Vorschriften zu gewährleisten."
+        },
+        "privateInfra": {
+          "title": "Private Infrastruktur",
+          "desc": "Bereitstellung auf Ihrer eigenen Infrastruktur oder in isolierten Cloud-Umgebungen mit voller Kontrolle und Transparenz."
+        },
+        "compliance": {
+          "title": "Regulatorische Compliance",
+          "desc": "Integrierte Compliance-Frameworks für DSGVO, Datensouveränitätsgesetze und branchenspezifische Vorschriften."
+        },
+        "transparency": {
+          "title": "Volle Transparenz",
+          "desc": "Vollständige Sichtbarkeit des Modellverhaltens, der Datenflüsse und Systemoperationen für Audit und Governance."
+        }
+      },
+      "components": {
+        "title": "Blueprint-Komponenten",
+        "subtitle": "Vollständige Architektur, die alle Ebenen einer souveränen KI-Bereitstellung abdeckt",
+        "item1": "Private LLM-Bereitstellung mit lokaler Inferenz",
+        "item2": "On-Premises- oder Air-Gapped-Infrastrukturoptionen",
+        "item3": "Verschlüsselte Datenpipelines und sicherer Speicher",
+        "item4": "Durchsetzung regionaler Datenresidenz",
+        "item5": "Audit-Protokollierung und Compliance-Berichterstattung",
+        "item6": "Modell-Governance und Versionskontrolle",
+        "item7": "Sichere API-Gateways und Zugriffskontrollen",
+        "item8": "Monitoring- und Observability-Stack"
+      },
+      "useCases": {
+        "title": "Hauptanwendungsfälle",
+        "subtitle": "Souveräne KI-Lösungen für regulierte Branchen und sensible Anwendungen",
+        "government": {
+          "title": "Regierung & Öffentlicher Sektor",
+          "desc": "Bereitstellung von KI-Systemen, die staatliche Datensouveränitäts- und Sicherheitsanforderungen erfüllen."
+        },
+        "finance": {
+          "title": "Finanzdienstleistungen",
+          "desc": "Bank- und Finanz-KI mit strenger regulatorischer Compliance und Datenschutz."
+        },
+        "healthcare": {
+          "title": "Gesundheitswesen & Biowissenschaften",
+          "desc": "Medizinische KI-Systeme mit HIPAA-Compliance und Patientendatensouveränität."
+        },
+        "defense": {
+          "title": "Verteidigung & Kritische Infrastruktur",
+          "desc": "Air-Gapped KI-Bereitstellungen für nationale Sicherheit und Schutz kritischer Infrastruktur."
+        }
+      },
+      "benefits": {
+        "title": "Hauptvorteile",
+        "subtitle": "Warum Organisationen unseren Sovereign AI Blueprint wählen",
+        "control": {
+          "title": "Vollständige Kontrolle",
+          "desc": "Behalten Sie die vollständige Kontrolle über Ihre KI-Systeme, Daten und Infrastruktur."
+        },
+        "compliance": {
+          "title": "Regulatorische Compliance",
+          "desc": "Erfüllen Sie strenge regulatorische Anforderungen für Datenresidenz und Souveränität."
+        },
+        "security": {
+          "title": "Erhöhte Sicherheit",
+          "desc": "Reduzierte Angriffsfläche mit isolierter, privater KI-Infrastruktur."
+        },
+        "independence": {
+          "title": "Anbieterunabhängigkeit",
+          "desc": "Vermeiden Sie Vendor-Lock-in mit portabler, standardbasierter Architektur."
+        }
+      },
+      "cta": {
+        "title": "Bereit für Sovereign AI?",
+        "subtitle": "Lassen Sie uns besprechen, wie unser Blueprint Ihnen helfen kann, Ihre Datensouveränitäts- und Compliance-Anforderungen zu erfüllen.",
+        "button": "Jetzt starten"
+      }
     },
     "industries": {
       "agriculture": {
@@ -536,6 +965,148 @@
         "ctaTitle": "Interesse an sicherem KI-Sharing?",
         "ctaSubtitle": "Erfahren Sie mehr über unsere datenschutzwahrende KI-Forschung oder erkunden Sie Kooperationsmöglichkeiten.",
         "ctaButton": "Dem Partnerprogramm beitreten →"
+      }
+    },
+    "caseStudies": {
+      "case01": {
+        "title": "Globale Bank - RAG für Forschung",
+        "description": "Wie wir einer globalen Bank geholfen haben, die Forschungsanalyse mit RAG-Technologie zu verbessern.",
+        "breadcrumb": "Fall 01",
+        "problem": "Analysten verbringen Zeit damit, Fakten aus vielen Quellen abzugleichen. Zitationen sind inkonsistent.",
+        "approach": "RAG+ Orchestrator mit Query-Umschreibung und semantischem Routing. Golden Sets zur Evaluierung. Policy Gateway zum Screening unsicherer Inhalte.",
+        "stack": "Vektor und BM25 Hybrid, Policy Engine, Evaluierungsharness und Lineage.",
+        "impact": "Schnellere Bearbeitungszeit und konsistente Zitationen. Geringere Nacharbeit. Ein klarer Weg zu weiterer Automatisierung.",
+        "ctaTitle": "Bereit für eine ähnliche Lösung?",
+        "ctaSubtitle": "Fordern Sie eine Referenzarchitektur für Ihre RAG-Implementierung an.",
+        "ctaButton": "Referenzarchitektur anfordern →"
+      },
+      "case02": {
+        "title": "Autohersteller - Engineering-Copilot für SDV",
+        "description": "Engineering-Copilot-Lösung für die Entwicklung software-definierter Fahrzeuge.",
+        "breadcrumb": "Fall 02",
+        "problem": "Dokumentation ist umfangreich und verstreut. Mängel entgehen den Reviews.",
+        "approach": "Agentische Suche und Code-Copilots. Tools begrenzt durch Richtlinien und Genehmigungen. Integration mit PLM und Repositories.",
+        "stack": "Agent-Plattform mit Policy-Kontrollen und PLM-Integration.",
+        "impact": "Kürzere Zyklen und frühere Fehlererkennung. Rückverfolgbarkeit verbessert sich mit Lineage.",
+        "ctaTitle": "Benötigen Sie Engineering-Beschleunigung?",
+        "ctaSubtitle": "Entdecken Sie, wie agentische Systeme Ihre Engineering-Workflows beschleunigen können.",
+        "ctaButton": "Referenzarchitektur anfordern →"
+      },
+      "case03": {
+        "title": "Gesundheitskasse - Nutzungsmanagement",
+        "description": "KI-gestütztes Nutzungsmanagement für Gesundheitskassen-Operationen.",
+        "breadcrumb": "Fall 03",
+        "problem": "Hohes Review-Volumen und variable Dokumentationsqualität.",
+        "approach": "Klinische NLP-Unterstützung mit gegrü ndeter Retrieval. Human-in-the-Loop-Genehmigung. Klare Eskalationspfade.",
+        "stack": "RAG+ mit medizinischem Vokabular und menschlichen Review-Workflows.",
+        "impact": "Höherer Durchsatz und bessere Konsistenz. Einfachere Audits.",
+        "ctaTitle": "Gesundheitsoperationen transformieren?",
+        "ctaSubtitle": "Erfahren Sie, wie KI das Nutzungsmanagement im Gesundheitswesen verbessern kann.",
+        "ctaButton": "Referenzarchitektur anfordern →"
+      },
+      "case04": {
+        "title": "Energieversorger - Feldinspektion",
+        "description": "Edge-KI-Lösung für Feldinspektion von Energieversorgern.",
+        "breadcrumb": "Fall 04",
+        "problem": "Asset-Inspektion ist langsam und inkonsistent. Abgelegene Bedingungen erschweren die Konnektivität.",
+        "approach": "Edge-Inferenz mit Twin-basierter Triage. Synchronisation mit zentralen Systemen. Policy Gating für Betätigung.",
+        "stack": "Edge-to-Cloud-Architektur mit digitaler Twin-Synchronisation.",
+        "impact": "Schnellere Inspektion und sicherere Operationen.",
+        "ctaTitle": "Feldoperationen optimieren?",
+        "ctaSubtitle": "Erkunden Sie Edge-KI-Lösungen für Versorgungs- und Energieoperationen.",
+        "ctaButton": "Referenzarchitektur anfordern →"
+      },
+      "case05": {
+        "title": "SaaS-Plattform - Support-Deflection",
+        "description": "KI-Assistent für Kundenservice-Deflection und Automatisierung.",
+        "breadcrumb": "Fall 05",
+        "problem": "Ticket-Volumen überlastet Teams und wiederholt bekannte Antworten.",
+        "approach": "Gegrünte Assistenten mit Intent-Routing und Content-Governance. Policy-Kontrollen für öffentliche Antworten.",
+        "stack": "RAG mit Dokumentation und Community-Content.",
+        "impact": "Deflection verbessert sich und CSAT steigt. Agenten helfen, bessere Artikel zu erstellen.",
+        "ctaTitle": "Support-Last reduzieren?",
+        "ctaSubtitle": "Sehen Sie, wie KI-Assistenten Support-Tickets effektiv ablenken können.",
+        "ctaButton": "Referenzarchitektur anfordern →"
+      },
+      "case06": {
+        "title": "Hersteller - Qualität und MRO",
+        "description": "Visuelle QA und MRO-Copilot für Fertigungsoperationen.",
+        "breadcrumb": "Fall 06",
+        "problem": "Qualitätsprüfungen und Teilesuche verlangsamen die Produktion.",
+        "approach": "Visuelle QA mit Retrieval und skriptierten Aktionen. MRO-Copilots mit Teile- und Lieferantenwissen.",
+        "stack": "Vision-Modelle mit Teile-Datenbank-Integration.",
+        "impact": "Weniger Nacharbeiten und geringere Ausfallzeiten.",
+        "ctaTitle": "Fertigungsqualität verbessern?",
+        "ctaSubtitle": "Entdecken Sie KI-Lösungen für Qualitätskontrolle und Wartung.",
+        "ctaButton": "Referenzarchitektur anfordern →"
+      }
+    },
+    "reports": {
+      "report01": {
+        "title": "State of Enterprise AI 2024",
+        "description": "Umfassende Analyse der KI-Adoptionstrends in Unternehmensorganisationen.",
+        "breadcrumb": "State of Enterprise AI 2024",
+        "executiveSummary": "Unsere umfassende Analyse 2024 offenbart ein transformatives Jahr für die Einführung von Enterprise-KI, wobei Organisationen beispiellosen Umfang und ROI erreichen. Dieser Bericht untersucht über 500 Unternehmen in verschiedenen Branchen und dokumentiert erfolgreiche Strategien, häufige Herausforderungen und aufkommende Trends, die die Zukunft der KI im Geschäftsleben prägen.",
+        "keyFindings": "Die Enterprise-KI-Adoption hat sich dramatisch beschleunigt, mit 78% der befragten Organisationen, die jetzt KI-Systeme in der Produktion betreiben - gegenüber 54% in 2023. Die Daten offenbaren drei kritische Erfolgsfaktoren: Führungsverpflichtung, funktionsübergreifende Zusammenarbeit und robuste Governance-Frameworks. Organisationen, die positiven ROI innerhalb von 12 Monaten melden, teilen gemeinsame Merkmale: klare Geschäftsziele, dedizierte KI-Teams und systematische Evaluierungsprozesse.",
+        "methodology": "Dieser Bericht basiert auf quantitativen Umfragen von 512 Unternehmensorganisationen, qualitativen Interviews mit 87 KI-Führungskräften und Analyse von Bereitstellungsdaten aus unseren Kundenengagements. Umfrageteilnehmer repräsentieren Organisationen mit mehr als 1.000 Mitarbeitern in Nordamerika, Europa und Asien-Pazifik.",
+        "ctaTitle": "Möchten Sie den vollständigen Bericht?",
+        "ctaSubtitle": "Laden Sie den vollständigen State of Enterprise AI 2024 Bericht mit detaillierter Analyse und umsetzbaren Erkenntnissen herunter.",
+        "ctaButton": "Vollständigen Bericht anfordern →"
+      },
+      "report02": {
+        "title": "KI-Sicherheit in Produktionssystemen",
+        "description": "Best Practices und Frameworks für die Bereitstellung sicherer KI in Produktionsumgebungen.",
+        "breadcrumb": "KI-Sicherheit in der Produktion",
+        "executiveSummary": "Wenn KI-Systeme von der Experim entierung zur Produktion übergehen, wird Sicherheit von größter Bedeutung. Dieser technische Leitfaden bietet umfassende Frameworks und Best Practices für die Bereitstellung von KI-Systemen, die zuverlässig, überwacht und sicher sind.",
+        "keyFindings": "Produktions-KI-Systeme erfordern mehrschichtige Sicherheitsansätze einschließlich Eingabevalidierung, Ausgabeüberwachung, Fallback-Mechanismen und menschlicher Aufsicht. Organisationen mit ausgereiften KI-Sicherheitspraktiken melden 89% weniger Vorfälle und 72% schnellere Vorfallauflösung.",
+        "methodology": "Dieser Leitfaden synthetisiert Erkenntnisse aus über 200 Produktions-KI-Bereitstellungen, Sicherheitsvorfallanalysen und Interviews mit 45 KI-Operations-Teams.",
+        "ctaTitle": "Benötigen Sie Hilfe bei KI-Sicherheit?",
+        "ctaSubtitle": "Konsultieren Sie unsere Experten, um robuste Sicherheitsframeworks für Ihre KI-Systeme zu implementieren.",
+        "ctaButton": "Beratung planen →"
+      },
+      "report03": {
+        "title": "ROI-Analyse: KI-Implementierung",
+        "description": "Datengesteuerte Einblicke in die Messung und Maximierung des ROI von KI-Initiativen.",
+        "breadcrumb": "ROI-Analyse",
+        "executiveSummary": "Das Verständnis und die Demonstration des ROI von KI-Investitionen bleibt eine kritische Herausforderung für Organisationen. Diese Analyse untersucht ROI-Messansätze, typische Investitionsprofile und Faktoren, die positive Renditen treiben.",
+        "keyFindings": "Erfolgreiche KI-Implementierungen zeigen einen durchschnittlichen ROI von 3,2x innerhalb von 18 Monaten, wobei Top-Performer 5x oder höher erreichen. Der ROI ist am höchsten, wenn KI klare Geschäftsprobleme mit messbaren Baselines adressiert.",
+        "methodology": "Analyse basierend auf Finanzdaten von 87 KI-Implementierungen in Unternehmensorganisationen, kombiniert mit Umfragen von 156 Geschäftsführern und detaillierten Fallstudien von 23 High-ROI-KI-Projekten.",
+        "ctaTitle": "Maximieren Sie Ihren KI-ROI",
+        "ctaSubtitle": "Arbeiten Sie mit uns zusammen, um High-ROI-KI-Möglichkeiten zu identifizieren und die Geschäftsauswirkungen zu messen.",
+        "ctaButton": "ROI-Bewertung starten →"
+      },
+      "report04": {
+        "title": "Compliance-Frameworks für KI",
+        "description": "Navigation regulatorischer Anforderungen für KI-Systeme über Branchen hinweg.",
+        "breadcrumb": "KI-Compliance",
+        "executiveSummary": "Die regulatorische Landschaft für KI entwickelt sich schnell, mit neuen Anforderungen, die über Jurisdiktionen und Branchen hinweg entstehen. Dieser Leitfaden bietet praktische Frameworks für die Sicherstellung, dass KI-Systeme Compliance-Anforderungen erfüllen.",
+        "keyFindings": "Organisationen, die KI-Compliance proaktiv angehen, melden 65% weniger regulatorische Herausforderungen und schnellere Markteinführungszeiten. Wichtige Compliance-Bereiche umfassen Datengovernance, Modelldokumentation, Bias-Tests, Erklärbarkeit und Audit-Trails.",
+        "methodology": "Basierend auf Compliance-Framework-Analyse über 12 Jurisdiktionen, rechtlicher Überprüfung von 34 KI-spezifischen Vorschriften und Interviews mit 52 Compliance-Verantwortlichen.",
+        "ctaTitle": "KI-Compliance sicherstellen",
+        "ctaSubtitle": "Erhalten Sie Expertenberatung zur Erfüllung regulatorischer Anforderungen für Ihre KI-Systeme.",
+        "ctaButton": "Compliance-Beratung →"
+      },
+      "report05": {
+        "title": "Edge-KI-Bereitstellungsstrategien",
+        "description": "Technische Strategien für die Bereitstellung von KI-Systemen auf Edge-Geräten und Infrastruktur.",
+        "breadcrumb": "Edge-KI-Bereitstellung",
+        "executiveSummary": "Edge-KI ermöglicht Echtzeit-Inferenz mit reduzierter Latenz, verbesserter Privatsphäre und Offline-Fähigkeiten. Dieser technische Leitfaden behandelt Strategien für die Bereitstellung von KI-Modellen auf Edge-Geräten.",
+        "keyFindings": "Edge-KI-Bereitstellungen erreichen 10-100x Latenzreduzierung im Vergleich zu Cloud-Inferenz, mit erheblichen Kosteneinsparungen im Maßstab. Modelloptimierung durch Quantisierung und Pruning kann die Modellgröße um 75% reduzieren.",
+        "methodology": "Technische Analyse von 78 Edge-KI-Bereitstellungen über industrielles IoT, autonome Systeme und mobile Anwendungen hinweg.",
+        "ctaTitle": "KI am Edge bereitstellen",
+        "ctaSubtitle": "Lernen Sie, wie Sie KI-Modelle für Edge-Geräte und Infrastruktur optimieren und bereitstellen.",
+        "ctaButton": "Edge-KI-Lösungen erkunden →"
+      },
+      "report06": {
+        "title": "KI-Talent & Skills Gap Analyse",
+        "description": "Aktueller Stand und zukünftige Projektionen für KI-Talentbedarf im Markt.",
+        "breadcrumb": "KI-Talent-Analyse",
+        "executiveSummary": "Das schnelle Wachstum der KI-Adoption hat eine beispiellose Nachfrage nach KI-Talent geschaffen, während das Angebot Schwierigkeiten hat, Schritt zu halten. Diese Marktforschung untersucht den aktuellen Stand der KI-Talentverfügbarkeit.",
+        "keyFindings": "Die Nachfrage nach KI-Talent wuchs um 74% Jahr über Jahr, mit einer mittleren Zeit bis zur Besetzung für KI-Rollen von 87 Tagen im Vergleich zu 42 Tagen für allgemeine Tech-Rollen.",
+        "methodology": "Analyse von über 15.000 KI-Stellenanzeigen, Gehaltsdaten von über 2.400 Platzierungen, Umfragen von 230 Personalverantwortlichen und Kompetenzbewertungen von über 1.100 KI-Praktikern.",
+        "ctaTitle": "Bauen Sie Ihr KI-Team auf",
+        "ctaSubtitle": "Partnern Sie mit uns für KI-Talentstrategie und Team-Enablement-Programme.",
+        "ctaButton": "Talentbedarf besprechen →"
       }
     }
   }

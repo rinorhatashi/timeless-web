@@ -12,121 +12,6 @@ interface NavigationItem {
   description?: string
 }
 
-const navigationItems: NavigationItem[] = [
-  {
-    label: 'Capabilities',
-    href: '/capabilities',
-    description: 'AI Strategy, Agentic Systems, GenAI Applications, and more',
-    children: [
-      { label: 'AI Strategy & Value', href: '/capabilities/ai-strategy-value' },
-      { label: 'Agentic Systems', href: '/capabilities/agentic-systems' },
-      { label: 'GenAI Applications', href: '/capabilities/genai-apps' },
-      { label: 'RAG & Knowledge', href: '/capabilities/rag-knowledge-orchestration' },
-      { label: 'LLMOps & Observability', href: '/capabilities/llmops-observability' },
-      { label: 'Responsible AI', href: '/capabilities/responsible-ai' },
-      { label: 'Sovereign/Private AI', href: '/capabilities/sovereign-private-ai' },
-      { label: 'Talent & Enablement', href: '/capabilities/talent-enablement' },
-      { label: 'Embedded & Edge AI', href: '/capabilities/embedded-edge-ai' },
-      { label: 'Data Platforms', href: '/capabilities/data-platforms' },
-      { label: 'Security & Compliance', href: '/capabilities/security-compliance' },
-      { label: 'Robotics & RPA', href: '/capabilities/robotics-rpa' },
-      { label: 'Platform Engineering', href: '/capabilities/platform-engineering' },
-      { label: 'Enterprise Software', href: '/capabilities/enterprise-software' },
-      { label: 'Blockchain & Cryptography', href: '/capabilities/blockchain-cryptography' },
-      { label: 'Game Systems', href: '/capabilities/game-systems' },
-      { label: 'Deep Tech Research', href: '/capabilities/deep-tech-research' }
-    ]
-  },
-  {
-    label: 'Platforms',
-    href: '/platforms',
-    description: 'Agent Platform, RAG Orchestrator, Safety Stack',
-    children: [
-      { label: 'Agent Platform', href: '/platforms/agent-platform' },
-      { label: 'RAG Orchestrator', href: '/platforms/rag-orchestrator' },
-      { label: 'RAI Safety Stack', href: '/platforms/rai-safety-stack' },
-      { label: 'Sovereign AI Blueprint', href: '/platforms/sovereign-ai-blueprint' }
-    ]
-  },
-  {
-    label: 'Industries',
-    href: '/industries',
-    description: 'Industrial, Healthcare, Automotive, Energy, and more',
-    children: [
-      { label: 'Industrial & Manufacturing', href: '/industries/industrial' },
-      { label: 'Healthcare', href: '/industries/health' },
-      { label: 'Automotive', href: '/industries/automotive' },
-      { label: 'Energy', href: '/industries/energy' },
-      { label: 'Telco & Media', href: '/industries/telco-media' },
-      { label: 'Agriculture', href: '/industries/agriculture' },
-      { label: 'Retail & CPG', href: '/industries/retail-cpg' },
-      { label: 'High Tech', href: '/industries/high-tech' },
-      { label: 'Software & Platforms', href: '/industries/software-platforms' },
-      { label: 'Public Sector', href: '/industries/public-sector' }
-    ]
-  },
-  {
-    label: 'Solutions',
-    href: '/solutions',
-    description: 'Payment Solutions, Wearables, Smart Cards',
-    children: [
-      { label: 'Payment Solutions', href: '/solutions/payment-solutions' },
-      { label: 'Smart Cards & Digital ID', href: '/solutions/smart-cards-digital-id' },
-      { label: 'Wearables', href: '/solutions/wearables' }
-    ]
-  },
-  {
-    label: 'Research',
-    href: '/research',
-    description: 'Agent Safety, Digital Twins, LLM Observability',
-    children: [
-      { label: 'Agent Safety Aegis', href: '/research/agent-safety-aegis' },
-      { label: 'Agentic RAG', href: '/research/agentic-rag' },
-      { label: 'Digital Twins Ops', href: '/research/digital-twins-ops' },
-      { label: 'LLM Observability', href: '/research/llm-observability' },
-      { label: 'Multimodal Real-time', href: '/research/multimodal-real-time' },
-      { label: 'On-device Inference', href: '/research/on-device-inference' },
-      { label: 'Sovereign AI', href: '/research/sovereign-ai' },
-      { label: 'Trustless Model Sharing', href: '/research/trustless-model-sharing' }
-    ]
-  },
-  {
-    label: 'Ventures',
-    href: '/ventures',
-    description: 'Our investment portfolio and startup partnerships'
-  },
-  {
-    label: 'Insights',
-    href: '/insights',
-    description: 'Reports, case studies, and industry insights',
-    children: [
-      { label: 'Reports', href: '/insights/reports' }
-    ]
-  },
-  {
-    label: 'About',
-    href: '/about',
-    description: 'Team, Careers, Partners',
-    children: [
-      { label: 'Team', href: '/about/team' },
-      { label: 'Careers', href: '/about/careers' },
-      { label: 'Partners', href: '/about/partners' }
-    ]
-  }
-]
-
-const searchCategories = [
-  { label: 'All', value: 'all' },
-  { label: 'Capabilities', value: 'capabilities' },
-  { label: 'Platforms', value: 'platforms' },
-  { label: 'Industries', value: 'industries' },
-  { label: 'Solutions', value: 'solutions' },
-  { label: 'Research', value: 'research' },
-  { label: 'Ventures', value: 'ventures' },
-  { label: 'Insights', value: 'insights' },
-  { label: 'About', value: 'about' }
-]
-
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
@@ -146,7 +31,7 @@ const mockSearchResults = [
 ]
 
 export const Header = () => {
-  const { locale, setLocale } = useI18n()
+  const { locale, setLocale, t, isLoading } = useI18n()
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -157,6 +42,121 @@ export const Header = () => {
   const closeTimeoutRef = React.useRef<NodeJS.Timeout | null>(null)
   
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0]
+
+  // Navigation items using translations
+  const navigationItems: NavigationItem[] = [
+    {
+      label: t('navigation.capabilities'),
+      href: '/capabilities',
+      description: t('navigation.menu.capabilities.description'),
+      children: [
+        { label: t('navigation.menu.capabilities.aiStrategy'), href: '/capabilities/ai-strategy-value' },
+        { label: t('navigation.menu.capabilities.agenticSystems'), href: '/capabilities/agentic-systems' },
+        { label: t('navigation.menu.capabilities.genaiApps'), href: '/capabilities/genai-apps' },
+        { label: t('navigation.menu.capabilities.ragKnowledge'), href: '/capabilities/rag-knowledge-orchestration' },
+        { label: t('navigation.menu.capabilities.llmops'), href: '/capabilities/llmops-observability' },
+        { label: t('navigation.menu.capabilities.responsibleAI'), href: '/capabilities/responsible-ai' },
+        { label: t('navigation.menu.capabilities.sovereignAI'), href: '/capabilities/sovereign-private-ai' },
+        { label: t('navigation.menu.capabilities.talentEnablement'), href: '/capabilities/talent-enablement' },
+        { label: t('navigation.menu.capabilities.embeddedEdgeAI'), href: '/capabilities/embedded-edge-ai' },
+        { label: t('navigation.menu.capabilities.dataPlatforms'), href: '/capabilities/data-platforms' },
+        { label: t('navigation.menu.capabilities.securityCompliance'), href: '/capabilities/security-compliance' },
+        { label: t('navigation.menu.capabilities.roboticsRPA'), href: '/capabilities/robotics-rpa' },
+        { label: t('navigation.menu.capabilities.platformEngineering'), href: '/capabilities/platform-engineering' },
+        { label: t('navigation.menu.capabilities.enterpriseSoftware'), href: '/capabilities/enterprise-software' },
+        { label: t('navigation.menu.capabilities.blockchainCrypto'), href: '/capabilities/blockchain-cryptography' },
+        { label: t('navigation.menu.capabilities.gameSystems'), href: '/capabilities/game-systems' },
+        { label: t('navigation.menu.capabilities.deepTechResearch'), href: '/capabilities/deep-tech-research' }
+      ]
+    },
+    {
+      label: t('navigation.platforms'),
+      href: '/platforms',
+      description: t('navigation.menu.platforms.description'),
+      children: [
+        { label: t('navigation.menu.platforms.agentPlatform'), href: '/platforms/agent-platform' },
+        { label: t('navigation.menu.platforms.ragOrchestrator'), href: '/platforms/rag-orchestrator' },
+        { label: t('navigation.menu.platforms.raiSafetyStack'), href: '/platforms/rai-safety-stack' },
+        { label: t('navigation.menu.platforms.sovereignAIBlueprint'), href: '/platforms/sovereign-ai-blueprint' }
+      ]
+    },
+    {
+      label: t('navigation.industries'),
+      href: '/industries',
+      description: t('navigation.menu.industries.description'),
+      children: [
+        { label: t('navigation.menu.industries.industrial'), href: '/industries/industrial' },
+        { label: t('navigation.menu.industries.healthcare'), href: '/industries/health' },
+        { label: t('navigation.menu.industries.automotive'), href: '/industries/automotive' },
+        { label: t('navigation.menu.industries.energy'), href: '/industries/energy' },
+        { label: t('navigation.menu.industries.telcoMedia'), href: '/industries/telco-media' },
+        { label: t('navigation.menu.industries.agriculture'), href: '/industries/agriculture' },
+        { label: t('navigation.menu.industries.retailCPG'), href: '/industries/retail-cpg' },
+        { label: t('navigation.menu.industries.highTech'), href: '/industries/high-tech' },
+        { label: t('navigation.menu.industries.softwarePlatforms'), href: '/industries/software-platforms' },
+        { label: t('navigation.menu.industries.publicSector'), href: '/industries/public-sector' }
+      ]
+    },
+    {
+      label: t('navigation.solutions'),
+      href: '/solutions',
+      description: t('navigation.menu.solutions.description'),
+      children: [
+        { label: t('navigation.menu.solutions.paymentSolutions'), href: '/solutions/payment-solutions' },
+        { label: t('navigation.menu.solutions.smartCards'), href: '/solutions/smart-cards-digital-id' },
+        { label: t('navigation.menu.solutions.wearables'), href: '/solutions/wearables' }
+      ]
+    },
+    {
+      label: t('navigation.research'),
+      href: '/research',
+      description: t('navigation.menu.research.description'),
+      children: [
+        { label: t('navigation.menu.research.agentSafety'), href: '/research/agent-safety-aegis' },
+        { label: t('navigation.menu.research.agenticRAG'), href: '/research/agentic-rag' },
+        { label: t('navigation.menu.research.digitalTwins'), href: '/research/digital-twins-ops' },
+        { label: t('navigation.menu.research.llmObservability'), href: '/research/llm-observability' },
+        { label: t('navigation.menu.research.multimodalRealtime'), href: '/research/multimodal-real-time' },
+        { label: t('navigation.menu.research.onDeviceInference'), href: '/research/on-device-inference' },
+        { label: t('navigation.menu.research.sovereignAI'), href: '/research/sovereign-ai' },
+        { label: t('navigation.menu.research.trustlessModelSharing'), href: '/research/trustless-model-sharing' }
+      ]
+    },
+    {
+      label: t('navigation.ventures'),
+      href: '/ventures',
+      description: t('navigation.menu.ventures.description')
+    },
+    {
+      label: t('navigation.insights'),
+      href: '/insights',
+      description: t('navigation.menu.insights.description'),
+      children: [
+        { label: t('navigation.menu.insights.reports'), href: '/insights/reports' }
+      ]
+    },
+    {
+      label: t('navigation.about'),
+      href: '/about',
+      description: t('navigation.menu.about.description'),
+      children: [
+        { label: t('navigation.menu.about.team'), href: '/about/team' },
+        { label: t('navigation.menu.about.careers'), href: '/about/careers' },
+        { label: t('navigation.menu.about.partners'), href: '/about/partners' }
+      ]
+    }
+  ]
+
+  const searchCategories = [
+    { label: t('navigation.capabilities'), value: 'capabilities' },
+    { label: t('navigation.platforms'), value: 'platforms' },
+    { label: t('navigation.industries'), value: 'industries' },
+    { label: t('navigation.solutions'), value: 'solutions' },
+    { label: t('navigation.research'), value: 'research' },
+    { label: t('navigation.ventures'), value: 'ventures' },
+    { label: t('navigation.insights'), value: 'insights' },
+    { label: t('navigation.about'), value: 'about' }
+  ]
 
   const handleMouseEnter = (label: string) => {
     // Clear any pending close timeout
@@ -282,7 +282,26 @@ export const Header = () => {
 
           {/* Desktop Navigation - closer spacing between items */}
           <nav className="nav-menu" style={{ gap: '24px' }}>
-            {navigationItems.map((item) => (
+            {isLoading ? (
+              // Skeleton loading for navigation
+              <>
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                  <div key={i} className="nav-item">
+                    <div 
+                      className="nav-link" 
+                      style={{ 
+                        background: 'var(--card-bg)',
+                        height: '20px',
+                        width: '80px',
+                        borderRadius: '4px',
+                        animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                      }}
+                    />
+                  </div>
+                ))}
+              </>
+            ) : (
+              navigationItems.map((item) => (
               <div
                 key={item.label}
                 className="nav-item"
@@ -329,7 +348,8 @@ export const Header = () => {
                   </div>
                 )}
               </div>
-            ))}
+              ))
+            )}
           </nav>
 
           {/* Header Actions - with separation from menu items */}
@@ -415,47 +435,66 @@ export const Header = () => {
             </div>
 
             <nav className="mobile-menu-content">
-              {navigationItems.map((item) => (
-                <div key={item.label} className="mobile-menu-item">
-                  <div className="mobile-menu-item-header">
-                    <Link 
-                      href={item.href} 
-                      className="mobile-menu-link"
-                      onClick={handleLinkClick}
-                    >
-                      {item.label}
-                    </Link>
-                    {item.children && (
-                      <button
-                        onClick={() => handleMobileSubmenuToggle(item.label)}
-                        className="mobile-submenu-toggle"
-                        aria-label={`Toggle ${item.label} submenu`}
+              {isLoading ? (
+                // Skeleton loading for mobile menu
+                <>
+                  {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                    <div key={i} className="mobile-menu-item">
+                      <div 
+                        style={{ 
+                          background: 'var(--card-bg)',
+                          height: '24px',
+                          width: '60%',
+                          borderRadius: '4px',
+                          animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                        }}
+                      />
+                    </div>
+                  ))}
+                </>
+              ) : (
+                navigationItems.map((item) => (
+                  <div key={item.label} className="mobile-menu-item">
+                    <div className="mobile-menu-item-header">
+                      <Link 
+                        href={item.href} 
+                        className="mobile-menu-link"
+                        onClick={handleLinkClick}
                       >
-                        <ChevronRight 
-                          className={`w-5 h-5 transition-transform ${
-                            mobileActiveSubmenu === item.label ? 'rotate-90' : ''
-                          }`}
-                        />
-                      </button>
+                        {item.label}
+                      </Link>
+                      {item.children && (
+                        <button
+                          onClick={() => handleMobileSubmenuToggle(item.label)}
+                          className="mobile-submenu-toggle"
+                          aria-label={`Toggle ${item.label} submenu`}
+                        >
+                          <ChevronRight 
+                            className={`w-5 h-5 transition-transform ${
+                              mobileActiveSubmenu === item.label ? 'rotate-90' : ''
+                            }`}
+                          />
+                        </button>
+                      )}
+                    </div>
+                    
+                    {item.children && mobileActiveSubmenu === item.label && (
+                      <div className="mobile-submenu">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="mobile-submenu-link"
+                            onClick={handleLinkClick}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     )}
                   </div>
-                  
-                  {item.children && mobileActiveSubmenu === item.label && (
-                    <div className="mobile-submenu">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="mobile-submenu-link"
-                          onClick={handleLinkClick}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+                ))
+              )}
             </nav>
 
             <div className="mobile-menu-footer">
@@ -467,7 +506,7 @@ export const Header = () => {
                 }}
               >
                 <Search className="w-5 h-5" />
-                <span>Search</span>
+                <span>{t('navigation.search')}</span>
               </button>
             </div>
           </div>
@@ -486,7 +525,7 @@ export const Header = () => {
           {/* Search Drawer */}
           <div className="search-drawer">
             <div className="search-drawer-header">
-              <h2 className="search-drawer-title">Search</h2>
+              <h2 className="search-drawer-title">{t('navigation.search')}</h2>
               <button
                 onClick={() => setIsSearchOpen(false)}
                 className="search-drawer-close"
@@ -503,7 +542,7 @@ export const Header = () => {
                   <Search className="search-input-icon" />
                   <input
                     type="text"
-                    placeholder="Search across all content..."
+                    placeholder={t('navigation.searchPlaceholder')}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="search-input"
@@ -513,7 +552,7 @@ export const Header = () => {
 
                 {/* Category Filters */}
                 <div className="search-filters">
-                  <span className="search-filters-label">Filter by:</span>
+                  <span className="search-filters-label">{t('common.viewAll')}:</span>
                   <div className="search-filter-buttons">
                     {searchCategories.map((category) => (
                       <button
