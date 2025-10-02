@@ -1,0 +1,220 @@
+{
+  "navigation": {
+    "capabilities": "Fähigkeiten",
+    "platforms": "Plattformen",
+    "industries": "Branchen",
+    "solutions": "Lösungen",
+    "research": "Forschung",
+    "ventures": "Ventures",
+    "insights": "Einblicke",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "search": "Suchen",
+    "searchPlaceholder": "Fähigkeiten, Branchen, Forschung suchen...",
+    "menu": {
+      "capabilities": {
+        "title": "Fähigkeiten",
+        "description": "KI-Strategie, Agentische Systeme, GenAI-Anwendungen und mehr",
+        "aiStrategy": "KI-Strategie & Wert",
+        "agenticSystems": "Agentische Systeme",
+        "genaiApps": "GenAI-Anwendungen",
+        "ragKnowledge": "RAG & Wissen",
+        "llmops": "LLMOps & Observability",
+        "responsibleAI": "Verantwortungsvolle KI",
+        "sovereignAI": "Souveräne/Private KI",
+        "talentEnablement": "Talent & Befähigung",
+        "embeddedEdgeAI": "Embedded & Edge KI",
+        "dataPlatforms": "Datenplattformen",
+        "securityCompliance": "Sicherheit & Compliance",
+        "roboticsRPA": "Robotik & RPA",
+        "platformEngineering": "Platform Engineering",
+        "enterpriseSoftware": "Unternehmenssoftware",
+        "blockchainCrypto": "Blockchain & Kryptographie",
+        "gameSystems": "Game-Systeme",
+        "deepTechResearch": "Deep-Tech-Forschung"
+      },
+      "platforms": {
+        "title": "Plattformen",
+        "description": "Agent-Plattform, RAG-Orchestrator, Safety Stack",
+        "agentPlatform": "Agent-Plattform",
+        "ragOrchestrator": "RAG-Orchestrator",
+        "raiSafetyStack": "RAI Safety Stack",
+        "sovereignAIBlueprint": "Sovereign AI Blueprint"
+      },
+      "industries": {
+        "title": "Branchen",
+        "description": "Industrie, Gesundheitswesen, Automobil, Energie und mehr",
+        "industrial": "Industrie & Fertigung",
+        "healthcare": "Gesundheitswesen",
+        "automotive": "Automobil",
+        "energy": "Energie",
+        "telcoMedia": "Telco & Medien",
+        "agriculture": "Landwirtschaft",
+        "retailCPG": "Einzelhandel & CPG",
+        "highTech": "High Tech",
+        "softwarePlatforms": "Software & Plattformen",
+        "publicSector": "Öffentlicher Sektor"
+      },
+      "solutions": {
+        "title": "Lösungen",
+        "description": "Zahlungslösungen, Wearables, Smart Cards",
+        "paymentSolutions": "Zahlungslösungen",
+        "smartCards": "Smart Cards & Digitale ID",
+        "wearables": "Wearables"
+      },
+      "research": {
+        "title": "Forschung",
+        "description": "Agentensicherheit, Digital Twins, LLM-Observability",
+        "agentSafety": "Agent Safety Aegis",
+        "agenticRAG": "Agentic RAG",
+        "digitalTwins": "Digital Twins Ops",
+        "llmObservability": "LLM-Observability",
+        "multimodalRealtime": "Multimodal Echtzeit",
+        "onDeviceInference": "On-Device-Inferenz",
+        "sovereignAI": "Sovereign AI",
+        "trustlessModelSharing": "Trustless Model Sharing"
+      },
+      "ventures": {
+        "title": "Ventures",
+        "description": "Unser Investmentportfolio und Startup-Partnerschaften"
+      },
+      "insights": {
+        "title": "Einblicke",
+        "description": "Berichte, Fallstudien und Brancheneinblicke",
+        "reports": "Berichte"
+      },
+      "about": {
+        "title": "Über uns",
+        "description": "Team, Karriere, Partner",
+        "team": "Team",
+        "careers": "Karriere",
+        "partners": "Partner"
+      }
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Deep-Tech-Plattformen und -Produkte, die in der realen Welt skalieren",
+      "subtitle": "Wir erfinden, entwerfen und liefern Deep-Tech-Software und -Plattformen – agentische Systeme, Edge/Embedded und sichere Daten-Backbones. Wir integrieren wo nötig, aber wir liefern in erster Linie. Unsere Teams kombinieren Forschung, KI und Engineering mit Governance und Sicherheit, um jeden Tag in der Produktion zu laufen.",
+      "cta1": "Fähigkeiten erkunden",
+      "cta2": "Forschung ansehen",
+      "cta3": "Verbinden"
+    },
+    "features": {
+      "title": "WAS WIR FÜR SIE BETREIBEN",
+      "subtitle": "Produktionsreife Systeme, die vom ersten Tag an Wert liefern. Jede Komponente getestet, überwacht und für den Einsatz in der realen Welt optimiert.",
+      "production": {
+        "title": "Produktionsorientierter Ansatz",
+        "description": "Gemeinsame KPIs für Zuverlässigkeit, Sicherheit und Wertrealisierung. Wir bauen Systeme, die in der realen Welt funktionieren, nicht nur Demos."
+      },
+      "evaluation": {
+        "title": "Kontinuierliche Evaluierung",
+        "description": "Sichere Release-Praktiken, die Regressionen reduzieren, bevor sie die Benutzer erreichen. Jede Änderung wird getestet und validiert."
+      },
+      "observability": {
+        "title": "Vollständige Observability",
+        "description": "Lineage für Modelle, Prompts, Daten und Agentenaktionen über den gesamten Stack. Wissen Sie, was auf jeder Ebene passiert."
+      },
+      "security": {
+        "title": "Sicherheitsmuster für GenAI",
+        "description": "Schützen Sie Systeme vor bekannten Angriffsvektoren und riskantem Tool-Einsatz. Defense in Depth für KI-Systeme."
+      }
+    },
+    "capabilities": {
+      "title": "Fähigkeiten Highlight",
+      "subtitle": "Einige der Bausteine, die wir am häufigsten verwenden – jeder mit seiner eigenen detaillierten Seite und Referenzmustern. Dies sind keine theoretischen Frameworks; sie sind im Einsatz bewährte Komponenten, die in der Produktion laufen.",
+      "cta": "Alle Fähigkeiten anzeigen",
+      "description": "Produktionsreife Implementierung mit realen Fallstudien und Bereitstellungsmustern."
+    },
+    "industries": {
+      "title": "Branchen",
+      "subtitle": "Wo wir die Plattformen und Fähigkeiten anwenden – Produktionsprogramme, keine Demos. Jede Seite listet hochwertige Anwendungsfälle, Compliance-Hinweise und Schritte zur Skalierung auf. Echte Implementierungen mit messbaren Ergebnissen.",
+      "cta": "Alle Branchen anzeigen",
+      "description": "Bewährte Implementierungen mit Compliance-Frameworks und Skalierbarkeitsmuster."
+    },
+    "global": {
+      "title": "Wo wir tätig sind",
+      "subtitle": "Globale Präsenz mit lokaler Expertise. Unsere verteilten Teams gewährleisten 24/7-Abdeckung und tiefes Marktverständnis.",
+      "locations": {
+        "northAmerica": "Nordamerika",
+        "europe": "Europa",
+        "middleEast": "Naher Osten"
+      },
+      "sovereign": "Souveräne Modelle unterstützt: EU · USA · KSA"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Kurzer Weg von der Idee zur Produktion",
+      "description": "Ein Team. Globale Lieferung. Echte Systeme, die funktionieren. Lassen Sie uns etwas bauen, das zählt.",
+      "cta": "Kontaktieren Sie uns"
+    }
+  },
+  "footer": {
+    "description": "Deep-Tech-Plattformen und -Produkte, die in der realen Welt skalieren. Wir bauen, betreiben und härten KI für Unternehmen.",
+    "email": "hello@timeless.dev",
+    "globalPresence": "Globale Präsenz an 12 Standorten",
+    "globalOffices": "Globale Büros",
+    "platform": "Plattform",
+    "company": "Unternehmen",
+    "contactSection": "Kontakt",
+    "contactMethods": {
+      "general": "Allgemeine Anfragen",
+      "partnerships": "Partnerschaften",
+      "research": "Forschung"
+    },
+    "offices": {
+      "northAmerica": "Nordamerika",
+      "northAmericaCities": "New York • San Francisco • Washington DC • Toronto",
+      "europe": "Europa",
+      "europeCities": "London • Stuttgart • Wien • Zürich • Pristina",
+      "middleEast": "Naher Osten",
+      "middleEastCities": "Riad • Abu Dhabi • Tel Aviv"
+    },
+    "legal": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "copyright": "© 2024 Timeless. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "readMore": "Weiterlesen",
+    "getStarted": "Loslegen",
+    "contactUs": "Kontaktieren Sie uns",
+    "productionReady": "Produktionsbereit",
+    "researchPhase": "Forschungsphase",
+    "published": "Veröffentlicht",
+    "active": "Aktiv",
+    "overview": "Übersicht",
+    "benefits": "Vorteile",
+    "features": "Funktionen",
+    "useCases": "Anwendungsfälle",
+    "implementation": "Implementierung",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "pages": {
+    "agenticSystems": {
+      "title": "Agentische Systeme",
+      "description": "Autonome KI-Agenten, die sicher in Produktionsumgebungen mit menschlicher Aufsicht und kontinuierlichen Lernfähigkeiten arbeiten.",
+      "breadcrumb": "Agentische Systeme",
+      "overview": {
+        "title": "Übersicht",
+        "subtitle": "Bauen Sie autonome Agenten, die sicher in der Produktion agieren, lernen und skalieren",
+        "p1": "Wir entwerfen und implementieren agentische Systeme, die wahrnehmen, denken und autonom handeln können, während sie Sicherheit, Erklärbarkeit und Ausrichtung auf Geschäftsziele beibehalten. Unser Ansatz kombiniert fortschrittliche KI-Techniken mit robusten Engineering-Praktiken, um Agenten zu erstellen, die zuverlässig in realen Umgebungen arbeiten.",
+        "p2": "Jeder von uns gebaute Agent umfasst umfassendes Monitoring, menschliche Überwachungsmechanismen und Fail-Safe-Protokolle. Wir konzentrieren uns auf schrittweise Fähigkeitserweiterung und stellen sicher, dass Agenten zunehmend komplexe Aufgaben bewältigen können, während sie vorhersehbare und sichere Verhaltensmuster beibehalten."
+      }
+    },
+    "genaiApps": {
+      "title": "GenAI-Anwendungen",
+      "description": "Maßgeschneiderte generative KI-Anwendungen für Unternehmensmaßstab und Compliance.",
+      "breadcrumb": "GenAI-Anwendungen"
+    },
+    "aiStrategy": {
+      "title": "KI-Strategie & Wert",
+      "description": "Wertbäume, die an Geschäftsarchitektur gebunden sind, finanzierbare Roadmaps und KPI-Modelle, die ROI beweisen, wenn Systeme ausgeliefert werden - kein Theater.",
+      "breadcrumb": "KI-Strategie & Wert"
+    }
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "navigation": {
+    "capabilities": "Capabilities",
+    "platforms": "Platforms",
+    "industries": "Industries",
+    "solutions": "Solutions",
+    "research": "Research",
+    "ventures": "Ventures",
+    "insights": "Insights",
+    "about": "About",
+    "contact": "Contact",
+    "search": "Search",
+    "searchPlaceholder": "Search capabilities, industries, research...",
+    "menu": {
+      "capabilities": {
+        "title": "Capabilities",
+        "description": "AI Strategy, Agentic Systems, GenAI Applications, and more",
+        "aiStrategy": "AI Strategy & Value",
+        "agenticSystems": "Agentic Systems",
+        "genaiApps": "GenAI Applications",
+        "ragKnowledge": "RAG & Knowledge",
+        "llmops": "LLMOps & Observability",
+        "responsibleAI": "Responsible AI",
+        "sovereignAI": "Sovereign/Private AI",
+        "talentEnablement": "Talent & Enablement",
+        "embeddedEdgeAI": "Embedded & Edge AI",
+        "dataPlatforms": "Data Platforms",
+        "securityCompliance": "Security & Compliance",
+        "roboticsRPA": "Robotics & RPA",
+        "platformEngineering": "Platform Engineering",
+        "enterpriseSoftware": "Enterprise Software",
+        "blockchainCrypto": "Blockchain & Cryptography",
+        "gameSystems": "Game Systems",
+        "deepTechResearch": "Deep Tech Research"
+      },
+      "platforms": {
+        "title": "Platforms",
+        "description": "Agent Platform, RAG Orchestrator, Safety Stack",
+        "agentPlatform": "Agent Platform",
+        "ragOrchestrator": "RAG Orchestrator",
+        "raiSafetyStack": "RAI Safety Stack",
+        "sovereignAIBlueprint": "Sovereign AI Blueprint"
+      },
+      "industries": {
+        "title": "Industries",
+        "description": "Industrial, Healthcare, Automotive, Energy, and more",
+        "industrial": "Industrial & Manufacturing",
+        "healthcare": "Healthcare",
+        "automotive": "Automotive",
+        "energy": "Energy",
+        "telcoMedia": "Telco & Media",
+        "agriculture": "Agriculture",
+        "retailCPG": "Retail & CPG",
+        "highTech": "High Tech",
+        "softwarePlatforms": "Software & Platforms",
+        "publicSector": "Public Sector"
+      },
+      "solutions": {
+        "title": "Solutions",
+        "description": "Payment Solutions, Wearables, Smart Cards",
+        "paymentSolutions": "Payment Solutions",
+        "smartCards": "Smart Cards & Digital ID",
+        "wearables": "Wearables"
+      },
+      "research": {
+        "title": "Research",
+        "description": "Agent Safety, Digital Twins, LLM Observability",
+        "agentSafety": "Agent Safety Aegis",
+        "agenticRAG": "Agentic RAG",
+        "digitalTwins": "Digital Twins Ops",
+        "llmObservability": "LLM Observability",
+        "multimodalRealtime": "Multimodal Real-time",
+        "onDeviceInference": "On-device Inference",
+        "sovereignAI": "Sovereign AI",
+        "trustlessModelSharing": "Trustless Model Sharing"
+      },
+      "ventures": {
+        "title": "Ventures",
+        "description": "Our investment portfolio and startup partnerships"
+      },
+      "insights": {
+        "title": "Insights",
+        "description": "Reports, case studies, and industry insights",
+        "reports": "Reports"
+      },
+      "about": {
+        "title": "About",
+        "description": "Team, Careers, Partners",
+        "team": "Team",
+        "careers": "Careers",
+        "partners": "Partners"
+      }
+    }
+  },
+  "pages": {
+    "agenticSystems": {
+      "title": "Agentic Systems",
+      "description": "Autonomous AI agents that operate safely in production environments with human oversight and continuous learning capabilities.",
+      "breadcrumb": "Agentic Systems",
+      "overview": {
+        "title": "Overview",
+        "subtitle": "Build autonomous agents that act, learn, and scale safely in production",
+        "p1": "We design and deploy agentic systems that can perceive, reason, and act autonomously while maintaining safety, explainability, and alignment with business objectives. Our approach combines advanced AI techniques with robust engineering practices to create agents that operate reliably in real-world environments.",
+        "p2": "Every agent we build includes comprehensive monitoring, human oversight mechanisms, and fail-safe protocols. We focus on gradual capability enhancement, ensuring that agents can handle increasingly complex tasks while maintaining predictable and safe behavior patterns."
+      },
+      "architecture": {
+        "title": "Agent Architecture",
+        "subtitle": "Modular, scalable design for reliable autonomous operation",
+        "perception": {
+          "title": "Perception Layer",
+          "desc": "Multi-modal sensing and environment understanding with real-time context awareness."
+        },
+        "reasoning": {
+          "title": "Reasoning Engine",
+          "desc": "Decision-making frameworks that balance objectives, constraints, and risk factors."
+        },
+        "actionSpace": {
+          "title": "Action Space",
+          "desc": "Controlled interfaces for agent interactions with systems, APIs, and human stakeholders."
+        },
+        "memory": {
+          "title": "Memory Systems",
+          "desc": "Persistent knowledge storage and retrieval for learning and context retention."
+        },
+        "safety": {
+          "title": "Safety Monitors",
+          "desc": "Continuous validation of agent behavior against safety policies and constraints."
+        },
+        "humanInterface": {
+          "title": "Human Interface",
+          "desc": "Transparent communication and oversight mechanisms for human-agent collaboration."
+        }
+      },
+      "implementation": {
+        "title": "Implementation Approach",
+        "subtitle": "From prototype to production-ready autonomous systems",
+        "discovery": {
+          "title": "Discovery",
+          "duration": "Define agent scope",
+          "items": [
+            "Task analysis and decomposition",
+            "Environment mapping",
+            "Safety requirement definition",
+            "Success metrics establishment"
+          ]
+        },
+        "development": {
+          "title": "Development",
+          "duration": "Build and validate",
+          "items": [
+            "Agent architecture design",
+            "Core capability implementation",
+            "Safety system integration",
+            "Testing and validation"
+          ]
+        },
+        "deployment": {
+          "title": "Deployment",
+          "duration": "Scale safely",
+          "items": [
+            "Staged rollout plan",
+            "Performance monitoring",
+            "Continuous learning setup",
+            "Feedback loop optimization"
+          ]
+        }
+      },
+      "safety": {
+        "title": "Safety & Reliability",
+        "subtitle": "Built-in safeguards for autonomous operation",
+        "behavioral": {
+          "title": "Behavioral Constraints",
+          "desc": "Hard limits and soft guidelines that shape agent decision-making.",
+          "features": [
+            "Policy enforcement mechanisms",
+            "Ethical decision frameworks",
+            "Risk assessment protocols",
+            "Escalation procedures"
+          ]
+        },
+        "monitoring": {
+          "title": "Monitoring & Control",
+          "desc": "Real-time oversight and intervention capabilities.",
+          "features": [
+            "Continuous behavior analysis",
+            "Anomaly detection systems",
+            "Human override mechanisms",
+            "Audit trail maintenance"
+          ]
+        }
+      },
+      "useCases": {
+        "title": "Use Cases",
+        "subtitle": "Proven applications across industries and functions",
+        "customerService": {
+          "title": "Customer Service",
+          "desc": "Intelligent support agents that handle complex queries with escalation to humans when needed."
+        },
+        "processAutomation": {
+          "title": "Process Automation",
+          "desc": "End-to-end workflow management with adaptive decision-making and exception handling."
+        },
+        "operations": {
+          "title": "Operations Management",
+          "desc": "Resource allocation and optimization with real-time adaptation to changing conditions."
+        },
+        "research": {
+          "title": "Research & Analysis",
+          "desc": "Autonomous investigation and reporting with synthesis of complex information sources."
+        }
+      }
+    },
+    "genaiApps": {
+      "title": "GenAI Applications",
+      "description": "Custom generative AI applications built for enterprise scale and compliance.",
+      "breadcrumb": "GenAI Applications",
+      "intro": {
+        "title": "Enterprise Generative AI",
+        "subtitle": "Build and deploy custom generative AI applications that transform how your organization creates, processes, and analyzes content."
+      },
+      "features": {
+        "customModel": {
+          "title": "Custom Model Development",
+          "desc": "Purpose-built generative models tailored to your specific use cases and data."
+        },
+        "integration": {
+          "title": "Enterprise Integration",
+          "desc": "Seamless integration with existing enterprise systems and workflows."
+        },
+        "safety": {
+          "title": "Safety & Governance",
+          "desc": "Built-in safety measures and governance frameworks for responsible AI deployment."
+        },
+        "performance": {
+          "title": "Performance Optimization",
+          "desc": "Optimized for production performance with efficient inference and scaling."
+        }
+      },
+      "useCases": {
+        "title": "Use Cases",
+        "subtitle": "Transform your business processes with generative AI applications",
+        "items": [
+          "Content generation and automation",
+          "Code generation and development assistance",
+          "Document processing and analysis",
+          "Customer service automation",
+          "Knowledge base creation",
+          "Language translation and localization",
+          "Creative design assistance",
+          "Data synthesis and augmentation"
+        ]
+      },
+      "approach": {
+        "title": "Implementation Approach",
+        "intro": "Our GenAI applications are built using a systematic approach that ensures reliability, security, and performance. We start with understanding your specific requirements and build custom solutions that integrate seamlessly with your existing infrastructure.",
+        "discovery": {
+          "title": "Discovery & Planning",
+          "desc": "We work with your team to identify the best opportunities for generative AI, assess your data readiness, and design an implementation roadmap that delivers value quickly while building toward long-term goals."
+        },
+        "development": {
+          "title": "Custom Development",
+          "desc": "Our team develops custom generative models and applications tailored to your specific use cases. We use proven architectures and best practices to ensure your applications are reliable, secure, and scalable."
+        },
+        "deployment": {
+          "title": "Deployment & Optimization",
+          "desc": "We deploy your applications with comprehensive monitoring and optimization frameworks. Our systems continuously learn and improve, ensuring your AI applications deliver increasing value over time."
+        }
+      },
+      "benefits": {
+        "title": "Key Benefits",
+        "subtitle": "Why organizations choose our GenAI applications for their critical business processes",
+        "accelerated": {
+          "title": "Accelerated Development",
+          "desc": "Reduce time-to-market with pre-built components and proven architectures."
+        },
+        "security": {
+          "title": "Enterprise-Grade Security",
+          "desc": "Built-in security measures and compliance frameworks for enterprise deployment."
+        },
+        "scalable": {
+          "title": "Scalable Infrastructure",
+          "desc": "Auto-scaling infrastructure that handles varying workloads efficiently."
+        },
+        "improvement": {
+          "title": "Continuous Improvement",
+          "desc": "Models that learn and improve over time with feedback and new data."
+        }
+      },
+      "cta": {
+        "title": "Ready to build your GenAI application?",
+        "subtitle": "Let's discuss how generative AI can transform your business processes and unlock new opportunities.",
+        "button": "Start your project"
+      }
+    },
+    "aiStrategy": {
+      "title": "AI Strategy & Value",
+      "description": "Value trees tied to business architecture, fundable roadmaps, and KPI models that prove ROI as systems ship-no theater.",
+      "breadcrumb": "AI Strategy & Value",
+      "overview": {
+        "title": "Overview",
+        "subtitle": "Translate AI into a portfolio of funded bets with measurable lift",
+        "p1": "We connect AI opportunities to business architecture and data realities. The result is a portfolio of prioritized plays, enabling platforms, and operating model changes - staged to fund themselves as value lands. Each play has a reference architecture, owners, evidence gates, and KPIs wired into delivery so ROI is observed continuously, not after the fact.",
+        "p2": "Our engagements avoid theater. We define exit criteria per stage, attach assumptions and risks to metrics, and design experiments that converge on truth quickly. When prerequisites are missing (data, infra, controls), they are captured as roadmap items with clear value coupling, not hand‑wavy dependencies."
+      },
+      "method": {
+        "title": "Method",
+        "subtitle": "From diagnosis to funded execution with evidence gates",
+        "diagnose": {
+          "title": "Diagnose",
+          "duration": "Map value and constraints",
+          "items": [
+            "Value tree and driver analysis",
+            "Business capability and process mapping",
+            "Data inventory and feasibility"
+          ]
+        },
+        "prioritize": {
+          "title": "Prioritize",
+          "duration": "Pick the right bets",
+          "items": [
+            "Impact x feasibility scoring",
+            "Risk/assumption registers",
+            "Reference architectures"
+          ]
+        },
+        "stage": {
+          "title": "Stage & fund",
+          "duration": "Invest with exit criteria",
+          "items": [
+            "Now/Next/Later roadmap",
+            "Evidence gates and owners",
+            "Budget and run-rate plans"
+          ]
+        }
+      },
+      "valueTree": {
+        "title": "Value Tree Mapping",
+        "subtitle": "Tie AI plays to levers, processes, and systems",
+        "business": {
+          "title": "Business architecture",
+          "desc": "Drivers → levers → metrics; capability heatmaps and pain points."
+        },
+        "valueStreams": {
+          "title": "Value streams",
+          "desc": "Process maps with bottlenecks; lead time, rework, and failure demand."
+        },
+        "systems": {
+          "title": "Systems",
+          "desc": "Application/data lineage and ownership; change windows and controls."
+        },
+        "data": {
+          "title": "Data",
+          "desc": "Source quality, access constraints, and privacy/compliance boundaries."
+        },
+        "opportunities": {
+          "title": "Opportunities",
+          "desc": "Candidate AI plays with hypotheses, assumptions, and evaluation plans."
+        },
+        "dependencies": {
+          "title": "Dependencies",
+          "desc": "Platform, data, and operating-model enablers linked to value."
+        }
+      },
+      "roadmap": {
+        "title": "Roadmap & Investment",
+        "subtitle": "Sequence for compounding value and de-risking",
+        "now": {
+          "title": "Now",
+          "duration": "90-day proofs",
+          "items": [
+            "Highest leverage experiments",
+            "Data/platform quick wins",
+            "Owner and exit criteria"
+          ]
+        },
+        "next": {
+          "title": "Next",
+          "duration": "Scale the wins",
+          "items": [
+            "Hardening and rollout plans",
+            "Cross-team enablement",
+            "Budget releases by evidence"
+          ]
+        },
+        "later": {
+          "title": "Later",
+          "duration": "Foundational bets",
+          "items": [
+            "Strategic platforms",
+            "Operating model changes",
+            "Risk/controls built-in"
+          ]
+        }
+      },
+      "evidence": {
+        "title": "Evidence & Measurement",
+        "subtitle": "Proof points that separate signal from noise",
+        "leading": {
+          "title": "Leading indicators",
+          "desc": "Metrics that predict value before it materializes in financials.",
+          "items": [
+            "Process efficiency gains",
+            "Data quality improvements",
+            "User adoption rates",
+            "System performance metrics"
+          ]
+        },
+        "lagging": {
+          "title": "Lagging indicators",
+          "desc": "Business outcomes that validate strategic bets over time.",
+          "items": [
+            "Revenue impact",
+            "Cost reduction",
+            "Risk mitigation",
+            "Market position"
+          ]
+        }
+      },
+      "patterns": {
+        "title": "Common Patterns",
+        "subtitle": "Repeatable plays across industries and functions",
+        "customer": {
+          "title": "Customer intelligence",
+          "desc": "Behavioral models for retention, upsell, and acquisition with clear attribution."
+        },
+        "operations": {
+          "title": "Operations optimization",
+          "desc": "Supply chain, workforce, and asset efficiency with real-time adjustment."
+        },
+        "risk": {
+          "title": "Risk & compliance",
+          "desc": "Automated controls and monitoring with auditability and explainability."
+        },
+        "product": {
+          "title": "Product intelligence",
+          "desc": "Usage analytics and feature optimization tied to business metrics."
+        }
+      }
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Deep‑tech platforms and products that scale in the real world",
+      "subtitle": "We invent, design, and ship deep‑tech software and platforms—agentic systems, edge/embedded, and secure data backbones. We integrate where it matters, but we primarily ship. Our teams combine research, AI, and engineering with governance and safety to run in production every day.",
+      "cta1": "Explore Capabilities",
+      "cta2": "See Research",
+      "cta3": "Connect"
+    },
+    "features": {
+      "title": "WHAT WE RUN FOR YOU",
+      "subtitle": "Production-ready systems that deliver value from day one. Every component tested, monitored, and optimized for real-world deployment.",
+      "production": {
+        "title": "Production-first approach",
+        "description": "Shared KPIs across reliability, safety, and value realization. We build systems that work in the real world, not just demos."
+      },
+      "evaluation": {
+        "title": "Continuous evaluation",
+        "description": "Safe release practices that reduce regressions before they reach users. Every change is tested and validated."
+      },
+      "observability": {
+        "title": "Full observability",
+        "description": "Lineage for models, prompts, data, and agent actions across the full stack. Know what's happening at every layer."
+      },
+      "security": {
+        "title": "Security patterns for GenAI",
+        "description": "Protect systems from known attack vectors and risky tool use. Defense in depth for AI systems."
+      }
+    },
+    "capabilities": {
+      "title": "Capabilities highlight",
+      "subtitle": "A few of the building blocks we use most often—each with its own deep page and reference patterns. These aren't theoretical frameworks; they're battle-tested components running in production.",
+      "cta": "View all capabilities",
+      "description": "Production-ready implementation with real-world case studies and deployment patterns."
+    },
+    "industries": {
+      "title": "Industries",
+      "subtitle": "Where we apply the platforms and capabilities—production programs, not demos. Each page lists high‑value use cases, compliance notes, and steps to scale. Real implementations with measurable outcomes.",
+      "cta": "View all industries",
+      "description": "Proven implementations with compliance frameworks and scalability patterns."
+    },
+    "global": {
+      "title": "Where we operate",
+      "subtitle": "Global presence with local expertise. Our distributed teams ensure 24/7 coverage and deep market understanding.",
+      "locations": {
+        "northAmerica": "North America",
+        "europe": "Europe",
+        "middleEast": "Middle East"
+      },
+      "sovereign": "Sovereign models supported: EU · US · KSA"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Short path from idea to production",
+      "description": "One team. Global delivery. Real systems that work. Let's build something that matters.",
+      "cta": "Connect with us"
+    }
+  },
+  "footer": {
+    "description": "Deep-tech platforms and products that scale in the real world. We build, operate, and harden AI for enterprises.",
+    "email": "hello@timeless.dev",
+    "globalPresence": "Global presence across 12 locations",
+    "globalOffices": "Global Offices",
+    "platform": "Platform",
+    "company": "Company",
+    "contactSection": "Contact",
+    "contactMethods": {
+      "general": "General Inquiries",
+      "partnerships": "Partnerships",
+      "research": "Research"
+    },
+    "offices": {
+      "northAmerica": "North America",
+      "northAmericaCities": "New York • San Francisco • Washington DC • Toronto",
+      "europe": "Europe",
+      "europeCities": "London • Stuttgart • Vienna • Zurich • Pristina",
+      "middleEast": "Middle East",
+      "middleEastCities": "Riyadh • Abu Dhabi • Tel Aviv"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© 2024 Timeless. All rights reserved."
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "readMore": "Read more",
+    "getStarted": "Get started",
+    "contactUs": "Contact us",
+    "productionReady": "Production Ready",
+    "researchPhase": "Research Phase",
+    "published": "Published",
+    "active": "Active",
+    "overview": "Overview",
+    "benefits": "Benefits",
+    "features": "Features",
+    "useCases": "Use Cases",
+    "implementation": "Implementation",
+    "getInTouch": "Get in touch"
+  }
+}
