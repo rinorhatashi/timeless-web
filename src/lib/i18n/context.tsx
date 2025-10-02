@@ -24,9 +24,7 @@ const loadTranslations = async (locale: Locale) => {
       console.error(`Failed to fetch translations for ${locale}:`, response.status, response.statusText)
       return {}
     }
-    const data = await response.json()
-    console.log(`Loaded translations for ${locale}:`, Object.keys(data))
-    return data
+    return await response.json()
   } catch (error) {
     console.error(`Failed to load translations for ${locale}`, error)
     return {}
@@ -38,23 +36,30 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
   const [translations, setTranslations] = useState<Record<string, TranslationValue>>({})
   const [isLoading, setIsLoading] = useState(true)
   const [isInitialized, setIsInitialized] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    // Mark component as mounted (hydration complete)
+    setIsMounted(true)
+    
     // Load from localStorage on mount and initialize translations immediately
     const initializeI18n = async () => {
-      const savedLocale = (localStorage.getItem('locale') as Locale) || 'en'
-      if (savedLocale && ['en', 'de', 'ar'].includes(savedLocale)) {
-        setLocaleState(savedLocale)
+      const savedLocale = (typeof window !== 'undefined' ? localStorage.getItem('locale') : null) as Locale | null
+      const initialLocale = (savedLocale && ['en', 'de', 'ar'].includes(savedLocale)) ? savedLocale : 'en'
+      
+      // Only update locale state if it's different from default
+      if (initialLocale !== 'en') {
+        setLocaleState(initialLocale)
       }
       
       // Load initial translations as fast as possible
-      const initialTranslations = await loadTranslations(savedLocale || 'en')
+      const initialTranslations = await loadTranslations(initialLocale)
       setTranslations(initialTranslations)
       
       // Set document direction for RTL languages
       if (typeof document !== 'undefined') {
-        document.documentElement.dir = (savedLocale || 'en') === 'ar' ? 'rtl' : 'ltr'
-        document.documentElement.lang = savedLocale || 'en'
+        document.documentElement.dir = initialLocale === 'ar' ? 'rtl' : 'ltr'
+        document.documentElement.lang = initialLocale
       }
       
       setIsLoading(false)
@@ -98,8 +103,8 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
       if (value && typeof value === 'object' && k in value) {
         value = value[k as keyof typeof value]
       } else {
-        console.warn(`Translation not found for key: ${key} at ${k}`)
-        return key // Return key if translation not found
+        // Translation not found, return the key as fallback
+        return key
       }
     }
 
