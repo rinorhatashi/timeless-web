@@ -1,91 +1,97 @@
+"use client"
+
 import { PageLayout, Section } from '@/components/ui/page-layout'
+import { ContentLoader } from '@/components/ui/content-loader'
+import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
-import { ArrowRight, Heart, Shield, FileText, Users, CheckCircle, BarChart3, Clock, Brain } from 'lucide-react'
+import { Heart, Shield, FileText, Users, CheckCircle, BarChart3, Clock, Brain } from 'lucide-react'
 
-const solutions = [
-  {
-    title: "Clinical Decision Support",
-    description: "AI-powered clinical decision support systems that assist healthcare providers with diagnosis and treatment recommendations.",
-    icon: Brain
-  },
-  {
-    title: "Medical Imaging Analysis",
-    description: "Advanced AI models for medical image analysis including radiology, pathology, and diagnostic imaging.",
-    icon: FileText
-  },
-  {
-    title: "Drug Discovery & Development",
-    description: "Accelerated drug discovery through AI-driven molecular analysis and clinical trial optimization.",
-    icon: BarChart3
-  },
-  {
-    title: "Patient Care Automation",
-    description: "Automated patient monitoring, care coordination, and treatment plan optimization systems.",
-    icon: Users
-  }
-]
+const HealthcarePageContent = () => {
+  const { t } = useI18n()
+  
+  const solutions = [
+    {
+      title: "Clinical Decision Support",
+      description: "AI-powered clinical decision support systems that assist healthcare providers with diagnosis and treatment recommendations.",
+      icon: Brain
+    },
+    {
+      title: "Medical Imaging Analysis",
+      description: "Advanced AI models for medical image analysis including radiology, pathology, and diagnostic imaging.",
+      icon: FileText
+    },
+    {
+      title: "Drug Discovery & Development",
+      description: "Accelerated drug discovery through AI-driven molecular analysis and clinical trial optimization.",
+      icon: BarChart3
+    },
+    {
+      title: "Patient Care Automation",
+      description: "Automated patient monitoring, care coordination, and treatment plan optimization systems.",
+      icon: Users
+    }
+  ]
 
-const useCases = [
-  "Clinical decision support systems",
-  "Medical image analysis and diagnostics",
-  "Drug discovery and development",
-  "Patient monitoring and care coordination",
-  "Electronic health record optimization",
-  "Predictive analytics for patient outcomes",
-  "Automated clinical documentation",
-  "Healthcare operations optimization"
-]
+  const useCases = [
+    "Clinical decision support systems",
+    "Medical image analysis and diagnostics",
+    "Drug discovery and development",
+    "Patient monitoring and care coordination",
+    "Electronic health record optimization",
+    "Predictive analytics for patient outcomes",
+    "Automated clinical documentation",
+    "Healthcare operations optimization"
+  ]
 
-const compliance = [
-  {
-    title: "HIPAA Compliance",
-    description: "Full HIPAA compliance with advanced privacy and security controls for patient data protection."
-  },
-  {
-    title: "FDA Regulations",
-    description: "FDA-compliant AI systems designed for medical device and software as medical device (SaMD) requirements."
-  },
-  {
-    title: "Clinical Guidelines",
-    description: "Integration with clinical best practices and evidence-based medicine guidelines."
-  },
-  {
-    title: "International Standards",
-    description: "Compliance with international healthcare standards including HL7 FHIR and IHE profiles."
-  }
-]
+  const compliance = [
+    {
+      title: "HIPAA Compliance",
+      description: "Full HIPAA compliance with advanced privacy and security controls for patient data protection."
+    },
+    {
+      title: "FDA Regulations",
+      description: "FDA-compliant AI systems designed for medical device and software as medical device (SaMD) requirements."
+    },
+    {
+      title: "Clinical Guidelines",
+      description: "Integration with clinical best practices and evidence-based medicine guidelines."
+    },
+    {
+      title: "International Standards",
+      description: "Compliance with international healthcare standards including HL7 FHIR and IHE profiles."
+    }
+  ]
 
-const benefits = [
-  {
-    title: "Improved Patient Outcomes",
-    description: "AI-driven insights that help healthcare providers make better decisions and improve patient care.",
-    icon: Heart
-  },
-  {
-    title: "Operational Efficiency",
-    description: "Streamlined workflows and automated processes that reduce administrative burden.",
-    icon: Clock
-  },
-  {
-    title: "Enhanced Accuracy",
-    description: "Reduced diagnostic errors and improved accuracy through AI-assisted analysis.",
-    icon: CheckCircle
-  },
-  {
-    title: "Data Security",
-    description: "Enterprise-grade security measures that protect sensitive patient information.",
-    icon: Shield
-  }
-]
+  const benefits = [
+    {
+      title: "Improved Patient Outcomes",
+      description: "AI-driven insights that help healthcare providers make better decisions and improve patient care.",
+      icon: Heart
+    },
+    {
+      title: "Operational Efficiency",
+      description: "Streamlined workflows and automated processes that reduce administrative burden.",
+      icon: Clock
+    },
+    {
+      title: "Enhanced Accuracy",
+      description: "Reduced diagnostic errors and improved accuracy through AI-assisted analysis.",
+      icon: CheckCircle
+    },
+    {
+      title: "Data Security",
+      description: "Enterprise-grade security measures that protect sensitive patient information.",
+      icon: Shield
+    }
+  ]
 
-export default function HealthcarePage() {
   return (
     <PageLayout
-      title="Healthcare & Life Sciences"
-      description="HIPAA-compliant AI systems for diagnostics, patient care, and operational efficiency in healthcare."
+      title={t('pages.industries.healthcare.title')}
+      description={t('pages.industries.healthcare.description')}
       breadcrumbs={[
-        { label: 'Industries', href: '/industries' },
-        { label: 'Healthcare', href: '/industries/health' }
+        { label: t('navigation.industries'), href: '/industries' },
+        { label: t('pages.industries.healthcare.breadcrumb'), href: '/industries/health' }
       ]}
     >
       <Section
@@ -277,10 +283,18 @@ export default function HealthcarePage() {
             className="btn-primary"
             style={{ background: 'var(--primary-white)', color: 'var(--primary-black)' }}
           >
-            Start your healthcare AI journey →
+            {t('pages.industries.healthcare.cta')}
           </Link>
         </div>
       </Section>
     </PageLayout>
+  )
+}
+
+export default function HealthcarePage() {
+  return (
+    <ContentLoader>
+      <HealthcarePageContent />
+    </ContentLoader>
   )
 } 

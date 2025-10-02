@@ -310,6 +310,68 @@
       "title": "Sovereign AI Blueprint",
       "description": "Vollständige Architektur für die Bereitstellung von KI-Systemen mit Datenresidenz- und Souveränitätsanforderungen.",
       "breadcrumb": "Sovereign AI Blueprint"
+    },
+    "industries": {
+      "agriculture": {
+        "title": "Landwirtschaft & Präzisionslandwirtschaft",
+        "description": "Präzisionsbetrieb vom Feld bis zur Gabel - Bildqualität, IoT-Telemetrie, digitale Zwillinge und Nachhaltigkeitsberichterstattung.",
+        "breadcrumb": "Landwirtschaft",
+        "cta": "Starten Sie Ihre Agrar-KI-Reise →"
+      },
+      "automotive": {
+        "title": "KI für die Automobilindustrie",
+        "description": "Sicherere, intelligentere SDVs schneller liefern mit ISO 26262-konformer Governance und KI-gestütztem Engineering.",
+        "breadcrumb": "Automobil",
+        "cta": "Starten Sie Ihre Automotive-KI-Reise →"
+      },
+      "energy": {
+        "title": "Energie & Versorgung KI",
+        "description": "KI für Optimierung erneuerbarer Energien, Netzmanagement und vorausschauende Wartung im großen Maßstab.",
+        "breadcrumb": "Energie",
+        "cta": "Starten Sie Ihre Energie-KI-Reise →"
+      },
+      "highTech": {
+        "title": "High-Tech & Softwareplattformen",
+        "description": "KI-Infrastruktur und Plattformen für Technologieunternehmen, die die nächste Generation aufbauen.",
+        "breadcrumb": "High-Tech",
+        "cta": "Starten Sie Ihre Plattform-Reise →"
+      },
+      "industrial": {
+        "title": "Industrie & Fertigung",
+        "description": "KI-gestützte Automatisierung, vorausschauende Wartung und Qualitätskontrollsysteme für moderne Fertigung.",
+        "breadcrumb": "Industrie",
+        "cta": "Starten Sie Ihre Fertigungs-KI-Reise →"
+      },
+      "publicSector": {
+        "title": "Öffentlicher Sektor & Regierung",
+        "description": "KI-Lösungen auf Regierungsebene mit maximaler Sicherheit, Transparenz und Compliance.",
+        "breadcrumb": "Öffentlicher Sektor",
+        "cta": "Starten Sie Ihre Regierungs-KI-Reise →"
+      },
+      "retailCPG": {
+        "title": "Einzelhandel & Konsumgüter",
+        "description": "KI-gesteuerte Personalisierung, Bestandsverwaltung und Lieferkettenoptimierung für den Einzelhandel.",
+        "breadcrumb": "Einzelhandel & Konsumgüter",
+        "cta": "Starten Sie Ihre Einzelhandels-KI-Reise →"
+      },
+      "softwarePlatforms": {
+        "title": "Software & Plattformen",
+        "description": "Moderne, skalierbare Softwareplattformen mit KI-gestützten Funktionen und Cloud-nativer Architektur aufbauen.",
+        "breadcrumb": "Softwareplattformen",
+        "cta": "Starten Sie Ihre Plattform-Reise →"
+      },
+      "telcoMedia": {
+        "title": "Telekommunikation & Medien",
+        "description": "KI für Netzoptimierung, Kundenservice und Konnektivität der nächsten Generation.",
+        "breadcrumb": "Telekommunikation & Medien",
+        "cta": "Starten Sie Ihre Telekom-KI-Reise →"
+      },
+      "healthcare": {
+        "title": "Gesundheitswesen & Biowissenschaften",
+        "description": "HIPAA-konforme KI-Systeme für Diagnostik, Patientenversorgung und operative Effizienz im Gesundheitswesen.",
+        "breadcrumb": "Gesundheitswesen",
+        "cta": "Starten Sie Ihre Gesundheits-KI-Reise →"
+      }
     }
   }
 }

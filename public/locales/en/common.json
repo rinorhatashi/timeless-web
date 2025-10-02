@@ -531,6 +531,68 @@
       "title": "Sovereign AI Blueprint",
       "description": "Complete architecture for deploying AI systems with data residency and sovereignty requirements.",
       "breadcrumb": "Sovereign AI Blueprint"
+    },
+    "industries": {
+      "agriculture": {
+        "title": "Agriculture & Precision Farming",
+        "description": "Precision operations from field to fork—vision quality, IoT telemetry, digital twins, and sustainability reporting.",
+        "breadcrumb": "Agriculture",
+        "cta": "Start your agriculture AI journey →"
+      },
+      "automotive": {
+        "title": "Automotive Industry AI",
+        "description": "Ship safer, smarter SDVs faster with ISO 26262-aligned governance and AI-powered engineering.",
+        "breadcrumb": "Automotive",
+        "cta": "Start your automotive AI journey →"
+      },
+      "energy": {
+        "title": "Energy & Utilities AI",
+        "description": "AI for renewable energy optimization, grid management, and predictive maintenance at scale.",
+        "breadcrumb": "Energy",
+        "cta": "Start your energy AI journey →"
+      },
+      "highTech": {
+        "title": "High-Tech & Software Platforms",
+        "description": "AI infrastructure and platforms for technology companies building the next generation.",
+        "breadcrumb": "High-Tech",
+        "cta": "Start your platform journey →"
+      },
+      "industrial": {
+        "title": "Industrial & Manufacturing",
+        "description": "AI-powered automation, predictive maintenance, and quality control systems for modern manufacturing.",
+        "breadcrumb": "Industrial",
+        "cta": "Start your manufacturing AI journey →"
+      },
+      "publicSector": {
+        "title": "Public Sector & Government",
+        "description": "Government-grade AI solutions with maximum security, transparency, and compliance.",
+        "breadcrumb": "Public Sector",
+        "cta": "Start your government AI journey →"
+      },
+      "retailCPG": {
+        "title": "Retail & Consumer Goods",
+        "description": "AI-driven personalization, inventory management, and supply chain optimization for retail.",
+        "breadcrumb": "Retail & CPG",
+        "cta": "Start your retail AI journey →"
+      },
+      "softwarePlatforms": {
+        "title": "Software & Platforms",
+        "description": "Build modern, scalable software platforms with AI-powered capabilities and cloud-native architecture.",
+        "breadcrumb": "Software Platforms",
+        "cta": "Start your platform journey →"
+      },
+      "telcoMedia": {
+        "title": "Telecommunications & Media",
+        "description": "AI for network optimization, customer service, and next-generation connectivity.",
+        "breadcrumb": "Telco & Media",
+        "cta": "Start your telecom AI journey →"
+      },
+      "healthcare": {
+        "title": "Healthcare & Life Sciences",
+        "description": "HIPAA-compliant AI systems for diagnostics, patient care, and operational efficiency in healthcare.",
+        "breadcrumb": "Healthcare",
+        "cta": "Start your healthcare AI journey →"
+      }
     }
   },
   "homepage": {

@@ -28,7 +28,7 @@ export const ContentLoader = ({ children, skeleton }: ContentLoaderProps) => {
   }
 
   return (
-    <div 
+    <div ˀ
       className="content-wrapper"
       style={{
         opacity: shouldRender ? 1 : 0,
