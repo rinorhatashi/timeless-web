@@ -178,7 +178,7 @@ body {
     top: 100%;
     left: 0;
     transform: translateY(-10px);
-    margin-top: var(--space-2);
+    margin-top: 4px;
     width: 600px;
     max-width: 90vw;
     background: var(--primary-white);
@@ -191,6 +191,17 @@ body {
     transition: all var(--transition-normal);
     pointer-events: none;
     z-index: 1000;
+}
+
+/* Invisible bridge to prevent dropdown from closing when moving cursor */
+.nav-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: transparent;
 }
 
 /* Capabilities dropdown - larger and left-aligned */
@@ -206,11 +217,22 @@ body {
     transform: translateY(0);
 }
 
+.nav-item:first-child:hover .nav-dropdown::before,
+.nav-item:first-child .nav-dropdown:hover::before {
+    pointer-events: auto;
+}
+
 .nav-item:hover .nav-dropdown,
 .nav-dropdown:hover {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Ensure the invisible bridge is also interactive when dropdown is visible */
+.nav-item:hover .nav-dropdown::before,
+.nav-dropdown:hover::before {
     pointer-events: auto;
 }
 
@@ -225,6 +247,11 @@ body {
 .nav-item:nth-last-child(-n+4):hover .nav-dropdown,
 .nav-item:nth-last-child(-n+4) .nav-dropdown:hover {
     transform: translateY(0);
+}
+
+.nav-item:nth-last-child(-n+4):hover .nav-dropdown::before,
+.nav-item:nth-last-child(-n+4) .nav-dropdown:hover::before {
+    pointer-events: auto;
 }
 
 .dropdown-header {
@@ -663,7 +690,7 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    margin-top: var(--space-2);
+    margin-top: 4px;
     width: 200px;
     background: var(--primary-white);
     border: 1px solid rgba(26, 25, 24, 0.1);
@@ -2209,6 +2236,69 @@ body {
     .mb-12 {
         margin-bottom: var(--space-6) !important;
     }
+}
+
+/* ========================================
+   LOADING ANIMATIONS
+   ======================================== */
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes loadingBar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading State Utilities */
+.animate-shimmer {
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.4s ease-in-out;
+}
+
+/* Prevent content flash during loading */
+.content-wrapper {
+    min-height: 50vh;
+}
+
+/* Skeleton loader styles */
+.skeleton-pulse {
+    animation: shimmer 1.5s ease-in-out infinite;
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0%,
+        #e0e0e0 50%,
+        #f0f0f0 100%
+    );
+    background-size: 200% 100%;
 }
 
 

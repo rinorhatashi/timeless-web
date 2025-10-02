@@ -7,32 +7,64 @@ import { ReactNode, useEffect, useState } from 'react'
 interface ContentLoaderProps {
   children: ReactNode
   skeleton?: ReactNode
+  minLoadingTime?: number
 }
 
-export const ContentLoader = ({ children, skeleton }: ContentLoaderProps) => {
+export const ContentLoader = ({ 
+  children, 
+  skeleton,
+  minLoadingTime = 300
+}: ContentLoaderProps) => {
   const { isLoading } = useI18n()
+  const [hasMounted, setHasMounted] = useState(false)
   const [shouldRender, setShouldRender] = useState(false)
+  const [showContent, setShowContent] = useState(false)
+  const [loadStartTime, setLoadStartTime] = useState<number | null>(null)
+
+  // Track mount to prevent hydration issues
+  useEffect(() => {
+    setHasMounted(true)
+    setLoadStartTime(Date.now())
+  }, [])
 
   useEffect(() => {
-    if (!isLoading) {
-      // Small delay for smooth transition
-      const timer = setTimeout(() => setShouldRender(true), 50)
-      return () => clearTimeout(timer)
-    } else {
-      setShouldRender(false)
-    }
-  }, [isLoading])
+    if (!hasMounted) return
 
-  if (isLoading) {
+    if (isLoading) {
+      // Track when loading started (if not already set)
+      if (loadStartTime === null) {
+        setLoadStartTime(Date.now())
+      }
+      setShouldRender(false)
+      setShowContent(false)
+    } else if (loadStartTime !== null) {
+      // Calculate how long we've been loading
+      const elapsed = Date.now() - loadStartTime
+      const remainingTime = Math.max(0, minLoadingTime - elapsed)
+      
+      // Wait for minimum loading time, then show content
+      const timer = setTimeout(() => {
+        setShouldRender(true)
+        // Small delay for smooth fade-in
+        setTimeout(() => setShowContent(true), 50)
+      }, remainingTime)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [isLoading, minLoadingTime, loadStartTime, hasMounted])
+
+  // Always show skeleton until fully ready
+  if (!hasMounted || isLoading || !shouldRender) {
     return <>{skeleton || <PageSkeleton />}</>
   }
 
   return (
-    <div ˀ
+    <div 
       className="content-wrapper"
       style={{
-        opacity: shouldRender ? 1 : 0,
-        transition: 'opacity 0.2s ease-in-out'
+        opacity: showContent ? 1 : 0,
+        transform: showContent ? 'translateY(0)' : 'translateY(10px)',
+        transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out'
       }}
     >
       {children}

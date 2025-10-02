@@ -154,18 +154,41 @@ export const Header = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [mobileActiveSubmenu, setMobileActiveSubmenu] = useState<string | null>(null)
+  const closeTimeoutRef = React.useRef<NodeJS.Timeout | null>(null)
   
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0]
 
   const handleMouseEnter = (label: string) => {
+    // Clear any pending close timeout
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
     setActiveDropdown(label)
   }
 
   const handleMouseLeave = () => {
-    setActiveDropdown(null)
+    // Add a delay before closing to allow smooth transitions to dropdown
+    closeTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 200)
   }
 
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current)
+      }
+    }
+  }, [])
+
   const handleLinkClick = () => {
+    // Clear any pending close timeout and close immediately
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
     setActiveDropdown(null)
     setIsMobileMenuOpen(false)
     setIsSearchOpen(false)

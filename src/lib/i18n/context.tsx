@@ -41,8 +41,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
         setLocaleState(savedLocale)
       }
       
-      // Load initial translations
-      setIsLoading(true)
+      // Load initial translations as fast as possible
       const initialTranslations = await loadTranslations(savedLocale || 'en')
       setTranslations(initialTranslations)
       
@@ -73,6 +72,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
         document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr'
         document.documentElement.lang = locale
       }
+      
       setIsLoading(false)
     }
 

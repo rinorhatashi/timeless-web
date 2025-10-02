@@ -3,6 +3,8 @@ import "./globals.css";
 import { Header } from "@/components/navigation/header";
 import { Footer } from "@/components/navigation/footer";
 import { Providers } from "./providers";
+import { Suspense } from "react";
+import { PageSkeleton } from "@/components/ui/skeleton-loader";
 
 export const metadata: Metadata = {
   title: "Timeless - Deep Tech Platforms and Capabilities That Scale in the Real World",
@@ -19,7 +21,9 @@ export default function RootLayout({
       <body>
         <Providers>
           <Header />
-          <main>{children}</main>
+          <Suspense fallback={<PageSkeleton />}>
+            <main>{children}</main>
+          </Suspense>
           <Footer />
         </Providers>
       </body>
