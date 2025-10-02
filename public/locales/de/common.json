@@ -192,7 +192,15 @@
     "features": "Funktionen",
     "useCases": "Anwendungsfälle",
     "implementation": "Implementierung",
-    "getInTouch": "Kontakt aufnehmen"
+    "getInTouch": "Kontakt aufnehmen",
+    "objective": "Ziel",
+    "method": "Methode",
+    "evaluation": "Bewertung",
+    "artifact": "Artefakt",
+    "activeResearch": "Aktive Forschung",
+    "whitepaper": "Whitepaper",
+    "researchOverview": "Forschungsübersicht",
+    "backToResearch": "Zurück zur Forschung"
   },
   "pages": {
     "agenticSystems": {
@@ -371,6 +379,163 @@
         "description": "HIPAA-konforme KI-Systeme für Diagnostik, Patientenversorgung und operative Effizienz im Gesundheitswesen.",
         "breadcrumb": "Gesundheitswesen",
         "cta": "Starten Sie Ihre Gesundheits-KI-Reise →"
+      }
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Deep‑tech Plattformen und Produkte, die in der realen Welt skalieren",
+      "subtitle": "Wir erfinden, entwerfen und liefern Deep-Tech-Software und -Plattformen - agentische Systeme, Edge/Embedded und sichere Datenrückgrate. Wir integrieren, wo es wichtig ist, aber wir liefern primär. Unsere Teams kombinieren Forschung, KI und Engineering mit Governance und Sicherheit, um täglich in der Produktion zu laufen.",
+      "cta1": "Funktionen erkunden",
+      "cta2": "Forschung ansehen",
+      "cta3": "Verbinden"
+    }
+  },
+  "footer": {
+    "description": "Deep-Tech-Plattformen und -Produkte, die in der realen Welt skalieren. Wir bauen, betreiben und härten KI für Unternehmen.",
+    "email": "hello@timeless.dev",
+    "globalPresence": "Globale Präsenz an 12 Standorten",
+    "globalOffices": "Globale Büros",
+    "platform": "Plattform",
+    "company": "Unternehmen",
+    "contactSection": "Kontakt",
+    "contactMethods": {
+      "general": "Allgemeine Anfragen",
+      "partnerships": "Partnerschaften",
+      "research": "Forschung"
+    },
+    "offices": {
+      "northAmerica": "Nordamerika",
+      "northAmericaCities": "New York • San Francisco • Washington DC • Toronto",
+      "europe": "Europa",
+      "europeCities": "London • Stuttgart • Wien • Zürich • Pristina",
+      "middleEast": "Naher Osten",
+      "middleEastCities": "Riad • Abu Dhabi • Tel Aviv"
+    },
+    "legal": {
+      "privacy": "Datenschutzerklärung",
+      "terms": "Nutzungsbedingungen",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "copyright": "© 2024 Timeless. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "readMore": "Weiterlesen",
+    "getStarted": "Loslegen",
+    "contactUs": "Kontaktieren Sie uns",
+    "productionReady": "Produktionsbereit",
+    "researchPhase": "Forschungsphase",
+    "published": "Veröffentlicht",
+    "active": "Aktiv",
+    "overview": "Übersicht",
+    "benefits": "Vorteile",
+    "features": "Funktionen",
+    "useCases": "Anwendungsfälle",
+    "implementation": "Implementierung",
+    "getInTouch": "Kontakt aufnehmen",
+    "objective": "Ziel",
+    "method": "Methode",
+    "evaluation": "Bewertung",
+    "artifact": "Artefakt",
+    "activeResearch": "Aktive Forschung",
+    "whitepaper": "Whitepaper",
+    "researchOverview": "Forschungsübersicht",
+    "backToResearch": "Zurück zur Forschung"
+  },
+  "pages": {
+    "research": {
+      "agenticRAG": {
+        "title": "Agentic RAG",
+        "description": "Agenten, die Retrieval-Strategien nach Fragetyp und Kontext auswählen.",
+        "breadcrumb": "Agentic RAG",
+        "objective": "Agenten, die Retrieval-Strategien nach Fragetyp und Kontext auswählen.",
+        "method": "Query-Umschreibung, semantisches Routing und Verstärkung durch Benutzerfeedback zu Zitaten und Antworten.",
+        "evaluation": "Grundierungsqualität, Antwortensistenz und Routing-Präzision.",
+        "artifact": "Whitepaper und Demo, die den Ansatz validieren.",
+        "overview": "Unsere Forschung erkundet intelligente Retrieval-Augmented-Generation-Systeme, bei denen KI-Agenten autonom Retrieval-Strategien basierend auf Abfrage-Charakteristiken und kontextuellen Anforderungen auswählen und optimieren. Dieser Ansatz ermöglicht eine genauere, effizientere und kontextbewusste Informationsabrufung.",
+        "ctaTitle": "Interesse an Agentic RAG Forschung?",
+        "ctaSubtitle": "Erfahren Sie mehr über unsere Retrieval-Augmented-Generation-Forschung oder erkunden Sie Kooperationsmöglichkeiten.",
+        "ctaButton": "Dem Partnerprogramm beitreten →"
+      },
+      "onDeviceInference": {
+        "title": "On-device Inference",
+        "description": "Assistenten am Edge unter Leistungs- und Latenzeinschränkungen betreiben.",
+        "breadcrumb": "On-device Inference",
+        "objective": "Assistenten am Edge unter Leistungs- und Latenzeinschränkungen betreiben.",
+        "method": "Quantisierung, Destillation und Planung. Mixed Precision wo möglich.",
+        "evaluation": "Latenzbudgets, Batterieverbrauchsprofile und Genauigkeitsschwellen.",
+        "artifact": "Whitepaper und Demo, die den Ansatz validieren.",
+        "overview": "Wir erforschen die effiziente Bereitstellung von KI-Modellen auf Edge-Geräten und balancieren Leistung mit strengen Leistungs- und Latenzanforderungen. Unser Ansatz ermöglicht es, anspruchsvolle KI-Funktionen lokal auf ressourcenbeschränkter Hardware auszuführen, ohne die Benutzererfahrung zu beeinträchtigen.",
+        "ctaTitle": "Interesse an On-device Inference?",
+        "ctaSubtitle": "Erfahren Sie mehr über unsere Edge-KI-Forschung oder erkunden Sie Kooperationsmöglichkeiten.",
+        "ctaButton": "Dem Partnerprogramm beitreten →"
+      },
+      "digitalTwinsOps": {
+        "title": "Digital Twins für Ops",
+        "description": "Zwillingsmodelle nutzen, um Operationen und Entscheidungen voranzutreiben.",
+        "breadcrumb": "Digital Twins Ops",
+        "objective": "Zwillingsmodelle nutzen, um Operationen und Entscheidungen voranzutreiben.",
+        "method": "Telemetrie-Aufnahme, Zustandsschätzung und Was-wäre-wenn-Simulation. Agenten schlagen Aktionen mit Richtlinien vor.",
+        "evaluation": "Entscheidungslatenz, Genauigkeit im Vergleich zur Realität und Vertrauensmaße des Bedieners.",
+        "artifact": "Whitepaper und Demo, die den Ansatz validieren.",
+        "overview": "Unsere Forschung konzentriert sich auf Digital-Twin-Technologie für operative Entscheidungsfindung, die Echtzeit-Telemetrie mit prädiktiver Modellierung kombiniert. KI-Agenten nutzen diese virtuellen Repräsentationen, um Szenarien zu simulieren und optimale Maßnahmen für komplexe operative Umgebungen zu empfehlen.",
+        "ctaTitle": "Interesse an Digital Twins Forschung?",
+        "ctaSubtitle": "Erfahren Sie mehr über unsere operative KI-Forschung oder erkunden Sie Kooperationsmöglichkeiten.",
+        "ctaButton": "Dem Partnerprogramm beitreten →"
+      },
+      "llmObservability": {
+        "title": "LLM Observability",
+        "description": "Standardisierte Telemetrie und Regressionstests für KI-Stacks.",
+        "breadcrumb": "LLM Observability",
+        "objective": "Standardisierte Telemetrie und Regressionstests für KI-Stacks.",
+        "method": "Traces und Metriken speisen Dashboards. Goldene Sets und Shadow-Tests fangen Regressionen vor der Veröffentlichung ab.",
+        "evaluation": "Regressions-Erfassungsrate, mittlere Zeit zur Problemerkennung und Rollout-Sicherheit.",
+        "artifact": "Whitepaper und Demo, die den Ansatz validieren.",
+        "overview": "Wir entwickeln umfassende Observability-Frameworks für Large-Language-Model-Systeme, die Teams ermöglichen, KI-Anwendungen in der Produktion zu überwachen, zu debuggen und zu optimieren. Unser Ansatz kombiniert Echtzeit-Telemetrie mit automatisierter Regressionserkennung, um zuverlässige KI-Bereitstellungen sicherzustellen.",
+        "ctaTitle": "Interesse an LLM Observability?",
+        "ctaSubtitle": "Erfahren Sie mehr über unsere KI-Operations-Forschung oder erkunden Sie Kooperationsmöglichkeiten.",
+        "ctaButton": "Dem Partnerprogramm beitreten →"
+      },
+      "multimodalRealTime": {
+        "title": "Multimodal Real-time",
+        "description": "Text, Audio und Vision in Echtzeit verschmelzen.",
+        "breadcrumb": "Multimodal Real-time",
+        "objective": "Text, Audio und Vision in Echtzeit verschmelzen.",
+        "method": "Streaming-Pipelines, zeitlich ausgerichtete Aufmerksamkeit und Cache-Strategien.",
+        "evaluation": "End-to-End-Latenz, Erkennungsgenauigkeit und Robustheit gegenüber Rauschen.",
+        "artifact": "Whitepaper und Demo, die den Ansatz validieren.",
+        "overview": "Unsere Forschung adressiert die Herausforderung der Verarbeitung und Integration mehrerer Datenmodalitäten (Text, Audio, Vision) in Echtzeit. Wir entwickeln Streaming-Architekturen, die zeitliche Ausrichtung aufrechterhalten und niedrige Latenzantworten für interaktive multimodale Anwendungen liefern.",
+        "ctaTitle": "Interesse an Multimodaler KI?",
+        "ctaSubtitle": "Erfahren Sie mehr über unsere Echtzeit-Multimodalforschung oder erkunden Sie Kooperationsmöglichkeiten.",
+        "ctaButton": "Dem Partnerprogramm beitreten →"
+      },
+      "sovereignAI": {
+        "title": "Sovereign AI",
+        "description": "Regionale Compliance und Lokalität zu erstklassigen Eigenschaften machen.",
+        "breadcrumb": "Sovereign AI",
+        "objective": "Regionale Compliance und Lokalität zu erstklassigen Eigenschaften machen.",
+        "method": "Blaupausen für Residenz, private Endpunkte, Enclave-Ausführung und Audit-Protokollierung.",
+        "evaluation": "Residenz-Konformität und Ergebnisse der Sicherheitsüberprüfung.",
+        "artifact": "Whitepaper und Demo, die den Ansatz validieren.",
+        "overview": "Wir erforschen KI-Systeme, die für regionale Datensouveränität und regulatorische Compliance entwickelt wurden. Unser Framework ermöglicht es Organisationen, KI bereitzustellen und dabei die vollständige Kontrolle über Datenresidenz, Datenschutz und Compliance mit lokalen Vorschriften zu behalten.",
+        "ctaTitle": "Interesse an Sovereign AI?",
+        "ctaSubtitle": "Erfahren Sie mehr über unsere compliance-fokussierte KI-Forschung oder erkunden Sie Kooperationsmöglichkeiten.",
+        "ctaButton": "Dem Partnerprogramm beitreten →"
+      },
+      "trustlessModelSharing": {
+        "title": "Trustless Model Sharing",
+        "description": "Modelle und sensible Daten sicher austauschen.",
+        "breadcrumb": "Trustless Model Sharing",
+        "objective": "Modelle und sensible Daten sicher austauschen.",
+        "method": "Enclave-Ausführung, Verschlüsselungsstrategien und Datenschutzkontrollen. Zero-Knowledge-Beweise oder Attestierungen wo angemessen.",
+        "evaluation": "Richtlinien-Konformität, Leck-Tests und Audit-Trail-Qualität.",
+        "artifact": "Whitepaper und Demo, die den Ansatz validieren.",
+        "overview": "Unsere Forschung ermöglicht sichere Zusammenarbeit an KI-Modellen und sensiblen Daten, ohne Vertrauen zwischen den Parteien zu erfordern. Durch kryptografische Techniken und sichere Enklaven ermöglichen wir es Organisationen, KI-Fähigkeiten zu teilen und davon zu profitieren, während Datenschutz und Sicherheit gewahrt bleiben.",
+        "ctaTitle": "Interesse an sicherem KI-Sharing?",
+        "ctaSubtitle": "Erfahren Sie mehr über unsere datenschutzwahrende KI-Forschung oder erkunden Sie Kooperationsmöglichkeiten.",
+        "ctaButton": "Dem Partnerprogramm beitreten →"
       }
     }
   }

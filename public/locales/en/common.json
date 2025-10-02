@@ -593,6 +593,99 @@
         "breadcrumb": "Healthcare",
         "cta": "Start your healthcare AI journey →"
       }
+    },
+    "research": {
+      "agenticRAG": {
+        "title": "Agentic RAG",
+        "description": "Agents that select retrieval strategies by question type and context.",
+        "breadcrumb": "Agentic RAG",
+        "objective": "Agents that select retrieval strategies by question type and context.",
+        "method": "Query rewriting, semantic routing, and reinforcement from user feedback on citations and answers.",
+        "evaluation": "Grounding quality, answer consistency, and routing precision.",
+        "artifact": "Whitepaper and demo that validates the approach.",
+        "overview": "Our research explores intelligent retrieval-augmented generation systems where AI agents autonomously select and optimize retrieval strategies based on query characteristics and contextual requirements. This approach enables more accurate, efficient, and context-aware information retrieval.",
+        "ctaTitle": "Interested in Agentic RAG research?",
+        "ctaSubtitle": "Learn more about our retrieval-augmented generation research or explore collaboration opportunities.",
+        "ctaButton": "Join the partner program →"
+      },
+      "onDeviceInference": {
+        "title": "On-device Inference",
+        "description": "Run assistants on the edge under power and latency constraints.",
+        "breadcrumb": "On-device Inference",
+        "objective": "Run assistants on the edge under power and latency constraints.",
+        "method": "Quantization, distillation, and scheduling. Mixed precision where possible.",
+        "evaluation": "Latency budgets, battery consumption profiles, and accuracy thresholds.",
+        "artifact": "Whitepaper and demo that validates the approach.",
+        "overview": "We research efficient AI model deployment on edge devices, balancing performance with strict power and latency requirements. Our approach enables sophisticated AI capabilities to run locally on resource-constrained hardware without compromising user experience.",
+        "ctaTitle": "Interested in On-device Inference?",
+        "ctaSubtitle": "Learn more about our edge AI research or explore collaboration opportunities.",
+        "ctaButton": "Join the partner program →"
+      },
+      "digitalTwinsOps": {
+        "title": "Digital Twins for Ops",
+        "description": "Use twin models to drive operations and decisions.",
+        "breadcrumb": "Digital Twins Ops",
+        "objective": "Use twin models to drive operations and decisions.",
+        "method": "Telemetry ingestion, state estimation, and what if simulation. Agents propose actions with policies.",
+        "evaluation": "Decision latency, accuracy versus ground truth, and operator trust measures.",
+        "artifact": "Whitepaper and demo that validates the approach.",
+        "overview": "Our research focuses on digital twin technology for operational decision-making, combining real-time telemetry with predictive modeling. AI agents leverage these virtual representations to simulate scenarios and recommend optimal actions for complex operational environments.",
+        "ctaTitle": "Interested in Digital Twins research?",
+        "ctaSubtitle": "Learn more about our operational AI research or explore collaboration opportunities.",
+        "ctaButton": "Join the partner program →"
+      },
+      "llmObservability": {
+        "title": "LLM Observability",
+        "description": "Standardized telemetry and regression testing for AI stacks.",
+        "breadcrumb": "LLM Observability",
+        "objective": "Standardized telemetry and regression testing for AI stacks.",
+        "method": "Traces and metrics feed dashboards. Golden sets and shadow tests catch regressions before release.",
+        "evaluation": "Regression catch rate, mean time to detect issues, and rollout safety.",
+        "artifact": "Whitepaper and demo that validates the approach.",
+        "overview": "We develop comprehensive observability frameworks for large language model systems, enabling teams to monitor, debug, and optimize AI applications in production. Our approach combines real-time telemetry with automated regression detection to ensure reliable AI deployments.",
+        "ctaTitle": "Interested in LLM Observability?",
+        "ctaSubtitle": "Learn more about our AI operations research or explore collaboration opportunities.",
+        "ctaButton": "Join the partner program →"
+      },
+      "multimodalRealTime": {
+        "title": "Multimodal Real-time",
+        "description": "Fuse text, audio, and vision in real time.",
+        "breadcrumb": "Multimodal Real-time",
+        "objective": "Fuse text, audio, and vision in real time.",
+        "method": "Streaming pipelines, time aligned attention, and cache strategies.",
+        "evaluation": "End to end latency, recognition accuracy, and robustness to noise.",
+        "artifact": "Whitepaper and demo that validates the approach.",
+        "overview": "Our research addresses the challenge of processing and integrating multiple data modalities (text, audio, vision) in real-time. We develop streaming architectures that maintain temporal alignment and deliver low-latency responses for interactive multimodal applications.",
+        "ctaTitle": "Interested in Multimodal AI?",
+        "ctaSubtitle": "Learn more about our real-time multimodal research or explore collaboration opportunities.",
+        "ctaButton": "Join the partner program →"
+      },
+      "sovereignAI": {
+        "title": "Sovereign AI",
+        "description": "Make regional compliance and locality first class properties.",
+        "breadcrumb": "Sovereign AI",
+        "objective": "Make regional compliance and locality first class properties.",
+        "method": "Blueprints for residency, private endpoints, enclave execution, and audit logging.",
+        "evaluation": "Residency conformance and security review outcomes.",
+        "artifact": "Whitepaper and demo that validates the approach.",
+        "overview": "We research AI systems designed for regional data sovereignty and regulatory compliance. Our framework enables organizations to deploy AI while maintaining full control over data residency, privacy, and compliance with local regulations.",
+        "ctaTitle": "Interested in Sovereign AI?",
+        "ctaSubtitle": "Learn more about our compliance-focused AI research or explore collaboration opportunities.",
+        "ctaButton": "Join the partner program →"
+      },
+      "trustlessModelSharing": {
+        "title": "Trustless Model Sharing",
+        "description": "Exchange models and sensitive data safely.",
+        "breadcrumb": "Trustless Model Sharing",
+        "objective": "Exchange models and sensitive data safely.",
+        "method": "Enclave execution, encryption strategies, and privacy controls. Zero knowledge style proofs or attestations where appropriate.",
+        "evaluation": "Policy compliance, leakage tests, and audit trail quality.",
+        "artifact": "Whitepaper and demo that validates the approach.",
+        "overview": "Our research enables secure collaboration on AI models and sensitive data without requiring trust between parties. Using cryptographic techniques and secure enclaves, we allow organizations to share and benefit from AI capabilities while maintaining data privacy and security.",
+        "ctaTitle": "Interested in Secure AI Sharing?",
+        "ctaSubtitle": "Learn more about our privacy-preserving AI research or explore collaboration opportunities.",
+        "ctaButton": "Join the partner program →"
+      }
     }
   },
   "homepage": {
@@ -695,6 +788,14 @@
     "features": "Features",
     "useCases": "Use Cases",
     "implementation": "Implementation",
-    "getInTouch": "Get in touch"
+    "getInTouch": "Get in touch",
+    "objective": "Objective",
+    "method": "Method",
+    "evaluation": "Evaluation",
+    "artifact": "Artifact",
+    "activeResearch": "Active Research",
+    "whitepaper": "Whitepaper",
+    "researchOverview": "Research Overview",
+    "backToResearch": "Back to Research"
   }
 }
