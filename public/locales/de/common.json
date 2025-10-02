@@ -818,6 +818,54 @@
       "cta1": "Funktionen erkunden",
       "cta2": "Forschung ansehen",
       "cta3": "Verbinden"
+    },
+    "features": {
+      "title": "WAS WIR FÜR SIE BETREIBEN",
+      "subtitle": "Produktionsreife Systeme, die vom ersten Tag an Wert liefern. Jede Komponente getestet, überwacht und für den realen Einsatz optimiert.",
+      "production": {
+        "title": "Production-First-Ansatz",
+        "description": "Gemeinsame KPIs für Zuverlässigkeit, Sicherheit und Wertrealisierung. Wir bauen Systeme, die in der realen Welt funktionieren, nicht nur Demos."
+      },
+      "evaluation": {
+        "title": "Kontinuierliche Bewertung",
+        "description": "Sichere Release-Praktiken, die Regressionen reduzieren, bevor sie Benutzer erreichen. Jede Änderung wird getestet und validiert."
+      },
+      "observability": {
+        "title": "Vollständige Observability",
+        "description": "Abstammung für Modelle, Prompts, Daten und Agentenaktionen über den gesamten Stack. Wissen Sie, was auf jeder Ebene passiert."
+      },
+      "security": {
+        "title": "Sicherheitsmuster für GenAI",
+        "description": "Schützen Sie Systeme vor bekannten Angriffsvektoren und riskantem Tool-Einsatz. Defense in Depth für KI-Systeme."
+      }
+    },
+    "capabilities": {
+      "title": "Funktionen im Überblick",
+      "subtitle": "Einige der Bausteine, die wir am häufigsten verwenden - jeder mit eigener ausführlicher Seite und Referenzmustern. Dies sind keine theoretischen Frameworks; sie sind im Kampf erprobte Komponenten, die in der Produktion laufen.",
+      "cta": "Alle Funktionen anzeigen",
+      "description": "Produktionsreife Implementierung mit realen Fallstudien und Bereitstellungsmustern."
+    },
+    "industries": {
+      "title": "Branchen",
+      "subtitle": "Wo wir die Plattformen und Fähigkeiten anwenden - Produktionsprogramme, keine Demos. Jede Seite listet hochwertige Anwendungsfälle, Compliance-Hinweise und Schritte zur Skalierung auf. Echte Implementierungen mit messbaren Ergebnissen.",
+      "cta": "Alle Branchen anzeigen",
+      "description": "Bewährte Implementierungen mit Compliance-Frameworks und Skalierbarkeitsmustern."
+    },
+    "global": {
+      "title": "Wo wir tätig sind",
+      "subtitle": "Globale Präsenz mit lokaler Expertise. Unsere verteilten Teams gewährleisten 24/7-Abdeckung und tiefes Marktverständnis.",
+      "locations": {
+        "northAmerica": "Nordamerika",
+        "europe": "Europa",
+        "middleEast": "Naher Osten"
+      },
+      "sovereign": "Unterstützte souveräne Modelle: EU · US · KSA"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Kurzer Weg von der Idee zur Produktion",
+      "description": "Ein Team. Globale Lieferung. Echte Systeme, die funktionieren. Lassen Sie uns etwas bauen, das zählt.",
+      "cta": "Kontaktieren Sie uns"
     }
   },
   "footer": {
