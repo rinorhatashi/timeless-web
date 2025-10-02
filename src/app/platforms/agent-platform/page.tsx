@@ -1,4 +1,7 @@
+"use client"
+
 import { PageLayout, Section } from '@/components/ui/page-layout'
+import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import { ArrowRight, Users, Brain, Shield, Zap, CheckCircle, GitBranch, Settings } from 'lucide-react'
 
@@ -79,13 +82,15 @@ const benefits = [
 ]
 
 export default function AgentPlatformPage() {
+  const { t } = useI18n()
+  
   return (
     <PageLayout
-      title="Agent Platform"
-      description="Multi-agent orchestration platform for coordinated AI automation with human oversight."
+      title={t('pages.agentPlatform.title')}
+      description={t('pages.agentPlatform.description')}
       breadcrumbs={[
-        { label: 'Platforms', href: '/platforms' },
-        { label: 'Agent Platform', href: '/platforms/agent-platform' }
+        { label: t('navigation.platforms'), href: '/platforms' },
+        { label: t('pages.agentPlatform.breadcrumb'), href: '/platforms/agent-platform' }
       ]}
     >
       <Section

@@ -1,4 +1,7 @@
+"use client"
+
 import { PageLayout, Section } from '@/components/ui/page-layout'
+import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import { ArrowRight, Database, Search, Brain, Zap, CheckCircle, FileText, Network, Settings } from 'lucide-react'
 
@@ -79,13 +82,15 @@ const architecture = [
 ]
 
 export default function RAGOrchestratorPage() {
+  const { t } = useI18n()
+  
   return (
     <PageLayout
-      title="RAG Orchestrator"
-      description="Enterprise-grade retrieval-augmented generation platform for knowledge-driven AI applications."
+      title={t('pages.ragOrchestrator.title')}
+      description={t('pages.ragOrchestrator.description')}
       breadcrumbs={[
-        { label: 'Platforms', href: '/platforms' },
-        { label: 'RAG Orchestrator', href: '/platforms/rag-orchestrator' }
+        { label: t('navigation.platforms'), href: '/platforms' },
+        { label: t('pages.ragOrchestrator.breadcrumb'), href: '/platforms/rag-orchestrator' }
       ]}
     >
       <Section

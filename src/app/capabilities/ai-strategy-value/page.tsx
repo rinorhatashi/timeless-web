@@ -1,13 +1,18 @@
+"use client"
+
 import { PageLayout, Section, Card, TimelinePhase } from '@/components/ui/page-layout'
+import { useI18n } from '@/lib/i18n/context'
 
 export default function AIStrategyValuePage() {
+  const { t } = useI18n()
+  
   return (
     <PageLayout
-      title="AI Strategy & Value"
-      description="Value trees tied to business architecture, fundable roadmaps, and KPI models that prove ROI as systems ship-no theater."
+      title={t('pages.aiStrategy.title')}
+      description={t('pages.aiStrategy.description')}
       breadcrumbs={[
-        { label: 'Capabilities', href: '/capabilities' },
-        { label: 'AI Strategy & Value', href: '/capabilities/ai-strategy-value' }
+        { label: t('navigation.capabilities'), href: '/capabilities' },
+        { label: t('pages.aiStrategy.breadcrumb'), href: '/capabilities/ai-strategy-value' }
       ]}
     >
       <Section

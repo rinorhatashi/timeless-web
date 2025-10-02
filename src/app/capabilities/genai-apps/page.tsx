@@ -1,4 +1,7 @@
+"use client"
+
 import { PageLayout, Section } from '@/components/ui/page-layout'
+import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import { ArrowRight, Zap, Shield, Code, Cpu, CheckCircle } from 'lucide-react'
 
@@ -56,13 +59,15 @@ const benefits = [
 ]
 
 export default function GenAIAppsPage() {
+  const { t } = useI18n()
+  
   return (
     <PageLayout
-      title="GenAI Applications"
-      description="Custom generative AI applications built for enterprise scale and compliance."
+      title={t('pages.genaiApps.title')}
+      description={t('pages.genaiApps.description')}
       breadcrumbs={[
-        { label: 'Capabilities', href: '/capabilities' },
-        { label: 'GenAI Applications', href: '/capabilities/genai-apps' }
+        { label: t('navigation.capabilities'), href: '/capabilities' },
+        { label: t('pages.genaiApps.breadcrumb'), href: '/capabilities/genai-apps' }
       ]}
     >
       <Section
