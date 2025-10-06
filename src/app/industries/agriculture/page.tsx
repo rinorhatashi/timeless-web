@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Wheat, Droplet, Eye, TrendingUp, CheckCircle, Shield, BarChart3, Globe } from 'lucide-react'
 
 const AgriculturePageContent = () => {
@@ -98,6 +99,19 @@ const AgriculturePageContent = () => {
         { label: t('pages.industries.agriculture.breadcrumb'), href: '/industries/agriculture' }
       ]}
     >
+      {/* Hero Image - 16:9 */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/agriculture-hero.jpg"
+            alt="Modern farm field with organized crop rows and agricultural landscape"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from AI-powered precision agriculture systems in production"
@@ -123,23 +137,34 @@ const AgriculturePageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Agriculture AI Implementation</h2>
-          <p>
-            We integrate satellite/drone imagery, in-field sensors, and machinery telemetry into 
-            a digital twin of fields and assets. Planners generate zone prescriptions and task 
-            schedules that balance yield, input cost, and water constraints with weather windows 
-            and labor availability.
-          </p>
-          <p>
-            Processing facilities use computer vision for grading and contamination detection 
-            with closed-loop adjustments to upstream parameters. Supply signals and storage 
-            constraints feed dispatch decisions and marketplace integration for better realizations.
-          </p>
-          <p>
-            Sustainability is MRV-ready: activity data and models feed carbon programs and 
-            disclosures, with chain-of-custody across suppliers and lots.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Agriculture AI Implementation</h2>
+            <p>
+              We integrate satellite/drone imagery, in-field sensors, and machinery telemetry into 
+              a digital twin of fields and assets. Planners generate zone prescriptions and task 
+              schedules that balance yield, input cost, and water constraints with weather windows 
+              and labor availability.
+            </p>
+            <p>
+              Processing facilities use computer vision for grading and contamination detection 
+              with closed-loop adjustments to upstream parameters. Supply signals and storage 
+              constraints feed dispatch decisions and marketplace integration for better realizations.
+            </p>
+            <p>
+              Sustainability is MRV-ready: activity data and models feed carbon programs and 
+              disclosures, with chain-of-custody across suppliers and lots.
+            </p>
+          </div>
+          {/* Drone Monitoring Image - 16:9 */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            <Image
+              src="/agriculture-drone-monitoring.jpg"
+              alt="Farmer using drone technology to monitor crop fields for precision agriculture"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -147,6 +172,16 @@ const AgriculturePageContent = () => {
         title="AI-Powered Agriculture Solutions"
         description="Transform farming operations with AI systems designed for precision, efficiency, and sustainability"
       >
+        {/* Agricultural Equipment Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/agriculture-equipment.jpg"
+            alt="Modern agricultural machinery with GPS and monitoring technology in farm field"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -192,6 +227,16 @@ const AgriculturePageContent = () => {
       </Section>
 
       <Section>
+        {/* Quality Grading Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/agriculture-quality-grading.jpg"
+            alt="Agricultural produce quality inspection and grading at processing facility"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">

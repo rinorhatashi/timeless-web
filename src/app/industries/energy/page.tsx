@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Zap, Wind, Battery, LineChart, CheckCircle, Shield, BarChart3, Activity } from 'lucide-react'
 
 const EnergyPageContent = () => {
@@ -90,6 +91,19 @@ const EnergyPageContent = () => {
         { label: t('pages.industries.energy.breadcrumb'), href: '/industries/energy' }
       ]}
     >
+      {/* Hero Image - 16:9 */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/energy-hero.jpg"
+            alt="Solar farm with wind turbines renewable energy infrastructure"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from AI-powered energy systems in production"
@@ -109,23 +123,34 @@ const EnergyPageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Energy AI Transformation</h2>
-          <p>
-            We build AI systems that optimize energy generation, distribution, and consumption. 
-            Our platforms integrate real-time data from sensors, weather forecasts, and market 
-            signals to make intelligent decisions that balance efficiency, reliability, and cost.
-          </p>
-          <p>
-            For renewable energy, our forecasting models predict solar and wind generation with 
-            high accuracy, enabling better grid integration and reducing curtailment. Predictive 
-            maintenance systems monitor critical infrastructure and prevent costly downtime.
-          </p>
-          <p>
-            Smart grid solutions optimize load balancing, demand response, and energy storage 
-            to ensure stable operations while maximizing renewable energy utilization and 
-            minimizing carbon emissions.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Energy AI Transformation</h2>
+            <p>
+              We build AI systems that optimize energy generation, distribution, and consumption. 
+              Our platforms integrate real-time data from sensors, weather forecasts, and market 
+              signals to make intelligent decisions that balance efficiency, reliability, and cost.
+            </p>
+            <p>
+              For renewable energy, our forecasting models predict solar and wind generation with 
+              high accuracy, enabling better grid integration and reducing curtailment. Predictive 
+              maintenance systems monitor critical infrastructure and prevent costly downtime.
+            </p>
+            <p>
+              Smart grid solutions optimize load balancing, demand response, and energy storage 
+              to ensure stable operations while maximizing renewable energy utilization and 
+              minimizing carbon emissions.
+            </p>
+          </div>
+          {/* Grid Control Image - 16:9 */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            <Image
+              src="/energy-grid-control.jpg"
+              alt="Energy grid control room with operators monitoring power systems"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -133,6 +158,16 @@ const EnergyPageContent = () => {
         title="AI-Powered Energy Solutions"
         description="Transform energy operations with production-ready AI systems"
       >
+        {/* Field Maintenance Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/energy-field-maintenance.jpg"
+            alt="Field technician inspecting solar panels during maintenance operations"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -178,6 +213,16 @@ const EnergyPageContent = () => {
       </Section>
 
       <Section>
+        {/* Wind Monitoring Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/energy-wind-monitoring.jpg"
+            alt="Wind energy engineer monitoring turbine performance with laptop in field"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">

@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Laptop, Code, Rocket, Settings, CheckCircle, Shield, Zap, Database } from 'lucide-react'
 
 const HighTechPageContent = () => {
@@ -90,6 +91,19 @@ const HighTechPageContent = () => {
         { label: t('pages.industries.highTech.breadcrumb'), href: '/industries/high-tech' }
       ]}
     >
+      {/* Hero Image - 16:9 */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/high-tech-hero.jpg"
+            alt="Modern tech company office with software engineers working collaboratively"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from high-tech AI implementations in production"
@@ -109,23 +123,34 @@ const HighTechPageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>High-Tech AI Transformation</h2>
-          <p>
-            We build the platforms and infrastructure that power the next generation of technology 
-            companies. Our systems help engineering teams ship faster, scale more efficiently, 
-            and maintain high reliability in production.
-          </p>
-          <p>
-            From developer productivity tools to AI acceleration platforms, we provide the 
-            foundation for innovation. Our platform engineering approach ensures that internal 
-            tools are as polished as external products.
-          </p>
-          <p>
-            We focus on developer experience, operational excellence, and security by default. 
-            Every platform we build includes comprehensive observability, automated compliance, 
-            and self-service capabilities that empower teams.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>High-Tech AI Transformation</h2>
+            <p>
+              We build the platforms and infrastructure that power the next generation of technology 
+              companies. Our systems help engineering teams ship faster, scale more efficiently, 
+              and maintain high reliability in production.
+            </p>
+            <p>
+              From developer productivity tools to AI acceleration platforms, we provide the 
+              foundation for innovation. Our platform engineering approach ensures that internal 
+              tools are as polished as external products.
+            </p>
+            <p>
+              We focus on developer experience, operational excellence, and security by default. 
+              Every platform we build includes comprehensive observability, automated compliance, 
+              and self-service capabilities that empower teams.
+            </p>
+          </div>
+          {/* Code Review Image - 16:9 */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            <Image
+              src="/high-tech-code-review.jpg"
+              alt="Engineering team conducting code review session with collaborative development"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -133,6 +158,16 @@ const HighTechPageContent = () => {
         title="AI-Powered Platform Solutions"
         description="Transform engineering operations with production-ready platforms"
       >
+        {/* Infrastructure Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/high-tech-infrastructure.jpg"
+            alt="DevOps engineer monitoring cloud infrastructure and system dashboards"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -178,6 +213,16 @@ const HighTechPageContent = () => {
       </Section>
 
       <Section>
+        {/* Team Meeting Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/high-tech-team-meeting.jpg"
+            alt="Product team in collaborative planning meeting with sprint board and roadmap"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">

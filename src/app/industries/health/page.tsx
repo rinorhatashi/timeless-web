@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Heart, Shield, FileText, Users, CheckCircle, BarChart3, Clock, Brain } from 'lucide-react'
 
 const HealthcarePageContent = () => {
@@ -94,6 +95,19 @@ const HealthcarePageContent = () => {
         { label: t('pages.industries.healthcare.breadcrumb'), href: '/industries/health' }
       ]}
     >
+      {/* Hero Image - 16:9 */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/health-hero.jpg"
+            alt="Healthcare professionals in modern clinical hospital setting"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="AI-Powered Healthcare Solutions"
         description="Transform healthcare delivery with AI systems designed for clinical excellence, patient safety, and regulatory compliance."
@@ -143,6 +157,16 @@ const HealthcarePageContent = () => {
       </Section>
 
       <Section>
+        {/* Medical Imaging Image - 16:9 */}
+        <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/health-medical-imaging.jpg"
+            alt="Doctor reviewing medical images and diagnostics on computer workstation"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="content-prose">
           <h2>Healthcare AI Implementation</h2>
           <p>
@@ -201,6 +225,16 @@ const HealthcarePageContent = () => {
       </Section>
 
       <Section>
+        {/* Patient Care Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/health-patient-care.jpg"
+            alt="Doctor consulting with patient during medical examination"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">
@@ -231,6 +265,16 @@ const HealthcarePageContent = () => {
       </Section>
 
       <Section variant="alt">
+        {/* EHR Documentation Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/health-ehr-documentation.jpg"
+            alt="Healthcare professional using electronic health records system for clinical documentation"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="content-prose">
           <h2>Implementation Approach</h2>
           <p>

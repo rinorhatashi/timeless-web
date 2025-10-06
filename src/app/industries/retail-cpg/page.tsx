@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ShoppingBag, Users, TrendingUp, Package, CheckCircle, Shield, BarChart3, Sparkles } from 'lucide-react'
 
 const RetailCPGPageContent = () => {
@@ -90,6 +91,19 @@ const RetailCPGPageContent = () => {
         { label: t('pages.industries.retailCPG.breadcrumb'), href: '/industries/retail-cpg' }
       ]}
     >
+      {/* Hero Image - 16:9 */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/retail-cpg-hero.jpg"
+            alt="Modern retail store with AI-powered smart shelves and digital displays"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from retail AI implementations in production"
@@ -109,24 +123,35 @@ const RetailCPGPageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Retail AI Transformation</h2>
-          <p>
-            We build AI systems that transform retail operations from customer-facing experiences 
-            to backend supply chain management. Our solutions help retailers deliver personalized 
-            experiences, optimize inventory, and operate more efficiently.
-          </p>
-          <p>
-            Personalization engines analyze customer behavior, preferences, and context to deliver 
-            tailored product recommendations and marketing messages. Demand forecasting models 
-            predict future sales with high accuracy, enabling optimal inventory levels and 
-            reducing waste.
-          </p>
-          <p>
-            Supply chain optimization systems provide end-to-end visibility and intelligent 
-            decision-making across procurement, warehousing, and distribution. Customer analytics 
-            platforms help retailers understand behavior, predict churn, and maximize lifetime value.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Retail AI Transformation</h2>
+            <p>
+              We build AI systems that transform retail operations from customer-facing experiences 
+              to backend supply chain management. Our solutions help retailers deliver personalized 
+              experiences, optimize inventory, and operate more efficiently.
+            </p>
+            <p>
+              Personalization engines analyze customer behavior, preferences, and context to deliver 
+              tailored product recommendations and marketing messages. Demand forecasting models 
+              predict future sales with high accuracy, enabling optimal inventory levels and 
+              reducing waste.
+            </p>
+            <p>
+              Supply chain optimization systems provide end-to-end visibility and intelligent 
+              decision-making across procurement, warehousing, and distribution. Customer analytics 
+              platforms help retailers understand behavior, predict churn, and maximize lifetime value.
+            </p>
+          </div>
+          {/* Warehouse Image - 16:9 */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            <Image
+              src="/retail-cpg-inventory-warehouse.jpg"
+              alt="Smart warehouse with automated inventory management and AI-powered systems"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -134,6 +159,16 @@ const RetailCPGPageContent = () => {
         title="AI-Powered Retail Solutions"
         description="Transform retail operations with production-ready AI systems"
       >
+        {/* Customer Experience Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/retail-cpg-customer-experience.jpg"
+            alt="Personalized retail shopping experience with AI-powered recommendations"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -179,6 +214,16 @@ const RetailCPGPageContent = () => {
       </Section>
 
       <Section>
+        {/* Analytics Center Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/retail-cpg-analytics-center.jpg"
+            alt="Retail analytics operations center with demand forecasting and customer insights"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">

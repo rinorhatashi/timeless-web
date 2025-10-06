@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Radio, Network, Users, CheckCircle, Shield, BarChart3, Zap } from 'lucide-react'
 
 const TelcoMediaPageContent = () => {
@@ -90,6 +91,19 @@ const TelcoMediaPageContent = () => {
         { label: t('pages.industries.telcoMedia.breadcrumb'), href: '/industries/telco-media' }
       ]}
     >
+      {/* Hero Image */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/telco-media-hero.jpg"
+            alt="Modern telecommunications network operations center with 5G monitoring systems"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from telecom and media AI implementations"
@@ -109,23 +123,33 @@ const TelcoMediaPageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Telecom & Media AI Transformation</h2>
-          <p>
-            We build AI systems that transform telecommunications and media operations—from network 
-            optimization to content delivery. Our solutions help providers deliver better service, 
-            reduce churn, and operate more efficiently in competitive markets.
-          </p>
-          <p>
-            Network optimization systems use AI to predict demand, optimize routing, and prevent 
-            issues before they impact customers. Customer analytics platforms identify at-risk 
-            subscribers and enable targeted retention strategies.
-          </p>
-          <p>
-            For media companies, our content intelligence systems personalize recommendations, 
-            optimize delivery, and automate moderation. Infrastructure optimization ensures 
-            reliable, high-performance delivery of streaming and real-time services.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Telecom & Media AI Transformation</h2>
+            <p>
+              We build AI systems that transform telecommunications and media operations—from network 
+              optimization to content delivery. Our solutions help providers deliver better service, 
+              reduce churn, and operate more efficiently in competitive markets.
+            </p>
+            <p>
+              Network optimization systems use AI to predict demand, optimize routing, and prevent 
+              issues before they impact customers. Customer analytics platforms identify at-risk 
+              subscribers and enable targeted retention strategies.
+            </p>
+            <p>
+              For media companies, our content intelligence systems personalize recommendations, 
+              optimize delivery, and automate moderation. Infrastructure optimization ensures 
+              reliable, high-performance delivery of streaming and real-time services.
+            </p>
+          </div>
+          <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
+            <Image
+              src="/telco-media-5g-infrastructure.jpg"
+              alt="5G telecommunications infrastructure with advanced antenna arrays and network equipment"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -133,6 +157,16 @@ const TelcoMediaPageContent = () => {
         title="AI-Powered Telecom Solutions"
         description="Transform telecommunications and media with production-ready AI"
       >
+        {/* Customer Service Image */}
+        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/telco-media-customer-service.jpg"
+            alt="AI-powered customer service center with modern support interfaces and analytics"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -178,6 +212,16 @@ const TelcoMediaPageContent = () => {
       </Section>
 
       <Section>
+        {/* Content Streaming Image */}
+        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/telco-media-content-streaming.jpg"
+            alt="Media streaming content operations center with AI-powered recommendation systems"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">

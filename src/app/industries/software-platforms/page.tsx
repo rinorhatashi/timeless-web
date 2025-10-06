@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Cloud, Code, Database, Zap, CheckCircle, Shield, Layers, GitBranch } from 'lucide-react'
 
 const SoftwarePlatformsPageContent = () => {
@@ -90,6 +91,19 @@ const SoftwarePlatformsPageContent = () => {
         { label: t('pages.industries.softwarePlatforms.breadcrumb'), href: '/industries/software-platforms' }
       ]}
     >
+      {/* Hero Image - 16:9 */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/software-platforms-hero.jpg"
+            alt="Software development team collaborating in modern tech office"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from software platform implementations"
@@ -109,24 +123,35 @@ const SoftwarePlatformsPageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Software Platform Transformation</h2>
-          <p>
-            We build modern software platforms that enable businesses to scale, innovate, and 
-            compete in digital markets. Our platforms are designed for cloud-native deployment, 
-            with comprehensive APIs, developer tools, and operational excellence built in.
-          </p>
-          <p>
-            From SaaS platforms to internal developer platforms, we focus on architecture that 
-            scales, developer experience that accelerates shipping, and operational practices 
-            that ensure reliability. Every platform includes comprehensive observability, 
-            security, and automation.
-          </p>
-          <p>
-            We leverage AI to enhance platform capabilities—from intelligent search and 
-            recommendations to automated operations and predictive analytics. Our platforms 
-            are built to evolve with your business needs while maintaining stability and performance.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Software Platform Transformation</h2>
+            <p>
+              We build modern software platforms that enable businesses to scale, innovate, and 
+              compete in digital markets. Our platforms are designed for cloud-native deployment, 
+              with comprehensive APIs, developer tools, and operational excellence built in.
+            </p>
+            <p>
+              From SaaS platforms to internal developer platforms, we focus on architecture that 
+              scales, developer experience that accelerates shipping, and operational practices 
+              that ensure reliability. Every platform includes comprehensive observability, 
+              security, and automation.
+            </p>
+            <p>
+              We leverage AI to enhance platform capabilities—from intelligent search and 
+              recommendations to automated operations and predictive analytics. Our platforms 
+              are built to evolve with your business needs while maintaining stability and performance.
+            </p>
+          </div>
+          {/* Developer Coding Image - 16:9 */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            <Image
+              src="/software-platforms-developer-coding.jpg"
+              alt="Software developer writing code on laptop in real office environment"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -134,6 +159,16 @@ const SoftwarePlatformsPageContent = () => {
         title="Software Platform Solutions"
         description="Transform your software capabilities with modern platform architecture"
       >
+        {/* DevOps Monitoring Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/software-platforms-devops-monitoring.jpg"
+            alt="DevOps engineer monitoring cloud infrastructure in real office setting"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -179,6 +214,16 @@ const SoftwarePlatformsPageContent = () => {
       </Section>
 
       <Section>
+        {/* API Development Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/software-platforms-api-development.jpg"
+            alt="Software engineers reviewing API documentation and testing in meeting room"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">

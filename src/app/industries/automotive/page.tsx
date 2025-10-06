@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Car, Cpu, Wrench, Shield, CheckCircle, BarChart3, Clock, Zap } from 'lucide-react'
 
 const AutomotivePageContent = () => {
@@ -90,6 +91,19 @@ const AutomotivePageContent = () => {
         { label: t('pages.industries.automotive.breadcrumb'), href: '/industries/automotive' }
       ]}
     >
+      {/* Hero Image */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/automotive-hero.jpg"
+            alt="Modern automotive manufacturing facility with electric vehicles and automated systems"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from automotive AI implementations in production"
@@ -109,24 +123,34 @@ const AutomotivePageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Automotive AI Transformation</h2>
-          <p>
-            Automotive leaders win by turning software investment into shippable, safe features. 
-            We focus on SDV pipelines (requirements→code→tests), manufacturing quality (vision 
-            and anomaly detection), resilient supply chains, and lifecycle services that monetize 
-            the vehicle beyond the sale.
-          </p>
-          <p>
-            Our approach: align architecture with safety cases, build golden datasets, stand up 
-            CI/CD for models and embedded code, and enable OTA risk controls. The result is faster 
-            feature velocity, fewer escapes, and lower service cost—without compromising safety.
-          </p>
-          <p>
-            On the factory floor, computer vision and closed-loop analytics improve first-pass 
-            yield and traceability. In-field, fleet diagnostics copilots triage telemetry, propose 
-            remote fixes, and prevent recalls through early signal detection.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Automotive AI Transformation</h2>
+            <p>
+              Automotive leaders win by turning software investment into shippable, safe features. 
+              We focus on SDV pipelines (requirements→code→tests), manufacturing quality (vision 
+              and anomaly detection), resilient supply chains, and lifecycle services that monetize 
+              the vehicle beyond the sale.
+            </p>
+            <p>
+              Our approach: align architecture with safety cases, build golden datasets, stand up 
+              CI/CD for models and embedded code, and enable OTA risk controls. The result is faster 
+              feature velocity, fewer escapes, and lower service cost—without compromising safety.
+            </p>
+            <p>
+              On the factory floor, computer vision and closed-loop analytics improve first-pass 
+              yield and traceability. In-field, fleet diagnostics copilots triage telemetry, propose 
+              remote fixes, and prevent recalls through early signal detection.
+            </p>
+          </div>
+          <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
+            <Image
+              src="/automotive-autonomous-sdv.jpg"
+              alt="Autonomous vehicle testing with advanced sensor arrays and AI systems"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -134,6 +158,16 @@ const AutomotivePageContent = () => {
         title="AI-Powered Automotive Solutions"
         description="Transform automotive development and operations with production-ready AI systems"
       >
+        {/* Quality Control Image */}
+        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/automotive-quality-control.jpg"
+            alt="AI-powered quality inspection system in automotive manufacturing"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -179,6 +213,16 @@ const AutomotivePageContent = () => {
       </Section>
 
       <Section>
+        {/* Fleet Diagnostics Image */}
+        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/automotive-fleet-diagnostics.jpg"
+            alt="Modern fleet management control center with real-time vehicle diagnostics"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">

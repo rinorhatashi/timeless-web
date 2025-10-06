@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Factory, Wrench, Eye, TrendingUp, CheckCircle, Shield, BarChart3, Package } from 'lucide-react'
 
 const IndustrialPageContent = () => {
@@ -109,6 +110,19 @@ const IndustrialPageContent = () => {
         { label: t('pages.industries.industrial.breadcrumb'), href: '/industries/industrial' }
       ]}
     >
+      {/* Hero Image */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/industrial-hero.jpg"
+            alt="Modern smart factory floor with AI-powered systems"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from manufacturing AI implementations in production"
@@ -128,23 +142,33 @@ const IndustrialPageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Manufacturing AI Transformation</h2>
-          <p>
-            We build AI systems that transform manufacturing operations through predictive 
-            maintenance, quality automation, and production optimization. Our platforms integrate 
-            with existing MES, ERP, and SCADA systems to provide actionable insights in real-time.
-          </p>
-          <p>
-            Computer vision systems inspect products at line speed, detecting defects that human 
-            inspectors might miss. Predictive maintenance models analyze sensor data to forecast 
-            equipment failures days or weeks in advance, enabling proactive maintenance scheduling.
-          </p>
-          <p>
-            Production optimization algorithms continuously adjust process parameters to maximize 
-            output, minimize waste, and reduce energy consumption. Supply chain intelligence 
-            systems forecast demand and optimize inventory levels across the value chain.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Manufacturing AI Transformation</h2>
+            <p>
+              We build AI systems that transform manufacturing operations through predictive 
+              maintenance, quality automation, and production optimization. Our platforms integrate 
+              with existing MES, ERP, and SCADA systems to provide actionable insights in real-time.
+            </p>
+            <p>
+              Computer vision systems inspect products at line speed, detecting defects that human 
+              inspectors might miss. Predictive maintenance models analyze sensor data to forecast 
+              equipment failures days or weeks in advance, enabling proactive maintenance scheduling.
+            </p>
+            <p>
+              Production optimization algorithms continuously adjust process parameters to maximize 
+              output, minimize waste, and reduce energy consumption. Supply chain intelligence 
+              systems forecast demand and optimize inventory levels across the value chain.
+            </p>
+          </div>
+          <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
+            <Image
+              src="/industrial-predictive-maintenance.jpg"
+              alt="Industrial equipment with condition monitoring sensors and predictive analytics"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -152,6 +176,16 @@ const IndustrialPageContent = () => {
         title="AI-Powered Manufacturing Solutions"
         description="Transform industrial operations with production-ready AI systems"
       >
+        {/* Quality Control Image */}
+        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/industrial-quality-control.jpg"
+            alt="AI-powered quality inspection station with vision system"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon

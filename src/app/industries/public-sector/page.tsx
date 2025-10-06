@@ -4,6 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Landmark, Users, Shield, FileText, CheckCircle, Lock, Database, Activity } from 'lucide-react'
 
 const PublicSectorPageContent = () => {
@@ -109,6 +110,19 @@ const PublicSectorPageContent = () => {
         { label: t('pages.industries.publicSector.breadcrumb'), href: '/industries/public-sector' }
       ]}
     >
+      {/* Hero Image - 16:9 */}
+      <Section>
+        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="/public-sector-hero.jpg"
+            alt="Modern government agency office with professional public service environment"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </Section>
+
       <Section
         title="Industry Impact Metrics"
         description="Real results from public sector AI implementations"
@@ -128,24 +142,35 @@ const PublicSectorPageContent = () => {
       </Section>
 
       <Section variant="alt">
-        <div className="content-prose">
-          <h2>Public Sector AI Transformation</h2>
-          <p>
-            We build AI systems that modernize government operations while maintaining the highest 
-            standards of security, transparency, and accountability. Our solutions help agencies 
-            deliver better services to citizens, make data-driven policy decisions, and operate 
-            more efficiently.
-          </p>
-          <p>
-            Every system we build for government meets or exceeds federal security and compliance 
-            requirements. We design with transparency and explainability from the ground up, ensuring 
-            that AI decisions can be audited and explained to stakeholders.
-          </p>
-          <p>
-            From citizen-facing services to internal operations, we help government agencies 
-            leverage AI to improve outcomes while protecting privacy, ensuring fairness, and 
-            maintaining public trust.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="content-prose">
+            <h2>Public Sector AI Transformation</h2>
+            <p>
+              We build AI systems that modernize government operations while maintaining the highest 
+              standards of security, transparency, and accountability. Our solutions help agencies 
+              deliver better services to citizens, make data-driven policy decisions, and operate 
+              more efficiently.
+            </p>
+            <p>
+              Every system we build for government meets or exceeds federal security and compliance 
+              requirements. We design with transparency and explainability from the ground up, ensuring 
+              that AI decisions can be audited and explained to stakeholders.
+            </p>
+            <p>
+              From citizen-facing services to internal operations, we help government agencies 
+              leverage AI to improve outcomes while protecting privacy, ensuring fairness, and 
+              maintaining public trust.
+            </p>
+          </div>
+          {/* Citizen Service Image - 16:9 */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            <Image
+              src="/public-sector-citizen-service.jpg"
+              alt="Government caseworker assisting citizen with services and benefits application"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
 
@@ -153,6 +178,16 @@ const PublicSectorPageContent = () => {
         title="AI-Powered Government Solutions"
         description="Transform public sector operations with compliant, secure AI systems"
       >
+        {/* Emergency Operations Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/public-sector-emergency-operations.jpg"
+            alt="Government emergency operations center coordinating public safety response"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="grid-2">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon
@@ -220,6 +255,16 @@ const PublicSectorPageContent = () => {
       </Section>
 
       <Section variant="alt">
+        {/* Data Operations Image - 4:3 */}
+        <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="/public-sector-data-operations.jpg"
+            alt="Government analysts working in secure data operations and analytics center"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="section-title">Key Benefits</h2>
           <p className="section-description">
