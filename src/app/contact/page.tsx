@@ -1,6 +1,7 @@
 import { PageLayout, Section, Card } from '@/components/ui/page-layout'
 import { Mail, Phone, MapPin, Calendar, MessageSquare, Users } from 'lucide-react'
 import Image from 'next/image'
+import { WorldMap } from '@/components/ui/world-map'
 
 export default function ContactPage() {
   return (
@@ -130,9 +131,16 @@ export default function ContactPage() {
       </Section>
 
       <Section
+        title="Where We Operate"
+        description="Global presence with local expertise across key markets"
+        variant="alt"
+      >
+        <WorldMap />
+      </Section>
+
+      <Section
         title="Our Process"
         description="How we approach new partnerships"
-        variant="alt"
       >
         <div className="timeline-grid trio">
           <div className="timeline-phase">

@@ -2,7 +2,8 @@
 
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
-import { Zap, Target, Activity, Shield, Globe, Building2, MapPin } from 'lucide-react'
+import { Zap, Target, Activity, Shield } from 'lucide-react'
+import { WorldMap } from '@/components/ui/world-map'
 
 export const HomePageContent = () => {
   const { t } = useI18n()
@@ -110,29 +111,7 @@ export const HomePageContent = () => {
             <h2 className="section-title">{t('homepage.global.title')}</h2>
             <p className="section-description">{t('homepage.global.subtitle')}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="platform-item">
-              <div className="flex items-start gap-3 mb-3">
-                <Building2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                <h4>{t('homepage.global.locations.northAmerica')}</h4>
-              </div>
-            </div>
-            <div className="platform-item">
-              <div className="flex items-start gap-3 mb-3">
-                <Globe className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                <h4>{t('homepage.global.locations.europe')}</h4>
-              </div>
-            </div>
-            <div className="platform-item">
-              <div className="flex items-start gap-3 mb-3">
-                <MapPin className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                <h4>{t('homepage.global.locations.middleEast')}</h4>
-              </div>
-            </div>
-          </div>
-          <p className="text-center text-gray-600 dark:text-gray-400 text-lg">
-            {t('homepage.global.sovereign')}
-          </p>
+          <WorldMap />
         </div>
       </section>
 
