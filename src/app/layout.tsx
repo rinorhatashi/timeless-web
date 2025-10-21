@@ -5,6 +5,7 @@ import { Footer } from "@/components/navigation/footer";
 import { Providers } from "./providers";
 import { Suspense } from "react";
 import { PageSkeleton } from "@/components/ui/skeleton-loader";
+import { ChatWidget } from "@/components/chat";
 
 export const metadata: Metadata = {
   title: "Timeless - Deep Tech Platforms and Capabilities That Scale in the Real World",
@@ -25,6 +26,7 @@ export default function RootLayout({
             <main>{children}</main>
           </Suspense>
           <Footer />
+          <ChatWidget />
         </Providers>
       </body>
     </html>

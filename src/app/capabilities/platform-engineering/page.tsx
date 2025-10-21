@@ -1,206 +1,372 @@
-import { PageLayout, Section, Card, TimelinePhase } from '@/components/ui/page-layout'
+"use client"
+
+import Link from 'next/link'
+import { PageLayout, Section } from '@/components/ui/page-layout'
+import { TimelinePhase } from '@/components/ui/page-layout'
+import { useI18n } from '@/lib/i18n/context'
+import { Boxes, GitBranch, Code2, Lock, Activity, DollarSign, Laptop, Package, Cloud, Settings, Shield, BarChart3, FileCode2, Workflow, Database, TrendingUp, Key, UserCheck, FileText, BookOpen, CheckCircle, Target, Gauge } from 'lucide-react'
 
 export default function PlatformEngineeringPage() {
+  const { t } = useI18n()
+  
+  const overviewContent = t('pages.platformEngineering.sections.overview.content', { returnObjects: true })
+  const contentArray = Array.isArray(overviewContent) ? overviewContent : []
+  
+  // Safe array extraction for TimelinePhase items
+  const templatesItems = t('pages.platformEngineering.sections.devex.phases.templates.items', { returnObjects: true })
+  const automationItems = t('pages.platformEngineering.sections.devex.phases.automation.items', { returnObjects: true })
+  const insightsItems = t('pages.platformEngineering.sections.devex.phases.insights.items', { returnObjects: true })
+
   return (
     <PageLayout
-      title="Platform Engineering & DevEx"
-      description="We build internal platforms that make the right thing the easy thing: secure-by-default templates, opinionated CI/CD, IaC, policy-as-code, and cost/SLO guardrails."
+      title={t('pages.platformEngineering.title')}
+      description={t('pages.platformEngineering.description')}
       breadcrumbs={[
-        { label: 'Capabilities', href: '/capabilities' },
-        { label: 'Platform Engineering', href: '/capabilities/platform-engineering' }
+        { label: t('navigation.capabilities'), href: '/capabilities' },
+        { label: t('pages.platformEngineering.breadcrumb'), href: '/capabilities/platform-engineering' }
       ]}
     >
+      {/* Overview Section */}
       <Section
-        title="Overview"
-        description="A Platform Engineering org exists to make the right thing the easy thing. We build internal developer platforms (IDPs) that encode best practices as paved roads-with golden templates, shared runtime services, and guardrails for security, cost, and reliability. Teams ship faster because the platform removes undifferentiated heavy lifting and provides measurable DevEx improvements."
+        title={t('pages.platformEngineering.sections.overview.title')}
+        subtitle={t('pages.platformEngineering.sections.overview.subtitle')}
       >
         <div className="content-prose">
-          <p>Our approach is product‑led: we treat the platform as a multi‑tenant product with customers (feature teams), SLAs/SLOs, a backlog, and adoption goals. We define high‑leverage capabilities once (identity, policy‑as‑code, CI/CD, IaC, observability, FinOps) and expose them as APIs and self‑service experiences. Everything is instrumented-time to first commit, time to first deploy, lead time for change, change failure rate, mean time to restore, on‑call load, and per‑team/cloud cost envelopes. Success is when teams create value quickly without needing a platform concierge.</p>
-          <p>Technically, the platform standardizes: (1) developer workstations and templates; (2) build pipelines and artifact standards; (3) environment vending via IaC; (4) runtime policy and service mesh; (5) tracing/metrics/logs with out‑of‑the‑box dashboards; (6) security controls from commit to production; and (7) cost/SLO governance with automated feedback. We prefer composable, open interfaces over monoliths; we adopt where it's good enough and build where differentiation matters.</p>
+          {contentArray.map((paragraph: string, idx: number) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
         </div>
       </Section>
 
+      {/* Platform Capabilities */}
       <Section
-        title="Platform Capabilities"
-        description="Modular components you can adopt incrementally"
+        title={t('pages.platformEngineering.sections.capabilities.title')}
+        subtitle={t('pages.platformEngineering.sections.capabilities.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>IDP</h4>
-            <p>Self-serve portal with backstage-style catalogs, scorecards, and golden paths.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Boxes className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.capabilities.items.idp.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.capabilities.items.idp.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>CI/CD</h4>
-            <p>Reusable pipelines, artifact standards, provenance, and progressive delivery.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <GitBranch className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.capabilities.items.cicd.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.capabilities.items.cicd.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>IaC</h4>
-            <p>Terraform + policy-as-code; drift detection; environment vending as APIs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Code2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.capabilities.items.iac.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.capabilities.items.iac.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Security</h4>
-            <p>Secrets, SBOM/SLSA, dependency risk, and pre-merge policy gates.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.capabilities.items.security.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.capabilities.items.security.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Observability</h4>
-            <p>Tracing/metrics/logs defaults, SLOs, and golden dashboards out-of-the-box.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.capabilities.items.observability.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.capabilities.items.observability.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>FinOps</h4>
-            <p>Budgets, cost anomalies, and showback/chargeback for platform and teams.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <DollarSign className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.capabilities.items.finops.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.capabilities.items.finops.desc')}</p>
           </div>
         </div>
       </Section>
 
+      {/* Developer Experience */}
       <Section
-        title="Developer Experience"
-        description="Shorten feedback loops and remove toil"
+        title={t('pages.platformEngineering.sections.devex.title')}
+        subtitle={t('pages.platformEngineering.sections.devex.subtitle')}
       >
         <div className="timeline-grid trio">
           <TimelinePhase
-            title="Templates"
-            duration="Language + framework + infra"
-            items={[
-              "Secure-by-default app and service templates",
-              "Built-in observability and policy hooks",
-              "One-command local and cloud dev"
-            ]}
+            title={t('pages.platformEngineering.sections.devex.phases.templates.title')}
+            duration={t('pages.platformEngineering.sections.devex.phases.templates.duration')}
+            items={Array.isArray(templatesItems) ? templatesItems : []}
           />
           <TimelinePhase
-            title="Automation"
-            duration="Scaffolding and upgrades"
-            items={[
-              "New service wizards and repo bootstraps",
-              "Automated upgrades across fleets",
-              "Guardrails for breaking changes"
-            ]}
+            title={t('pages.platformEngineering.sections.devex.phases.automation.title')}
+            duration={t('pages.platformEngineering.sections.devex.phases.automation.duration')}
+            items={Array.isArray(automationItems) ? automationItems : []}
           />
           <TimelinePhase
-            title="Insights"
-            duration="Flow metrics and capacity"
-            items={[
-              "DORA/SPACE dashboards",
-              "WIP limits and release cadence",
-              "On-call and SLO health radar"
-            ]}
+            title={t('pages.platformEngineering.sections.devex.phases.insights.title')}
+            duration={t('pages.platformEngineering.sections.devex.phases.insights.duration')}
+            items={Array.isArray(insightsItems) ? insightsItems : []}
           />
         </div>
       </Section>
 
+      {/* Reference Architecture */}
       <Section
-        title="Reference Architecture"
-        description="From laptop to production-consistent paths and APIs"
+        title={t('pages.platformEngineering.sections.refArch.title')}
+        subtitle={t('pages.platformEngineering.sections.refArch.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Workstation & Inner Loop</h4>
-            <p>Dev containers standardize toolchains; make targets/scripts unify run/test; local emulators for queues, secrets, and key services reduce cloud dependency.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Laptop className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.refArch.items.workstation.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.refArch.items.workstation.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Build & Artifact</h4>
-            <p>Unified build images; SBOM generation; attestations and signatures; hermetic builds; provenance stored alongside artifacts for policy checks.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Package className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.refArch.items.build.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.refArch.items.build.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Environments</h4>
-            <p>Ephemeral preview environments via IaC and templates; blueprints for shared state; automated teardown; environment drift monitors.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Cloud className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.refArch.items.environments.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.refArch.items.environments.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Runtime & Mesh</h4>
-            <p>Kubernetes with policy controllers (OPA/Gatekeeper), service mesh (mTLS, retries, timeouts), and standard sidecars for telemetry and policy.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Settings className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.refArch.items.runtime.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.refArch.items.runtime.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Policy & Identity</h4>
-            <p>Workload identity (SPIFFE/SPIRE or cloud-native), fine-grained permissions, secrets automation (rotation, least-privilege, just-in-time).</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.refArch.items.policy.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.refArch.items.policy.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Observability & SLOs</h4>
-            <p>OpenTelemetry defaults, RED/USE dashboards per service, SLO error budgets with burn alerts, runbooks linked to pages.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.refArch.items.observability.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.refArch.items.observability.desc')}</p>
           </div>
         </div>
       </Section>
 
+      {/* Golden Paths */}
       <Section
-        title="Golden Paths"
-        description="Repeatable end-to-end flows with paved guardrails"
+        title={t('pages.platformEngineering.sections.goldenPaths.title')}
+        subtitle={t('pages.platformEngineering.sections.goldenPaths.subtitle')}
       >
-        <div className="grid-2">
-          <Card
-            title="Service: API + DB"
-            description="Scaffold, CI/CD, environments, SLOs, dashboards, runbook, and cost budget in under 30 minutes."
-          />
-          <Card
-            title="Event-Driven Service"
-            description="Topic provisioning, contracts/registry, consumer offsets, reprocessing playbooks, and dead-letter handling."
-          />
-          <Card
-            title="Batch/Data Pipeline"
-            description="Data contracts, lineage capture, quality checks, and promotion gates from dev to prod."
-          />
-          <Card
-            title="ML Microservice"
-            description="Model registry integration, feature store, inference service with canaries, and evaluation gates per model route."
-          />
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileCode2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.goldenPaths.items.serviceAPI.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.goldenPaths.items.serviceAPI.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Workflow className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.goldenPaths.items.eventDriven.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.goldenPaths.items.eventDriven.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.goldenPaths.items.batchPipeline.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.goldenPaths.items.batchPipeline.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.goldenPaths.items.mlService.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.goldenPaths.items.mlService.desc')}</p>
+          </div>
         </div>
       </Section>
 
+      {/* Security & Compliance */}
       <Section
-        title="Security & Compliance"
-        description="Security-by-default, evidence on demand"
+        title={t('pages.platformEngineering.sections.security.title')}
+        subtitle={t('pages.platformEngineering.sections.security.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Supply Chain</h4>
-            <p>Dependency scanning, SBOM, vulnerability gating, and SLSA provenance; signatures verified before deploy.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Package className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.security.items.supplyChain.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.security.items.supplyChain.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Secrets & Keys</h4>
-            <p>Centralized vaults, rotation and leasing, envelope encryption; secretless patterns via workload identity.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Key className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.security.items.secrets.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.security.items.secrets.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Access</h4>
-            <p>Least privilege for CI/CD and runtime, short‑lived tokens, and automated access reviews mapped to services.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <UserCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.security.items.access.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.security.items.access.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Controls</h4>
-            <p>Policy‑as‑code checks at PR, pipeline, and admission; continuous evidence collection mapped to SOC2/ISO/NIST.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.security.items.controls.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.security.items.controls.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Data</h4>
-            <p>Data contracts, masking, retention, and audit trails; privacy impact workflows embedded in templates.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.security.items.data.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.security.items.data.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Runbooks</h4>
-            <p>Standard incident playbooks per control category and automated drills.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.security.items.runbooks.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.security.items.runbooks.desc')}</p>
           </div>
         </div>
       </Section>
 
+      {/* Reliability & Continuity */}
       <Section
-        title="FinOps & Cost Engineering"
-        description="Make cost visible, predictable, and governable"
+        title={t('pages.platformEngineering.sections.reliability.title')}
+        subtitle={t('pages.platformEngineering.sections.reliability.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Budgets</h4>
-            <p>Per team/service budgets and alerts; budget APIs integrated in CI/CD for gates and reports.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.reliability.items.slo.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.reliability.items.slo.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Showback/Chargeback</h4>
-            <p>Labels/telemetry for cost allocation; monthly reports that drive healthy optimization culture.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.reliability.items.capacity.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.reliability.items.capacity.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Optimization</h4>
-            <p>Right‑sizing, autoscaling settings, spot/commitment strategies, and data lifecycle policies.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.reliability.items.resilience.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.reliability.items.resilience.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Model cost</h4>
-            <p>For AI workloads: per‑route/token cost dashboards, model routing, and caching strategies to hit targets.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.reliability.items.changeSafety.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.reliability.items.changeSafety.desc')}</p>
           </div>
+        </div>
+      </Section>
+
+      {/* FinOps & Cost Engineering */}
+      <Section
+        title={t('pages.platformEngineering.sections.finops.title')}
+        subtitle={t('pages.platformEngineering.sections.finops.subtitle')}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <DollarSign className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.finops.items.budgets.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.finops.items.budgets.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.finops.items.showback.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.finops.items.showback.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.finops.items.optimization.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.finops.items.optimization.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.platformEngineering.sections.finops.items.modelCost.title')}</h4>
+            </div>
+            <p>{t('pages.platformEngineering.sections.finops.items.modelCost.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Deliverables */}
+      <Section
+        title={t('pages.platformEngineering.sections.deliverables.title')}
+        subtitle={t('pages.platformEngineering.sections.deliverables.subtitle')}
+      >
+        <div className="deliverables-grid">
+          <div className="deliverable-item">
+            <FileCode2 className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.platformEngineering.sections.deliverables.items.templates.title')}</h3>
+            <p>{t('pages.platformEngineering.sections.deliverables.items.templates.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <GitBranch className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.platformEngineering.sections.deliverables.items.pipelines.title')}</h3>
+            <p>{t('pages.platformEngineering.sections.deliverables.items.pipelines.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <Boxes className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.platformEngineering.sections.deliverables.items.portal.title')}</h3>
+            <p>{t('pages.platformEngineering.sections.deliverables.items.portal.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <BarChart3 className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.platformEngineering.sections.deliverables.items.dashboards.title')}</h3>
+            <p>{t('pages.platformEngineering.sections.deliverables.items.dashboards.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA Section */}
+      <Section variant="dark">
+        <div className="cta-container">
+          <Link href="/contact" className="btn-primary large">
+            {t('pages.platformEngineering.sections.cta')} →
+          </Link>
         </div>
       </Section>
     </PageLayout>
   )
-} 
+}

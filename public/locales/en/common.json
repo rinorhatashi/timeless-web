@@ -95,7 +95,7 @@
     }
   },
   "pages": {
-    "agenticSystems": {
+    "DELETED_OLD_AGENTIC_SYSTEMS": {
       "title": "Agentic Systems",
       "description": "Autonomous AI agents that operate safely in production environments with human oversight and continuous learning capabilities.",
       "breadcrumb": "Agentic Systems",
@@ -212,7 +212,800 @@
         }
       }
     },
+    "deepTechResearch": {
+      "title": "Deep Tech Research - Algorithms, systems, and open benchmarks",
+      "description": "We pursue hard problems across models, retrieval, reasoning, safety, and efficiency. Outputs are reference implementations, datasets, and decision-grade benchmarks that turn ideas into engineering advantage.",
+      "breadcrumb": "Deep Tech Research",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Invent with purpose: measurable gains in capability, safety, and cost",
+          "content": ["Our lab operates with a Bell‑Labs ethos: hard problems, rigorous engineering, and artifacts that compound. We focus on algorithms and systems that translate directly into product leverage - higher accuracy and reliability, lower latency and cost, and safer deployments. Each program targets a well‑formed gap in the literature and ships reference code, datasets, and benchmarks so results are reproducible and transferable.", "We measure progress with decision‑grade benchmarks that reflect real constraints: input distributions with long tails, adversarial and out‑of‑distribution cases, and full cost models that include training, inference, memory, and data movement. When results clear the bar, we upstream to platforms and products; when they do not, we publish negatives so we and partners do not waste cycles."]
+        },
+        "focusAreas": {
+          "title": "FOCUS AREAS",
+          "subtitle": "Research with a build-and-measure loop",
+          "items": {
+            "training": {
+              "title": "Efficient Training & Inference",
+              "desc": "LoRA/QLoRA, distillation, sparsity/MoE, KV-cache policies, streaming decode, and server-side batching to bend cost-latency curves."
+            },
+            "retrieval": {
+              "title": "Retrieval & Memory",
+              "desc": "Graph RAG, semantic routing, hard negative mining, structure-aware retrievers, and freshness-aware caching."
+            },
+            "reasoning": {
+              "title": "Reasoning & Program Synthesis",
+              "desc": "Planning agents, toolformer-style augmentation, code repair, and verifiable workflows with success criteria."
+            },
+            "multimodal": {
+              "title": "Multimodal",
+              "desc": "Vision-language grounding, speech (ASR/TTS) alignment, and sensor fusion for edge deployments."
+            },
+            "safety": {
+              "title": "Safety & Alignment",
+              "desc": "Jailbreak/indirect prompt attack defenses, content policy engines, RLHF/DPO/RLAIF comparisons under eval suites."
+            },
+            "onDevice": {
+              "title": "On-Device & Sovereign",
+              "desc": "Quantization, operator re-write, and enclave/TEE execution for private/regulated workloads."
+            }
+          }
+        },
+        "methodology": {
+          "title": "METHODOLOGY",
+          "subtitle": "Bell‑Labs ethos: invent, implement, instrument",
+          "phases": {
+            "hypothesis": {
+              "title": "Hypothesis",
+              "duration": "Problem framing and literature gap",
+              "items": ["Define target metric(s) and constraints", "Derive testable hypotheses from prior art", "Pre-register evaluation protocols"]
+            },
+            "implementation": {
+              "title": "Implementation",
+              "duration": "Reference code and ablations",
+              "items": ["Minimal, readable baselines with togglable components", "Deterministic seeds and config capture", "Hardware-aware optimizations isolated behind flags"]
+            },
+            "evaluation": {
+              "title": "Evaluation",
+              "duration": "Benchmarks with decision power",
+              "items": ["Golden sets, stress tests, and drift scenarios", "Cost/latency/quality trade-off charts", "Reproducible papers with artifact DOIs"]
+            }
+          }
+        },
+        "architectures": {
+          "title": "ARCHITECTURES & ALGORITHMS",
+          "subtitle": "From inductive biases to scalable training recipes",
+          "items": {
+            "neural": { "title": "Neural architectures", "desc": "Structured state space models, recurrent memory, Mixture‑of‑Experts routing, and sparse attention for long contexts." },
+            "optimization": { "title": "Optimization", "desc": "Adaptive schedules, length/temperature scaling, curriculum and replay; stability at large batch sizes." },
+            "regularization": { "title": "Regularization", "desc": "Data‑augmentation, dropout/variational techniques, and weight‑space priors for generalization." },
+            "distillation": { "title": "Distillation", "desc": "Task‑aware and multi‑objective distillation; routing preservation for MoE; calibration retention." },
+            "continual": { "title": "Continual learning", "desc": "Elastic weight consolidation, rehearsal buffers, and dataset versioning; catastrophic forgetting bounds." },
+            "evaluation": { "title": "Evaluation science", "desc": "Metric consistency, rater calibration, and causally valid comparisons to avoid leaderboard overfitting." }
+          }
+        },
+        "retrieval": {
+          "title": "RETRIEVAL & MEMORY SYSTEMS",
+          "subtitle": "Make models reference facts instead of hallucinating",
+          "items": {
+            "indexing": { "title": "Indexing", "desc": "Hybrid lexical/semantic, graph‑augmented retrieval, and freshness‑aware caches for time‑sensitive data." },
+            "routing": { "title": "Routing", "desc": "Query decomposition, schema‑aware routing for structured sources, and tool selection with confidence." },
+            "grounding": { "title": "Grounding", "desc": "Citation and snippet attributions; entailment checks; grounded output validators." },
+            "agentsTools": { "title": "Agents & tools", "desc": "Toolformer‑style augmentation with tool use telemetry; recovery from tool failures." },
+            "evals": { "title": "Evals", "desc": "Faithfulness, coverage, and latency‑cost tradeoffs; robust long‑context regressions." },
+            "privacy": { "title": "Privacy", "desc": "PII detection/redaction, query minimization, and purpose binding; per‑source access policy integration." }
+          }
+        },
+        "reasoning": {
+          "title": "REASONING & PROGRAM SYNTHESIS",
+          "subtitle": "From chain‑of‑thought to verifiable workflows",
+          "items": {
+            "planner": { "title": "Planner‑executor", "desc": "Hierarchical decomposition with subgoal verification; retry/repair strategies and self‑critique." },
+            "codeGeneration": { "title": "Code generation", "desc": "Tests‑first synthesis, repair loops, and type‑aware constraints; sandboxed execution traces." },
+            "symbolic": { "title": "Symbolic tools", "desc": "Differentiable programming hybrids; SMT solvers and formal spec checkers in the loop." },
+            "verification": { "title": "Verification", "desc": "Witnesses, proofs, and litmus tests; epistemic uncertainty estimation and rejection policies." },
+            "memory": { "title": "Memory of work", "desc": "Persistent task graphs and artifact stores; credit assignment across multi‑step executions." },
+            "benchmarks": { "title": "Benchmarks", "desc": "Task success, repair rate, and cost per solved task; robust code/general reasoning suites." }
+          }
+        },
+        "multimodal": {
+          "title": "MULTIMODAL SYSTEMS",
+          "subtitle": "Ground language in perception and action",
+          "items": {
+            "vision": { "title": "Vision", "desc": "Structured perception with segmentation and geometric priors; low‑shot adaptation for domains." },
+            "speech": { "title": "Speech", "desc": "Streaming ASR/TTS with prosody control; speaker adaptation and noise robustness." },
+            "temporal": { "title": "Temporal", "desc": "Video understanding and event detection; memory over long sequences with efficient attention." },
+            "action": { "title": "Action", "desc": "Vision‑language‑action policies; simulation‑to‑real transfer with domain randomization." },
+            "edgeCapture": { "title": "Edge capture", "desc": "Sensor fusion and uncertainty bounds; compression and on‑device preprocessing." },
+            "evals": { "title": "Evals", "desc": "Grounding accuracy, temporal recall, and task success; human‑in‑the‑loop assessments." }
+          }
+        },
+        "efficiency": {
+          "title": "EFFICIENT TRAINING & INFERENCE",
+          "subtitle": "Do more with less: throughput, latency, and cost",
+          "items": {
+            "quantization": { "title": "Quantization", "desc": "Post‑training and QAT; mixed‑precision kernels; blockwise and KV‑cache‑aware schemes." },
+            "sparsity": { "title": "Sparsity & MoE", "desc": "Routing policies, expert capacity planning, and load balance; token‑level and layer‑level sparsity." },
+            "caching": { "title": "Caching & batching", "desc": "KV‑cache eviction strategies, continuous batching, and request shaping for tail‑latency control." },
+            "compilation": { "title": "Compilation", "desc": "Graph capture, kernel fusion, and memory planning; vendor runtimes and portable backends." },
+            "distributed": { "title": "Distributed", "desc": "Data/tensor/pipeline parallel mixes; fault‑tolerant training; elastic scaling." },
+            "costModels": { "title": "Cost models", "desc": "End‑to‑end costing with data movement; amortized costs for batch/online workloads." }
+          }
+        },
+        "safety": {
+          "title": "SAFETY & ALIGNMENT",
+          "subtitle": "Useful, controllable, and compliant systems",
+          "phases": {
+            "policy": { "title": "Policy & red‑teaming", "duration": "Prevent harms", "items": ["Content policy engines", "Adversarial test suites", "Response filters and escalation"] },
+            "tuning": { "title": "Tuning & feedback", "duration": "Steer behavior", "items": ["RLHF/DPO/RLAIF comparisons", "Preference datasets and bias checks", "Calibration and refusals"] },
+            "monitoring": { "title": "Monitoring", "duration": "Operate safely", "items": ["Usage analytics and drift", "Guardrails and rollback", "Incident reviews"] }
+          }
+        },
+        "onDevice": {
+          "title": "ON‑DEVICE & SOVEREIGN AI",
+          "subtitle": "Private, compliant, and offline‑capable models",
+          "items": {
+            "operators": { "title": "Operators", "desc": "Operator rewrite for mobile/edge; int8/fp8 kernels; vendor accelerators and portability." },
+            "packaging": { "title": "Packaging", "desc": "Model/component packaging with secure update channels; rollback and provenance checks." },
+            "federation": { "title": "Federation", "desc": "Federated fine‑tuning and evaluation; privacy budgets and aggregation strategies." },
+            "sovereignty": { "title": "Sovereignty", "desc": "Air‑gapped training/eval stacks; HSM custody and audit trails; region‑locked deployments." },
+            "evals": { "title": "Evals", "desc": "On‑device latency/quality/power triads; thermals and battery impact tracking." },
+            "tooling": { "title": "Tooling", "desc": "Profilers, kernel auto‑tuning, and quantization assistants; developer SDKs." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & BENCHMARKS",
+          "subtitle": "Measure capability, robustness, and efficiency",
+          "items": {
+            "capability": { "title": "Capability", "desc": "Task accuracy, success rates for agents, and synthesis pass@k; calibrated uncertainty." },
+            "robustness": { "title": "Robustness", "desc": "OOD performance, adversarial resilience, and degradation under perturbations." },
+            "efficiency": { "title": "Efficiency", "desc": "Tokens/sec, memory/compute per token, and throughput at P95/P99 latency." },
+            "cost": { "title": "Cost", "desc": "Training/inference $ per unit quality; storage and egress; amortized per user/task." },
+            "safety": { "title": "Safety", "desc": "Policy violation rates, refusal appropriateness, and red‑team coverage." },
+            "reproducibility": { "title": "Reproducibility", "desc": "Seed variance, config completeness, and artifact availability." }
+          }
+        },
+        "openScience": {
+          "title": "OPEN SCIENCE & IP",
+          "subtitle": "Publish what compounds, protect what differentiates",
+          "items": {
+            "artifacts": { "title": "Artifacts", "desc": "Code, datasets, and papers with DOIs; clear licenses and contribution guides." },
+            "licensing": { "title": "Licensing", "desc": "Dually license components; commercial terms for differentiated assets." },
+            "standards": { "title": "Standards", "desc": "Participate in formats and benchmarks; ensure interoperability and adoption." },
+            "ethics": { "title": "Ethics", "desc": "Dataset documentation, consent, and bias studies; transparent limitations." },
+            "community": { "title": "Community", "desc": "Shared tasks, leaderboards with anti‑gaming checks, and grants for replication studies." },
+            "patents": { "title": "Patents", "desc": "File where algorithms or systems confer durable advantage; defensive publications." }
+          }
+        },
+        "transfer": {
+          "title": "TECHNOLOGY TRANSFER",
+          "subtitle": "From paper to production",
+          "phases": {
+            "hardening": { "title": "Hardening", "duration": "Production‑ready", "items": ["Interfaces and SLAs", "Perf/security reviews", "Docs and training"] },
+            "integration": { "title": "Integration", "duration": "Platform fit", "items": ["SDKs and APIs", "Data/feature wiring", "Rollout strategies"] },
+            "adoption": { "title": "Adoption", "duration": "Proven value", "items": ["KPIs and cost models", "Case studies", "Support and roadmap"] }
+          }
+        },
+        "lab": {
+          "title": "LAB & INFRASTRUCTURE",
+          "subtitle": "Hardware, software, and data practices",
+          "items": {
+            "compute": { "title": "Compute", "desc": "GPU clusters with schedulers, mixed-precision toolchains, and energy/thermal telemetry for fair comparisons." },
+            "data": { "title": "Data", "desc": "Ethically sourced corpora, de-duplication, filtering, and license tracking; red-team datasets for safety." },
+            "evals": { "title": "Evals", "desc": "Continuous evaluation harness (unit/regression/perturbation) with scorecards and dashboards." },
+            "reproducibility": { "title": "Reproducibility", "desc": "Immutable configs, model/version registries, and containerized experiments." },
+            "collaboration": { "title": "Collaboration", "desc": "University/industry partners; shared tasks and challenge problems with prizes." },
+            "ipLicensing": { "title": "IP & Licensing", "desc": "Open-source where it compounds adoption; commercial licenses where differentiation matters." }
+          }
+        },
+        "outputs": {
+          "title": "OUTPUTS",
+          "subtitle": "Artifacts that teams can use immediately",
+          "items": {
+            "reference": { "title": "Reference implementations", "desc": "Well-documented code with ablations and tests." },
+            "datasets": { "title": "Datasets", "desc": "Curated/annotated corpora with licenses and datasheets." },
+            "benchmarks": { "title": "Benchmarks", "desc": "Task suites and scorecards that track real progress, not leaderboard noise." },
+            "reports": { "title": "Technical reports", "desc": "Reproducible papers, notebooks, and citations for internal/external use." }
+          }
+        },
+        "cta": "Propose a joint research agenda"
+      }
+    },
+    "agenticSystems": {
+      "title": "Agentic Systems - Autonomous actors that plan, learn, and execute",
+      "description": "From single-turn assistants to persistent, goal-seeking agents. We build and operate agentic systems that compose tools, manage memory, respect boundaries, and deliver measurable outcomes.",
+      "breadcrumb": "Agentic Systems",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Move from scripted automation to goal-oriented autonomy",
+          "content": ["An agent is not just an LLM with tool-use; it is a persistent actor that reasons about goals, breaks them into sub-tasks, chooses and invokes tools, monitors state, and recovers from failures. We engineer agents that are observable, steerable, and safe-composing memory, retrieval, policy guardrails, and approval flows so humans stay in the loop where it matters and step back where it doesn't.", "Agentic systems thrive on constraints: bounded domains with success criteria, low tolerance for hallucination, and well-defined tool inventories. We measure agents by outcomes-tasks completed, cost per transaction, policy adherence-not by prompt complexity."]
+        },
+        "systemModel": {
+          "title": "SYSTEM MODEL",
+          "subtitle": "Core primitives of an agent",
+          "items": {
+            "planner": { "title": "Planner", "desc": "Decomposes goals into sub‑tasks with success criteria; orchestrates multi‑step workflows." },
+            "executor": { "title": "Executor", "desc": "Invokes tools, logs results, and maintains task state; handles retries and rollback." },
+            "memory": { "title": "Memory", "desc": "Short‑term context (session buffer) and long‑term knowledge (vector/graph stores, logs)." },
+            "tools": { "title": "Tools", "desc": "APIs, databases, external systems, and code executors; schema‑enforced invocation." },
+            "policies": { "title": "Policies", "desc": "Pre/post invocation checks: allowlists, rate limits, PII redaction, and approval gates." },
+            "observability": { "title": "Observability", "desc": "Traces, metrics, and logs for every decision and action; real‑time dashboards and alerting." }
+          }
+        },
+        "planning": {
+          "title": "PLANNING & CONTROL",
+          "subtitle": "Goal decomposition and execution orchestration",
+          "phases": {
+            "goal": { "title": "Goal", "duration": "Objective and constraints", "items": ["User intent and success criteria", "Constraints: time, cost, policy", "Initial state and available tools"] },
+            "plan": { "title": "Plan", "duration": "Decompose and sequence", "items": ["Break into sub‑tasks with dependencies", "Select tools and assign data sources", "Check safety/policy pre‑conditions"] },
+            "execute": { "title": "Execute", "duration": "Act, monitor, adapt", "items": ["Invoke tools; capture results and errors", "Update state; retry or escalate failures", "Validate outputs and report progress"] }
+          }
+        },
+        "architecture": {
+          "title": "REFERENCE ARCHITECTURE",
+          "subtitle": "End‑to‑end agent platform",
+          "items": {
+            "gateway": { "title": "Gateway", "desc": "Request routing, authentication, rate limiting, and policy enforcement at entry." },
+            "orchestrator": { "title": "Orchestrator", "desc": "Planner/executor loops; state machines; parallel task dispatch and rollback logic." },
+            "toolRuntime": { "title": "Tool Runtime", "desc": "Sandboxed execution; schema validation; credential management; versioned tool catalog." },
+            "memoryLayer": { "title": "Memory Layer", "desc": "Session context buffers, vector stores for retrieval, and persistent task/artifact logs." },
+            "policyEngine": { "title": "Policy Engine", "desc": "Pre‑flight and post‑execution checks; PII/content filters; approval workflows." },
+            "observability": { "title": "Observability", "desc": "Traces, spans, and metrics for planning/tool use; real‑time alerts and dashboards." }
+          }
+        },
+        "toolsIntegration": {
+          "title": "TOOLS & INTEGRATION",
+          "subtitle": "Safe, observable interfaces to real systems",
+          "items": {
+            "contracts": { "title": "Contracts", "desc": "Typed schemas, validation, retries, and timeouts; idempotency and side‑effect classification." },
+            "catalog": { "title": "Catalog", "desc": "Discovery and allow‑lists; scopes and credentials per tool; sandboxing for high‑risk tools." },
+            "delegation": { "title": "Delegation", "desc": "Impersonation and scoped tokens; step‑up approvals; audit of every call." },
+            "observation": { "title": "Observation", "desc": "Structured logs of inputs/outputs; error taxonomies and retries with jitter/backoff." },
+            "resilience": { "title": "Resilience", "desc": "Circuit breakers, bulkheads, and fallback behaviors; graceful degradation policies." },
+            "dataAccess": { "title": "Data access", "desc": "PII minimization, redaction, and purpose binding; query templates and row‑level control." }
+          }
+        },
+        "memoryKnowledge": {
+          "title": "MEMORY & KNOWLEDGE",
+          "subtitle": "Short‑term context, long‑term learning",
+          "items": {
+            "episodic": { "title": "Episodic", "desc": "Per‑run context windows with summarization and pinning; eviction based on utility." },
+            "semantic": { "title": "Semantic", "desc": "RAG indices with freshness; per‑tenant partitioning; citation and entailment checks." },
+            "working": { "title": "Working memory", "desc": "Tool outputs normalized into typed state; truth maintenance with reconciliation." },
+            "learning": { "title": "Learning loop", "desc": "Failed traces to counterfactual training sets; safe prompt evolution; gated fine‑tuning." },
+            "governance": { "title": "Governance", "desc": "Data retention and deletion; PII scopes; dataset/document lineage and approvals." },
+            "edge": { "title": "Edge/sovereign", "desc": "Local stores and federated updates for on‑prem/air‑gapped deployments." }
+          }
+        },
+        "policySafety": {
+          "title": "POLICY & SAFETY",
+          "subtitle": "Guardrails that preserve utility",
+          "phases": {
+            "prevention": { "title": "Prevention", "duration": "Block unsafe actions", "items": ["Policy filters and allow/deny lists", "Prompt isolation and escaping controls", "High‑risk action approvals"] },
+            "detection": { "title": "Detection", "duration": "Find issues fast", "items": ["Usage analytics and anomaly models", "Content policy and PII scanners", "Tool failure and abuse signals"] },
+            "recovery": { "title": "Recovery", "duration": "Fail safe", "items": ["Rollback and compensating actions", "Containment modes", "Incident reviews and fixes"] }
+          }
+        },
+        "reliabilityOps": {
+          "title": "RELIABILITY & OPERATIONS",
+          "subtitle": "Operate agents like production services",
+          "items": {
+            "slis": { "title": "SLIs/SLOs", "desc": "Task success, quality, and latency; error budgets with enforcement." },
+            "runbooks": { "title": "Runbooks", "desc": "Playbooks for common failures; safing modes and feature flags; hotfix workflows." },
+            "observability": { "title": "Observability", "desc": "Traces, spans, and structured logs; per‑tool and per‑step telemetry and dashboards." },
+            "testing": { "title": "Testing", "desc": "Golden sets, regressions, chaos, and fuzzing for tool contracts and prompts." },
+            "cost": { "title": "Cost", "desc": "Unit economics and budgets per agent/play; acceptance thresholds for cost per outcome." },
+            "changeMgmt": { "title": "Change mgmt", "desc": "Safe prompt/model updates, canaries, and rollbacks; approvals and audit trails." }
+          }
+        },
+        "deploymentPatterns": {
+          "title": "DEPLOYMENT PATTERNS",
+          "subtitle": "Meet constraints across clouds and sovereignty",
+          "phases": {
+            "cloudNative": { "title": "Cloud‑native", "duration": "Managed platforms", "items": ["Hosted LLMs/tools", "Central policy and tracing", "Rapid iteration"] },
+            "hybrid": { "title": "Hybrid", "duration": "Data gravity", "items": ["On‑prem data/tooling", "Cloud control planes", "Latency‑aware routing"] },
+            "sovereign": { "title": "Sovereign", "duration": "Isolated and private", "items": ["Local models/tools", "Air‑gapped tracing", "HSM custody"] }
+          }
+        },
+        "humanLoop": {
+          "title": "HUMAN-IN-THE-LOOP & GOVERNANCE",
+          "subtitle": "Design authority so humans stay in control",
+          "items": {
+            "approval": { "title": "Approval workflows", "desc": "Context‑rich approvals for risky actions; delegated authority and revocation." },
+            "auditability": { "title": "Auditability", "desc": "End‑to‑end evidence for decisions; time‑boxed retention; tamper‑evident logs." },
+            "accountability": { "title": "Accountability", "desc": "Clear ownership for policies, datasets, prompts, and tools; change logs and reviews." },
+            "ethics": { "title": "Ethics & policy", "desc": "Content guidelines, red lines, and user‑impact reviews; transparent disclosures." },
+            "access": { "title": "Access", "desc": "Role and tenant segregation; data minimization and approval for sensitive scopes." },
+            "training": { "title": "Training", "desc": "Operator playbooks, incident drills, and user education; feedback loops." }
+          }
+        },
+        "designConsiderations": {
+          "title": "DESIGN CONSIDERATIONS",
+          "subtitle": "Make agents reliable before you make them powerful",
+          "items": {
+            "bounded": { "title": "Bounded autonomy", "desc": "Step budgets, tool allow‑lists, and timeouts prevent runaway behavior. High‑risk actions route to approvals with full context." },
+            "truth": { "title": "Truth maintenance", "desc": "State updates are idempotent and auditable. Agents reason over working memory; only validated outcomes persist to system of record." },
+            "robust": { "title": "Robust tool use", "desc": "Schema‑validated tool contracts, retries with jitter/backoff, and classification of retriable vs terminal errors." },
+            "security": { "title": "Security", "desc": "Tokens rotate, least privilege on tool credentials, prompt isolation per tenant, and PII masking/redaction at boundaries." }
+          }
+        },
+        "implementationPatterns": {
+          "title": "IMPLEMENTATION PATTERNS",
+          "subtitle": "Reusable blueprints for common agent workflows",
+          "items": {
+            "research": { "title": "Research → Synthesis → Review", "desc": "Retriever‑augmented research, structured note synthesis, auto‑generated citations, human sign‑off, and knowledge base updates." },
+            "planAct": { "title": "Plan → Act → Verify", "desc": "Task planner emits sub‑goals; tools act; verifiers check post‑conditions and roll back or escalate on failure." },
+            "multiAgent": { "title": "Multi‑agent orchestration", "desc": "Specialist agents (researcher, planner, executor, verifier) coordinated via blackboard or supervisor with shared trace IDs." },
+            "learningLoop": { "title": "Learning loop", "desc": "Failed traces feed counterfactual training/evals; tool affordances refined over time; prompts templatized with guarded variables." }
+          }
+        },
+        "useCases": {
+          "title": "USE CASES",
+          "subtitle": "Where agents deliver value",
+          "items": {
+            "support": { "title": "Customer support", "desc": "Intent routing, knowledge retrieval, ticket creation, and escalation to humans." },
+            "data": { "title": "Data pipelines", "desc": "Extract, transform, validate, and load data; orchestrate multi‑source ingestion." },
+            "devops": { "title": "DevOps", "desc": "Deploy, monitor, diagnose, and repair services; auto‑scaling and incident response." },
+            "research": { "title": "Research/writing", "desc": "Gather sources, synthesize notes, draft reports, cite evidence, and submit for review." },
+            "coding": { "title": "Coding assistants", "desc": "Generate, test, review, and merge code; maintain context across pull requests." },
+            "backOffice": { "title": "Back‑office", "desc": "Invoice processing, compliance checks, data entry, and approval routing." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS",
+          "subtitle": "Measure what matters",
+          "items": {
+            "success": { "title": "Task success rate", "desc": "How often the agent completes its goal without escalation or failure." },
+            "quality": { "title": "Output quality", "desc": "Human evals, automated scoring, and user satisfaction on agent‑generated artifacts." },
+            "cost": { "title": "Cost per outcome", "desc": "Total LLM/tool/infra cost divided by successful completions; compare to baselines." },
+            "latency": { "title": "P95 latency", "desc": "End‑to‑end time from request to completion; track by complexity tier." },
+            "policy": { "title": "Policy adherence", "desc": "Violations, near‑misses, and escalations; red‑line breaches require investigation." },
+            "retry": { "title": "Retry/repair rate", "desc": "How often plans fail and require correction; lower is better." },
+            "satisfaction": { "title": "User satisfaction", "desc": "Thumbs up/down, Net Promoter Score, and qualitative feedback." }
+          }
+        },
+        "cta": "Build a production agent system"
+      }
+    },
+    "aiStrategyValue": {
+      "title": "AI Strategy & Value - Aim AI at measurable outcomes",
+      "description": "Value trees tied to business architecture, fundable roadmaps, and KPI models that prove ROI as systems ship-no theater.",
+      "breadcrumb": "AI Strategy & Value",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Translate AI into a portfolio of funded bets with measurable lift",
+          "content": ["We connect AI opportunities to business architecture and data realities. The result is a portfolio of prioritized plays, enabling platforms, and operating model changes - staged to fund themselves as value lands. Each play has a reference architecture, owners, evidence gates, and KPIs wired into delivery so ROI is observed continuously, not after the fact.", "Our engagements avoid theater. We define exit criteria per stage, attach assumptions and risks to metrics, and design experiments that converge on truth quickly. When prerequisites are missing (data, infra, controls), they are captured as roadmap items with clear value coupling, not hand‑wavy dependencies."]
+        },
+        "method": {
+          "title": "METHOD",
+          "subtitle": "From diagnosis to funded execution with evidence gates",
+          "phases": {
+            "diagnose": { "title": "Diagnose", "duration": "Map value and constraints", "items": ["Value tree and driver analysis", "Business capability and process mapping", "Data inventory and feasibility"] },
+            "prioritize": { "title": "Prioritize", "duration": "Pick the right bets", "items": ["Impact x feasibility scoring", "Risk/assumption registers", "Reference architectures"] },
+            "stageFund": { "title": "Stage & fund", "duration": "Invest with exit criteria", "items": ["Now/Next/Later roadmap", "Evidence gates and owners", "Budget and run-rate plans"] }
+          }
+        },
+        "valueTree": {
+          "title": "VALUE TREE MAPPING",
+          "subtitle": "Tie AI plays to levers, processes, and systems",
+          "items": {
+            "businessArchitecture": { "title": "Business architecture", "desc": "Drivers → levers → metrics; capability heatmaps and pain points." },
+            "valueStreams": { "title": "Value streams", "desc": "Process maps with bottlenecks; lead time, rework, and failure demand." },
+            "systems": { "title": "Systems", "desc": "Application/data lineage and ownership; change windows and controls." },
+            "data": { "title": "Data", "desc": "Source quality, access constraints, and privacy/compliance boundaries." },
+            "opportunities": { "title": "Opportunities", "desc": "Candidate AI plays with hypotheses, assumptions, and evaluation plans." },
+            "dependencies": { "title": "Dependencies", "desc": "Platform, data, and operating-model enablers linked to value." }
+          }
+        },
+        "roadmap": {
+          "title": "ROADMAP & INVESTMENT",
+          "subtitle": "Sequence for compounding value and de-risking",
+          "phases": {
+            "now": { "title": "Now", "duration": "90-day proofs", "items": ["Highest leverage experiments", "Data/platform quick wins", "Owner and exit criteria"] },
+            "next": { "title": "Next", "duration": "Scale the wins", "items": ["Hardening and rollout plans", "Cross-team enablement", "Budget releases by evidence"] },
+            "later": { "title": "Later", "duration": "Foundational bets", "items": ["Strategic platforms", "Operating model changes", "Risk/controls built-in"] }
+          }
+        },
+        "outcomes": {
+          "title": "OUTCOMES",
+          "subtitle": "From slides to shipped value",
+          "items": {
+            "portfolio": { "title": "Portfolio", "desc": "Ranked AI plays with risk/return and technical feasibility." },
+            "dependencies": { "title": "Dependencies", "desc": "Data/platform/operating-model work captured as roadmap items." },
+            "kpis": { "title": "KPIs", "desc": "Metrics wired into delivery so ROI is measured continuously." }
+          }
+        },
+        "artifacts": {
+          "title": "REFERENCE ARTIFACTS",
+          "subtitle": "The minimum kit to run at scale",
+          "items": {
+            "valueTree": { "title": "Value tree", "desc": "Top-line drivers → levers → AI plays with owners and targets." },
+            "playbooks": { "title": "Playbooks", "desc": "Reference architectures, budgets, and evidence gates." },
+            "scorecards": { "title": "Scorecards", "desc": "Quarterly value tracking and dependency burndown." },
+            "briefings": { "title": "Briefings", "desc": "Board/CXO-ready updates and decision memos." }
+          }
+        },
+        "financial": {
+          "title": "FINANCIAL MODEL",
+          "subtitle": "Transparent economics from first experiment",
+          "items": {
+            "benefits": { "title": "Benefits", "desc": "Revenue lift, cost-to-serve reduction, risk avoidance; leading vs. lagging indicators." },
+            "costs": { "title": "Costs", "desc": "Build/run: infra, licenses, data labeling, ops; people and change management." },
+            "sensitivity": { "title": "Sensitivity", "desc": "Scenario and elasticity analysis; confidence intervals and guardrail policies." },
+            "funding": { "title": "Funding", "desc": "Stage gates tied to evidence; phased budget release and stop/go decisions." },
+            "unitEconomics": { "title": "Unit economics", "desc": "Per request/user/task costs and margins; price/value alignment." },
+            "accounting": { "title": "Accounting", "desc": "CapEx vs. OpEx treatment; amortization and chargebacks by product/team." }
+          }
+        },
+        "delivery": {
+          "title": "DELIVERY PATTERNS",
+          "subtitle": "Ship with paved roads and reusable components",
+          "items": {
+            "refArchitectures": { "title": "Reference architectures", "desc": "Play-specific diagrams and templates with security, privacy, and cost controls." },
+            "accelerators": { "title": "Accelerators", "desc": "SDKs, workflows, and scaffolds; zero-to-prod paths with policy checks." },
+            "dataReadiness": { "title": "Data readiness", "desc": "Contracts, quality gates, and lineage; privacy-by-default retention and masking." },
+            "mlops": { "title": "MLOps", "desc": "Registries, canary rollouts, eval harnesses, and guardrails; rollback playbooks." },
+            "observability": { "title": "Observability", "desc": "SLIs/SLOs and error budgets; value and reliability dashboards at launch." },
+            "enablement": { "title": "Enablement", "desc": "Guides, workshops, and office hours; DX feedback loops and golden paths." }
+          }
+        },
+        "dependencies": {
+          "title": "DEPENDENCIES & ENABLERS",
+          "subtitle": "Make prerequisites explicit and fund them",
+          "items": {
+            "dataPlatform": { "title": "Data platform", "desc": "Streaming, lakehouse, feature stores; access controls and clean rooms." },
+            "platformEngineering": { "title": "Platform engineering", "desc": "IDP, CI/CD, IaC, policy-as-code, and ephemeral environments." },
+            "securityPrivacy": { "title": "Security & privacy", "desc": "Identity, secrets, SBOM/SLSA, privacy tech; continuous compliance." },
+            "peopleChange": { "title": "People & change", "desc": "Enablement programs, hiring, and incentives; new roles and playbooks." },
+            "vendors": { "title": "Vendors", "desc": "Buy vs. build analyses; integration and contract guardrails; exit plans." },
+            "governance": { "title": "Governance", "desc": "Decision rights, review cadences, and exception handling; metrics for health." }
+          }
+        },
+        "governance": {
+          "title": "GOVERNANCE & DECISION RIGHTS",
+          "subtitle": "Clear ownership and fast, safe decisions",
+          "phases": {
+            "raciOwners": { "title": "RACI & owners", "duration": "Who decides", "items": ["Product, data, platform RACI", "Control owners and approvers", "Escalation paths"] },
+            "reviews": { "title": "Reviews", "duration": "Cadence and criteria", "items": ["Architecture and model risk reviews", "Privacy/security sign-offs", "Exception processes"] },
+            "controls": { "title": "Controls", "duration": "Automate the gates", "items": ["Policy-as-code checks", "Evidence capture", "Dashboards and alerts"] }
+          }
+        },
+        "operatingModel": {
+          "title": "OPERATING MODEL",
+          "subtitle": "Make AI a capability of the org, not a project",
+          "phases": {
+            "ownership": { "title": "Ownership", "duration": "Decisions and accountability", "items": ["Product, data, and platform owners", "Embedded security and compliance", "Funding tied to value delivery"] },
+            "waysOfWorking": { "title": "Ways of working", "duration": "Ship safely, quickly", "items": ["Evidence gates and stage exits", "Playbooks and paved roads", "Postmortems and learning loops"] },
+            "skillsEnablement": { "title": "Skills & enablement", "duration": "Scale the practice", "items": ["Guilds and training programs", "Reusable components and SDKs", "Hiring profiles and career paths"] }
+          }
+        },
+        "risk": {
+          "title": "RISK MANAGEMENT",
+          "subtitle": "Surface assumptions early, test cheaply",
+          "items": {
+            "assumptionRegister": { "title": "Assumption register", "desc": "Document hypotheses and test plans; retire risks with evidence." },
+            "technicalFeasibility": { "title": "Technical feasibility", "desc": "Data quality, model performance, integration complexity; prototypes as tests." },
+            "businessAcceptance": { "title": "Business acceptance", "desc": "User research, change readiness, and stakeholder buy-in; pilots as proof." },
+            "regulatory": { "title": "Regulatory", "desc": "Privacy, fairness, transparency requirements; early legal and compliance sign-off." },
+            "operational": { "title": "Operational", "desc": "SRE capacity, on-call, incident playbooks; runbooks before scale." },
+            "financial": { "title": "Financial", "desc": "Sensitivity to volume, cost, and adoption curves; guardrails and circuit breakers." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & MEASUREMENT",
+          "subtitle": "Track value and health continuously",
+          "items": {
+            "valueMetrics": { "title": "Value metrics", "desc": "Revenue, cost, time-to-market, NPS; leading and lagging indicators." },
+            "operational": { "title": "Operational", "desc": "Uptime, latency, throughput, error rates; SLOs and error budgets." },
+            "quality": { "title": "Quality", "desc": "Task success, accuracy, hallucination rates; user corrections and feedback." },
+            "cost": { "title": "Cost", "desc": "Per request, per user, per value delivered; trend vs. budget and forecasts." },
+            "adoption": { "title": "Adoption", "desc": "Active users, session depth, retention; friction points and drop-off." },
+            "governance": { "title": "Governance", "desc": "Policy violations, audit coverage, control effectiveness; incident frequency." }
+          }
+        },
+        "cta": "Build your AI strategy"
+      }
+    },
     "genaiApps": {
+      "title": "GenAI Applications - Copilots for real work",
+      "description": "Role copilots that integrate with systems, follow policy, and prove value: governance and telemetry by default, not optional.",
+      "breadcrumb": "GenAI Applications",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "subtitle": "From chat to systems - assistants that act safely and measurably",
+          "content": ["We design assistants as production systems: policy‑aware adapters to data and tools, prompts and toolchains gated by evals, and end‑to‑end traces for quality, safety, and ROI. The result is faster cycle‑times and fewer escalations - with dashboards that prove lift and guardrails that keep risk acceptable.", "We avoid glue‑code sprawl by using reference components for retrieval, tool routing, memory, and policy. We ship paved roads so new assistants inherit governance, observability, and cost controls automatically."]
+        },
+        "systemModel": {
+          "title": "System Model",
+          "subtitle": "Assistants connect to data and tools through policy-aware adapters, run eval-gated prompts/tools, and emit traces for quality and ROI tracking.",
+          "content": "Assistants connect to data and tools through policy-aware adapters, run eval-gated prompts/tools, and emit traces for quality and ROI tracking."
+        },
+        "outcomes": {
+          "title": "Outcomes",
+          "subtitle": "Ship assistants that executives and risk teams can trust",
+          "items": {
+            "cycleTime": { "title": "Cycle time", "desc": "Lower handle time and better first-touch resolution." },
+            "quality": { "title": "Quality", "desc": "Eval KPIs (factuality, safety, tone) and error budget policies." },
+            "adoption": { "title": "Adoption", "desc": "Usage telemetry and experiment frameworks to iterate fast." }
+          }
+        },
+        "architecture": {
+          "title": "Reference Architecture",
+          "subtitle": "Reusable components and paved roads",
+          "items": {
+            "retrieval": { "title": "Retrieval", "desc": "Schema‑aware connectors, hybrid search, and grounded citation checks." },
+            "tooling": { "title": "Tooling", "desc": "Schema‑validated tools with retries, timeouts, and allow‑lists; side‑effect classification." },
+            "memory": { "title": "Memory", "desc": "Episodic/semantic stores with PII minimization, retention, and purpose binding." },
+            "policy": { "title": "Policy", "desc": "Content filters, approval flows, and tiered permissions tied to roles and risk." },
+            "evals": { "title": "Evals", "desc": "Golden sets and regressions for prompts/tools; offline/online evals wired to gates." },
+            "tracing": { "title": "Tracing", "desc": "Per‑request spans, tool I/O, and outcomes; dashboards for quality and ROI." }
+          }
+        },
+        "patterns": {
+          "title": "Patterns",
+          "subtitle": "What we ship most often",
+          "items": {
+            "supportOps": { "title": "Support & ops", "desc": "Conversation assistants that resolve, triage, and file tickets with grounding and policy." },
+            "salesGrowth": { "title": "Sales & growth", "desc": "Prospecting, sequencing, and proposal drafting; CRM grounded and policy aware." },
+            "engineering": { "title": "Engineering", "desc": "Spec → code → tests; structured review prompts and toolchains; traceable diffs." },
+            "finance": { "title": "Finance", "desc": "Close and FP&A copilots; reconciliation and forecasting with audit trails." },
+            "knowledge": { "title": "Knowledge", "desc": "Authoring, summarization, and enrichment; citations and metadata hygiene." },
+            "backOffice": { "title": "Back‑office", "desc": "Document classification, extraction, and approvals; SOX/PCI/PII aware." }
+          }
+        },
+        "reliability": {
+          "title": "Reliability & Operations",
+          "subtitle": "Operate assistants like critical services",
+          "phases": {
+            "slisSlos": { "title": "SLIs/SLOs", "duration": "Define and enforce", "items": ["Latency/availability/quality", "Error budgets and gates", "Per‑assistant dashboards"] },
+            "changeMgmt": { "title": "Change mgmt", "duration": "Update safely", "items": ["Prompt/model canaries", "Rollbacks and freezes", "Approvals and audits"] },
+            "costPerformance": { "title": "Cost & performance", "duration": "Stay efficient", "items": ["Unit economics budgets", "Batching/caching policies", "Tail latency controls"] }
+          }
+        },
+        "security": {
+          "title": "Security & Privacy",
+          "subtitle": "Built‑in controls for regulated data",
+          "items": {
+            "identity": { "title": "Identity", "desc": "Role/tenant separation; step‑up auth for risky actions; scoped tokens." },
+            "data": { "title": "Data", "desc": "PII detection/redaction; minimization; region‑aware routing and retention." },
+            "supplyChain": { "title": "Supply chain", "desc": "Signed artifacts and SBOM; policy gates at deploy; runtime admission controls." },
+            "monitoring": { "title": "Monitoring", "desc": "Policy violation analytics, abuse signals, and incident playbooks." },
+            "compliance": { "title": "Compliance", "desc": "Evidence capture mapped to SOC2/ISO/NIST/sector frameworks." },
+            "sovereign": { "title": "Sovereign", "desc": "On‑prem/air‑gapped deployments with local models and HSM custody." }
+          }
+        },
+        "cta": "Design a role specific copilot"
+      }
+    },
+    "ragKnowledgeOrchestration": {
+      "title": "RAG & Knowledge Orchestration - Grounded answers that scale",
+      "description": "Graph RAG with semantic routing, query rewriting, hybrid retrieval, and policy-aware synthesis. Built for citations, freshness, and low hallucination risk.",
+      "breadcrumb": "RAG & Knowledge Orchestration",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "subtitle": "RAG is only as good as routing, data hygiene, and synthesis discipline",
+          "content": ["We combine multiple retrieval strategies with a knowledge graph and policy‑aware generators to keep answers grounded and current.", "Our orchestration attaches provenance and citations to every answer. Queries are rewritten and routed to the best retriever; synthesis respects source boundaries and redacts sensitive fields where required. This creates trustable assistants for docs, support, engineering knowledge, and regulated content."]
+        },
+        "systemModel": {
+          "title": "System Model",
+          "subtitle": "",
+          "content": "Queries are classified and routed across strategies (dense, sparse, hybrid, table, code). A knowledge graph tracks entities and provenance; synthesis uses citations with policy gating."
+        },
+        "outcomes": {
+          "title": "Outcomes",
+          "subtitle": "Ground truth with speed",
+          "items": {
+            "trust": { "title": "Trust", "desc": "Citations and provenance by default; abstain when confidence is low." },
+            "freshness": { "title": "Freshness", "desc": "Recrawl/invalidation SLAs; near‑real‑time indices where needed." },
+            "performance": { "title": "Performance", "desc": "P95 latency targets via routing and caching; predictable costs per query." }
+          }
+        },
+        "refArchitecture": {
+          "title": "Reference Architecture",
+          "subtitle": "Retrieval strategies and guards",
+          "items": {
+            "routing": { "title": "Routing", "desc": "Query intent detection, rewriting, and multi-armed bandit selection." },
+            "hybridRetrieval": { "title": "Hybrid Retrieval", "desc": "Vector + BM25 + structure-aware retrievers with dedup and re-ranking." },
+            "knowledgeGraph": { "title": "Knowledge Graph", "desc": "Entity/relationship store, provenance, and freshness scoring." },
+            "synthesis": { "title": "Synthesis", "desc": "Citation-first generation, chunk-attribution, and guardrail prompts." },
+            "policy": { "title": "Policy", "desc": "Access controls, redaction, and content/classification filters." },
+            "evals": { "title": "Evals", "desc": "Groundedness, citation density, latency, and freshness KPIs." }
+          }
+        },
+        "indexingStores": {
+          "title": "Indexing & Stores",
+          "subtitle": "Choose the right store for the job",
+          "items": {
+            "vectorDB": { "title": "Vector DB", "desc": "HNSW/IVF‑PQ, sharding/replication, and filterable metadata; TTL and freshness tiers." },
+            "sparse": { "title": "Sparse", "desc": "BM25/colBERT indexes for lexical match; hybrid re‑ranking to improve precision." },
+            "graph": { "title": "Graph", "desc": "Entities/relations with provenance; path queries for reasoning and disambiguation." },
+            "tables": { "title": "Tables", "desc": "Schema‑aware retrievers and SQL generation with guardrails and allow‑listed queries." },
+            "code": { "title": "Code", "desc": "Symbol and call‑graph indexes; docstring/citation linking; semantic search with structure." },
+            "caches": { "title": "Caches", "desc": "Query/result and chunk caches; invalidation policies; cost‑latency tradeoffs." }
+          }
+        },
+        "retrievalOrchestration": {
+          "title": "Retrieval Orchestration",
+          "subtitle": "Make the router smarter over time",
+          "items": {
+            "classification": { "title": "Classification", "desc": "Intent detection and schema selection; domain routing and fallbacks." },
+            "rewriting": { "title": "Rewriting", "desc": "Query expansion, paraphrase, and negative term injection; language and locale handling." },
+            "bandits": { "title": "Bandits", "desc": "Multi‑armed policies with offline evaluation and online learning; guardrail bounds." },
+            "contextWindows": { "title": "Context windows", "desc": "Chunk budgeting and dedup; diversity and novelty controls; anti‑leak filters." },
+            "abstain": { "title": "Abstain", "desc": "Confidence estimation and safe fallbacks to human or search flows." },
+            "telemetry": { "title": "Telemetry", "desc": "Per‑strategy outcomes; cost/latency/quality tradeoffs; policy hit rates." }
+          }
+        },
+        "ctaSection": {
+          "text": "Stand up RAG+",
+          "link": "/platforms/rag-orchestrator"
+        },
+        "dataIndexing": {
+          "title": "Data & Indexing",
+          "subtitle": "Quality in, quality out",
+          "items": {
+            "ingestion": { "title": "Ingestion", "desc": "Connectors, de‑duplication, partitioning, and canonicalization for PDFs, tables, HTML, code, and media." },
+            "chunking": { "title": "Chunking", "desc": "Layout‑aware segmentation, table extraction, and code symbol graphs for better recall and citation density." },
+            "embeddings": { "title": "Embeddings", "desc": "Domain‑tuned encoders, hard negative mining, and periodic refresh jobs to avoid staleness." },
+            "metadata": { "title": "Metadata", "desc": "Source, authorship, timestamp, and access labels for routing and policy enforcement." }
+          }
+        },
+        "synthesisGuardrails": {
+          "title": "Synthesis & Guardrails",
+          "subtitle": "Grounded generation that respects policy",
+          "items": {
+            "citations": { "title": "Citations", "desc": "Chunk‑level attributions; entailment checks; user‑visible references." },
+            "redaction": { "title": "Redaction", "desc": "PII masking/minimization; allow‑listed fields; purpose binding for outputs." },
+            "format": { "title": "Format", "desc": "Schema‑constrained outputs; validators for JSON/XML; error‑aware re‑asks." },
+            "policies": { "title": "Policies", "desc": "Content filters, classification, and role‑based guardrails; audit trails." },
+            "feedback": { "title": "Feedback", "desc": "User voting and correction capture; flywheel into retrievers and prompts." },
+            "edgeSovereign": { "title": "Edge/sovereign", "desc": "On‑prem synthesis with local indices; HSM custody and offline operation." }
+          }
+        },
+        "operationsKpis": {
+          "title": "Operations & KPIs",
+          "subtitle": "Retrieval that improves with use",
+          "items": {
+            "groundedness": { "title": "Groundedness", "desc": "Citation coverage and correctness; abstain rates when confidence is low." },
+            "freshness": { "title": "Freshness", "desc": "Index lag and decay; SLA on ingestion latency and invalidation." },
+            "latencyCost": { "title": "Latency & cost", "desc": "Per strategy and overall; router decisions vs outcomes to tune policies." },
+            "userFeedback": { "title": "User feedback", "desc": "Vote/acceptance signals and error classes feeding back to retraining." }
+          }
+        },
+        "cta": "Build grounded AI systems"
+      }
+    },
+    "llmopsObservability": {
+      "title": "LLMOps & Observability - Instrument, measure, and improve every generation",
+      "description": "Production LLM systems require telemetry, evaluation, and continuous improvement. We build LLMOps platforms that capture traces, run evals, detect drift, and close the loop from production back to training.",
+      "breadcrumb": "LLMOps & Observability",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "If you can't measure it, you can't improve it",
+          "content": ["LLMs are probabilistic, non-deterministic, and opaque. A single prompt can produce different outputs across runs, models, or configurations. Without instrumentation, you are blind: you don't know what's working, what's expensive, what's drifting, or what's violating policies. LLMOps is the practice of making LLM systems observable, measurable, and improvable in production.", "We instrument every request with distributed traces that capture prompts, model choices, retrieved context, tool invocations, and outputs. We attach metadata-latency, cost, quality scores, policy flags-and aggregate into dashboards. We run continuous evals to catch regressions, detect drift, and surface improvement opportunities. And we close the loop: production signals feed back into prompt tuning, model selection, and retraining pipelines."]
+        },
+        "systemModel": {
+          "title": "SYSTEM MODEL",
+          "subtitle": "Core primitives of LLMOps",
+          "items": {
+            "instrumentation": { "title": "Instrumentation", "desc": "Capture every request: prompts, completions, latency, cost, and metadata." },
+            "traces": { "title": "Traces", "desc": "Distributed tracing across retrieval, models, tools, and synthesis; spans with parent/child relationships." },
+            "metrics": { "title": "Metrics", "desc": "Aggregates: latency distributions, cost per user/task, throughput, and error rates." },
+            "evals": { "title": "Evals", "desc": "Automated quality checks on sampled requests; detect regressions and drift." },
+            "feedback": { "title": "Feedback", "desc": "User ratings, corrections, and flags; close the loop to improve prompts and models." },
+            "governance": { "title": "Governance", "desc": "Policy adherence, audit logs, and incident tracking; evidence for compliance." }
+          }
+        },
+        "architecture": {
+          "title": "ARCHITECTURE & INSTRUMENTATION",
+          "subtitle": "Capture signal at every layer",
+          "phases": {
+            "request": { "title": "Request", "duration": "Inbound", "items": ["User context and intent", "Authentication and metadata", "Trace ID injection"] },
+            "processing": { "title": "Processing", "duration": "Orchestration", "items": ["Retrieval, re-rank, tool spans", "Model invocations and retries", "Cost and latency per stage"] },
+            "response": { "title": "Response", "duration": "Outbound", "items": ["Output validation and filters", "Quality and policy scores", "User feedback hooks"] }
+          }
+        },
+        "pipelines": {
+          "title": "PIPELINES & DATA MODEL",
+          "subtitle": "Collect, aggregate, and analyze",
+          "items": {
+            "ingestion": { "title": "Ingestion", "desc": "Stream traces from application servers; batch and real-time pipelines; deduplication." },
+            "storage": { "title": "Storage", "desc": "Time-series for metrics, columnar for traces, OLAP for analytics; retention policies." },
+            "indexing": { "title": "Indexing", "desc": "Tag traces by user, model, prompt version, outcome; fast queries for debugging." },
+            "aggregation": { "title": "Aggregation", "desc": "Pre-compute rollups: latency percentiles, cost per cohort, success rates." },
+            "sampling": { "title": "Sampling", "desc": "Stratified sampling for evals; over-sample failures and edge cases." },
+            "privacy": { "title": "Privacy", "desc": "PII redaction in logs; access controls for traces; retention and deletion policies." }
+          }
+        },
+        "signals": {
+          "title": "SIGNALS & EVALS",
+          "subtitle": "What to measure and how",
+          "items": {
+            "quality": { "title": "Quality", "desc": "Correctness, relevance, coherence; human raters, model-as-judge, or task success." },
+            "safety": { "title": "Safety", "desc": "Policy violations, toxicity, bias; adversarial and jailbreak attempts." },
+            "latency": { "title": "Latency", "desc": "P50/P95/P99 for total and per-stage; identify bottlenecks (retrieval, model, tools)." },
+            "cost": { "title": "Cost", "desc": "Tokens (input/output), compute, storage; per-user, per-task, and amortized views." },
+            "drift": { "title": "Drift", "desc": "Input distribution shifts, quality degradation over time, and model staleness." },
+            "userSatisfaction": { "title": "User satisfaction", "desc": "Thumbs up/down, task completion, retention; NPS and qualitative feedback." }
+          }
+        },
+        "runbook": {
+          "title": "RUNBOOK & RELEASE",
+          "subtitle": "Operate with confidence",
+          "phases": {
+            "preRelease": { "title": "Pre-release", "duration": "Validate before deploy", "items": ["Offline evals on golden sets", "A/B test setup and metrics", "Rollback and circuit-breaker config"] },
+            "release": { "title": "Release", "duration": "Gradual rollout", "items": ["Canary or shadow deployments", "Real-time monitoring and alerts", "Stop/rollback on regressions"] },
+            "postRelease": { "title": "Post-release", "duration": "Learn and improve", "items": ["Compare metrics vs. baseline", "User feedback analysis", "Next iteration planning"] }
+          }
+        },
+        "reliability": {
+          "title": "RELIABILITY & SLOS",
+          "subtitle": "Define and enforce service levels",
+          "items": {
+            "availability": { "title": "Availability", "desc": "Uptime SLOs, error budgets, and incident thresholds; on-call and escalation." },
+            "latency": { "title": "Latency", "desc": "P95/P99 SLOs; identify and fix tail-latency issues; timeout policies." },
+            "quality": { "title": "Quality", "desc": "Task success SLOs; regression detection; automated rollback on quality drops." },
+            "cost": { "title": "Cost", "desc": "Budget per user/task; alerts on anomalous spend; cost attribution and chargebacks." },
+            "capacity": { "title": "Capacity", "desc": "Throughput limits, auto-scaling policies, and load shedding strategies." },
+            "incidents": { "title": "Incidents", "desc": "Incident classification, runbooks, post-mortems; blameless retrospectives." }
+          }
+        },
+        "security": {
+          "title": "SECURITY & COMPLIANCE",
+          "subtitle": "Audit and govern production systems",
+          "items": {
+            "accessLogs": { "title": "Access logs", "desc": "Who accessed what data, when, and why; immutable audit trails." },
+            "policyTracking": { "title": "Policy tracking", "desc": "Record every policy check (pre/post); violations logged and escalated." },
+            "modelProvenance": { "title": "Model provenance", "desc": "Track model versions, prompt versions, and configuration; lineage for audits." },
+            "piiHandling": { "title": "PII handling", "desc": "Redact PII in logs; retention policies; right-to-delete workflows." },
+            "incidentReports": { "title": "Incident reports", "desc": "Document security/safety incidents; evidence packs for regulators." },
+            "compliance": { "title": "Compliance", "desc": "GDPR, CCPA, SOC 2, ISO 27001; automated evidence collection." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & BENCHMARKS",
+          "subtitle": "Dashboards that matter",
+          "items": {
+            "taskSuccess": { "title": "Task success", "desc": "Fraction of requests that complete successfully; stratify by user/intent." },
+            "quality": { "title": "Quality", "desc": "Eval pass rates, user ratings, and correction frequency; track trends." },
+            "latency": { "title": "Latency", "desc": "P50/P95/P99 by endpoint, model, and workload; regression alerts." },
+            "cost": { "title": "Cost", "desc": "Total spend, cost per user, cost per task; identify optimization opportunities." },
+            "policyAdherence": { "title": "Policy adherence", "desc": "Violation rates, false positive/negative rates; continuous improvement." },
+            "userEngagement": { "title": "User engagement", "desc": "Session length, retention, NPS; qualitative feedback themes." }
+          }
+        },
+        "deployment": {
+          "title": "DEPLOYMENT PATTERNS",
+          "subtitle": "How to roll out LLMOps",
+          "items": {
+            "shadowMode": { "title": "Shadow mode", "desc": "Run new model/prompt alongside prod; compare outputs without user impact." },
+            "canary": { "title": "Canary", "desc": "Route small % of traffic; monitor closely; expand or rollback based on metrics." },
+            "abTesting": { "title": "A/B testing", "desc": "Randomized cohorts; statistical tests for significance; report treatment effects." },
+            "blueGreen": { "title": "Blue/green", "desc": "Deploy to staging; validate; switch traffic atomically; instant rollback." },
+            "featureFlags": { "title": "Feature flags", "desc": "Toggle prompts, models, or policies per-user or per-tenant; gradual enablement." },
+            "circuitBreakers": { "title": "Circuit breakers", "desc": "Halt rollout on anomalies; automatic rollback on quality/cost/latency spikes." }
+          }
+        },
+        "outcomes": {
+          "title": "OUTCOMES",
+          "subtitle": "Why LLMOps matters",
+          "items": {
+            "visibility": { "title": "Visibility", "desc": "Know what's happening in production: quality, cost, latency, and policy adherence." },
+            "reliability": { "title": "Reliability", "desc": "Detect and fix regressions before users complain; operate with SLOs and error budgets." },
+            "improvement": { "title": "Continuous improvement", "desc": "Close the loop from production to prompts/models; data-driven iteration." },
+            "governance": { "title": "Governance", "desc": "Audit trails, compliance evidence, and incident playbooks for safe operations." }
+          }
+        },
+        "cta": "Build your LLMOps platform"
+      }
+    },
+    "genaiAppsOld": {
       "title": "GenAI Applications",
       "description": "Custom generative AI applications built for enterprise scale and compliance.",
       "breadcrumb": "GenAI Applications",
@@ -439,50 +1232,1114 @@
         }
       }
     },
-    "deepTechResearch": {
-      "title": "Deep Tech Research",
-      "description": "Ambitious work in neural architectures, retrieval, program synthesis, safety, and efficient training. Reference implementations, datasets, and open benchmarks with a Bell Labs ethos.",
-      "breadcrumb": "Deep Tech Research"
-    },
     "enterpriseSoftware": {
-      "title": "Enterprise Software Engineering",
-      "description": "Cloud-native services, event-driven systems, API platforms, data mesh, zero-downtime delivery. Architecture patterns, reference stacks, SLOs, and governance for enterprise scale.",
-      "breadcrumb": "Enterprise Software"
+      "title": "Enterprise Software Engineering - Cloud-native, event-driven, resilient",
+      "description": "We design and ship large-scale systems: domain-driven microservices, event streaming, API platforms, and data mesh. Zero-downtime delivery, clear SLOs, and cost governance baked in.",
+      "breadcrumb": "Enterprise Software Engineering",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Enterprise software is an optimization problem across velocity, reliability, and cost. We build systems that are easy to change, hard to break, and economical to run-using domain-driven design, evented integration, API platforms, and lakehouse‑centric data foundations.",
+          "content": [
+            "We start with a clear domain map and ownership model, then standardize service templates, pipelines, and runtime policy so teams ship value quickly. Consistency comes from golden paths and reference stacks; flexibility comes from modular interfaces and contract‑first design. Observability, SLOs, and cost governance are built in from the first commit-so decisions are driven by signals rather than anecdotes.",
+            "Our delivery model emphasizes trunk‑based development, progressive delivery, and contract testing to enable independent deployability. For integration, we favor events (for decoupling) with clear schemas and replay semantics, and use APIs where request/response or access control is primary. We treat data as a product: contracts, lineage, and quality SLAs ensure downstream teams can build confidently on top."
+          ]
+        },
+        "refArchitecture": {
+          "title": "REFERENCE ARCHITECTURE",
+          "subtitle": "An opinionated blueprint for product velocity and operational resilience",
+          "items": {
+            "serviceLayer": { "title": "Service Layer", "desc": "Domain-driven microservices (Java/Go/Node/.NET) with hexagonal ports/adapters, contract tests, and backpressure-aware clients." },
+            "eventing": { "title": "Eventing & Integration", "desc": "Kafka/Pulsar for logs, commands, and CDC; outbox/inbox patterns; idempotency and exactly-once semantics where required." },
+            "apiPlatform": { "title": "API Platform", "desc": "Gateway + BFFs, GraphQL/REST, schema registry, automated changelogs, and usage-based rate/quotas with zero trust." },
+            "dataLayer": { "title": "Data Layer", "desc": "OLTP (Postgres), OLAP (ClickHouse), lakehouse (Iceberg/Delta), feature stores, lineage, and privacy-preserving analytics." },
+            "opsRuntime": { "title": "Ops & Runtime", "desc": "Kubernetes/Istio, autoscaling, HPA/KEDA, blue/green & canaries, runtime policy, secret rotation, and budget/SLO guardrails." },
+            "observability": { "title": "Observability", "desc": "OpenTelemetry traces/metrics/logs, RED/USE dashboards, SLO burn alerts, incident tooling, and postmortem templates." }
+          }
+        },
+        "practices": {
+          "title": "ENGINEERING PRACTICES",
+          "subtitle": "High-velocity delivery without compromising reliability",
+          "phases": {
+            "architecture": {
+              "title": "Architecture & Domains",
+              "duration": "Strategic DDD, bounded contexts, event storming",
+              "items": [
+                "Ubiquitous language, anti-corruption layers",
+                "Context maps, ownership and SLAs per domain",
+                "Golden paths for synchronous vs asynchronous flows"
+              ]
+            },
+            "delivery": {
+              "title": "Delivery & QA",
+              "duration": "Trunk-based, CI/CD, progressive delivery",
+              "items": [
+                "Contract/e2e tests, synthetic traffic, chaos drills",
+                "Feature flags, config-as-data, schema migration gates",
+                "Policy-as-code checks (security, privacy, cost)"
+              ]
+            },
+            "operations": {
+              "title": "Operations",
+              "duration": "SRE, runbooks, and error budgets",
+              "items": [
+                "SLO/SLA definitions and burn-rate alerting",
+                "Capacity management and cost envelopes",
+                "Incident response, blameless postmortems, learnings"
+              ]
+            }
+          }
+        },
+        "domainModeling": {
+          "title": "DOMAIN MODELING & CONTRACTS",
+          "subtitle": "Changeable systems begin with precise boundaries and interfaces",
+          "items": {
+            "contextMaps": { "title": "Context maps", "desc": "Identify core vs supporting domains. Explicit upstream/downstream relationships drive data movement and API/event ownership." },
+            "apiContracts": { "title": "API contracts", "desc": "OpenAPI/GraphQL schemas versioned in a registry. Consumer‑driven contract tests gate breaking changes before deploy." },
+            "eventSchemas": { "title": "Event schemas", "desc": "Avro/JSON schemas with evolution rules; schema compatibility checks in pipelines; dedup keys and idempotent handlers." },
+            "dataProducts": { "title": "Data products", "desc": "Tables/streams with owners, SLAs, and quality tests. Lineage captured automatically for impact analysis." },
+            "policyInterfaces": { "title": "Policy interfaces", "desc": "Authorization and policy decisions pulled into policy services (e.g., OPA/OPA‑style) to avoid business logic drift." },
+            "errorTaxonomies": { "title": "Error taxonomies", "desc": "Standardized error types across services, mapped to retry/escalation behaviors and observability dimensions." }
+          }
+        },
+        "eventingPatterns": {
+          "title": "EVENTING PATTERNS",
+          "subtitle": "Loose coupling without losing guarantees",
+          "items": {
+            "outboxInbox": { "title": "Outbox/inbox", "desc": "Local transaction writes event to outbox; CDC publishes; consumers use inbox for idempotency and at‑least‑once safety." },
+            "commandEvent": { "title": "Command vs event", "desc": "Commands for directed intent and ordering; events for facts. Clear ownership to avoid dual‑write ambiguity." },
+            "replay": { "title": "Replay & reprocessing", "desc": "Retention and compaction strategies; versioned handlers; dead‑letter topics with replay workflows and SLAs." },
+            "workflow": { "title": "Workflow orchestration", "desc": "State machines/Saga orchestration for long‑running transactions; compensation handlers and observability for each step." },
+            "backpressure": { "title": "Backpressure", "desc": "Consumer lag dashboards, adaptive concurrency, and queue shaping to protect downstream stores and services." },
+            "exactlyOnce": { "title": "Exactly‑once options", "desc": "Leverage transactional topics/streams selectively; otherwise lean on idempotent handlers and monotonic state changes." }
+          }
+        },
+        "apiPlatform": {
+          "title": "API PLATFORM",
+          "subtitle": "Productized access with governance and performance",
+          "items": {
+            "gateway": { "title": "Gateway & BFF", "desc": "Per‑channel BFFs reduce chatty calls; gateway enforces authz, quotas, and schema validation close to the edge." },
+            "versioning": { "title": "Versioning", "desc": "Semantic versioning and deprecation policies; API changelogs generated from contracts; consumer notifications automated." },
+            "perfCaching": { "title": "Perf & caching", "desc": "CDN/edge caching for public APIs; internal caching keyed by identity and policy context; HPA tuned to P95/P99 SLIs." },
+            "security": { "title": "Security", "desc": "mTLS, JWT/OIDC with scopes; sensitive fields tokenized/masked; request signing for high‑trust partners." },
+            "monitoring": { "title": "Monitoring", "desc": "Per‑endpoint RED metrics, dashboards, and auto‑tickets on SLO burn; synthetic checks from representative regions." },
+            "monetization": { "title": "Monetization", "desc": "Usage analytics, plan entitlements, and billing hooks for paid APIs." }
+          }
+        },
+        "dataArchitecture": {
+          "title": "DATA ARCHITECTURE",
+          "subtitle": "Lakehouse as the backbone, OLTP/OLAP where they fit",
+          "items": {
+            "contracts": { "title": "Contracts", "desc": "Producers publish data contracts (schemas, SLAs); consumers depend on them; automated tests enforce quality." },
+            "storageTiers": { "title": "Storage tiers", "desc": "Hot OLTP (normalized), materialized views for queries, and lakehouse tables for analytics/ML with ACID tables." },
+            "processing": { "title": "Processing", "desc": "Incremental pipelines; late‑arriving data handling; windowing; CDC integration to reconcile state." },
+            "governance": { "title": "Governance", "desc": "Catalog/lineage, masking, row/column security, and consent enforcement; data products with owners and budgets." },
+            "featureStore": { "title": "Feature store", "desc": "Online/offline parity, point‑in‑time correctness, and training/serving skew checks for ML features." },
+            "biActivation": { "title": "BI & activation", "desc": "Metrics layer with definitions; reverse ETL for activation into SaaS tools with audit trails." }
+          }
+        },
+        "reliability": {
+          "title": "RELIABILITY & PERFORMANCE",
+          "subtitle": "SLOs, capacity, latency budgets, and scale testing",
+          "phases": {
+            "slos": {
+              "title": "SLOs",
+              "duration": "Error budgets drive change policy",
+              "items": [
+                "Availability, latency, freshness per user journey",
+                "Burn‑rate alerts and guardrail automation",
+                "Experiment flags tied to error budgets"
+              ]
+            },
+            "capacity": {
+              "title": "Capacity",
+              "duration": "Plan for demand and variance",
+              "items": [
+                "Load modeling and autoscaling envelopes",
+                "Queue sizing, rate limits, and backpressure",
+                "Perf budgets in CI/CD with synthetic tests"
+              ]
+            },
+            "resilience": {
+              "title": "Resilience",
+              "duration": "Expect failure, contain impact",
+              "items": [
+                "Fault injection and chaos drills",
+                "Multi‑AZ/region strategies and failover playbooks",
+                "Data backup/restore RPO/RTO validation"
+              ]
+            }
+          }
+        },
+        "security": {
+          "title": "SECURITY ENGINEERING",
+          "subtitle": "Controls that enable shipping faster",
+          "items": {
+            "supplyChain": { "title": "Supply chain", "desc": "SBOM, vulnerability scanning, SLSA provenance and signature verification; policy blocks unproven artifacts." },
+            "identity": { "title": "Identity & access", "desc": "Workload identity and short‑lived credentials; fine‑grained permissions; mandatory mTLS and audit logs." },
+            "secrets": { "title": "Secrets", "desc": "Central vaults, rotation schedules, automated revocation, and secretless auth where feasible." },
+            "dataProtection": { "title": "Data protection", "desc": "Field‑level encryption, tokenization, masking, and DLP patterns with lineage." },
+            "testing": { "title": "Testing", "desc": "Threat modeling, static/dynamic analysis, fuzzing, and red‑team scenarios integrated in pipelines." },
+            "compliance": { "title": "Compliance", "desc": "Control‑as‑code mapped to SOC2/ISO/NIST; continuous evidence and dashboards for audits." }
+          }
+        },
+        "delivery": {
+          "title": "DELIVERY & TESTING",
+          "subtitle": "Move fast with confidence",
+          "items": {
+            "cicd": { "title": "CI/CD", "desc": "Trunk‑based, short‑lived branches, fast feedback; staged environments with artifact promotion and change approvals." },
+            "testingPyramid": { "title": "Testing pyramid", "desc": "Unit → contract → component → e2e; test impact analysis to keep cycles under control; synthetic users in pre‑prod." },
+            "schemaMigration": { "title": "Schema migration", "desc": "Online, backward‑compatible migrations; dual‑write/dual‑read strategies; automated fallbacks." },
+            "progressiveDelivery": { "title": "Progressive delivery", "desc": "Canary/blue‑green; feature flags; automated rollback and blast‑radius policies tied to SLOs." },
+            "changeGovernance": { "title": "Change governance", "desc": "Policy‑as‑code gates for security, compliance, and cost; evidence captured on every deploy." },
+            "migration": { "title": "Migration & legacy", "desc": "Strangler fig patterns; adapters; cutover rehearsals and metrics for success." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & ECONOMICS",
+          "subtitle": "Make progress visible to engineering and the business",
+          "items": {
+            "dora": { "title": "DORA/SPACE", "desc": "Lead time, deployment frequency, change failure, MTTR, flow efficiency, and satisfaction trends." },
+            "reliability": { "title": "Reliability", "desc": "SLO attainment, incident counts by severity, and toil reduction metrics by team." },
+            "cost": { "title": "Cost", "desc": "Per‑product and per‑feature cost curves; unit economics for critical journeys; budget adherence." },
+            "value": { "title": "Value", "desc": "Feature adoption, time‑to‑value, and improvements in business KPIs tied to releases." },
+            "security": { "title": "Security", "desc": "Mean time to remediate vulns, coverage of control‑as‑code, and supply‑chain risk posture." },
+            "data": { "title": "Data", "desc": "Data contract SLA compliance, lineage coverage, and query performance budgets." }
+          }
+        },
+        "deliverables": {
+          "title": "DELIVERABLES",
+          "subtitle": "Concrete assets that accelerate teams",
+          "items": {
+            "refRepo": { "title": "Reference repo", "desc": "Production-grade service template with CI/CD, tests, and observability." },
+            "archDocs": { "title": "Architecture docs", "desc": "ADR set, sequence/flow diagrams, SLO map, and failure modes." },
+            "apiContracts": { "title": "API contracts", "desc": "OpenAPI/GraphQL schemas, governance, and change workflows." },
+            "runbooks": { "title": "Runbooks", "desc": "On-call, incident, and capacity playbooks aligned to SLOs." }
+          }
+        },
+        "cta": "Stand up a production blueprint"
+      }
     },
     "gameSystems": {
-      "title": "Game Systems & Real-Time",
-      "description": "We develop multiplayer games and real-time backends across mobile, PC, and console - including blockchain gaming. Authoritative netcode, personalization, economies, and live ops at scale.",
-      "breadcrumb": "Game Systems"
+      "title": "Game Systems & Real-Time - Authoring to live ops",
+      "description": "We develop multiplayer games and real‑time backends across mobile, PC, and console - including blockchain gaming. Authoritative netcode, personalization, economies, and live ops at scale.",
+      "breadcrumb": "Game Systems & Real-Time",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "subtitle": "Real‑time games are distributed systems under tight latency and anti‑abuse constraints. We ship authoritative backends, predictable netcode, telemetry‑driven live ops, and authoring tools so content teams can move fast without breaking fairness or performance.",
+          "content": "We design for consistency where it matters (authoritative state, economy) and for speed at the edge (prediction, reconciliation). Matchmaking balances skill, geography, and queue time; servers arbitrate truth and protect against manipulations; anti‑cheat combines client signals, server heuristics, and ML anomaly detection; live ops runs safe experiments; and data pipelines power personalization and economy tuning."
+        },
+        "gameDevelopment": {
+          "title": "Game Development - Mobile, PC, Console",
+          "subtitle": "End‑to‑end development and online services for cross‑platform multiplayer",
+          "items": {
+            "engines": { "title": "Engines", "desc": "Unreal Engine, Unity, and custom C++/C# stacks; deterministic simulation where genre requires." },
+            "platformSDKs": { "title": "Platform SDKs", "desc": "Xbox (GDK/XSTS), PlayStation (NP/TRC), Nintendo (Lotcheck), Steam, Epic Online Services." },
+            "crossPlay": { "title": "Cross‑play", "desc": "Identity linking, platform entitlements, friends/party systems, and voice chat integration." },
+            "crossProgression": { "title": "Cross‑progression", "desc": "Portable profiles, inventory, cosmetics, and economy state across devices and platforms." },
+            "certification": { "title": "Certification", "desc": "TRC/XR compliance, save‑data and network requirements, stability, suspend/resume, age ratings." },
+            "performance": { "title": "Performance", "desc": "Frame‑time budgets, platform‑specific optimizations, console memory/IO constraints, mobile thermal." },
+            "monetization": { "title": "Monetization", "desc": "Storefront integration (DLC/IAP), pricing experiments, parental controls, and receipt validation." },
+            "localizationAccessibility": { "title": "Localization & Accessibility", "desc": "Globalization, text expansion, input remapping, color/contrast controls, and compliance." }
+          }
+        },
+        "backendServices": {
+          "title": "Backend & Services",
+          "subtitle": "Ultra-low-latency and consistency where it matters",
+          "items": {
+            "matchmaking": { "title": "Matchmaking", "desc": "Skill/ELO, geography, role constraints, and queue-time budgets." },
+            "netcode": { "title": "Netcode", "desc": "Authoritative servers, reconciliation, anti-lag, and rollback strategies." },
+            "state": { "title": "State", "desc": "Event sourcing for auditability; CRDTs where multi-master consistency is needed." },
+            "antiCheat": { "title": "Anti-cheat", "desc": "Signals from clients/servers, ML anomaly detection, and enforcement policies." },
+            "personalization": { "title": "Personalization", "desc": "Recommendations and dynamic difficulty with guardrail evaluation." },
+            "liveOps": { "title": "Live Ops", "desc": "Experimentation, feature flags, and campaign tooling with near-real-time analytics." }
+          }
+        },
+        "blockchainGaming": {
+          "title": "Blockchain Gaming",
+          "subtitle": "On‑chain assets with mainstream UX and compliance",
+          "items": {
+            "design": { "title": "Design", "desc": "Hybrid on/off‑chain models for economies; deterministic on‑chain logic where needed." },
+            "walletsCustody": { "title": "Wallets & Custody", "desc": "Non‑custodial, MPC, and HSM‑backed flows; account abstraction and session keys." },
+            "marketplaces": { "title": "Marketplaces", "desc": "Primary/secondary trading, royalties, fraud detection, and AML/OFAC guardrails." },
+            "scale": { "title": "Scale", "desc": "L2/L3 integrations, DA layers, and gas optimization; on‑chain randomness (VRF) and oracles." },
+            "zkPrivacy": { "title": "ZK & Privacy", "desc": "Proofs for fairness and private state; allowlists and secure matchmaking disclosures." },
+            "compliance": { "title": "Compliance", "desc": "KYC/age gates by region, data minimization, and policy‑as‑code in services." }
+          }
+        },
+        "crossPlatformSystems": {
+          "title": "Cross‑Platform Systems",
+          "subtitle": "Seamless play anywhere",
+          "phases": {
+            "crossPlay": { "title": "Cross‑play", "duration": "Unified online", "items": ["Federated identity and entitlements", "Input‑based pools and anti‑smurfing", "Voice and social graph integration"] },
+            "crossProgression": { "title": "Cross‑progression", "duration": "One profile", "items": ["Inventory and cosmetics sync", "Cloud save and conflict resolution", "Regional data routing"] },
+            "certification": { "title": "Certification", "duration": "Ship compliant", "items": ["TRC/XR/Lotcheck readiness", "Network and suspend/resume cases", "Crash‑free and age rating proofs"] }
+          }
+        },
+        "netcodeConsistency": {
+          "title": "Netcode & Consistency",
+          "subtitle": "Fair, performant, and predictable play",
+          "items": {
+            "authoritativeTick": { "title": "Authoritative tick", "desc": "Server‑authoritative state with fixed tick; client prediction and reconciliation bounded by latency budgets." },
+            "rollback": { "title": "Rollback", "desc": "Input delay/rollback strategies for fighting games; deterministic simulation and input timelines." },
+            "lagCompensation": { "title": "Lag compensation", "desc": "Temporal raycast, hitbox rewind, and rate‑limited correction; P95/P99 latency SLOs per region." },
+            "replication": { "title": "Replication", "desc": "Interest management, delta compression, and state channels tuned to bandwidth/CPU budgets." },
+            "scaling": { "title": "Scaling", "desc": "Session affinity, shard orchestration, and fleet autoscaling; match state persistence and recovery." },
+            "protocols": { "title": "Protocols", "desc": "UDP/QUIC with congestion control and loss recovery; secure session establishment and anti‑tamper tokens." }
+          }
+        },
+        "authoringTooling": {
+          "title": "Authoring & Tooling",
+          "subtitle": "Content velocity with safety rails",
+          "items": {
+            "contentPipelines": { "title": "Content pipelines", "desc": "Versioned assets, dependency graphs, and CI for content; hot‑reload where safe, gated where risky." },
+            "schemaConfig": { "title": "Schema & config", "desc": "Typed configs, diff/merge tooling, and rollout gates; audit logs for changes impacting gameplay or economy." },
+            "experimentation": { "title": "Experimentation", "desc": "Server‑side flags, cohorts, and metrics with guardrails; sequential testing to reduce sample sizes." },
+            "observability": { "title": "Observability", "desc": "Session and server traces; RED/USE dashboards per endpoint; match timelines and error taxonomies." },
+            "diagnostics": { "title": "Diagnostics", "desc": "Replay capture, issue repro harnesses, and packet capture redaction; automated triage suggestions." },
+            "security": { "title": "Security", "desc": "Asset signing, integrity checks, and supply‑chain protections for tooling and content." }
+          }
+        },
+        "opsLiveOperations": {
+          "title": "Ops & Live Operations",
+          "subtitle": "Run the game as a service",
+          "phases": {
+            "matchmaking": { "title": "Matchmaking", "duration": "Healthy, fair queues", "items": ["MMR/ELO with decay and role constraints", "Geo routing, ping budgets, and party handling", "Abandonment/abort policies and safeguards"] },
+            "economyProgression": { "title": "Economy & Progression", "duration": "Balanced and abuse‑resistant", "items": ["Sink/source analysis; inflation monitoring", "Exploit and bot detection; rate limits", "Event/campaign tooling and retros"] },
+            "incidentsSupport": { "title": "Incidents & Support", "duration": "Resolve fast", "items": ["Player reports triage and evidence capture", "Rollback and remediation playbooks", "Postmortems and quality gates"] }
+          }
+        },
+        "antiCheatTrust": {
+          "title": "Anti‑Cheat & Trust",
+          "subtitle": "Defense‑in‑depth without harming honest players",
+          "items": {
+            "signals": { "title": "Signals", "desc": "Client telemetry (input variance, process/userland signals) and server heuristics; outlier detection with review queues." },
+            "enforcement": { "title": "Enforcement", "desc": "Soft and hard actions (shadow pools to bans); appeal workflows; privacy‑aware evidence handling." },
+            "integrity": { "title": "Integrity", "desc": "Binary integrity checks and kernel/userland protections; nonce‑based handshake and replay protections." },
+            "fraud": { "title": "Fraud", "desc": "Account, payment, and promo abuse detection; device fingerprinting and velocity rules." },
+            "privacy": { "title": "Privacy", "desc": "Data minimization and retention; transparent policy disclosures; regional routing controls." },
+            "compliance": { "title": "Compliance", "desc": "Sensitive content and regional regulations handled in authoring and runtime pipelines." }
+          }
+        },
+        "kpis": {
+          "title": "KPIs & Benchmarks",
+          "subtitle": "Performance, fairness, and stability",
+          "items": {
+            "latency": { "title": "Latency", "desc": "P50/P95 round‑trip by region and mode; server frame time stability; tick drift." },
+            "fairness": { "title": "Fairness", "desc": "Rollback corrections per match, hit registration quality, and desync events." },
+            "stability": { "title": "Stability", "desc": "Crash rates, disconnects, and server recovery MTTR; incident counts." },
+            "engagement": { "title": "Engagement", "desc": "DAU/MAU, session length, retention cohorts, and experiment lift." },
+            "economy": { "title": "Economy", "desc": "Inflation index, sink/source balance, and cheater impact estimates." },
+            "support": { "title": "Support", "desc": "Time to resolution, rollback rate, and NPS for support resolutions." }
+          }
+        },
+        "cta": "Scale your real-time backend"
+      }
     },
     "hardwarePrototyping": {
       "title": "Hardware Prototyping",
       "description": "We design, iterate, and qualify hardware systems with partners for fabrication and assembly. Risk-driven decisions, fast loops, and compliance-ready artifacts.",
       "breadcrumb": "Hardware Prototyping"
     },
-    "responsibleAI": {
-      "title": "Responsible AI & Governance",
-      "description": "Policy kits, model risk registry, lineage, audits, red-team harnesses, and incident playbooks. Governance that enables delivery, not blocks it.",
-      "breadcrumb": "Responsible AI"
+    "embeddedEdgeAI": {
+      "title": "Embedded Systems & Edge AI - Sensors to inference",
+      "description": "Architecture design, BSP/driver bring-up, RTOS/Linux, sensor fusion, perception, and on-device inference with CUDA/TensorRT/OpenVINO. Safety cases and certification pathways.",
+      "breadcrumb": "Embedded & Edge AI",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "PCB to perception with deterministic control and safety",
+          "content": ["Embedded and edge systems must meet tight latency, energy, and safety budgets while remaining updatable in the field. We architect from PCB to perception to deliver deterministic control where needed and high-throughput inference where possible-without compromising certification pathways or fleet operations.", "Our approach is layered and measurable. Hardware and BSP choices set the envelope; the OS/RT layer enforces scheduling and QoS; perception and inference pipelines are tuned for end-to-end latency and energy; connectivity and OTA keep fleets healthy; and safety artifacts make decisions auditable. We build traceability across the stack so we can reproduce and optimize behaviors under real workloads."]
+        },
+        "stackOverview": {
+          "title": "STACK OVERVIEW",
+          "subtitle": "A layered approach to predictable performance",
+          "items": {
+            "hardware": { "title": "Hardware & BSP", "desc": "Board bring-up, bootloaders, secure boot, power/thermal envelopes, and drivers for sensors/actuators." },
+            "osRT": { "title": "OS & RT", "desc": "RTOS or Linux (PREEMPT_RT), IPC, scheduling, and QoS for deterministic workloads." },
+            "perception": { "title": "Perception", "desc": "Sensor fusion (EKF/UKF), CV pipelines, calibration, and model runtime abstraction." },
+            "inference": { "title": "Inference", "desc": "CUDA/TensorRT/OpenVINO/NPU SDKs; quantization, sparsity, and mixed precision for latency/energy targets." },
+            "connectivity": { "title": "Connectivity", "desc": "TSN, CAN, EtherCAT, gRPC, and OTA update frameworks with staged rollouts and rollback." },
+            "safety": { "title": "Safety", "desc": "ISO 26262/IEC 61508 artifacts, FMEA/FMEDA, and independence of safety and convenience domains." }
+          }
+        },
+        "optimization": {
+          "title": "OPTIMIZATION & TOOLING",
+          "subtitle": "Tuning for latency, throughput, and energy",
+          "items": {
+            "profiling": { "title": "Profiling", "desc": "Nsight/SystemTap/eBPF traces; hotspots from ISR to kernel to userland." },
+            "modelOpt": { "title": "Model optimization", "desc": "Calibration, INT8/FP16 plans, pipeline fusion, and batching strategies." },
+            "reliability": { "title": "Reliability", "desc": "Watchdogs, degraded modes, bounded queues, and brownout behavior." },
+            "otaFleet": { "title": "OTA & Fleet", "desc": "Delta updates, staged canaries, device attestation, and fleet observability." }
+          }
+        },
+        "architecturePatterns": {
+          "title": "ARCHITECTURE PATTERNS",
+          "subtitle": "Determinism where it counts, throughput where it helps",
+          "items": {
+            "timeCritical": { "title": "Time-critical path", "desc": "Hard/firm real-time threads for actuation and safety interlocks; bounded memory; priority inheritance; static allocation for predictability." },
+            "perceptionPath": { "title": "Perception path", "desc": "Double-buffered DMA, zero-copy kernels, and fused operators; batch size tuned against latency/energy targets with backpressure." },
+            "controlLoop": { "title": "Control loop", "desc": "MPC/robust PID with carefully quantized signals; latency budgets per stage; health checks and fallback modes on sensor loss." },
+            "edgeCache": { "title": "Edge cache", "desc": "Feature/inference cache keyed by context; TTL/eviction policies; prefetching for known routes or tasks." },
+            "telemetry": { "title": "Telemetry", "desc": "Efficient, structured logs and metrics with sampling; on-device ring buffers flushed on connectivity; privacy-aware filters." },
+            "secureBoot": { "title": "Secure boot", "desc": "Measured boot, chain of trust, signed firmware, and secure update ceremonies with rollback protection." }
+          }
+        },
+        "safetyCert": {
+          "title": "SAFETY & CERTIFICATION",
+          "subtitle": "Artifacts and independence for regulated environments",
+          "items": {
+            "safetyCase": { "title": "Safety case", "desc": "Hazard analysis, FMEA/FMEDA, and safety goals mapped to technical mitigations; independence between safety and convenience domains." },
+            "tracing": { "title": "Tracing", "desc": "Design evidence, code reviews, test matrices, coverage, and HW/SW traceability for audits and root-cause analysis." },
+            "diagnostics": { "title": "Diagnostics", "desc": "Built-in tests, self-checks, stuck-bit detection, and watchdog resets; limp-home strategies and safe degraded modes." },
+            "dataGov": { "title": "Data governance", "desc": "PII/PHI handling policies, on-device redaction, secure storage, and time-bounded retention; reproducible export for compliance." },
+            "toolQual": { "title": "Tool qualification", "desc": "Controlled toolchains and verified versions for compilers, model compilers, and static analysis as required by standards." },
+            "procedures": { "title": "Procedures", "desc": "HIL, SIL, and field test plans with acceptance criteria; change control and sign-off workflows integrated with OTA." }
+          }
+        },
+        "otaFleet": {
+          "title": "OTA & FLEET OPERATIONS",
+          "subtitle": "Keep devices secure, updated, and observable",
+          "phases": {
+            "updatePipeline": { "title": "Update pipeline", "duration": "From build to staged rollout", "items": ["Immutable artifacts with signatures and provenance", "Ring deployments and canaries with health checks", "Delta/compressed packages with resume support"] },
+            "fleetHealth": { "title": "Fleet health", "duration": "Detect issues early", "items": ["Device heartbeat, watchdog resets, and error taxonomies", "Telemetry sampling and anomaly detection at edge", "Automated ticketing and fleet segmentation"] },
+            "securityPosture": { "title": "Security posture", "duration": "Defense in depth", "items": ["Key rotation and attestation; certificate revocation", "Patch windows and emergency update paths", "Run-time integrity checks and tamper evidence"] }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & BENCHMARKS",
+          "subtitle": "Quantify performance and reliability at the edge",
+          "items": {
+            "latency": { "title": "Latency budget", "desc": "End-to-end and per-stage P50/P95 with variance; budget regressions block release." },
+            "energy": { "title": "Energy/thermal", "desc": "Joules per inference and thermal headroom across ambient profiles; throttling detection." },
+            "reliability": { "title": "Reliability", "desc": "Crash-free sessions, watchdog events, and degraded-mode frequency; mean time between failures." },
+            "accuracy": { "title": "Accuracy", "desc": "Task-specific metrics (mAP, F1, CER, WER) under real sensor noise; drift monitoring." },
+            "fleet": { "title": "Fleet metrics", "desc": "Update success rates, rollback rates, time-to-patch, and device compliance." },
+            "security": { "title": "Security", "desc": "Attestation pass rates, key rotations, and blocked tamper attempts." }
+          }
+        },
+        "cta": "Review an embedded stack"
+      }
     },
-    "roboticsRPA": {
-      "title": "Robotics & RPA",
-      "description": "We build perception-to-actuation stacks and pragmatic RPA. Simulate fast, ship safely, and keep humans-in-the-loop with audit and governance.",
-      "breadcrumb": "Robotics & RPA"
+    "platformEngineering": {
+      "title": "Platform Engineering & DevEx - Golden paths and paved roads",
+      "description": "Internal developer platforms, golden paths, CI/CD, IaC, policy-as-code, cost/SLO governance, and AI-era DevEx.",
+      "breadcrumb": "Platform Engineering",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Make the right thing the easy thing",
+          "content": ["A Platform Engineering org exists to make the right thing the easy thing. We build internal developer platforms (IDPs) that encode best practices as paved roads-with golden templates, shared runtime services, and guardrails for security, cost, and reliability. Teams ship faster because the platform removes undifferentiated heavy lifting and provides measurable DevEx improvements.", "Our approach is product-led: we treat the platform as a multi-tenant product with customers (feature teams), SLAs/SLOs, a backlog, and adoption goals. We define high-leverage capabilities once (identity, policy-as-code, CI/CD, IaC, observability, FinOps) and expose them as APIs and self-service experiences. Everything is instrumented-time to first commit, time to first deploy, lead time for change, change failure rate, mean time to restore, on-call load, and per-team/cloud cost envelopes. Success is when teams create value quickly without needing a platform concierge.", "Technically, the platform standardizes: (1) developer workstations and templates; (2) build pipelines and artifact standards; (3) environment vending via IaC; (4) runtime policy and service mesh; (5) tracing/metrics/logs with out-of-the-box dashboards; (6) security controls from commit to production; and (7) cost/SLO governance with automated feedback. We prefer composable, open interfaces over monoliths; we adopt where it's good enough and build where differentiation matters."]
+        },
+        "capabilities": {
+          "title": "PLATFORM CAPABILITIES",
+          "subtitle": "Modular components you can adopt incrementally",
+          "items": {
+            "idp": { "title": "IDP", "desc": "Self-serve portal with backstage-style catalogs, scorecards, and golden paths." },
+            "cicd": { "title": "CI/CD", "desc": "Reusable pipelines, artifact standards, provenance, and progressive delivery." },
+            "iac": { "title": "IaC", "desc": "Terraform + policy-as-code; drift detection; environment vending as APIs." },
+            "security": { "title": "Security", "desc": "Secrets, SBOM/SLSA, dependency risk, and pre-merge policy gates." },
+            "observability": { "title": "Observability", "desc": "Tracing/metrics/logs defaults, SLOs, and golden dashboards out-of-the-box." },
+            "finops": { "title": "FinOps", "desc": "Budgets, cost anomalies, and showback/chargeback for platform and teams." }
+          }
+        },
+        "devex": {
+          "title": "DEVELOPER EXPERIENCE",
+          "subtitle": "Shorten feedback loops and remove toil",
+          "phases": {
+            "templates": { "title": "Templates", "duration": "Language + framework + infra", "items": ["Secure-by-default app and service templates", "Built-in observability and policy hooks", "One-command local and cloud dev"] },
+            "automation": { "title": "Automation", "duration": "Scaffolding and upgrades", "items": ["New service wizards and repo bootstraps", "Automated upgrades across fleets", "Guardrails for breaking changes"] },
+            "insights": { "title": "Insights", "duration": "Flow metrics and capacity", "items": ["DORA/SPACE dashboards", "WIP limits and release cadence", "On-call and SLO health radar"] }
+          }
+        },
+        "refArch": {
+          "title": "REFERENCE ARCHITECTURE",
+          "subtitle": "From laptop to production-consistent paths and APIs",
+          "items": {
+            "workstation": { "title": "Workstation & Inner Loop", "desc": "Dev containers standardize toolchains; make targets/scripts unify run/test; local emulators for queues, secrets, and key services reduce cloud dependency." },
+            "build": { "title": "Build & Artifact", "desc": "Unified build images; SBOM generation; attestations and signatures; hermetic builds; provenance stored alongside artifacts for policy checks." },
+            "environments": { "title": "Environments", "desc": "Ephemeral preview environments via IaC and templates; blueprints for shared state; automated teardown; environment drift monitors." },
+            "runtime": { "title": "Runtime & Mesh", "desc": "Kubernetes with policy controllers (OPA/Gatekeeper), service mesh (mTLS, retries, timeouts), and standard sidecars for telemetry and policy." },
+            "policy": { "title": "Policy & Identity", "desc": "Workload identity (SPIFFE/SPIRE or cloud-native), fine-grained permissions, secrets automation (rotation, least-privilege, just-in-time)." },
+            "observability": { "title": "Observability & SLOs", "desc": "OpenTelemetry defaults, RED/USE dashboards per service, SLO error budgets with burn alerts, runbooks linked to pages." }
+          }
+        },
+        "goldenPaths": {
+          "title": "GOLDEN PATHS",
+          "subtitle": "Repeatable end-to-end flows with paved guardrails",
+          "items": {
+            "serviceAPI": { "title": "Service: API + DB", "desc": "Scaffold, CI/CD, environments, SLOs, dashboards, runbook, and cost budget in under 30 minutes." },
+            "eventDriven": { "title": "Event-Driven Service", "desc": "Topic provisioning, contracts/registry, consumer offsets, reprocessing playbooks, and dead-letter handling." },
+            "batchPipeline": { "title": "Batch/Data Pipeline", "desc": "Data contracts, lineage capture, quality checks, and promotion gates from dev to prod." },
+            "mlService": { "title": "ML Microservice", "desc": "Model registry integration, feature store, inference service with canaries, and evaluation gates per model route." }
+          }
+        },
+        "security": {
+          "title": "SECURITY & COMPLIANCE",
+          "subtitle": "Security-by-default, evidence on demand",
+          "items": {
+            "supplyChain": { "title": "Supply Chain", "desc": "Dependency scanning, SBOM, vulnerability gating, and SLSA provenance; signatures verified before deploy." },
+            "secrets": { "title": "Secrets & Keys", "desc": "Centralized vaults, rotation and leasing, envelope encryption; secretless patterns via workload identity." },
+            "access": { "title": "Access", "desc": "Least privilege for CI/CD and runtime, short-lived tokens, and automated access reviews mapped to services." },
+            "controls": { "title": "Controls", "desc": "Policy-as-code checks at PR, pipeline, and admission; continuous evidence collection mapped to SOC2/ISO/NIST." },
+            "data": { "title": "Data", "desc": "Data contracts, masking, retention, and audit trails; privacy impact workflows embedded in templates." },
+            "runbooks": { "title": "Runbooks", "desc": "Standard incident playbooks per control category and automated drills." }
+          }
+        },
+        "reliability": {
+          "title": "RELIABILITY & CONTINUITY",
+          "subtitle": "SLOs, capacity, and disaster recovery engineered in",
+          "items": {
+            "slo": { "title": "SLO program", "desc": "Error budgets, burn policies, and ownership encoded per service; platform enforces alerts and escalation paths." },
+            "capacity": { "title": "Capacity management", "desc": "Autoscaling policies, workload shaping, queue backpressure, and cost-aware placement." },
+            "resilience": { "title": "Resilience", "desc": "Region/zonal DR patterns, backup/restore drills, chaos experiments integrated into CI/CD as scheduled tests." },
+            "changeSafety": { "title": "Change safety", "desc": "Feature flags, blast radius analysis, and progressive delivery defaults for high-risk changes." }
+          }
+        },
+        "finops": {
+          "title": "FINOPS & COST ENGINEERING",
+          "subtitle": "Make cost visible, predictable, and governable",
+          "items": {
+            "budgets": { "title": "Budgets", "desc": "Per team/service budgets and alerts; budget APIs integrated in CI/CD for gates and reports." },
+            "showback": { "title": "Showback/Chargeback", "desc": "Labels/telemetry for cost allocation; monthly reports that drive healthy optimization culture." },
+            "optimization": { "title": "Optimization", "desc": "Right-sizing, autoscaling settings, spot/commitment strategies, and data lifecycle policies." },
+            "modelCost": { "title": "Model cost", "desc": "For AI workloads: per-route/token cost dashboards, model routing, and caching strategies to hit targets." }
+          }
+        },
+        "deliverables": {
+          "title": "DELIVERABLES",
+          "subtitle": "What teams receive from the platform program",
+          "items": {
+            "templates": { "title": "Templates & Golden Paths", "desc": "Language/framework templates, infra blueprints, and end-to-end golden paths with docs and examples." },
+            "pipelines": { "title": "Reference Pipelines", "desc": "Shared CI/CD with security gates, provenance, and progressive delivery." },
+            "portal": { "title": "IDP Portal", "desc": "Catalogs, scorecards, self-service environment vending, and diagnostic tools." },
+            "dashboards": { "title": "Dashboards", "desc": "DORA/SPACE metrics, SLO boards, incident/risk views, and cost dashboards by team and service." }
+          }
+        },
+        "cta": "Launch your IDP"
+      }
+    },
+    "dataPlatforms": {
+      "title": "Data Platforms - Streaming, lakehouse, governance",
+      "description": "We build data backbones for AI: streaming ingestion, lakehouse tables, feature stores, and governance that meets privacy and compliance without killing velocity.",
+      "breadcrumb": "Data Platforms",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Decision-grade data from source to activation",
+          "content": ["Modern data platforms are product platforms: contract-driven ingestion, lakehouse storage with open table formats, batch/stream processing with reliable orchestration, feature stores with point-in-time correctness, and governed access with privacy guardrails. We engineer for freshness, quality, and cost - with SLOs that map to business outcomes and ML/analytics workloads.", "Our blueprints emphasize data ownership and self-serve: domain data products with clear SLAs, lineage, and observability. We align storage/compute tiers to workload patterns, automate compaction and vacuum, and use policy-as-code for access, retention, and purpose limitations. Everything ships with metrics, alerts, and playbooks."]
+        },
+        "refStack": {
+          "title": "REFERENCE STACK",
+          "subtitle": "From ingestion to activation",
+          "items": {
+            "ingestion": { "title": "Ingestion", "desc": "Kafka/Pulsar, CDC, schema registry, and data contracts with ownership." },
+            "storage": { "title": "Storage", "desc": "Lakehouse (Iceberg/Delta), compaction, retention, and tiering strategies." },
+            "processing": { "title": "Processing", "desc": "Batch/stream engines, incremental models, and laminar pipelines." },
+            "featureStore": { "title": "Feature Store", "desc": "Offline/online stores, point-in-time correctness, and lineage." },
+            "access": { "title": "Access", "desc": "Privacy controls, data products, contracts, and SLAs for consumers." },
+            "activation": { "title": "Activation", "desc": "Reverse ETL, metrics layers, and BI/ML service integrations." }
+          }
+        },
+        "streaming": {
+          "title": "STREAMING & INGESTION",
+          "subtitle": "Contracts first, lossless capture, and backpressure safety",
+          "items": {
+            "connectors": { "title": "Connectors", "desc": "CDC (Debezium), file drops, APIs, and SDKs; schema evolution with compatibility enforcement." },
+            "contracts": { "title": "Data contracts", "desc": "Producer/consumer contracts, ownership, SLAs; tests at source to prevent breaking changes." },
+            "buffering": { "title": "Buffering", "desc": "Backpressure handling, dead-letter queues, idempotency keys, and exactly-once semantics where required." },
+            "multitenancy": { "title": "Multitenancy", "desc": "Topic and namespace isolation; quotas; encryption in transit and at rest." },
+            "observability": { "title": "Observability", "desc": "Lag, throughput, and error budgets per source; SLO alerts and replay tooling." },
+            "edge": { "title": "Edge", "desc": "Gateway ingestion, CDC at branch sites, and merge conflict resolution for intermittency." }
+          }
+        },
+        "lakehouse": {
+          "title": "LAKEHOUSE TABLES & STORAGE",
+          "subtitle": "Open tables, efficient IO, predictable costs",
+          "items": {
+            "formats": { "title": "Table formats", "desc": "Apache Iceberg and Delta Lake; partitioning and clustering strategies; snapshot isolation." },
+            "compaction": { "title": "Compaction", "desc": "Small file mitigation, optimize/vacuum scheduling, and metadata pruning." },
+            "tiers": { "title": "Tiers", "desc": "Hot/warm/cold with lifecycle policies; archival and legal hold patterns." },
+            "indexes": { "title": "Indexes", "desc": "Bloom/Z-order and manifest/metadata caching; vector indexes for retrieval features." },
+            "security": { "title": "Security", "desc": "Server-side encryption, key rotation, row/column masking, and tokenized PII." },
+            "deletes": { "title": "Governed deletes", "desc": "Retention, time-travel, GDPR/CCPA deletes, and reproducible compaction logs." }
+          }
+        },
+        "processing": {
+          "title": "PROCESSING & ORCHESTRATION",
+          "subtitle": "Incremental by default, resilient by design",
+          "items": {
+            "engines": { "title": "Engines", "desc": "Spark/Flink/Beam/DBT; streaming first with CDC upserts and watermarks." },
+            "orchestration": { "title": "Orchestration", "desc": "DAGs with retries, idempotent tasks, and backfill playbooks; SLAs with auto-escalation." },
+            "quality": { "title": "Quality", "desc": "Contract tests, anomaly detection, and quarantine; schema drift notifications." },
+            "semantic": { "title": "Semantic layer", "desc": "Metric definitions, versioning, and change audit; query authorization integrated." },
+            "observability": { "title": "Observability", "desc": "Lineage, run logs, and resource usage; OpenTelemetry traces across jobs." },
+            "devex": { "title": "DevEx", "desc": "Local dev with fixtures, data diffs in PRs, and ephemeral test runs." }
+          }
+        },
+        "featureStore": {
+          "title": "FEATURE STORES & ONLINE SERVING",
+          "subtitle": "Point-in-time correctness and low-latency reads",
+          "items": {
+            "offline": { "title": "Offline", "desc": "Backfills, historical joins, and reproducible training sets with snapshot cutoffs." },
+            "online": { "title": "Online", "desc": "Serving stores with P99 targets; TTLs and write amplification controls; hot feature caching." },
+            "materialization": { "title": "Materialization", "desc": "Stream and micro-batch sync; audit events for lineage and drift analysis." },
+            "joinCorrectness": { "title": "Join correctness", "desc": "As-of joins, late data handling, and entity resolution rules." },
+            "modelRegistry": { "title": "Model registry", "desc": "Versioning, signatures, canaries, and rollout policies tied to features and datasets." },
+            "edge": { "title": "Edge", "desc": "Local caches and federated updates for sovereign/edge deployments." }
+          }
+        },
+        "governance": {
+          "title": "GOVERNANCE",
+          "subtitle": "Trust without friction",
+          "items": {
+            "catalog": { "title": "Catalog & lineage", "desc": "Automated metadata capture, ownership, and impact analysis." },
+            "privacy": { "title": "Privacy & policy", "desc": "Row/column-level security, masking, consent, and purpose limits." },
+            "quality": { "title": "Quality SLAs", "desc": "Contracts, tests, and automatic quarantines for broken data." },
+            "cleanRooms": { "title": "Clean rooms", "desc": "Partner collaboration with privacy-preserving joins and logs." }
+          }
+        },
+        "privacy": {
+          "title": "PRIVACY & CLEAN ROOMS",
+          "subtitle": "Collaborate without sharing raw data",
+          "phases": {
+            "consent": { "title": "Consent & minimization", "duration": "Lawful, purpose-bound use", "items": ["Consent capture and purpose scoping", "Data minimization and masking", "Automated retention and deletion"] },
+            "privacyTech": { "title": "Privacy tech", "duration": "Insights with protections", "items": ["DP/k-anonymity/synthetic data", "Pseudonymization and tokenization", "Threshold queries and noise"] },
+            "cleanRooms": { "title": "Clean rooms", "duration": "Partner analytics", "items": ["Query templates and audits", "Cross-party joins without data egress", "Usage logs and billing"] }
+          }
+        },
+        "security": {
+          "title": "SECURITY & COMPLIANCE",
+          "subtitle": "Defense-in-depth for sensitive data",
+          "items": {
+            "encryption": { "title": "Encryption", "desc": "End-to-end encryption at rest and in transit; key management with HSM integration and rotation." },
+            "access": { "title": "Access control", "desc": "Fine-grained authZ (ABAC/RBAC), workload identity, and least-privilege defaults." },
+            "audit": { "title": "Audit logs", "desc": "Immutable audit trails for all data access; retention policies and tamper-evident storage." },
+            "secrets": { "title": "Secrets", "desc": "Vaulted secrets, rotation, envelope encryption; key custody and access logs." },
+            "network": { "title": "Network security", "desc": "VPC isolation, private endpoints, and zero-trust network access; DDoS protection." },
+            "incident": { "title": "Incident response", "desc": "Detection, containment, and recovery playbooks; breach notification workflows." }
+          }
+        },
+        "reliability": {
+          "title": "RELIABILITY & CONTINUITY",
+          "subtitle": "SLOs for freshness, quality, and availability",
+          "phases": {
+            "slos": { "title": "SLOs & SLIs", "duration": "What 'good' means", "items": ["Freshness and staleness budgets", "Completeness and accuracy thresholds", "Availability and latency targets"] },
+            "quality": { "title": "Quality & contracts", "duration": "Prevent regressions", "items": ["Contract tests and drift detection", "Auto-quarantine and alerts", "Owner on-call and playbooks"] },
+            "dr": { "title": "DR & backfills", "duration": "Recover fast", "items": ["Checkpointing and snapshots", "Deterministic reprocessing", "Failover and runbooks"] }
+          }
+        },
+        "finops": {
+          "title": "FINOPS & COST ENGINEERING",
+          "subtitle": "Performance per dollar, not just performance",
+          "items": {
+            "costing": { "title": "Cost attribution", "desc": "Tag-driven allocation across teams, products, and environments; unit economics per pipeline." },
+            "optimization": { "title": "Optimization", "desc": "Right-sizing, autoscaling, spot/RI mixes; storage tiering and compaction strategies." },
+            "budgets": { "title": "Budgets", "desc": "Team-level budgets and alerts; per-product chargebacks and forecasts." },
+            "showback": { "title": "Showback & reporting", "desc": "Cost dashboards, anomaly detection, and predictive spend models for planning." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & BENCHMARKS",
+          "subtitle": "Measure what matters",
+          "items": {
+            "freshness": { "title": "Freshness", "desc": "End-to-end latency by product; staleness budgets and breach counts." },
+            "quality": { "title": "Quality", "desc": "Null rates, distribution drift, and quarantine durations; test pass rates." },
+            "performance": { "title": "Performance", "desc": "Query P50/P95/P99, engine utilization, and compaction efficacy." },
+            "adoption": { "title": "Adoption", "desc": "Active data products, consumer SLAs, and self-serve usage." },
+            "reliability": { "title": "Reliability", "desc": "Incident counts, MTTR/MTTD, and recovery time for backfills." },
+            "cost": { "title": "Cost", "desc": "Storage growth, compute spend per TB processed, and egress." }
+          }
+        },
+        "deployment": {
+          "title": "DEPLOYMENT PATTERNS",
+          "subtitle": "Meet you where you run",
+          "phases": {
+            "cloudNative": { "title": "Cloud-native managed", "duration": "Fastest path", "items": ["Managed Kafka/lakehouse engines", "Serverless feature/serving tiers", "Managed governance controls"] },
+            "hybrid": { "title": "Hybrid & edge", "duration": "Data gravity", "items": ["On-prem ingestion and caching", "Cloud processing tiers", "Policy-aware data movement"] },
+            "sovereign": { "title": "Sovereign & on-prem", "duration": "Full control", "items": ["Air-gapped clusters", "HSM key custody and audit", "Offline/edge feature serving"] }
+          }
+        },
+        "cta": "Stand up a lakehouse/feature store"
+      }
     },
     "securityCompliance": {
-      "title": "Security & Compliance",
+      "title": "Security & Compliance - Build fast, stay safe",
       "description": "Security isn't a gate at the end, it's paved into the road: identity, secrets, SBOM/SLSA, threat models, red teams, and continuous compliance.",
-      "breadcrumb": "Security & Compliance"
+      "breadcrumb": "Security & Compliance",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Security-by-default for platforms, apps, and AI systems",
+          "content": ["We implement defense-in-depth that never slows teams down: paved roads with identity, secrets, signed supply chains, and policy-as-code built into every service template. Detection and response are engineered as products with well-defined SLAs and playbooks. Compliance is continuous and automated, producing audit-ready evidence without manual spreadsheets.", "Our approach is outcome-driven: least-privilege by default, workload identity and mTLS everywhere, tamper-evident builds, and environment baselines that resist drift. Controls are observable, measurable, and versioned, so changes are safe, reversible, and attributable."]
+        },
+        "controls": {
+          "title": "CONTROLS & FOUNDATIONS",
+          "subtitle": "Secure-by-default components that ship with every service",
+          "items": {
+            "identity": { "title": "Identity", "desc": "Workload identity, mTLS, and least-privilege access with automated expiry." },
+            "secrets": { "title": "Secrets", "desc": "Rotation, envelopes, and vault integrations with audit trails." },
+            "supplyChain": { "title": "Supply Chain", "desc": "SBOM, provenance (SLSA), and signature verification in CI/CD." },
+            "policy": { "title": "Policy", "desc": "OPA/Conftest checks for security, privacy, and cost gates pre-merge." },
+            "detection": { "title": "Detection", "desc": "Centralized logs, detections-as-code, and response playbooks." },
+            "compliance": { "title": "Compliance", "desc": "Evidence collection and controls mapped to SOC2/ISO/NIST/HIPAA." }
+          }
+        },
+        "engineering": {
+          "title": "ENGINEERING PROCESS",
+          "subtitle": "Shift-left without slowing down",
+          "phases": {
+            "threatModeling": { "title": "Threat Modeling", "duration": "Per feature and per system", "items": ["Abuse cases and mitigation tracking", "Security requirements baked into stories", "Architectural risk analysis"] },
+            "testing": { "title": "Testing", "duration": "Automated and adversarial", "items": ["Static/dynamic scans, fuzzing, and dependency risk", "Red-team scenarios and purple-team drills", "Chaos and failure-injection for security controls"] },
+            "complianceOps": { "title": "Compliance Ops", "duration": "Continuous evidence", "items": ["Control-as-code and automated evidence", "Dashboards for control drift and coverage", "Audit packs for external assessors"] }
+          }
+        },
+        "identity": {
+          "title": "IDENTITY & ACCESS",
+          "subtitle": "Zero trust and least privilege as defaults",
+          "items": {
+            "workloadIdentity": { "title": "Workload identity", "desc": "SPIFFE/SPIRE or cloud-native workload identity; short-lived certs and mTLS everywhere." },
+            "accessControls": { "title": "Access controls", "desc": "ABAC/RBAC with policy-as-code; just-in-time access and auto-expiry approvals." },
+            "federation": { "title": "Federation", "desc": "SSO, SCIM, and SCIM provisioning; device posture checks; step-up auth for sensitive actions." },
+            "auditTrails": { "title": "Audit trails", "desc": "Immutable logs for authN/Z decisions; evidence tied to change requests and work items." },
+            "networkTrust": { "title": "Network trust", "desc": "Private service meshes with mTLS and identity-aware policies; egress controls and DNS security." },
+            "secretsScope": { "title": "Secrets scope", "desc": "Fine-grained scopes, token lifetimes, and rotation policies aligned to risk levels." }
+          }
+        },
+        "secrets": {
+          "title": "SECRETS & KEY MANAGEMENT",
+          "subtitle": "Custody, rotation, and cryptographic hygiene",
+          "items": {
+            "vaults": { "title": "Vaults", "desc": "Centralized KMS/HSM with envelope encryption; automated rotation and revocation; break-glass procedures." },
+            "transit": { "title": "Transit encryption", "desc": "TLS 1.3, modern ciphers, PFS; service and data plane isolation; cert pinning where feasible." },
+            "atRest": { "title": "Data-at-rest", "desc": "Key hierarchies, per-tenant keys, and periodic re-keying; auditable key access and custody logs." },
+            "signing": { "title": "Signing", "desc": "Artifact and container signing; provenance (SLSA) and policy enforcement at deploy time." },
+            "lifecycle": { "title": "Secrets lifecycle", "desc": "Creation, distribution, rotation, and sunset; secret scanning in repos and images." },
+            "customerKeys": { "title": "Customer keys", "desc": "Bring-your-own-key (BYOK) and hold-your-own-key (HYOK) patterns with HSM custody." }
+          }
+        },
+        "supplyChain": {
+          "title": "SOFTWARE SUPPLY CHAIN",
+          "subtitle": "From source to prod with integrity and provenance",
+          "items": {
+            "sbom": { "title": "SBOM", "desc": "Dependency inventories per build; license and vulnerability policies enforced in CI." },
+            "provenance": { "title": "Provenance", "desc": "SLSA 3+ pipelines; reproducible builds and attestations; tamper-evident logs." },
+            "isolation": { "title": "Isolation", "desc": "Hermetic builds, pinned dependencies, and sandboxed runners; secrets-free build stages." },
+            "hardening": { "title": "Image hardening", "desc": "Minimal base images, distroless, and runtime constraints (seccomp, AppArmor, SELinux)." },
+            "policyGates": { "title": "Policy gates", "desc": "Signature and policy verification pre-deploy; runtime admission controls in clusters." },
+            "thirdParties": { "title": "Third parties", "desc": "Vendor risk assessments, scopes, and monitored tokens; periodic reviews and expiry." }
+          }
+        },
+        "appSecurity": {
+          "title": "APPLICATION & API SECURITY",
+          "subtitle": "Prevent, detect, and contain vulnerabilities",
+          "items": {
+            "secureCoding": { "title": "Secure coding", "desc": "Linting, SAST/DAST, and dependency scanning; language-appropriate frameworks and guardrails." },
+            "apiHardening": { "title": "API hardening", "desc": "Schema validation, rate limits, authZ checks, and consistent error handling; abuse case tests." },
+            "dataValidation": { "title": "Data validation", "desc": "Canonicalization and strict parsing; SSRF/SQLi/XSS protections; safe templating and deserialization." },
+            "secretsInCode": { "title": "Secrets in code", "desc": "Pre-commit and CI scanning; auto-revoke on detection; PR education feedback loops." },
+            "aiLLMSecurity": { "title": "AI/LLM security", "desc": "Prompt injection defenses, output validation, and policy filters; dataset governance and lineage." },
+            "testing": { "title": "Testing", "desc": "Fuzzing, chaos in staging, and replay harnesses for high-risk code paths." }
+          }
+        },
+        "cloudNetwork": {
+          "title": "CLOUD & NETWORK SECURITY",
+          "subtitle": "Hardened infrastructure with observable controls",
+          "items": {
+            "baselines": { "title": "Baselines", "desc": "Hardened images and CIS benchmarks; drift detection and auto-remediation." },
+            "segmentation": { "title": "Segmentation", "desc": "VPC, subnet, and security group hygiene; service mesh policies and egress allowlists." },
+            "edge": { "title": "Edge", "desc": "WAF, bot management, and DDoS protections; certificate management and TLS policies." },
+            "storage": { "title": "Storage", "desc": "Default encryption, public access detection, and data egress controls; object lock capabilities." },
+            "kubernetes": { "title": "Kubernetes", "desc": "Admission control, PSP/PSA, runtime policies, and resource quotas; namespace isolation." },
+            "observability": { "title": "Observability", "desc": "Flow logs, configuration diffing, and topology maps; queryable audit trails." }
+          }
+        },
+        "threatDetection": {
+          "title": "THREAT DETECTION & RESPONSE",
+          "subtitle": "Detect fast, respond faster",
+          "phases": {
+            "detections": { "title": "Detections", "duration": "Signals that matter", "items": ["Detections-as-code with tests", "Behavioral analytics and anomaly models", "Use-case coverage dashboards"] },
+            "operations": { "title": "Operations", "duration": "From alert to action", "items": ["Playbooks and auto-enrichment", "Triage SLAs and SLOs", "Threat intel and case management"] },
+            "continuity": { "title": "Continuity", "duration": "Prepared and practiced", "items": ["Tabletops and red/blue exercises", "Forensics and containment", "Post-incident reviews"] }
+          }
+        },
+        "complianceEvidence": {
+          "title": "COMPLIANCE & EVIDENCE",
+          "subtitle": "Controls mapped to frameworks, evidence captured continuously",
+          "items": {
+            "frameworks": { "title": "Frameworks", "desc": "SOC2, ISO 27001, HIPAA, PCI, NIST; unified control catalogs and mappings." },
+            "evidence": { "title": "Evidence", "desc": "Automated collection from systems of record; freshness and coverage tracking." },
+            "tasks": { "title": "Tasks", "desc": "Control owners, review cadences, and escalation; attestations and approvals in workflow." },
+            "vendors": { "title": "Vendors", "desc": "Third-party risk management, data processing agreements, and right-to-audit language." },
+            "policies": { "title": "Policies", "desc": "Human-readable policies tied to technical controls; versioning and acknowledgements." },
+            "reporting": { "title": "Reporting", "desc": "Auditor packs with evidence pointers; change logs and exceptions management." }
+          }
+        },
+        "privacy": {
+          "title": "PRIVACY ENGINEERING",
+          "subtitle": "Respect by design, compliance by default",
+          "items": {
+            "lifecycle": { "title": "Data lifecycle", "desc": "Collection, minimization, purpose binding, retention, and deletion automation." },
+            "techniques": { "title": "Techniques", "desc": "Tokenization, anonymization, differential privacy, and secure enclaves." },
+            "subjectRights": { "title": "Subject rights", "desc": "DSAR workflows, consent, and preference management; region-aware routing." },
+            "llmPrivacy": { "title": "LLM privacy", "desc": "Dataset governance, PII redaction, prompt/output policies, and usage logs." },
+            "dataSharing": { "title": "Data sharing", "desc": "Data clean rooms, query templates, and auditing; controlled egress paths." },
+            "privacyReviews": { "title": "Privacy reviews", "desc": "PIAs/LIAs as code with CI checks; approval trails and expirations." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & BENCHMARKS",
+          "subtitle": "Prove control effectiveness and program health",
+          "items": {
+            "exposure": { "title": "Exposure", "desc": "High-risk asset counts, internet-exposed endpoints, and misconfigurations over time." },
+            "findings": { "title": "Findings", "desc": "MTTR/MTTD for vulnerabilities; patch coverage; critical vuln window durations." },
+            "incidents": { "title": "Incidents", "desc": "Mean time to contain, escalations, and recurrence rates; playbook adherence." },
+            "compliance": { "title": "Compliance", "desc": "Control coverage, evidence freshness, and audit finding rates." },
+            "education": { "title": "Education", "desc": "Secure code training completion and defect density trends post-training." },
+            "cost": { "title": "Cost", "desc": "Cost per control, per incident, and per avoided breach vs. baseline." }
+          }
+        },
+        "deployment": {
+          "title": "DEPLOYMENT PATTERNS",
+          "subtitle": "Meet regulatory and business constraints",
+          "phases": {
+            "cloudNative": { "title": "Cloud-native", "duration": "Managed controls", "items": ["CSP managed security services", "Centralized policy-as-code", "Unified identity and logging"] },
+            "hybrid": { "title": "Hybrid", "duration": "Data gravity", "items": ["On-prem trust anchors", "Cloud control planes", "Federated identity and policy"] },
+            "sovereign": { "title": "Sovereign", "duration": "Fully isolated", "items": ["Air-gapped clusters", "Offline key custody", "Manual evidence ingestion"] }
+          }
+        },
+        "cta": "Bootstrap security-by-default"
+      }
+    },
+    "responsibleAI": {
+      "title": "Responsible AI & Governance - Policies, audits, and accountable operations",
+      "description": "Policy kits, model risk registry, lineage, audits, red-team harnesses, and incident playbooks. Governance that enables delivery, not blocks it.",
+      "breadcrumb": "Responsible AI & Governance",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "Responsible AI is a product discipline: policies and controls embedded in the lifecycle so builders move faster with fewer surprises. We focus on evidence and accountability, not paperwork.",
+          "content": ["Every control is testable and has an owner. We connect requirements to data, models, prompts, tools, and releases, capturing lineage and decisions. When something changes-or fails-we know what changed, why, and how to respond."]
+        },
+        "lifecycleControls": {
+          "title": "LIFECYCLE CONTROLS",
+          "subtitle": "Attach evidence to every change",
+          "phases": {
+            "design": {
+              "title": "Design",
+              "duration": "Before build",
+              "items": [
+                "Policy requirements and impact assessments",
+                "Data sourcing and consent checks",
+                "Model/playbook selection"
+              ]
+            },
+            "build": {
+              "title": "Build",
+              "duration": "During implementation",
+              "items": [
+                "Eval obligations and bias tests",
+                "Prompt/tool gateways",
+                "Security/privacy controls"
+              ]
+            },
+            "operate": {
+              "title": "Operate",
+              "duration": "After release",
+              "items": [
+                "Monitoring and incident playbooks",
+                "Retraining governance",
+                "Regulator communications"
+              ]
+            }
+          }
+        },
+        "outcomes": {
+          "title": "OUTCOMES",
+          "subtitle": "Evidence-backed governance",
+          "items": {
+            "registry": {
+              "title": "Registry",
+              "desc": "Inventory of AI systems with risk ratings, owners, and lineage."
+            },
+            "controls": {
+              "title": "Controls",
+              "desc": "Bias, safety, privacy, and security controls mapped to tests."
+            },
+            "response": {
+              "title": "Response",
+              "desc": "Playbooks for model incidents, rollbacks, and regulator outreach."
+            }
+          }
+        },
+        "controlsLibrary": {
+          "title": "CONTROLS LIBRARY",
+          "subtitle": "Map obligations to technical controls",
+          "items": {
+            "data": {
+              "title": "Data",
+              "desc": "Consent, purpose limitation, minimization, retention, and DSAR fulfillment with logs."
+            },
+            "model": {
+              "title": "Model",
+              "desc": "Datasheets, eval obligations, bias testing, and retraining governance."
+            },
+            "promptTool": {
+              "title": "Prompt/Tool",
+              "desc": "Prompt gateways, redaction, tool allow‑lists, and approval workflows."
+            },
+            "operations": {
+              "title": "Operations",
+              "desc": "Access reviews, incident processes, and regulator communication plans."
+            },
+            "thirdParty": {
+              "title": "Third‑party",
+              "desc": "Vendor assessment, model provenance, and contract clauses for AI use."
+            },
+            "transparency": {
+              "title": "Transparency",
+              "desc": "Disclosures, user notices, and explanation artifacts where applicable."
+            }
+          }
+        },
+        "registryAudits": {
+          "title": "REGISTRY, AUDITS & EVIDENCE",
+          "subtitle": "Governance that runs itself",
+          "items": {
+            "registry": {
+              "title": "Registry",
+              "desc": "Model/system registry with risk ratings, owners, lineage, and obligations."
+            },
+            "audits": {
+              "title": "Audits",
+              "desc": "Internal/external audits with evidence packs from telemetry and controls."
+            },
+            "incidents": {
+              "title": "Incidents",
+              "desc": "RAI incident taxonomy and playbooks; reporting thresholds and timelines."
+            },
+            "reviews": {
+              "title": "Reviews",
+              "desc": "Architecture/model risk reviews; approvals and exceptions with expiry."
+            },
+            "reporting": {
+              "title": "Reporting",
+              "desc": "Board/regulator briefings; metrics for policy adherence and outcomes."
+            },
+            "training": {
+              "title": "Training",
+              "desc": "Policy education, secure coding for prompts/tools, and red‑teaming drills."
+            }
+          }
+        },
+        "cta": "See our RAI program"
+      }
+    },
+    "roboticsRPA": {
+      "title": "Robotics & RPA - Autonomy and enterprise automation",
+      "description": "We build perception-to-actuation stacks and pragmatic RPA. Simulate fast, ship safely, and keep humans-in-the-loop with audit and governance.",
+      "breadcrumb": "Robotics & RPA",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "subtitle": "Robotics demands end‑to‑end engineering-from perception to planning to control-validated in simulation and proven in the field. Enterprise RPA demands the same rigor at business layer: reliable automations with security, auditability, and clear ROI. We build both with a common philosophy: composable stacks, measured loops, and human‑in‑the‑loop where it counts.",
+          "content": "For autonomy, we design perception pipelines that work under real noise, planners that satisfy constraints, and controllers that meet latency and stability requirements. We connect digital twins to production telemetry so we can iterate fast with high fidelity. For RPA, we treat processes as products: discovery → design → governance → operations, with resilient libraries, secrets handling, and escalation paths. Each automation publishes metrics and evidence so leadership sees value and risk in one place."
+        },
+        "roboticsStack": {
+          "title": "Robotics Stack",
+          "subtitle": "Composable modules for reliability and iteration speed",
+          "items": {
+            "perception": { "title": "Perception", "desc": "Multi-sensor fusion, SLAM, and object pose; synthetic data pipelines for rare cases." },
+            "planning": { "title": "Planning", "desc": "Sampling- and optimization-based planners with collision checking; time-parameterization." },
+            "control": { "title": "Control", "desc": "Model predictive control and robust PID; latency/quantization-aware trajectories." },
+            "digitalTwins": { "title": "Digital Twins", "desc": "High-fidelity sims tied to production telemetry for root-cause and regression." },
+            "hil": { "title": "HIL", "desc": "Hardware-in-the-loop rigs for deterministic faults and safety validation." },
+            "safety": { "title": "Safety", "desc": "PLd/SIL, interlocks, e-stops, fenced zones, and supervised autonomy patterns." }
+          }
+        },
+        "autonomyPatterns": {
+          "title": "Autonomy Patterns",
+          "subtitle": "From sensor to actuator with guarantees",
+          "items": {
+            "stateEstimation": { "title": "State estimation", "desc": "Filter stacks (EKF/UKF/particle) and factor graphs; observability analysis; online calibration for drifts." },
+            "taskTrajectory": { "title": "Task/trajectory", "desc": "Hierarchical task planners and motion planners with dynamics & constraints; warm‑starts from learned policies where beneficial." },
+            "latencyBudgets": { "title": "Latency budgets", "desc": "Perception → plan → control budgets with oscillation/overshoot limits; watchdogs and degraded modes." },
+            "testing": { "title": "Testing", "desc": "Scenario generation, randomized stress tests, and sim‑to‑real transfer metrics; regression harnesses tied to traces." },
+            "tooling": { "title": "Tooling", "desc": "Bag/log tooling, timeline visualizers, profiler hooks, and replay systems for quick iteration." },
+            "ops": { "title": "Ops", "desc": "Fleet telemetry, remote diagnostics, staged updates, and rollbacks; incident playbooks and RCA templates." }
+          }
+        },
+        "rpaArchitecture": {
+          "title": "Enterprise RPA Architecture",
+          "subtitle": "Reliable automations with audit, security, and human oversight",
+          "phases": {
+            "designGovernance": { "title": "Design & Governance", "duration": "Start with the right targets", "items": ["Process discovery from event logs and shadowing", "Data minimization, secrets handling, and approval rules", "Shared libraries with versioning and tests"] },
+            "runtimeReliability": { "title": "Runtime & Reliability", "duration": "Keep bots stable", "items": ["Idempotent steps, retries with backoff, and circuit breakers", "Structured logs/metrics and health dashboards", "Graceful escalation and dead‑letter workflows"] },
+            "operationsROI": { "title": "Operations & ROI", "duration": "Make value visible", "items": ["Per‑bot SLAs and acceptance criteria", "Cost/benefit tracking and utilization", "Change management and release policies"] }
+          }
+        },
+        "enterpriseRPA": {
+          "title": "Enterprise RPA",
+          "subtitle": "Robots for business processes with guardrails",
+          "items": {
+            "processDiscovery": { "title": "Process discovery", "desc": "Event logs, task mining, and human shadowing to target ROI." },
+            "designGovernance": { "title": "Design & governance", "desc": "Shared libraries, secrets handling, retries, and audit trails." },
+            "operations": { "title": "Operations", "desc": "Versioning, canaries, rollback, and business continuity plans." },
+            "hybridAgents": { "title": "Hybrid agents", "desc": "Human-in-the-loop and escalation trees for complex cases." }
+          }
+        },
+        "kpis": {
+          "title": "KPIs & Benchmarks",
+          "subtitle": "Prove reliability and value",
+          "items": {
+            "robotics": { "title": "Robotics", "desc": "Task success rates, cycle time, grasp/place precision or path error, energy draw, and mean time between failures." },
+            "simulation": { "title": "Simulation", "desc": "Scenario coverage, sim‑to‑real correlation, and regression pass rates per release." },
+            "rpaQuality": { "title": "RPA quality", "desc": "Step failure rates, retries, escalation frequency, and human acceptance rates." },
+            "rpaEconomics": { "title": "RPA economics", "desc": "Minutes saved, cost per transaction, utilization, and payback time by process." },
+            "security": { "title": "Security", "desc": "Secret access events, least‑privilege violations caught, and audit trail completeness." },
+            "changeSafety": { "title": "Change safety", "desc": "Rollback frequency, blast‑radius incidents, and mean time to repair." }
+          }
+        },
+        "cta": "Design a robotics/RPA program"
+      }
     },
     "sovereignPrivateAI": {
-      "title": "Sovereign and Private AI",
+      "title": "Sovereign and Private AI - Residency and control without compromise",
       "description": "Local/air-gapped LLMs, confidential computing, enclaves, and policy-aware tool use. Residency and control for regulated workloads without losing capability.",
-      "breadcrumb": "Sovereign & Private AI"
+      "breadcrumb": "Sovereign & Private AI",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "subtitle": "Deploy capable AI under strict residency and confidentiality requirements",
+          "content": [
+            "Some workloads cannot leave a jurisdiction, a data center, or even a network segment. We help you deploy capable AI under strict residency and confidentiality requirements without sacrificing operability.",
+            "We design isolation first: model serving in TEEs or private clusters; gateways that redact and enforce policy; and audit across prompts, tools, and outputs. The result is local control with global engineering quality."
+          ]
+        },
+        "systemModel": {
+          "title": "System Model",
+          "subtitle": "Comprehensive isolation and auditability",
+          "description": "Isolate data and compute domains; route prompts/tools through gateways with PII/PHI redaction; deploy models in enclaves; and ensure auditability across the chain."
+        },
+        "outcomes": {
+          "title": "Outcomes",
+          "subtitle": "Deploy AI where data must stay",
+          "items": {
+            "residency": {
+              "title": "Residency",
+              "desc": "Data stays in-region with local model hosting and storage."
+            },
+            "confidentiality": {
+              "title": "Confidentiality",
+              "desc": "TEE-based inference and encryption-in-use for sensitive inputs."
+            },
+            "control": {
+              "title": "Control",
+              "desc": "Policy gates for tools, network, and prompts; full audit trails."
+            }
+          }
+        },
+        "deploymentPatterns": {
+          "title": "Deployment Patterns",
+          "subtitle": "Private by construction",
+          "items": {
+            "inRegionHosting": {
+              "title": "In‑region hosting",
+              "desc": "Control planes and data planes pinned to specific jurisdictions."
+            },
+            "enclaveInference": {
+              "title": "Enclave inference",
+              "desc": "TEE (SGX/SEV) with attestation, sealed keys, and constrained syscalls."
+            },
+            "airGapped": {
+              "title": "Air‑gapped options",
+              "desc": "Offline package signing, media transfer policies, and update ceremonies."
+            },
+            "gatewayControls": {
+              "title": "Gateway controls",
+              "desc": "Prompt/tool gateways with redaction, PII scanners, and policy logs."
+            }
+          }
+        },
+        "securityOps": {
+          "title": "Security & Operations",
+          "subtitle": "Operate private AI with confidence",
+          "items": {
+            "identity": {
+              "title": "Identity",
+              "desc": "Workload identity and mTLS; HSM custody and key attestation."
+            },
+            "network": {
+              "title": "Network",
+              "desc": "Segmentation and egress controls; allow‑listed destinations; inspected gateways."
+            },
+            "observability": {
+              "title": "Observability",
+              "desc": "Local traces and metrics; PII‑safe logs; offline audit packs."
+            },
+            "supplyChain": {
+              "title": "Supply chain",
+              "desc": "Signed artifacts, SBOM/SLSA levels, and offline verification ceremonies."
+            },
+            "continuity": {
+              "title": "Continuity",
+              "desc": "Backup/restore, DR for sovereign stacks, and hardware spares strategy."
+            },
+            "compliance": {
+              "title": "Compliance",
+              "desc": "Evidence generation for regulators; residency attestations and reports."
+            }
+          }
+        },
+        "cta": "Design a sovereign blueprint"
+      }
     },
     "talentEnablement": {
-      "title": "Talent & Enablement",
+      "title": "Talent & Enablement - Teams that can run AI every day",
       "description": "Role maps and enablement sprints build the skills to operate AI.",
-      "breadcrumb": "Talent & Enablement"
+      "breadcrumb": "Talent & Enablement",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "subtitle": "Turn AI into a team capability, not a side project",
+          "content": "We align roles, skills, and workflows so teams can build and operate AI safely every day. We establish guilds, paved roads, and hands‑on enablement that converts case studies into muscle memory. The outcome: faster time‑to‑productivity and fewer rollout surprises."
+        },
+        "outcomes": {
+          "title": "Outcomes",
+          "subtitle": "Measurable enablement, sustained performance",
+          "items": {
+            "onboarding": { "title": "Onboarding speed", "desc": "Time‑to‑first‑PR/launch for AI work drops across cohorts." },
+            "quality": { "title": "Quality", "desc": "Defect density and regression rates improve post‑training cycles." },
+            "adoption": { "title": "Adoption", "desc": "Usage of paved roads/components; reduction in bespoke patterns." }
+          }
+        },
+        "ctaSection": {
+          "text": "Run an enablement sprint",
+          "link": "/contact"
+        },
+        "roleMaps": {
+          "title": "Role Maps & Skills",
+          "subtitle": "Who does what; what \"good\" looks like",
+          "items": {
+            "product": { "title": "Product", "desc": "Outcome framing, KPI wiring, and evidence gates; adoption analytics." },
+            "engineering": { "title": "Engineering", "desc": "RAG/tooling patterns, guardrails, and observability; SLO practices." },
+            "dataML": { "title": "Data/ML", "desc": "Contracts, feature stores, evals, and model lifecycle; bias/safety testing." },
+            "security": { "title": "Security", "desc": "Identity, secrets, supply chain, and privacy; incident readiness." },
+            "operations": { "title": "Operations", "desc": "Runbooks, DR, and ROI tracking; cost governance and budgets." },
+            "compliance": { "title": "Compliance", "desc": "Controls mapping, evidence packs, and review cadences." }
+          }
+        },
+        "programs": {
+          "title": "Programs & Enablement",
+          "subtitle": "Make learning stick",
+          "phases": {
+            "bootcamps": { "title": "Bootcamps", "duration": "Start strong", "items": ["Hands‑on labs", "Reference apps", "Assessment and feedback"] },
+            "guilds": { "title": "Guilds", "duration": "Share and scale", "items": ["Show‑and‑tell", "Design reviews", "Reusable patterns"] },
+            "officeHours": { "title": "Office hours", "duration": "Unblock delivery", "items": ["Regular clinics", "Ad hoc help", "Playbook updates"] }
+          }
+        }
+      }
     },
     "ragKnowledge": {
       "title": "RAG & Knowledge Orchestration",
@@ -494,25 +2351,94 @@
       "description": "Operations platform for LLMs with monitoring, evaluation, and deployment pipelines at scale.",
       "breadcrumb": "LLMOps & Observability"
     },
-    "embeddedEdgeAI": {
-      "title": "Embedded & Edge AI",
-      "description": "AI models optimized for edge devices and embedded systems with efficient inference and real-time performance.",
-      "breadcrumb": "Embedded & Edge AI"
-    },
-    "dataPlatforms": {
-      "title": "Data Platforms",
-      "description": "Modern data infrastructure for AI workloads with streaming, batch processing, and feature stores.",
-      "breadcrumb": "Data Platforms"
-    },
-    "platformEngineering": {
-      "title": "Platform Engineering",
-      "description": "Developer platforms and internal tools that accelerate delivery and ensure consistency.",
-      "breadcrumb": "Platform Engineering"
-    },
     "blockchainCrypto": {
-      "title": "Blockchain & Cryptography",
-      "description": "Decentralized systems, smart contracts, and cryptographic protocols for secure and transparent operations.",
-      "breadcrumb": "Blockchain & Cryptography"
+      "title": "Blockchain & Cryptography - Secure primitives and systems",
+      "description": "We design secure, compliant web3 systems and cryptographic services: smart contracts, ZK, custody, and DA/L2 integrations with auditable operations.",
+      "breadcrumb": "Blockchain & Cryptography",
+      "sections": {
+        "overview": {
+          "title": "OVERVIEW",
+          "subtitle": "We build crypto systems with the same discipline as mission‑critical software: explicit threat models, verifiable contracts, hardened operations, and compliance by construction. The objective is not hype-it's secure, observable systems that ship.",
+          "content": ["Our approach separates protocol concerns (data availability, validity/fraud proofs, bridge safety) from application concerns (contracts, custody, compliance). We deliver audited contracts, ZK circuits with rigorous tests, MPC/HSM custody, and DA/L2 integrations with operational runbooks. Evidence-formal specs, coverage, fuzz results, on‑chain monitoring-accompanies every change."]
+        },
+        "systemComponents": {
+          "title": "SYSTEM COMPONENTS",
+          "subtitle": "Security-first architecture from protocol to product",
+          "items": {
+            "smartContracts": { "title": "Smart Contracts", "desc": "Upgradable patterns, pausable controls, access models, and formal specs." },
+            "zkPrivacy": { "title": "ZK & Privacy", "desc": "zk-SNARK/STARK circuits, proving/verification pipelines, and audits." },
+            "custody": { "title": "Custody", "desc": "MPC/HSM, key ceremonies, recovery flows, and transaction policies." },
+            "dataAvailability": { "title": "Data Availability", "desc": "Rollup DA layers, fraud/validity proofs, and bridge safety considerations." },
+            "compliance": { "title": "Compliance", "desc": "KYC/AML hooks, travel rule, and jurisdictional routing for flows." },
+            "operations": { "title": "Operations", "desc": "Monitoring, incident runbooks, and upgrade governance frameworks." }
+          }
+        },
+        "contractEngineering": {
+          "title": "CONTRACT ENGINEERING",
+          "subtitle": "Design for correctness, upgradeability, and safety",
+          "items": {
+            "patterns": { "title": "Patterns", "desc": "Proxy‑based upgrades with explicit admin policies; pausable/emergency stops; role‑based access control and permit flows." },
+            "specsTests": { "title": "Specs & tests", "desc": "Executable specifications, property‑based tests, fuzzing, and invariant checks; gas benchmarking and optimization passes." },
+            "formalMethods": { "title": "Formal methods", "desc": "Symbolic execution and model checking for critical components (vaults, bridges, governance); proofs integrated in CI." },
+            "errorHandling": { "title": "Error handling", "desc": "Fail‑closed design; bounded external calls; reentrancy guards; checks‑effects‑interactions by default." },
+            "upgradeProcess": { "title": "Upgrade process", "desc": "Timelocks, multi‑sig approvals, and on‑chain announcements; rollback plans and canaries on low‑risk assets first." },
+            "observability": { "title": "Observability", "desc": "Event schemas, indexers, and monitoring; anomaly alerts for unexpected state transitions and privileged events." }
+          }
+        },
+        "zkPrivacy": {
+          "title": "ZK & PRIVACY",
+          "subtitle": "Circuits and pipelines you can reason about",
+          "phases": {
+            "design": { "title": "Design", "duration": "Circuits and constraints", "items": ["Explicit threat models and adversary capabilities", "Soundness and completeness goals with benchmarks", "Constraints aligned to protocol limits and fees"] },
+            "implementation": { "title": "Implementation", "duration": "Reproducible and testable", "items": ["Deterministic circuits with test vectors", "Trusted setup ceremonies (where needed) and transcripts", "Prover/verifier performance budgets and telemetry"] },
+            "auditOps": { "title": "Audit & Ops", "duration": "Secure lifecycles", "items": ["Independent reviews and fuzzers", "Rotation of parameters/keys where applicable", "Runtime monitors for proof failures or anomalies"] }
+          }
+        },
+        "custodyKeyManagement": {
+          "title": "CUSTODY & KEY MANAGEMENT",
+          "subtitle": "Operational security for assets and workflows",
+          "items": {
+            "mpcHsm": { "title": "MPC/HSM", "desc": "Threshold signatures, secure enclaves, and geo‑distributed shares with tamper evidence and recovery drills." },
+            "keyCeremonies": { "title": "Key ceremonies", "desc": "Documented, witnessed ceremonies with checklists; segregation of duties and access logs." },
+            "policies": { "title": "Policies", "desc": "Per‑asset limits, velocity rules, multi‑party approvals, and anomaly triggers; programmable policy engines." },
+            "integrations": { "title": "Integrations", "desc": "Wallet/provider integrations (hardware, custodial, or self‑custody) with monitoring and fallbacks." },
+            "disasterReadiness": { "title": "Disaster readiness", "desc": "Runbooks for lost keys, compromised endpoints, and corrupted state; incident comms templates." },
+            "offChainOps": { "title": "Off‑chain ops", "desc": "Secure pipelines for off‑chain computations feeding on‑chain decisions; provenance for data inputs." }
+          }
+        },
+        "complianceOperations": {
+          "title": "COMPLIANCE & OPERATIONS",
+          "subtitle": "Ship with audits and regulators in mind",
+          "phases": {
+            "compliance": { "title": "Compliance", "duration": "Controls mapped to obligations", "items": ["KYC/AML hooks and travel‑rule messaging", "Sanctions screening and geo‑fencing", "Evidence capture and reporting pipelines"] },
+            "monitoring": { "title": "Monitoring", "duration": "See issues early", "items": ["On‑chain telemetry and anomaly detection", "MEV/bridge risk monitoring and rate limits", "Alerting to rotation or upgrade actions"] },
+            "governance": { "title": "Governance", "duration": "Change with safety", "items": ["Multi‑sig/DAO governance processes", "Timelocks and staged rollouts", "Backout plans and disclosure guidelines"] }
+          }
+        },
+        "securityAudits": {
+          "title": "SECURITY & AUDITS",
+          "subtitle": "Build-time and run-time assurance",
+          "items": {
+            "threatModel": { "title": "Threat model", "desc": "Assets, trust boundaries, and abuse cases; mitigations tracked to code." },
+            "staticFormal": { "title": "Static & formal", "desc": "Slither/Foundry/Certora; invariants, fuzzing, and symbolic execution." },
+            "runtimeMonitoring": { "title": "Runtime monitoring", "desc": "On-chain telemetry, anomaly detection, and circuit breakers." },
+            "auditPack": { "title": "Audit pack", "desc": "Specs, diagrams, tests, and evidence for external auditors." }
+          }
+        },
+        "kpis": {
+          "title": "KPIS & PROGRAM METRICS",
+          "subtitle": "Measure security posture and product traction",
+          "items": {
+            "security": { "title": "Security", "desc": "Critical issues per audit, time‑to‑fix, % code covered by fuzzers/invariants, and incident MTTR." },
+            "reliability": { "title": "Reliability", "desc": "On‑chain revert rates, failed/late proofs, and bridge uptime." },
+            "performance": { "title": "Performance", "desc": "Gas costs per operation, prover latency, and throughput under load." },
+            "compliance": { "title": "Compliance", "desc": "KYC/AML coverage, sanctions hit rates handled correctly, and evidence completeness." },
+            "operations": { "title": "Operations", "desc": "Upgrade success rate, key ceremony success metrics, and rotation cadence." },
+            "business": { "title": "Business", "desc": "TVL/volume (where appropriate), partner integrations, and user retention." }
+          }
+        },
+        "cta": "Design a secure web3 system"
+      }
     },
     "agentPlatform": {
       "title": "Agent Platform",

@@ -10,7 +10,7 @@ type TranslationValue = string | Record<string, any>
 interface I18nContextType {
   locale: Locale
   setLocale: (locale: Locale) => void
-  t: (key: string, params?: Record<string, string>) => string
+  t: (key: string, options?: { returnObjects?: boolean } | Record<string, string>) => string | TranslationValue
   translations: Record<string, TranslationValue>
   isLoading: boolean
 }
@@ -95,7 +95,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('locale', newLocale)
   }
 
-  const t = (key: string, params?: Record<string, string>): string => {
+  const t = (key: string, options?: { returnObjects?: boolean } | Record<string, string>): string | TranslationValue => {
     const keys = key.split('.')
     let value: TranslationValue | undefined = translations
 
@@ -108,9 +108,17 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
       }
     }
 
-    // Replace parameters if provided
-    if (typeof value === 'string' && params) {
-      return Object.entries(params).reduce((str, [key, val]) => {
+    // Check if returnObjects is requested
+    const returnObjects = options && 'returnObjects' in options ? options.returnObjects : false
+    
+    // If returnObjects is true, return the value as-is (could be object/array)
+    if (returnObjects && typeof value === 'object') {
+      return value
+    }
+
+    // Replace parameters if provided (only for string replacements)
+    if (typeof value === 'string' && options && !('returnObjects' in options)) {
+      return Object.entries(options).reduce((str, [key, val]) => {
         return str.replace(new RegExp(`{{${key}}}`, 'g'), val)
       }, value)
     }

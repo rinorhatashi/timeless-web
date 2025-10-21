@@ -1,61 +1,483 @@
 "use client"
 
-import { PageLayout, Section } from '@/components/ui/page-layout'
+import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
+import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
+import { 
+  Gamepad2, 
+  MonitorPlay, 
+  Users, 
+  Repeat, 
+  Award, 
+  Gauge, 
+  DollarSign, 
+  Languages, 
+  Network,
+  Activity,
+  Database,
+  Shield,
+  Target,
+  Radio,
+  Bitcoin,
+  Wallet,
+  ShoppingCart,
+  Layers,
+  Lock,
+  FileCheck,
+  Clock,
+  Zap,
+  Server,
+  Code2,
+  Settings,
+  Eye,
+  Wrench,
+  BarChart3,
+  AlertTriangle,
+  CheckCircle2,
+  TrendingUp
+} from 'lucide-react'
 
 export default function GameSystemsPage() {
   const { t } = useI18n()
   
   return (
     <PageLayout
-      title={t('pages.gameSystems.title')}
-      description={t('pages.gameSystems.description')}
+      title={t('pages.gameSystems.title') as string}
+      description={t('pages.gameSystems.description') as string}
       breadcrumbs={[
-        { label: t('navigation.capabilities'), href: '/capabilities' },
-        { label: t('pages.gameSystems.breadcrumb'), href: '/capabilities/game-systems' }
+        { label: t('navigation.capabilities') as string, href: '/capabilities' },
+        { label: t('pages.gameSystems.breadcrumb') as string, href: '/capabilities/game-systems' }
       ]}
     >
       <Section
-        title="Game Development"
-        description="From authoring tools to live ops"
+        title={t('pages.gameSystems.sections.overview.title') as string}
+        description={t('pages.gameSystems.sections.overview.subtitle') as string}
       >
         <div className="content-prose">
-          <p>We develop multiplayer games and real-time backends across mobile, PC, and console platforms. Our expertise includes authoritative netcode, personalization systems, in-game economies, and live operations at scale.</p>
-          <p>We also build tools for blockchain gaming, NFT integration, and play-to-earn mechanics.</p>
+          <p>{String(t('pages.gameSystems.sections.overview.content'))}</p>
         </div>
       </Section>
 
       <Section
-        title="Technical Capabilities"
-        description="End-to-end game system development"
+        title={t('pages.gameSystems.sections.gameDevelopment.title') as string}
+        description={t('pages.gameSystems.sections.gameDevelopment.subtitle') as string}
         variant="alt"
       >
-        <div className="grid-2">
-          <div className="feature-card">
-            <h3>Multiplayer Systems</h3>
-            <p>Authoritative servers, client prediction, and lag compensation.</p>
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gamepad2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.engines.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.engines.desc'))}</p>
           </div>
-          <div className="feature-card">
-            <h3>Live Operations</h3>
-            <p>Content updates, event management, and player analytics.</p>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <MonitorPlay className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.platformSDKs.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.platformSDKs.desc'))}</p>
           </div>
-          <div className="feature-card">
-            <h3>Game Economies</h3>
-            <p>Virtual currencies, item systems, and marketplace mechanics.</p>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Users className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.crossPlay.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.crossPlay.desc'))}</p>
           </div>
-          <div className="feature-card">
-            <h3>Blockchain Gaming</h3>
-            <p>NFT integration, smart contracts, and decentralized game assets.</p>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Repeat className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.crossProgression.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.crossProgression.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Award className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.certification.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.certification.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.performance.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.performance.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <DollarSign className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.monetization.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.monetization.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Languages className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.gameDevelopment.items.localizationAccessibility.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.gameDevelopment.items.localizationAccessibility.desc'))}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Platform Support"
-        description="Cross-platform game development"
+        title={t('pages.gameSystems.sections.backendServices.title') as string}
+        description={t('pages.gameSystems.sections.backendServices.subtitle') as string}
       >
-        <div className="content-prose">
-          <p>We build games for mobile (iOS/Android), PC (Windows/Mac/Linux), and console platforms (PlayStation, Xbox, Nintendo Switch). Our cross-platform solutions maximize code reuse while optimizing for each platform.</p>
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.backendServices.items.matchmaking.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.backendServices.items.matchmaking.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Network className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.backendServices.items.netcode.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.backendServices.items.netcode.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.backendServices.items.state.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.backendServices.items.state.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.backendServices.items.antiCheat.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.backendServices.items.antiCheat.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.backendServices.items.personalization.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.backendServices.items.personalization.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Radio className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.backendServices.items.liveOps.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.backendServices.items.liveOps.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.gameSystems.sections.blockchainGaming.title') as string}
+        description={t('pages.gameSystems.sections.blockchainGaming.subtitle') as string}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Code2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.blockchainGaming.items.design.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.blockchainGaming.items.design.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Wallet className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.blockchainGaming.items.walletsCustody.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.blockchainGaming.items.walletsCustody.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <ShoppingCart className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.blockchainGaming.items.marketplaces.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.blockchainGaming.items.marketplaces.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.blockchainGaming.items.scale.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.blockchainGaming.items.scale.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.blockchainGaming.items.zkPrivacy.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.blockchainGaming.items.zkPrivacy.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.blockchainGaming.items.compliance.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.blockchainGaming.items.compliance.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.gameSystems.sections.crossPlatformSystems.title') as string}
+        description={t('pages.gameSystems.sections.crossPlatformSystems.subtitle') as string}
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.gameSystems.sections.crossPlatformSystems.phases.crossPlay.title') as string}
+            duration={t('pages.gameSystems.sections.crossPlatformSystems.phases.crossPlay.duration') as string}
+            items={t('pages.gameSystems.sections.crossPlatformSystems.phases.crossPlay.items', { returnObjects: true }) as string[]}
+          />
+          <TimelinePhase
+            title={t('pages.gameSystems.sections.crossPlatformSystems.phases.crossProgression.title') as string}
+            duration={t('pages.gameSystems.sections.crossPlatformSystems.phases.crossProgression.duration') as string}
+            items={t('pages.gameSystems.sections.crossPlatformSystems.phases.crossProgression.items', { returnObjects: true }) as string[]}
+          />
+          <TimelinePhase
+            title={t('pages.gameSystems.sections.crossPlatformSystems.phases.certification.title') as string}
+            duration={t('pages.gameSystems.sections.crossPlatformSystems.phases.certification.duration') as string}
+            items={t('pages.gameSystems.sections.crossPlatformSystems.phases.certification.items', { returnObjects: true }) as string[]}
+          />
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.gameSystems.sections.netcodeConsistency.title') as string}
+        description={t('pages.gameSystems.sections.netcodeConsistency.subtitle') as string}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.netcodeConsistency.items.authoritativeTick.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.netcodeConsistency.items.authoritativeTick.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Repeat className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.netcodeConsistency.items.rollback.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.netcodeConsistency.items.rollback.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.netcodeConsistency.items.lagCompensation.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.netcodeConsistency.items.lagCompensation.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.netcodeConsistency.items.replication.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.netcodeConsistency.items.replication.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Server className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.netcodeConsistency.items.scaling.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.netcodeConsistency.items.scaling.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Network className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.netcodeConsistency.items.protocols.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.netcodeConsistency.items.protocols.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.gameSystems.sections.authoringTooling.title') as string}
+        description={t('pages.gameSystems.sections.authoringTooling.subtitle') as string}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.authoringTooling.items.contentPipelines.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.authoringTooling.items.contentPipelines.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Settings className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.authoringTooling.items.schemaConfig.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.authoringTooling.items.schemaConfig.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.authoringTooling.items.experimentation.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.authoringTooling.items.experimentation.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Eye className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.authoringTooling.items.observability.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.authoringTooling.items.observability.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Wrench className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.authoringTooling.items.diagnostics.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.authoringTooling.items.diagnostics.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.authoringTooling.items.security.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.authoringTooling.items.security.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.gameSystems.sections.opsLiveOperations.title') as string}
+        description={t('pages.gameSystems.sections.opsLiveOperations.subtitle') as string}
+        variant="alt"
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.gameSystems.sections.opsLiveOperations.phases.matchmaking.title') as string}
+            duration={t('pages.gameSystems.sections.opsLiveOperations.phases.matchmaking.duration') as string}
+            items={t('pages.gameSystems.sections.opsLiveOperations.phases.matchmaking.items', { returnObjects: true }) as string[]}
+          />
+          <TimelinePhase
+            title={t('pages.gameSystems.sections.opsLiveOperations.phases.economyProgression.title') as string}
+            duration={t('pages.gameSystems.sections.opsLiveOperations.phases.economyProgression.duration') as string}
+            items={t('pages.gameSystems.sections.opsLiveOperations.phases.economyProgression.items', { returnObjects: true }) as string[]}
+          />
+          <TimelinePhase
+            title={t('pages.gameSystems.sections.opsLiveOperations.phases.incidentsSupport.title') as string}
+            duration={t('pages.gameSystems.sections.opsLiveOperations.phases.incidentsSupport.duration') as string}
+            items={t('pages.gameSystems.sections.opsLiveOperations.phases.incidentsSupport.items', { returnObjects: true }) as string[]}
+          />
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.gameSystems.sections.antiCheatTrust.title') as string}
+        description={t('pages.gameSystems.sections.antiCheatTrust.subtitle') as string}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.antiCheatTrust.items.signals.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.antiCheatTrust.items.signals.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.antiCheatTrust.items.enforcement.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.antiCheatTrust.items.enforcement.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.antiCheatTrust.items.integrity.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.antiCheatTrust.items.integrity.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <AlertTriangle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.antiCheatTrust.items.fraud.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.antiCheatTrust.items.fraud.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.antiCheatTrust.items.privacy.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.antiCheatTrust.items.privacy.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.antiCheatTrust.items.compliance.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.antiCheatTrust.items.compliance.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.gameSystems.sections.kpis.title') as string}
+        description={t('pages.gameSystems.sections.kpis.subtitle') as string}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.kpis.items.latency.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.kpis.items.latency.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.kpis.items.fairness.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.kpis.items.fairness.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.kpis.items.stability.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.kpis.items.stability.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.kpis.items.engagement.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.kpis.items.engagement.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.kpis.items.economy.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.kpis.items.economy.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.gameSystems.sections.kpis.items.support.title'))}</h4>
+            </div>
+            <p>{String(t('pages.gameSystems.sections.kpis.items.support.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section variant="dark">
+        <div className="cta-container">
+          <Link href="/contact" className="btn-primary large">
+            {String(t('pages.gameSystems.sections.cta'))} →
+          </Link>
         </div>
       </Section>
     </PageLayout>

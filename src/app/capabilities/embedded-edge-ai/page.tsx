@@ -1,178 +1,319 @@
-import { PageLayout, Section, Card, TimelinePhase } from '@/components/ui/page-layout'
+"use client"
+
+import Link from 'next/link'
+import { PageLayout, Section } from '@/components/ui/page-layout'
+import { TimelinePhase } from '@/components/ui/page-layout'
+import { useI18n } from '@/lib/i18n/context'
+import { Cpu, Settings, Eye, Zap, Wifi, Shield, Activity, Gauge, Lock, Database, BarChart3, RefreshCw, Clock, GitBranch, Target, FileText, Wrench, CheckCircle, Radio } from 'lucide-react'
 
 export default function EmbeddedEdgeAIPage() {
+  const { t } = useI18n()
+  
+  const overviewContent = t('pages.embeddedEdgeAI.sections.overview.content', { returnObjects: true })
+  const contentArray = Array.isArray(overviewContent) ? overviewContent : []
+  
+  // Safe array extraction for TimelinePhase items
+  const updatePipelineItems = t('pages.embeddedEdgeAI.sections.otaFleet.phases.updatePipeline.items', { returnObjects: true })
+  const fleetHealthItems = t('pages.embeddedEdgeAI.sections.otaFleet.phases.fleetHealth.items', { returnObjects: true })
+  const securityPostureItems = t('pages.embeddedEdgeAI.sections.otaFleet.phases.securityPosture.items', { returnObjects: true })
+
   return (
     <PageLayout
-      title="Embedded Systems & Edge AI"
-      description="We architect, implement, and optimize embedded stacks from PCB to perception. Deterministic control where needed, high-throughput inference where possible, and safety always."
+      title={t('pages.embeddedEdgeAI.title')}
+      description={t('pages.embeddedEdgeAI.description')}
       breadcrumbs={[
-        { label: 'Capabilities', href: '/capabilities' },
-        { label: 'Embedded & Edge AI', href: '/capabilities/embedded-edge-ai' }
+        { label: t('navigation.capabilities'), href: '/capabilities' },
+        { label: t('pages.embeddedEdgeAI.breadcrumb'), href: '/capabilities/embedded-edge-ai' }
       ]}
     >
+      {/* Overview Section */}
       <Section
-        title="Overview"
-        description="Embedded and edge systems must meet tight latency, energy, and safety budgets while remaining updatable in the field. We architect from PCB to perception to deliver deterministic control where needed and high‑throughput inference where possible-without compromising certification pathways or fleet operations."
+        title={t('pages.embeddedEdgeAI.sections.overview.title')}
+        subtitle={t('pages.embeddedEdgeAI.sections.overview.subtitle')}
       >
         <div className="content-prose">
-          <p>Our approach is layered and measurable. Hardware and BSP choices set the envelope; the OS/RT layer enforces scheduling and QoS; perception and inference pipelines are tuned for end‑to‑end latency and energy; connectivity and OTA keep fleets healthy; and safety artifacts make decisions auditable. We build traceability across the stack so we can reproduce and optimize behaviors under real workloads.</p>
+          {contentArray.map((paragraph: string, idx: number) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
         </div>
       </Section>
 
+      {/* Stack Overview */}
       <Section
-        title="Stack Overview"
-        description="A layered approach to predictable performance"
+        title={t('pages.embeddedEdgeAI.sections.stackOverview.title')}
+        subtitle={t('pages.embeddedEdgeAI.sections.stackOverview.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Hardware & BSP</h4>
-            <p>Board bring-up, bootloaders, secure boot, power/thermal envelopes, and drivers for sensors/actuators.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Cpu className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.stackOverview.items.hardware.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.stackOverview.items.hardware.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>OS & RT</h4>
-            <p>RTOS or Linux (PREEMPT_RT), IPC, scheduling, and QoS for deterministic workloads.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Settings className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.stackOverview.items.osRT.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.stackOverview.items.osRT.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Perception</h4>
-            <p>Sensor fusion (EKF/UKF), CV pipelines, calibration, and model runtime abstraction.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Eye className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.stackOverview.items.perception.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.stackOverview.items.perception.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Inference</h4>
-            <p>CUDA/TensorRT/OpenVINO/NPU SDKs; quantization, sparsity, and mixed precision for latency/energy targets.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.stackOverview.items.inference.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.stackOverview.items.inference.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Connectivity</h4>
-            <p>TSN, CAN, EtherCAT, gRPC, and OTA update frameworks with staged rollouts and rollback.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Wifi className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.stackOverview.items.connectivity.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.stackOverview.items.connectivity.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Safety</h4>
-            <p>ISO 26262/IEC 61508 artifacts, FMEA/FMEDA, and independence of safety and convenience domains.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.stackOverview.items.safety.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.stackOverview.items.safety.desc')}</p>
           </div>
         </div>
       </Section>
 
+      {/* Optimization & Tooling */}
       <Section
-        title="Optimization & Tooling"
-        description="Tuning for latency, throughput, and energy"
+        title={t('pages.embeddedEdgeAI.sections.optimization.title')}
+        subtitle={t('pages.embeddedEdgeAI.sections.optimization.subtitle')}
       >
-        <div className="grid-2">
-          <Card
-            title="Profiling"
-            description="Nsight/SystemTap/eBPF traces; hotspots from ISR to kernel to userland."
-          />
-          <Card
-            title="Model optimization"
-            description="Calibration, INT8/FP16 plans, pipeline fusion, and batching strategies."
-          />
-          <Card
-            title="Reliability"
-            description="Watchdogs, degraded modes, bounded queues, and brownout behavior."
-          />
-          <Card
-            title="OTA & Fleet"
-            description="Delta updates, staged canaries, device attestation, and fleet observability."
-          />
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.optimization.items.profiling.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.optimization.items.profiling.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.optimization.items.modelOpt.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.optimization.items.modelOpt.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.optimization.items.reliability.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.optimization.items.reliability.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <RefreshCw className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.optimization.items.otaFleet.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.optimization.items.otaFleet.desc')}</p>
+          </div>
         </div>
       </Section>
 
+      {/* Architecture Patterns */}
       <Section
-        title="Architecture Patterns"
-        description="Determinism where it counts, throughput where it helps"
+        title={t('pages.embeddedEdgeAI.sections.architecturePatterns.title')}
+        subtitle={t('pages.embeddedEdgeAI.sections.architecturePatterns.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Time‑critical path</h4>
-            <p>Hard/firm real‑time threads for actuation and safety interlocks; bounded memory; priority inheritance; static allocation for predictability.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.timeCritical.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.timeCritical.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Perception path</h4>
-            <p>Double‑buffered DMA, zero‑copy kernels, and fused operators; batch size tuned against latency/energy targets with backpressure.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Eye className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.perceptionPath.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.perceptionPath.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Control loop</h4>
-            <p>MPC/robust PID with carefully quantized signals; latency budgets per stage; health checks and fallback modes on sensor loss.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.controlLoop.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.controlLoop.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Edge cache</h4>
-            <p>Feature/inference cache keyed by context; TTL/eviction policies; prefetching for known routes or tasks.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.edgeCache.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.edgeCache.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Telemetry</h4>
-            <p>Efficient, structured logs and metrics with sampling; on‑device ring buffers flushed on connectivity; privacy‑aware filters.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Radio className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.telemetry.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.telemetry.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Secure boot</h4>
-            <p>Measured boot, chain of trust, signed firmware, and secure update ceremonies with rollback protection.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.secureBoot.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.architecturePatterns.items.secureBoot.desc')}</p>
           </div>
         </div>
       </Section>
 
+      {/* Safety & Certification */}
       <Section
-        title="Safety & Certification"
-        description="Artifacts and independence for regulated environments"
+        title={t('pages.embeddedEdgeAI.sections.safetyCert.title')}
+        subtitle={t('pages.embeddedEdgeAI.sections.safetyCert.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Safety case</h4>
-            <p>Hazard analysis, FMEA/FMEDA, and safety goals mapped to technical mitigations; independence between safety and convenience domains.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.safetyCert.items.safetyCase.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.safetyCert.items.safetyCase.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Tracing</h4>
-            <p>Design evidence, code reviews, test matrices, coverage, and HW/SW traceability for audits and root‑cause analysis.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <GitBranch className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.safetyCert.items.tracing.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.safetyCert.items.tracing.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Diagnostics</h4>
-            <p>Built‑in tests, self‑checks, stuck‑bit detection, and watchdog resets; limp‑home strategies and safe degraded modes.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.safetyCert.items.diagnostics.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.safetyCert.items.diagnostics.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Data governance</h4>
-            <p>PII/PHI handling policies, on‑device redaction, secure storage, and time‑bounded retention; reproducible export for compliance.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.safetyCert.items.dataGov.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.safetyCert.items.dataGov.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Tool qualification</h4>
-            <p>Controlled toolchains and verified versions for compilers, model compilers, and static analysis as required by standards.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Wrench className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.safetyCert.items.toolQual.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.safetyCert.items.toolQual.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Procedures</h4>
-            <p>HIL, SIL, and field test plans with acceptance criteria; change control and sign‑off workflows integrated with OTA.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.safetyCert.items.procedures.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.safetyCert.items.procedures.desc')}</p>
           </div>
         </div>
       </Section>
 
+      {/* OTA & Fleet Operations */}
       <Section
-        title="KPIs & Benchmarks"
-        description="Quantify performance and reliability at the edge"
+        title={t('pages.embeddedEdgeAI.sections.otaFleet.title')}
+        subtitle={t('pages.embeddedEdgeAI.sections.otaFleet.subtitle')}
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.embeddedEdgeAI.sections.otaFleet.phases.updatePipeline.title')}
+            duration={t('pages.embeddedEdgeAI.sections.otaFleet.phases.updatePipeline.duration')}
+            items={Array.isArray(updatePipelineItems) ? updatePipelineItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.embeddedEdgeAI.sections.otaFleet.phases.fleetHealth.title')}
+            duration={t('pages.embeddedEdgeAI.sections.otaFleet.phases.fleetHealth.duration')}
+            items={Array.isArray(fleetHealthItems) ? fleetHealthItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.embeddedEdgeAI.sections.otaFleet.phases.securityPosture.title')}
+            duration={t('pages.embeddedEdgeAI.sections.otaFleet.phases.securityPosture.duration')}
+            items={Array.isArray(securityPostureItems) ? securityPostureItems : []}
+          />
+        </div>
+      </Section>
+
+      {/* KPIs & Benchmarks */}
+      <Section
+        title={t('pages.embeddedEdgeAI.sections.kpis.title')}
+        subtitle={t('pages.embeddedEdgeAI.sections.kpis.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Latency budget</h4>
-            <p>End‑to‑end and per‑stage P50/P95 with variance; budget regressions block release.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.kpis.items.latency.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.kpis.items.latency.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Energy/thermal</h4>
-            <p>Joules per inference and thermal headroom across ambient profiles; throttling detection.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.kpis.items.energy.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.kpis.items.energy.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Reliability</h4>
-            <p>Crash‑free sessions, watchdog events, and degraded‑mode frequency; mean time between failures.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.kpis.items.reliability.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.kpis.items.reliability.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Accuracy</h4>
-            <p>Task‑specific metrics (mAP, F1, CER, WER) under real sensor noise; drift monitoring.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.kpis.items.accuracy.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.kpis.items.accuracy.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Fleet metrics</h4>
-            <p>Update success rates, rollback rates, time‑to‑patch, and device compliance.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.kpis.items.fleet.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.kpis.items.fleet.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Security</h4>
-            <p>Attestation pass rates, key rotations, and blocked tamper attempts.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.embeddedEdgeAI.sections.kpis.items.security.title')}</h4>
+            </div>
+            <p>{t('pages.embeddedEdgeAI.sections.kpis.items.security.desc')}</p>
           </div>
+        </div>
+      </Section>
+
+      {/* CTA Section */}
+      <Section variant="dark">
+        <div className="cta-container">
+          <Link href="/contact" className="btn-primary large">
+            {t('pages.embeddedEdgeAI.sections.cta')} →
+          </Link>
         </div>
       </Section>
     </PageLayout>
   )
-} 
+}

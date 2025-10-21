@@ -1,0 +1,206 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "services",
+      "question": "What services does Timeless offer?",
+      "keywords": ["services", "offer", "provide", "capabilities", "what do you do"],
+      "answer": "Timeless offers comprehensive deep-tech platforms and capabilities including:\n\n• AI Strategy & Value\n• Agentic Systems\n• GenAI Applications\n• RAG & Knowledge Orchestration\n• LLMOps & Observability\n• Responsible AI & Governance\n• Sovereign/Private AI\n\nWould you like to learn more about any specific service?",
+      "links": [
+        { "text": "View All Capabilities", "url": "/capabilities" }
+      ],
+      "relatedQuestions": ["q2", "q3", "q6"]
+    },
+    {
+      "id": "q2",
+      "category": "services",
+      "question": "What are Agentic Systems?",
+      "keywords": ["agentic", "agent", "agents", "agentic systems"],
+      "answer": "Agentic Systems are autonomous AI systems that can plan, execute tasks, and make decisions. At Timeless, we build production-ready agentic platforms that:\n\n• Plan and execute complex workflows\n• Integrate with enterprise systems\n• Maintain safety and governance controls\n• Operate reliably at scale\n\nThese systems combine research, engineering, and operations to run safely in production every day.",
+      "links": [
+        { "text": "Learn More About Agentic Systems", "url": "/capabilities/agentic-systems" }
+      ],
+      "relatedQuestions": ["q3", "q4"]
+    },
+    {
+      "id": "q3",
+      "category": "services",
+      "question": "Tell me about RAG & Knowledge Orchestration",
+      "keywords": ["rag", "knowledge", "retrieval", "orchestration", "data"],
+      "answer": "RAG (Retrieval-Augmented Generation) & Knowledge Orchestration enables AI systems to access and use your enterprise knowledge effectively:\n\n• Advanced retrieval strategies\n• Memory and context management\n• Validation and quality control\n• Secure knowledge access\n• Rollout and scaling plans\n\nWe help you build knowledge systems that are reliable, accurate, and production-ready.",
+      "links": [
+        { "text": "Explore RAG Capabilities", "url": "/capabilities/rag-knowledge-orchestration" }
+      ],
+      "relatedQuestions": ["q5", "q2"]
+    },
+    {
+      "id": "q4",
+      "category": "services",
+      "question": "What is LLMOps & Observability?",
+      "keywords": ["llmops", "observability", "monitoring", "operations", "mlops"],
+      "answer": "LLMOps & Observability provides full visibility and control over your AI systems:\n\n• Model performance monitoring\n• Prompt and output tracking\n• Cost and latency optimization\n• Error detection and debugging\n• Compliance and audit trails\n\nWe ensure your AI systems are transparent, measurable, and continuously improving.",
+      "links": [
+        { "text": "Learn About LLMOps", "url": "/capabilities/llmops-observability" }
+      ],
+      "relatedQuestions": ["q2", "q6"]
+    },
+    {
+      "id": "q5",
+      "category": "services",
+      "question": "What platforms do you provide?",
+      "keywords": ["platforms", "platform", "products", "tools"],
+      "answer": "Timeless provides four core platforms:\n\n• Agent Platform - Build and deploy autonomous agents\n• RAG+ Orchestrator - Advanced knowledge systems\n• RAI & Safety Stack - Responsible AI governance\n• Sovereign AI Blueprint - Private and air-gapped AI\n\nEach platform is production-ready and designed for enterprise scale.",
+      "links": [
+        { "text": "Explore Platforms", "url": "/platforms" }
+      ],
+      "relatedQuestions": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "q6",
+      "category": "industries",
+      "question": "Which industries do you serve?",
+      "keywords": ["industries", "sectors", "verticals", "who do you work with"],
+      "answer": "Timeless serves enterprises across 10+ industries:\n\n• Industrial & Manufacturing\n• Healthcare\n• Automotive\n• Energy\n• Telecommunications & Media\n• Agriculture\n• Retail & CPG\n• High Tech\n• Software & Platforms\n• Public Sector\n\nWe deliver production programs, not demos, with industry-specific compliance and scaling strategies.",
+      "links": [
+        { "text": "View All Industries", "url": "/industries" }
+      ],
+      "relatedQuestions": ["q7", "q8", "q1"]
+    },
+    {
+      "id": "q7",
+      "category": "industries",
+      "question": "What Healthcare solutions do you offer?",
+      "keywords": ["health", "healthcare", "medical", "hospital", "patient"],
+      "answer": "For Healthcare, Timeless provides:\n\n• Clinical decision support systems\n• Patient monitoring and care coordination\n• Medical imaging AI\n• Drug discovery acceleration\n• Healthcare data platforms\n• PHI-compliant AI systems\n\nAll solutions are designed with HIPAA compliance and patient safety as priorities.",
+      "links": [
+        { "text": "Healthcare Solutions", "url": "/industries/health" }
+      ],
+      "relatedQuestions": ["q6", "q14"]
+    },
+    {
+      "id": "q8",
+      "category": "industries",
+      "question": "What solutions do you offer for Manufacturing?",
+      "keywords": ["manufacturing", "factory", "industrial", "production"],
+      "answer": "For Manufacturing & Industrial, we deliver:\n\n• Predictive maintenance systems\n• Quality control automation\n• Supply chain optimization\n• Robotics and AGV orchestration\n• Digital twins for operations\n• Shop floor intelligence\n\nOur solutions integrate with existing systems and deliver measurable ROI.",
+      "links": [
+        { "text": "Industrial Solutions", "url": "/industries/industrial" }
+      ],
+      "relatedQuestions": ["q6", "q13"]
+    },
+    {
+      "id": "q9",
+      "category": "solutions",
+      "question": "What are your Payment Solutions?",
+      "keywords": ["payment", "payments", "transaction", "financial"],
+      "answer": "Our Payment Solutions include:\n\n• Device authentication\n• Brand protection\n• Transport ticketing\n• E-tolling systems\n• Identity and access management\n• Secure transaction processing\n\nAll built with enterprise-grade security and compliance.",
+      "links": [
+        { "text": "Payment Solutions", "url": "/solutions/payment-solutions" }
+      ],
+      "relatedQuestions": ["q10", "q11"]
+    },
+    {
+      "id": "q10",
+      "category": "solutions",
+      "question": "Tell me about Wearables solutions",
+      "keywords": ["wearables", "wearable", "device", "iot", "sensor"],
+      "answer": "Our Wearables solutions provide:\n\n• Secure sensing and data collection\n• Low-power on-device inference\n• Over-the-air (OTA) security updates\n• Health and lifestyle monitoring\n• Edge AI processing\n• Battery optimization\n\nPerfect for health, fitness, and lifestyle applications.",
+      "links": [
+        { "text": "Wearables Solutions", "url": "/solutions/wearables" }
+      ],
+      "relatedQuestions": ["q9", "q7"]
+    },
+    {
+      "id": "q11",
+      "category": "solutions",
+      "question": "What about Smart Cards & Digital ID?",
+      "keywords": ["smart card", "digital id", "identity", "authentication", "esim"],
+      "answer": "Smart Cards & Digital ID solutions include:\n\n• Government identification systems\n• eSIM and mobile security\n• Embedded security for IoT\n• Access control systems\n• Digital identity verification\n• Secure credential management\n\nBuilt for government and enterprise security needs.",
+      "links": [
+        { "text": "Smart Cards & Digital ID", "url": "/solutions/smart-cards-digital-id" }
+      ],
+      "relatedQuestions": ["q9", "q10"]
+    },
+    {
+      "id": "q12",
+      "category": "research",
+      "question": "What research are you conducting?",
+      "keywords": ["research", "innovation", "r&d", "development"],
+      "answer": "Timeless Research focuses on:\n\n• Agent Safety (AEGIS framework)\n• Agentic RAG systems\n• Digital Twins for operations\n• LLM Observability\n• Multimodal real-time processing\n• On-device inference\n• Sovereign AI architectures\n• Trustless model sharing\n\nOur research directly informs production systems.",
+      "links": [
+        { "text": "View Research", "url": "/research" }
+      ],
+      "relatedQuestions": ["q13", "q1"]
+    },
+    {
+      "id": "q13",
+      "category": "company",
+      "question": "What case studies do you have?",
+      "keywords": ["case study", "case studies", "examples", "portfolio", "projects"],
+      "answer": "We have 6 detailed case studies covering:\n\n• Healthcare remote monitoring\n• Manufacturing optimization\n• Autonomous vehicle systems\n• Energy grid management\n• Financial services AI\n• Retail personalization\n\nEach written in problem-approach-stack-impact format.",
+      "links": [
+        { "text": "View Case Studies", "url": "/case-studies" }
+      ],
+      "relatedQuestions": ["q12", "q6"]
+    },
+    {
+      "id": "q14",
+      "category": "company",
+      "question": "Where are you located?",
+      "keywords": ["location", "office", "where", "address", "offices"],
+      "answer": "Timeless operates globally with presence in:\n\n📍 North America: New York, San Francisco, Washington DC, Toronto\n📍 Europe: London, Stuttgart, Vienna, Zurich, Pristina\n📍 Middle East: Riyadh, Abu Dhabi, Tel Aviv\n\n12 locations • 8 countries • 250+ people\n\nWe support sovereign models for EU, US, and KSA.",
+      "links": [
+        { "text": "Contact Us", "url": "/contact" }
+      ],
+      "relatedQuestions": ["q15", "q16"]
+    },
+    {
+      "id": "q15",
+      "category": "company",
+      "question": "How can I contact Timeless?",
+      "keywords": ["contact", "reach", "email", "phone", "connect", "get in touch"],
+      "answer": "Get in touch with Timeless:\n\n• Visit our Connect page for the contact form\n• Short path from idea to production\n• One team, global delivery\n• Procurement and security contacts available\n\nWe typically respond within 24 hours.",
+      "links": [
+        { "text": "Connect With Us", "url": "/contact" }
+      ],
+      "relatedQuestions": ["q16", "q14"]
+    },
+    {
+      "id": "q16",
+      "category": "company",
+      "question": "Tell me about your team",
+      "keywords": ["team", "people", "staff", "employees", "who"],
+      "answer": "The Timeless team combines:\n\n• Research scientists and AI experts\n• Software and platform engineers\n• Operations and reliability specialists\n• Safety and governance professionals\n• Industry domain experts\n\n250+ people across 8 countries, driven by vision, grit, and growth.",
+      "links": [
+        { "text": "About Timeless", "url": "/about" }
+      ],
+      "relatedQuestions": ["q17", "q14"]
+    },
+    {
+      "id": "q17",
+      "category": "company",
+      "question": "What are your company values?",
+      "keywords": ["values", "mission", "vision", "culture", "principles"],
+      "answer": "Timeless is guided by three core values:\n\n🎯 Vision - We see beyond the immediate to build systems that last\n💪 Grit - We persist through complexity to deliver production systems\n📈 Growth - We continuously learn and improve with every deployment\n\nOur mission: Invent and operate deep-tech platforms that run every day—reliable, secure, and measurable.",
+      "links": [
+        { "text": "About Us", "url": "/about" }
+      ],
+      "relatedQuestions": ["q16", "q1"]
+    },
+    {
+      "id": "q18",
+      "category": "company",
+      "question": "How do I get started?",
+      "keywords": ["start", "begin", "onboard", "get started", "first step"],
+      "answer": "Getting started with Timeless is simple:\n\n1. Connect with us through our contact page\n2. Initial discovery call to understand your needs\n3. We assess your technical landscape\n4. Develop a proof-of-concept or pilot\n5. Scale to production with full support\n\nFrom idea to production, one integrated team.",
+      "links": [
+        { "text": "Connect Now", "url": "/contact" },
+        { "text": "View Capabilities", "url": "/capabilities" }
+      ],
+      "relatedQuestions": ["q15", "q1"]
+    }
+  ],
+  "fallbackMessage": "I'm Atlas, here to help you learn about Timeless. I can answer questions about:\n\n• Our services and capabilities\n• Industries we serve\n• Platforms and solutions\n• Company information and contact details\n\nWhat would you like to know?",
+  "welcomeMessage": "Hi! I'm Atlas, your guide to Timeless. I'm here to help you learn about our deep-tech platforms and capabilities.\n\nWhat would you like to know?"
+}
+

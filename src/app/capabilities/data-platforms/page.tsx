@@ -1,279 +1,548 @@
-import { PageLayout, Section, Card, TimelinePhase } from '@/components/ui/page-layout'
+"use client"
+
+import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
+import Link from 'next/link'
+import { useI18n } from '@/lib/i18n/context'
+import { 
+  Database, Layers, Zap, Package, Shield, Activity, GitBranch, Cloud, Lock, TrendingUp, 
+  DollarSign, BarChart3, FileCode, Link as LinkIcon, Boxes, Server, Target, Key, Eye,
+  CheckCircle2, AlertTriangle, RefreshCw, HardDrive, FileSearch, GitCompare, Gauge,
+  Users, Settings, BarChart, Clock, Cpu, Network
+} from 'lucide-react'
 
 export default function DataPlatformsPage() {
+  const { t } = useI18n()
+  
+  const overviewContent = t('pages.dataPlatforms.sections.overview.content', { returnObjects: true })
+  const contentArray = Array.isArray(overviewContent) ? overviewContent : []
+  
+  // Safe array extraction for TimelinePhase items
+  const consentItems = t('pages.dataPlatforms.sections.privacy.phases.consent.items', { returnObjects: true })
+  const privacyTechItems = t('pages.dataPlatforms.sections.privacy.phases.privacyTech.items', { returnObjects: true })
+  const cleanRoomsItems = t('pages.dataPlatforms.sections.privacy.phases.cleanRooms.items', { returnObjects: true })
+  const slosItems = t('pages.dataPlatforms.sections.reliability.phases.slos.items', { returnObjects: true })
+  const qualityItems = t('pages.dataPlatforms.sections.reliability.phases.quality.items', { returnObjects: true })
+  const drItems = t('pages.dataPlatforms.sections.reliability.phases.dr.items', { returnObjects: true })
+  const cloudNativeItems = t('pages.dataPlatforms.sections.deployment.phases.cloudNative.items', { returnObjects: true })
+  const hybridItems = t('pages.dataPlatforms.sections.deployment.phases.hybrid.items', { returnObjects: true })
+  const sovereignItems = t('pages.dataPlatforms.sections.deployment.phases.sovereign.items', { returnObjects: true })
+
   return (
     <PageLayout
-      title="Data Platforms"
-      description="We build data backbones for AI: streaming ingestion, lakehouse tables, feature stores, and governance that meets privacy and compliance without killing velocity."
+      title={t('pages.dataPlatforms.title')}
+      description={t('pages.dataPlatforms.description')}
       breadcrumbs={[
-        { label: 'Capabilities', href: '/capabilities' },
-        { label: 'Data Platforms', href: '/capabilities/data-platforms' }
+        { label: t('navigation.capabilities'), href: '/capabilities' },
+        { label: t('pages.dataPlatforms.breadcrumb'), href: '/capabilities/data-platforms' }
       ]}
     >
       <Section
-        title="Overview"
-        description="Decision‑grade data from source to activation"
+        title={t('pages.dataPlatforms.sections.overview.title')}
+        description={t('pages.dataPlatforms.sections.overview.subtitle')}
       >
         <div className="content-prose">
-          <p>Modern data platforms are product platforms: contract‑driven ingestion, lakehouse storage with open table formats, batch/stream processing with reliable orchestration, feature stores with point‑in‑time correctness, and governed access with privacy guardrails. We engineer for freshness, quality, and cost - with SLOs that map to business outcomes and ML/analytics workloads.</p>
-          <p>Our blueprints emphasize data ownership and self‑serve: domain data products with clear SLAs, lineage, and observability. We align storage/compute tiers to workload patterns, automate compaction and vacuum, and use policy‑as‑code for access, retention, and purpose limitations. Everything ships with metrics, alerts, and playbooks.</p>
+          {contentArray.map((paragraph: string, idx: number) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
         </div>
       </Section>
 
       <Section
-        title="Reference Stack"
-        description="From ingestion to activation"
+        title={t('pages.dataPlatforms.sections.refStack.title')}
+        description={t('pages.dataPlatforms.sections.refStack.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Ingestion</h4>
-            <p>Kafka/Pulsar, CDC, schema registry, and data contracts with ownership.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <GitBranch className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.refStack.items.ingestion.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.refStack.items.ingestion.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Storage</h4>
-            <p>Lakehouse (Iceberg/Delta), compaction, retention, and tiering strategies.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.refStack.items.storage.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.refStack.items.storage.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Processing</h4>
-            <p>Batch/stream engines, incremental models, and laminar pipelines.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.refStack.items.processing.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.refStack.items.processing.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Feature Store</h4>
-            <p>Offline/online stores, point-in-time correctness, and lineage.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Package className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.refStack.items.featureStore.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.refStack.items.featureStore.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Access</h4>
-            <p>Privacy controls, data products, contracts, and SLAs for consumers.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.refStack.items.access.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.refStack.items.access.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Activation</h4>
-            <p>Reverse ETL, metrics layers, and BI/ML service integrations.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.refStack.items.activation.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.refStack.items.activation.desc')}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Streaming & Ingestion"
-        description="Contracts first, lossless capture, and backpressure safety"
+        title={t('pages.dataPlatforms.sections.streaming.title')}
+        description={t('pages.dataPlatforms.sections.streaming.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Connectors</h4>
-            <p>CDC (Debezium), file drops, APIs, and SDKs; schema evolution with compatibility enforcement.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <LinkIcon className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.streaming.items.connectors.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.streaming.items.connectors.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Data contracts</h4>
-            <p>Producer/consumer contracts, ownership, SLAs; tests at source to prevent breaking changes.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <FileCode className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.streaming.items.contracts.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.streaming.items.contracts.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Buffering</h4>
-            <p>Backpressure handling, dead‑letter queues, idempotency keys, and exactly‑once semantics where required.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Boxes className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.streaming.items.buffering.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.streaming.items.buffering.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Multitenancy</h4>
-            <p>Topic and namespace isolation; quotas; encryption in transit and at rest.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Users className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.streaming.items.multitenancy.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.streaming.items.multitenancy.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Observability</h4>
-            <p>Lag, throughput, and error budgets per source; SLO alerts and replay tooling.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Eye className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.streaming.items.observability.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.streaming.items.observability.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Edge</h4>
-            <p>Gateway ingestion, CDC at branch sites, and merge conflict resolution for intermittency.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Cpu className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.streaming.items.edge.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.streaming.items.edge.desc')}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Lakehouse Tables & Storage"
-        description="Open tables, efficient IO, predictable costs"
+        title={t('pages.dataPlatforms.sections.lakehouse.title')}
+        description={t('pages.dataPlatforms.sections.lakehouse.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Table formats</h4>
-            <p>Apache Iceberg and Delta Lake; partitioning and clustering strategies; snapshot isolation.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.lakehouse.items.formats.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.lakehouse.items.formats.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Compaction</h4>
-            <p>Small file mitigation, optimize/vacuum scheduling, and metadata pruning.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <GitCompare className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.lakehouse.items.compaction.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.lakehouse.items.compaction.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Tiers</h4>
-            <p>Hot/warm/cold with lifecycle policies; archival and legal hold patterns.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <HardDrive className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.lakehouse.items.tiers.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.lakehouse.items.tiers.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Indexes</h4>
-            <p>Bloom/Z‑order and manifest/metadata caching; vector indexes for retrieval features.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <FileSearch className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.lakehouse.items.indexes.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.lakehouse.items.indexes.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Security</h4>
-            <p>Server‑side encryption, key rotation, row/column masking, and tokenized PII.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.lakehouse.items.security.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.lakehouse.items.security.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Governed deletes</h4>
-            <p>Retention, time‑travel, GDPR/CCPA deletes, and reproducible compaction logs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <AlertTriangle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.lakehouse.items.deletes.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.lakehouse.items.deletes.desc')}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Processing & Orchestration"
-        description="Incremental by default, resilient by design"
+        title={t('pages.dataPlatforms.sections.processing.title')}
+        description={t('pages.dataPlatforms.sections.processing.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Engines</h4>
-            <p>Spark/Flink/Beam/DBT; streaming first with CDC upserts and watermarks.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.processing.items.engines.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.processing.items.engines.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Orchestration</h4>
-            <p>DAGs with retries, idempotent tasks, and backfill playbooks; SLAs with auto‑escalation.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Network className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.processing.items.orchestration.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.processing.items.orchestration.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Quality</h4>
-            <p>Contract tests, anomaly detection, and quarantine; schema drift notifications.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.processing.items.quality.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.processing.items.quality.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Semantic layer</h4>
-            <p>Metric definitions, versioning, and change audit; query authorization integrated.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.processing.items.semantic.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.processing.items.semantic.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Observability</h4>
-            <p>Lineage, run logs, and resource usage; OpenTelemetry traces across jobs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.processing.items.observability.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.processing.items.observability.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>DevEx</h4>
-            <p>Local dev with fixtures, data diffs in PRs, and ephemeral test runs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Settings className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.processing.items.devex.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.processing.items.devex.desc')}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Feature Stores & Online Serving"
-        description="Point‑in‑time correctness and low‑latency reads"
+        title={t('pages.dataPlatforms.sections.featureStore.title')}
+        description={t('pages.dataPlatforms.sections.featureStore.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Offline</h4>
-            <p>Backfills, historical joins, and reproducible training sets with snapshot cutoffs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.featureStore.items.offline.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.featureStore.items.offline.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Online</h4>
-            <p>Serving stores with P99 targets; TTLs and write amplification controls; hot feature caching.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.featureStore.items.online.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.featureStore.items.online.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Materialization</h4>
-            <p>Stream and micro‑batch sync; audit events for lineage and drift analysis.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <RefreshCw className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.featureStore.items.materialization.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.featureStore.items.materialization.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Join correctness</h4>
-            <p>As‑of joins, late data handling, and entity resolution rules.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.featureStore.items.joinCorrectness.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.featureStore.items.joinCorrectness.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Model registry</h4>
-            <p>Versioning, signatures, canaries, and rollout policies tied to features and datasets.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Package className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.featureStore.items.modelRegistry.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.featureStore.items.modelRegistry.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Edge</h4>
-            <p>Local caches and federated updates for sovereign/edge deployments.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Server className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.featureStore.items.edge.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.featureStore.items.edge.desc')}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Governance"
-        description="Trust without friction"
+        title={t('pages.dataPlatforms.sections.governance.title')}
+        description={t('pages.dataPlatforms.sections.governance.subtitle')}
       >
-        <div className="grid-2">
-          <Card
-            title="Catalog & lineage"
-            description="Automated metadata capture, ownership, and impact analysis."
-          />
-          <Card
-            title="Privacy & policy"
-            description="Row/column-level security, masking, consent, and purpose limits."
-          />
-          <Card
-            title="Quality SLAs"
-            description="Contracts, tests, and automatic quarantines for broken data."
-          />
-          <Card
-            title="Clean rooms"
-            description="Partner collaboration with privacy-preserving joins and logs."
-          />
+        <div className="deliverables-grid">
+          <div className="deliverable-item">
+            <GitBranch className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.dataPlatforms.sections.governance.items.catalog.title')}</h3>
+            <p>{t('pages.dataPlatforms.sections.governance.items.catalog.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <Lock className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.dataPlatforms.sections.governance.items.privacy.title')}</h3>
+            <p>{t('pages.dataPlatforms.sections.governance.items.privacy.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <CheckCircle2 className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.dataPlatforms.sections.governance.items.quality.title')}</h3>
+            <p>{t('pages.dataPlatforms.sections.governance.items.quality.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <Shield className="w-6 h-6 mb-2 text-blue-600 dark:text-blue-400" />
+            <h3>{t('pages.dataPlatforms.sections.governance.items.cleanRooms.title')}</h3>
+            <p>{t('pages.dataPlatforms.sections.governance.items.cleanRooms.desc')}</p>
+          </div>
         </div>
       </Section>
 
       <Section
-        title="Privacy & Clean Rooms"
-        description="Collaborate without sharing raw data"
+        title={t('pages.dataPlatforms.sections.privacy.title')}
+        description={t('pages.dataPlatforms.sections.privacy.subtitle')}
         variant="alt"
       >
         <div className="timeline-grid trio">
           <TimelinePhase
-            title="Consent & minimization"
-            duration="Lawful, purpose‑bound use"
-            items={[
-              "Consent capture and purpose scoping",
-              "Data minimization and masking",
-              "Automated retention and deletion"
-            ]}
+            title={t('pages.dataPlatforms.sections.privacy.phases.consent.title')}
+            duration={t('pages.dataPlatforms.sections.privacy.phases.consent.duration')}
+            items={Array.isArray(consentItems) ? consentItems : []}
           />
           <TimelinePhase
-            title="Privacy tech"
-            duration="Insights with protections"
-            items={[
-              "DP/k‑anonymity/synthetic data",
-              "Pseudonymization and tokenization",
-              "Threshold queries and noise"
-            ]}
+            title={t('pages.dataPlatforms.sections.privacy.phases.privacyTech.title')}
+            duration={t('pages.dataPlatforms.sections.privacy.phases.privacyTech.duration')}
+            items={Array.isArray(privacyTechItems) ? privacyTechItems : []}
           />
           <TimelinePhase
-            title="Clean rooms"
-            duration="Partner analytics"
-            items={[
-              "Query templates and audits",
-              "Cross‑party joins without data egress",
-              "Usage logs and billing"
-            ]}
+            title={t('pages.dataPlatforms.sections.privacy.phases.cleanRooms.title')}
+            duration={t('pages.dataPlatforms.sections.privacy.phases.cleanRooms.duration')}
+            items={Array.isArray(cleanRoomsItems) ? cleanRoomsItems : []}
           />
         </div>
       </Section>
 
       <Section
-        title="KPIs & Benchmarks"
-        description="Measure what matters"
+        title={t('pages.dataPlatforms.sections.security.title')}
+        description={t('pages.dataPlatforms.sections.security.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Freshness</h4>
-            <p>End‑to‑end latency by product; staleness budgets and breach counts.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Key className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.security.items.encryption.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.security.items.encryption.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Quality</h4>
-            <p>Null rates, distribution drift, and quarantine durations; test pass rates.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.security.items.access.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.security.items.access.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Performance</h4>
-            <p>Query P50/P95/P99, engine utilization, and compaction efficacy.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Eye className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.security.items.audit.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.security.items.audit.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Adoption</h4>
-            <p>Active data products, consumer SLAs, and self‑serve usage.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.security.items.secrets.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.security.items.secrets.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Reliability</h4>
-            <p>Incident counts, MTTR/MTTD, and recovery time for backfills.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Network className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.security.items.network.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.security.items.network.desc')}</p>
           </div>
           <div className="platform-item">
-            <h4>Cost</h4>
-            <p>Storage growth, compute spend per TB processed, and egress.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <AlertTriangle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.security.items.incident.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.security.items.incident.desc')}</p>
           </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.dataPlatforms.sections.reliability.title')}
+        description={t('pages.dataPlatforms.sections.reliability.subtitle')}
+        variant="alt"
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.dataPlatforms.sections.reliability.phases.slos.title')}
+            duration={t('pages.dataPlatforms.sections.reliability.phases.slos.duration')}
+            items={Array.isArray(slosItems) ? slosItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.dataPlatforms.sections.reliability.phases.quality.title')}
+            duration={t('pages.dataPlatforms.sections.reliability.phases.quality.duration')}
+            items={Array.isArray(qualityItems) ? qualityItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.dataPlatforms.sections.reliability.phases.dr.title')}
+            duration={t('pages.dataPlatforms.sections.reliability.phases.dr.duration')}
+            items={Array.isArray(drItems) ? drItems : []}
+          />
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.dataPlatforms.sections.finops.title')}
+        description={t('pages.dataPlatforms.sections.finops.subtitle')}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <DollarSign className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.finops.items.costing.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.finops.items.costing.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.finops.items.optimization.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.finops.items.optimization.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.finops.items.budgets.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.finops.items.budgets.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.finops.items.showback.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.finops.items.showback.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.dataPlatforms.sections.kpis.title')}
+        description={t('pages.dataPlatforms.sections.kpis.subtitle')}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.kpis.items.freshness.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.kpis.items.freshness.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.kpis.items.quality.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.kpis.items.quality.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.kpis.items.performance.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.kpis.items.performance.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.kpis.items.adoption.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.kpis.items.adoption.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.kpis.items.reliability.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.kpis.items.reliability.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <DollarSign className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.dataPlatforms.sections.kpis.items.cost.title')}</h4>
+            </div>
+            <p>{t('pages.dataPlatforms.sections.kpis.items.cost.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.dataPlatforms.sections.deployment.title')}
+        description={t('pages.dataPlatforms.sections.deployment.subtitle')}
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.dataPlatforms.sections.deployment.phases.cloudNative.title')}
+            duration={t('pages.dataPlatforms.sections.deployment.phases.cloudNative.duration')}
+            items={Array.isArray(cloudNativeItems) ? cloudNativeItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.dataPlatforms.sections.deployment.phases.hybrid.title')}
+            duration={t('pages.dataPlatforms.sections.deployment.phases.hybrid.duration')}
+            items={Array.isArray(hybridItems) ? hybridItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.dataPlatforms.sections.deployment.phases.sovereign.title')}
+            duration={t('pages.dataPlatforms.sections.deployment.phases.sovereign.duration')}
+            items={Array.isArray(sovereignItems) ? sovereignItems : []}
+          />
+        </div>
+      </Section>
+
+      <Section variant="dark">
+        <div className="cta-container">
+          <Link href="/contact" className="btn-primary large">
+            {t('pages.dataPlatforms.sections.cta')} →
+          </Link>
         </div>
       </Section>
     </PageLayout>
   )
-} 
+}

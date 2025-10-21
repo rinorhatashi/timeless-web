@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Search, Menu, X, ChevronDown, ArrowRight, Globe, ChevronRight } from 'lucide-react'
+import { Search, Menu, X, ChevronDown, ArrowRight, Globe, ChevronRight, Settings } from 'lucide-react'
 import { useI18n } from '@/lib/i18n/context'
+import { SettingsPanel } from '@/components/ui/settings-panel'
 
 interface NavigationItem {
   label: string
@@ -35,7 +36,7 @@ export const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false)
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [mobileActiveSubmenu, setMobileActiveSubmenu] = useState<string | null>(null)
@@ -192,21 +193,21 @@ export const Header = () => {
     setActiveDropdown(null)
     setIsMobileMenuOpen(false)
     setIsSearchOpen(false)
-    setIsLanguageOpen(false)
+    setIsSettingsOpen(false)
     setMobileActiveSubmenu(null)
   }
 
   const handleSearchToggle = () => {
     setIsSearchOpen(!isSearchOpen)
     if (!isSearchOpen) {
-      setIsLanguageOpen(false)
+      setIsSettingsOpen(false)
       setIsMobileMenuOpen(false)
     }
   }
 
-  const handleLanguageToggle = () => {
-    setIsLanguageOpen(!isLanguageOpen)
-    if (!isLanguageOpen) {
+  const handleSettingsToggle = () => {
+    setIsSettingsOpen(!isSettingsOpen)
+    if (!isSettingsOpen) {
       setIsSearchOpen(false)
     }
   }
@@ -215,17 +216,12 @@ export const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
     if (!isMobileMenuOpen) {
       setIsSearchOpen(false)
-      setIsLanguageOpen(false)
+      setIsSettingsOpen(false)
     }
   }
 
   const handleMobileSubmenuToggle = (label: string) => {
     setMobileActiveSubmenu(mobileActiveSubmenu === label ? null : label)
-  }
-
-  const handleLanguageChange = (language: typeof languages[0]) => {
-    setLocale(language.code as 'en' | 'de' | 'ar')
-    setIsLanguageOpen(false)
   }
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -243,21 +239,21 @@ export const Header = () => {
       })
     : []
 
-  // Close search drawer on escape key
+  // Close drawers on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsSearchOpen(false)
-        setIsLanguageOpen(false)
+        setIsSettingsOpen(false)
         setIsMobileMenuOpen(false)
       }
     }
 
-    if (isSearchOpen || isLanguageOpen || isMobileMenuOpen) {
+    if (isSearchOpen || isSettingsOpen || isMobileMenuOpen) {
       document.addEventListener('keydown', handleEscape)
       return () => document.removeEventListener('keydown', handleEscape)
     }
-  }, [isSearchOpen, isLanguageOpen, isMobileMenuOpen])
+  }, [isSearchOpen, isSettingsOpen, isMobileMenuOpen])
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -362,39 +358,13 @@ export const Header = () => {
               <Search className="w-5 h-5" />
             </button>
             
-            <div className="relative">
-              <button 
-                className="lang-btn" 
-                aria-label="Language"
-                onClick={handleLanguageToggle}
-              >
-                <Globe className="w-5 h-5" />
-              </button>
-
-              {/* Language Dropdown */}
-              {isLanguageOpen && (
-                <>
-                  <div 
-                    className="fixed inset-0 z-30" 
-                    onClick={() => setIsLanguageOpen(false)}
-                  />
-                  <div className="language-dropdown">
-                    {languages.map((language) => (
-                      <button
-                        key={language.code}
-                        onClick={() => handleLanguageChange(language)}
-                        className={`language-option ${
-                          language.code === currentLanguage.code ? 'active' : ''
-                        }`}
-                      >
-                        <span className="language-flag">{language.flag}</span>
-                        <span className="language-name">{language.name}</span>
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
+            <button 
+              className="lang-btn" 
+              aria-label="Settings"
+              onClick={handleSettingsToggle}
+            >
+              <Settings className="w-5 h-5" />
+            </button>
 
             {/* Mobile Menu Button */}
             <button
@@ -629,6 +599,12 @@ export const Header = () => {
           </div>
         </>
       )}
+
+      {/* Settings Panel */}
+      <SettingsPanel 
+        isOpen={isSettingsOpen} 
+        onClose={() => setIsSettingsOpen(false)} 
+      />
     </>
   )
 }

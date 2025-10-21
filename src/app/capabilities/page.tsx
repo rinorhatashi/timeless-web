@@ -150,79 +150,82 @@ const implementationPatterns = [
 export default function CapabilitiesPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Capabilities that scale in production</h1>
-          <p>
-            Battle-tested components and frameworks that power real-world AI systems. Every capability is production-ready 
-            with proven deployment patterns, compliance frameworks, and scalability blueprints.
-          </p>
-          <div className="hero-actions">
-            <Link href="/contact" className="btn-primary">
-              Start Building
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/research" className="btn-secondary">
-              View Research
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+      {/* Enhanced Hero Section */}
+      <section className="hero-enhanced">
+        <div className="hero-enhanced-content">
+          <div className="hero-enhanced-text">
+            <h1 className="hero-enhanced-title">Capabilities that scale in production</h1>
+            <p className="hero-enhanced-subtitle">
+              Battle-tested components and frameworks that power real-world AI systems. Every capability is production-ready 
+              with proven deployment patterns, compliance frameworks, and scalability blueprints.
+            </p>
+            <div className="hero-enhanced-actions">
+              <Link href="/contact" className="btn-primary-hero">
+                Start Building
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link href="/research" className="btn-secondary-hero">
+                View Research
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Capabilities Grid */}
+      {/* Capabilities Grid - Enhanced */}
       <section className="section">
         <div className="section-content">
           {capabilitiesData.map((category, categoryIndex) => {
             const CategoryIcon = category.icon
             return (
               <div key={categoryIndex} className="mb-20">
-                <div className="section-header">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-gray-100 rounded-lg">
-                      <CategoryIcon className="w-5 h-5 text-gray-700" />
-                    </div>
-                    <h2 className="section-title">{category.category}</h2>
+                <div className="capabilities-category-header">
+                  <div className="capabilities-category-icon">
+                    <CategoryIcon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h2 className="capabilities-category-title">{category.category}</h2>
+                    <div className="capabilities-category-divider"></div>
                   </div>
                 </div>
                 
-                <div className="grid-3">
+                <div className="capabilities-grid">
                   {category.capabilities.map((capability, index) => (
-                    <div key={index} className="card">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    <div key={index} className="capability-card">
+                      <div className="capability-card-header">
+                        <span className={`capability-badge ${
                           capability.status === 'Production Ready' 
-                            ? 'bg-gray-100 text-gray-800' 
-                            : 'bg-gray-50 text-gray-600'
+                            ? 'capability-badge-ready' 
+                            : 'capability-badge-research'
                         }`}>
                           {capability.status}
                         </span>
                       </div>
                       
-                      <h3 className="card-title">
+                      <h3 className="capability-card-title">
                         {capability.title}
                       </h3>
                       
-                      <p className="card-description mb-6">
+                      <p className="capability-card-description">
                         {capability.description}
                       </p>
                       
-                      <div className="space-y-2 mb-6">
+                      <div className="capability-features">
                         {capability.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center gap-3 text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500" />
-                            {feature}
+                          <div key={featureIndex} className="capability-feature-item">
+                            <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0" />
+                            <span>{feature}</span>
                           </div>
                         ))}
                       </div>
                       
-                      <div className="pt-4 border-t border-gray-200">
+                      <div className="capability-card-footer">
                         <Link 
                           href={`/capabilities/${capability.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                          className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors duration-300 flex items-center gap-2 group"
+                          className="capability-link group"
                         >
-                          Learn more
+                          <span>Learn more</span>
                           <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                       </div>
@@ -235,29 +238,29 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      {/* Implementation Patterns */}
-      <section className="section-alt">
+      {/* Implementation Patterns - Enhanced */}
+      <section className="section section-alt">
         <div className="section-content">
           <div className="section-header">
-            <h2 className="section-title">Implementation Patterns</h2>
+            <h2 className="section-title">IMPLEMENTATION PATTERNS</h2>
             <p className="section-description">
               Proven deployment patterns that reduce risk and accelerate time-to-value. Each pattern includes 
               compliance frameworks, scalability blueprints, and operational runbooks.
             </p>
           </div>
           
-          <div className="grid-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {implementationPatterns.map((pattern, index) => {
               const IconComponent = pattern.icon
               return (
-                <div key={index} className="card text-center">
-                  <div className="p-3 bg-gray-100 rounded-lg w-fit mx-auto mb-4">
-                    <IconComponent className="w-6 h-6 text-gray-700" />
+                <div key={index} className="platform-item-enhanced text-center">
+                  <div className="platform-item-icon mx-auto">
+                    <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <h3 className="card-title">
+                  <h3 className="platform-item-title">
                     {pattern.title}
                   </h3>
-                  <p className="card-description">
+                  <p className="platform-item-description">
                     {pattern.description}
                   </p>
                 </div>
@@ -267,19 +270,18 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section" style={{ background: 'var(--primary-black)', color: 'var(--primary-white)' }}>
+      {/* CTA Section - Enhanced */}
+      <section className="section section-dark-cta">
         <div className="section-content text-center">
-          <h2 className="text-4xl font-normal mb-8 text-white leading-tight">
+          <h2 className="text-4xl font-normal mb-8 leading-tight">
             Ready to build production-ready AI?
           </h2>
-          <p className="text-xl text-white opacity-90 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12 leading-relaxed">
             Let&apos;s discuss your specific requirements and design a solution that scales with your business.
           </p>
           <Link 
             href="/contact" 
-            className="btn-primary"
-            style={{ background: 'var(--primary-white)', color: 'var(--primary-black)' }}
+            className="btn-primary-inverted"
           >
             Start the conversation →
           </Link>

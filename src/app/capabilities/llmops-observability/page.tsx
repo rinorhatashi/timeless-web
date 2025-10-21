@@ -1,237 +1,469 @@
-import { PageLayout, Section } from '@/components/ui/page-layout'
+"use client"
+
+import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
 import Link from 'next/link'
-import { ArrowRight, Eye, BarChart3, Shield, Zap, AlertTriangle, TrendingUp } from 'lucide-react'
-
-const features = [
-  {
-    title: "Real-time Monitoring",
-    description: "Comprehensive monitoring of model performance, latency, and resource utilization.",
-    icon: Eye
-  },
-  {
-    title: "Performance Analytics",
-    description: "Deep insights into model behavior, accuracy trends, and operational metrics.",
-    icon: BarChart3
-  },
-  {
-    title: "Automated Alerting",
-    description: "Intelligent alerts for model drift, performance degradation, and system issues.",
-    icon: AlertTriangle
-  },
-  {
-    title: "Optimization Engine",
-    description: "Continuous optimization of model performance and infrastructure efficiency.",
-    icon: TrendingUp
-  }
-]
-
-const capabilities = [
-  "Model performance tracking",
-  "Drift detection and alerts", 
-  "Resource utilization monitoring",
-  "Cost optimization analysis",
-  "A/B testing frameworks",
-  "Experiment tracking",
-  "Model versioning and rollback",
-  "Compliance auditing"
-]
-
-const benefits = [
-  {
-    title: "Proactive Issue Detection",
-    description: "Identify and resolve issues before they impact users or business operations."
-  },
-  {
-    title: "Continuous Optimization",
-    description: "Automatically optimize model performance and infrastructure costs over time."
-  },
-  {
-    title: "Regulatory Compliance",
-    description: "Maintain audit trails and compliance documentation for regulatory requirements."
-  },
-  {
-    title: "Risk Mitigation",
-    description: "Minimize risks through comprehensive monitoring and automated safety measures."
-  }
-]
-
-const metrics = [
-  {
-    title: "Model Accuracy",
-    description: "Track prediction accuracy and confidence scores over time",
-    icon: BarChart3
-  },
-  {
-    title: "System Performance", 
-    description: "Monitor latency, throughput, and resource utilization",
-    icon: Zap
-  },
-  {
-    title: "Business Impact",
-    description: "Measure ROI and business value delivered by AI systems",
-    icon: TrendingUp
-  },
-  {
-    title: "Security & Compliance",
-    description: "Track security events and compliance metrics",
-    icon: Shield
-  }
-]
+import { useI18n } from '@/lib/i18n/context'
+import { Activity, BarChart3, AlertCircle, Lock, Database, GitBranch, Shield, TrendingUp, FileCheck, Gauge, Layers, CheckCircle2, Search, Target, Box, Users, FileText, Zap, Play, ToggleLeft, AlertTriangle, Eye } from 'lucide-react'
 
 export default function LLMOpsObservabilityPage() {
+  const { t } = useI18n()
+  
+  // Safe array extraction for TimelinePhase items
+  const requestItems = t('pages.llmopsObservability.sections.architecture.phases.request.items', { returnObjects: true })
+  const processingItems = t('pages.llmopsObservability.sections.architecture.phases.processing.items', { returnObjects: true })
+  const responseItems = t('pages.llmopsObservability.sections.architecture.phases.response.items', { returnObjects: true })
+  const preReleaseItems = t('pages.llmopsObservability.sections.runbook.phases.preRelease.items', { returnObjects: true })
+  const releaseItems = t('pages.llmopsObservability.sections.runbook.phases.release.items', { returnObjects: true })
+  const postReleaseItems = t('pages.llmopsObservability.sections.runbook.phases.postRelease.items', { returnObjects: true })
+  
   return (
     <PageLayout
-      title="LLMOps & Observability"
-      description="Complete visibility into model performance, costs, and behavior in production."
+      title={t('pages.llmopsObservability.title')}
+      description={t('pages.llmopsObservability.description')}
       breadcrumbs={[
-        { label: 'Capabilities', href: '/capabilities' },
-        { label: 'LLMOps & Observability', href: '/capabilities/llmops-observability' }
+        { label: t('navigation.capabilities'), href: '/capabilities' },
+        { label: t('pages.llmopsObservability.breadcrumb'), href: '/capabilities/llmops-observability' }
       ]}
     >
       <Section
-        title="Production AI Observability"
-        description="Gain complete visibility and control over your AI systems with comprehensive monitoring, analytics, and optimization capabilities."
+        title={t('pages.llmopsObservability.sections.overview.title')}
+        description={t('pages.llmopsObservability.sections.overview.subtitle')}
       >
-        <div className="grid-2">
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon
-            return (
-              <div key={index} className="card">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-gray-100 rounded-lg">
-                    <IconComponent className="w-6 h-6 text-gray-700" />
-                  </div>
-                  <h3 className="card-title">
-                    {feature.title}
-                  </h3>
-                </div>
-                <p className="card-description">
-                  {feature.description}
-                </p>
-              </div>
-            )
-          })}
-        </div>
-      </Section>
-
-      <Section variant="alt">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Key Metrics We Track</h2>
-          <p className="section-description">
-            Comprehensive monitoring across all aspects of your AI systems
-          </p>
-        </div>
-        
-        <div className="grid-2">
-          {metrics.map((metric, index) => {
-            const IconComponent = metric.icon
-            return (
-              <div key={index} className="card">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-blue-100 rounded-lg">
-                    <IconComponent className="w-6 h-6 text-blue-700" />
-                  </div>
-                  <h3 className="card-title">
-                    {metric.title}
-                  </h3>
-                </div>
-                <p className="card-description">
-                  {metric.description}
-                </p>
-              </div>
-            )
-          })}
-        </div>
-      </Section>
-
-      <Section>
         <div className="content-prose">
-          <h2>Comprehensive Observability</h2>
-          <p>
-            Our LLMOps platform provides end-to-end observability for your AI systems, from model 
-            training through production deployment. We monitor every aspect of your AI infrastructure 
-            to ensure optimal performance, reliability, and compliance.
-          </p>
-
-          <h3>Model Performance Monitoring</h3>
-          <p>
-            Track model accuracy, drift, and performance degradation in real-time. Our system 
-            automatically detects when models need retraining or adjustment, ensuring consistent 
-            performance over time.
-          </p>
-
-          <h3>Infrastructure Optimization</h3>
-          <p>
-            Monitor and optimize compute resources, costs, and scaling behavior. Our platform 
-            provides recommendations for infrastructure improvements and cost optimization 
-            opportunities.
-          </p>
-
-          <h3>Compliance & Auditing</h3>
-          <p>
-            Maintain comprehensive audit trails and compliance documentation. Our system tracks 
-            all model decisions, data usage, and system changes for regulatory compliance and 
-            internal governance.
-          </p>
+          <p>{t('pages.llmopsObservability.sections.overview.content.0')}</p>
+          <p>{t('pages.llmopsObservability.sections.overview.content.1')}</p>
         </div>
       </Section>
 
-      <Section variant="alt">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Observability Capabilities</h2>
-          <p className="section-description">
-            Everything you need to monitor and optimize your AI systems in production
-          </p>
-        </div>
-        
-        <div className="grid-4">
-          {capabilities.map((capability, index) => (
-            <div key={index} className="card text-center">
-              <p className="text-sm font-medium text-gray-900">
-                {capability}
-              </p>
+      <Section
+        title={t('pages.llmopsObservability.sections.systemModel.title')}
+        description={t('pages.llmopsObservability.sections.systemModel.subtitle')}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.systemModel.items.instrumentation.title')}</h4>
             </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <div className="text-center mb-12">
-          <h2 className="section-title">Why LLMOps Matters</h2>
-          <p className="section-description">
-            The benefits of comprehensive AI observability for your organization
-          </p>
-        </div>
-        
-        <div className="grid-2">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="card">
-              <h3 className="card-title">
-                {benefit.title}
-              </h3>
-              <p className="card-description">
-                {benefit.description}
-              </p>
+            <p>{t('pages.llmopsObservability.sections.systemModel.items.instrumentation.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <GitBranch className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.systemModel.items.traces.title')}</h4>
             </div>
-          ))}
+            <p>{t('pages.llmopsObservability.sections.systemModel.items.traces.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.systemModel.items.metrics.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.systemModel.items.metrics.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.systemModel.items.evals.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.systemModel.items.evals.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.systemModel.items.feedback.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.systemModel.items.feedback.desc')}</p>
+                  </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.systemModel.items.governance.title')}</h4>
+                </div>
+            <p>{t('pages.llmopsObservability.sections.systemModel.items.governance.desc')}</p>
+              </div>
         </div>
       </Section>
 
-      {/* CTA Section */}
+      <Section
+        title={t('pages.llmopsObservability.sections.architecture.title')}
+        description={t('pages.llmopsObservability.sections.architecture.subtitle')}
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.llmopsObservability.sections.architecture.phases.request.title')}
+            duration={t('pages.llmopsObservability.sections.architecture.phases.request.duration')}
+            items={Array.isArray(requestItems) ? requestItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.llmopsObservability.sections.architecture.phases.processing.title')}
+            duration={t('pages.llmopsObservability.sections.architecture.phases.processing.duration')}
+            items={Array.isArray(processingItems) ? processingItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.llmopsObservability.sections.architecture.phases.response.title')}
+            duration={t('pages.llmopsObservability.sections.architecture.phases.response.duration')}
+            items={Array.isArray(responseItems) ? responseItems : []}
+          />
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.pipelines.title')}
+        description={t('pages.llmopsObservability.sections.pipelines.subtitle')}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.pipelines.items.ingestion.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.pipelines.items.ingestion.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.pipelines.items.storage.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.pipelines.items.storage.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Search className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.pipelines.items.indexing.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.pipelines.items.indexing.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.pipelines.items.aggregation.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.pipelines.items.aggregation.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.pipelines.items.sampling.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.pipelines.items.sampling.desc')}</p>
+                  </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.pipelines.items.privacy.title')}</h4>
+                </div>
+            <p>{t('pages.llmopsObservability.sections.pipelines.items.privacy.desc')}</p>
+              </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.signals.title')}
+        description={t('pages.llmopsObservability.sections.signals.subtitle')}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.signals.items.quality.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.signals.items.quality.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.signals.items.safety.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.signals.items.safety.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.signals.items.latency.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.signals.items.latency.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.signals.items.cost.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.signals.items.cost.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <AlertCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.signals.items.drift.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.signals.items.drift.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Users className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.signals.items.userSatisfaction.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.signals.items.userSatisfaction.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.runbook.title')}
+        description={t('pages.llmopsObservability.sections.runbook.subtitle')}
+        variant="alt"
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.llmopsObservability.sections.runbook.phases.preRelease.title')}
+            duration={t('pages.llmopsObservability.sections.runbook.phases.preRelease.duration')}
+            items={Array.isArray(preReleaseItems) ? preReleaseItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.llmopsObservability.sections.runbook.phases.release.title')}
+            duration={t('pages.llmopsObservability.sections.runbook.phases.release.duration')}
+            items={Array.isArray(releaseItems) ? releaseItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.llmopsObservability.sections.runbook.phases.postRelease.title')}
+            duration={t('pages.llmopsObservability.sections.runbook.phases.postRelease.duration')}
+            items={Array.isArray(postReleaseItems) ? postReleaseItems : []}
+          />
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.reliability.title')}
+        description={t('pages.llmopsObservability.sections.reliability.subtitle')}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.reliability.items.availability.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.reliability.items.availability.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.reliability.items.latency.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.reliability.items.latency.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.reliability.items.quality.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.reliability.items.quality.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.reliability.items.cost.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.reliability.items.cost.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.reliability.items.capacity.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.reliability.items.capacity.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <AlertCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.reliability.items.incidents.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.reliability.items.incidents.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.security.title')}
+        description={t('pages.llmopsObservability.sections.security.subtitle')}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.security.items.accessLogs.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.security.items.accessLogs.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.security.items.policyTracking.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.security.items.policyTracking.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <GitBranch className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.security.items.modelProvenance.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.security.items.modelProvenance.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.security.items.piiHandling.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.security.items.piiHandling.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <AlertCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.security.items.incidentReports.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.security.items.incidentReports.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.security.items.compliance.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.security.items.compliance.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.kpis.title')}
+        description={t('pages.llmopsObservability.sections.kpis.subtitle')}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.kpis.items.taskSuccess.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.kpis.items.taskSuccess.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.kpis.items.quality.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.kpis.items.quality.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.kpis.items.latency.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.kpis.items.latency.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.kpis.items.cost.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.kpis.items.cost.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.kpis.items.policyAdherence.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.kpis.items.policyAdherence.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.kpis.items.userEngagement.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.kpis.items.userEngagement.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.deployment.title')}
+        description={t('pages.llmopsObservability.sections.deployment.subtitle')}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Eye className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.deployment.items.shadowMode.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.deployment.items.shadowMode.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.deployment.items.canary.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.deployment.items.canary.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <GitBranch className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.deployment.items.abTesting.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.deployment.items.abTesting.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Box className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.deployment.items.blueGreen.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.deployment.items.blueGreen.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <ToggleLeft className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.deployment.items.featureFlags.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.deployment.items.featureFlags.desc')}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <AlertTriangle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.llmopsObservability.sections.deployment.items.circuitBreakers.title')}</h4>
+            </div>
+            <p>{t('pages.llmopsObservability.sections.deployment.items.circuitBreakers.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.llmopsObservability.sections.outcomes.title')}
+        description={t('pages.llmopsObservability.sections.outcomes.subtitle')}
+      >
+        <div className="deliverables-grid">
+          <div className="deliverable-item">
+            <h3>{t('pages.llmopsObservability.sections.outcomes.items.visibility.title')}</h3>
+            <p>{t('pages.llmopsObservability.sections.outcomes.items.visibility.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <h3>{t('pages.llmopsObservability.sections.outcomes.items.reliability.title')}</h3>
+            <p>{t('pages.llmopsObservability.sections.outcomes.items.reliability.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <h3>{t('pages.llmopsObservability.sections.outcomes.items.improvement.title')}</h3>
+            <p>{t('pages.llmopsObservability.sections.outcomes.items.improvement.desc')}</p>
+          </div>
+          <div className="deliverable-item">
+            <h3>{t('pages.llmopsObservability.sections.outcomes.items.governance.title')}</h3>
+            <p>{t('pages.llmopsObservability.sections.outcomes.items.governance.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
       <Section variant="dark">
-        <div className="text-center">
-          <h2 className="text-3xl font-normal mb-8 text-white">
-            Ready to optimize your AI operations?
-          </h2>
-          <p className="text-xl text-white opacity-90 max-w-2xl mx-auto mb-8">
-            Gain complete visibility and control over your AI systems with our comprehensive observability platform.
-          </p>
-          <Link 
-            href="/contact" 
-            className="btn-primary"
-            style={{ background: 'var(--primary-white)', color: 'var(--primary-black)' }}
-          >
-            Start monitoring →
+        <div className="cta-container">
+          <Link href="/contact" className="btn-primary large">
+            {t('pages.llmopsObservability.sections.cta')} →
           </Link>
         </div>
       </Section>

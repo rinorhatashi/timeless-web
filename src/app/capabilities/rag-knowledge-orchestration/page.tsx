@@ -1,223 +1,406 @@
-import { PageLayout, Section, Card, TimelinePhase } from '@/components/ui/page-layout'
+"use client"
+
+import { PageLayout, Section } from '@/components/ui/page-layout'
+import Link from 'next/link'
+import { useI18n } from '@/lib/i18n/context'
+import { 
+  Search, 
+  Database, 
+  GitFork, 
+  FileText, 
+  Shield, 
+  Activity, 
+  Layers, 
+  Filter, 
+  CheckCircle, 
+  AlertTriangle, 
+  TrendingUp,
+  Clock,
+  Award,
+  Zap,
+  Code2,
+  Server,
+  Box,
+  MessageSquare,
+  Target,
+  Eye
+} from 'lucide-react'
 
 export default function RAGKnowledgeOrchestrationPage() {
+  const { t } = useI18n()
+  
   return (
     <PageLayout
-      title="RAG & Knowledge Orchestration"
-      description="Graph RAG with semantic routing, query rewriting, hybrid retrieval, and policy-aware synthesis. Built for citations, freshness, and low hallucination risk."
+      title={t('pages.ragKnowledgeOrchestration.title') as string}
+      description={t('pages.ragKnowledgeOrchestration.description') as string}
       breadcrumbs={[
-        { label: 'Capabilities', href: '/capabilities' },
-        { label: 'RAG & Knowledge Orchestration', href: '/capabilities/rag-knowledge-orchestration' }
+        { label: t('navigation.capabilities') as string, href: '/capabilities' },
+        { label: t('pages.ragKnowledgeOrchestration.breadcrumb') as string, href: '/capabilities/rag-knowledge-orchestration' }
       ]}
     >
       <Section
-        title="Overview"
-        description="RAG is only as good as routing, data hygiene, and synthesis discipline. We combine multiple retrieval strategies with a knowledge graph and policy‑aware generators to keep answers grounded and current."
+        title={t('pages.ragKnowledgeOrchestration.sections.overview.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.overview.subtitle') as string}
       >
         <div className="content-prose">
-          <p>Our orchestration attaches provenance and citations to every answer. Queries are rewritten and routed to the best retriever; synthesis respects source boundaries and redacts sensitive fields where required. This creates trustable assistants for docs, support, engineering knowledge, and regulated content.</p>
+          <p>{String(t('pages.ragKnowledgeOrchestration.sections.overview.content.0'))}</p>
+          <p>{String(t('pages.ragKnowledgeOrchestration.sections.overview.content.1'))}</p>
         </div>
       </Section>
 
       <Section
-        title="Outcomes"
-        description="Ground truth with speed"
+        title={t('pages.ragKnowledgeOrchestration.sections.systemModel.title') as string}
+        variant="alt"
+      >
+        <div className="content-prose">
+          <p>{String(t('pages.ragKnowledgeOrchestration.sections.systemModel.content'))}</p>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.ragKnowledgeOrchestration.sections.outcomes.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.outcomes.subtitle') as string}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.outcomes.items.trust.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.outcomes.items.trust.desc'))}</p>
+          </div>
+          
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.outcomes.items.freshness.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.outcomes.items.freshness.desc'))}</p>
+          </div>
+          
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.outcomes.items.performance.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.outcomes.items.performance.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title={t('pages.ragKnowledgeOrchestration.sections.refArchitecture.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.refArchitecture.subtitle') as string}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Trust</h4>
-            <p>Citations and provenance by default; abstain when confidence is low.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <GitFork className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.routing.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.routing.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Freshness</h4>
-            <p>Recrawl/invalidation SLAs; near‑real‑time indices where needed.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Search className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.hybridRetrieval.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.hybridRetrieval.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Performance</h4>
-            <p>P95 latency targets via routing and caching; predictable costs per query.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Box className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.knowledgeGraph.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.knowledgeGraph.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.synthesis.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.synthesis.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.policy.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.policy.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Award className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.evals.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.refArchitecture.items.evals.desc'))}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Reference Architecture"
-        description="Retrieval strategies and guards"
+        title={t('pages.ragKnowledgeOrchestration.sections.indexingStores.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.indexingStores.subtitle') as string}
       >
-        <div className="platform-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="platform-item">
-            <h4>Routing</h4>
-            <p>Query intent detection, rewriting, and multi-armed bandit selection.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.vectorDB.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.vectorDB.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>Hybrid Retrieval</h4>
-            <p>Vector + BM25 + structure-aware retrievers with dedup and re-ranking.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <FileText className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.sparse.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.sparse.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>Knowledge Graph</h4>
-            <p>Entity/relationship store, provenance, and freshness scoring.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Box className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.graph.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.graph.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>Synthesis</h4>
-            <p>Citation-first generation, chunk-attribution, and guardrail prompts.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Server className="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.tables.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.tables.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>Policy</h4>
-            <p>Access controls, redaction, and content/classification filters.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Code2 className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.code.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.code.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>Evals</h4>
-            <p>Groundedness, citation density, latency, and freshness KPIs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-cyan-600 dark:text-cyan-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.caches.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.indexingStores.items.caches.desc'))}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Indexing & Stores"
-        description="Choose the right store for the job"
+        title={t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.subtitle') as string}
         variant="alt"
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Vector DB</h4>
-            <p>HNSW/IVF‑PQ, sharding/replication, and filterable metadata; TTL and freshness tiers.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.classification.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.classification.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Sparse</h4>
-            <p>BM25/colBERT indexes for lexical match; hybrid re‑ranking to improve precision.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.rewriting.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.rewriting.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Graph</h4>
-            <p>Entities/relations with provenance; path queries for reasoning and disambiguation.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.bandits.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.bandits.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Tables</h4>
-            <p>Schema‑aware retrievers and SQL generation with guardrails and allow‑listed queries.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.contextWindows.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.contextWindows.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Code</h4>
-            <p>Symbol and call‑graph indexes; docstring/citation linking; semantic search with structure.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <AlertTriangle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.abstain.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.abstain.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Caches</h4>
-            <p>Query/result and chunk caches; invalidation policies; cost‑latency tradeoffs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.telemetry.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.retrievalOrchestration.items.telemetry.desc'))}</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA Section - Link to RAG Orchestrator (keeping this special design) */}
+      <Section>
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700 dark:from-blue-700 dark:to-indigo-800 rounded-2xl p-8 md:p-12 text-center">
+          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))] pointer-events-none"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to build production RAG systems?
+            </h3>
+            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+              Explore our RAG Orchestrator platform for end-to-end knowledge orchestration
+            </p>
+            <Link 
+              href={String(t('pages.ragKnowledgeOrchestration.sections.ctaSection.link'))}
+              className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 hover:shadow-lg hover:scale-105"
+            >
+              {String(t('pages.ragKnowledgeOrchestration.sections.ctaSection.text'))} 
+              <span className="text-xl">→</span>
+            </Link>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Retrieval Orchestration"
-        description="Make the router smarter over time"
-      >
-        <div className="platform-grid">
-          <div className="platform-item">
-            <h4>Classification</h4>
-            <p>Intent detection and schema selection; domain routing and fallbacks.</p>
-          </div>
-          <div className="platform-item">
-            <h4>Rewriting</h4>
-            <p>Query expansion, paraphrase, and negative term injection; language and locale handling.</p>
-          </div>
-          <div className="platform-item">
-            <h4>Bandits</h4>
-            <p>Multi‑armed policies with offline evaluation and online learning; guardrail bounds.</p>
-          </div>
-          <div className="platform-item">
-            <h4>Context windows</h4>
-            <p>Chunk budgeting and dedup; diversity and novelty controls; anti‑leak filters.</p>
-          </div>
-          <div className="platform-item">
-            <h4>Abstain</h4>
-            <p>Confidence estimation and safe fallbacks to human or search flows.</p>
-          </div>
-          <div className="platform-item">
-            <h4>Telemetry</h4>
-            <p>Per‑strategy outcomes; cost/latency/quality tradeoffs; policy hit rates.</p>
-          </div>
-        </div>
-      </Section>
-
-      <Section
-        title="Data & Indexing"
-        description="Quality in, quality out"
+        title={t('pages.ragKnowledgeOrchestration.sections.dataIndexing.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.dataIndexing.subtitle') as string}
         variant="alt"
       >
-        <div className="grid-2">
-          <Card
-            title="Ingestion"
-            description="Connectors, de‑duplication, partitioning, and canonicalization for PDFs, tables, HTML, code, and media."
-          />
-          <Card
-            title="Chunking"
-            description="Layout‑aware segmentation, table extraction, and code symbol graphs for better recall and citation density."
-          />
-          <Card
-            title="Embeddings"
-            description="Domain‑tuned encoders, hard negative mining, and periodic refresh jobs to avoid staleness."
-          />
-          <Card
-            title="Metadata"
-            description="Source, authorship, timestamp, and access labels for routing and policy enforcement."
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.ingestion.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.ingestion.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Box className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.chunking.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.chunking.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Layers className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.embeddings.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.embeddings.desc'))}</p>
+          </div>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileText className="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.metadata.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.dataIndexing.items.metadata.desc'))}</p>
+          </div>
         </div>
       </Section>
 
       <Section
-        title="Synthesis & Guardrails"
-        description="Grounded generation that respects policy"
+        title={t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.subtitle') as string}
       >
         <div className="platform-grid">
           <div className="platform-item">
-            <h4>Citations</h4>
-            <p>Chunk‑level attributions; entailment checks; user‑visible references.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.citations.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.citations.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Redaction</h4>
-            <p>PII masking/minimization; allow‑listed fields; purpose binding for outputs.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.redaction.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.redaction.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Format</h4>
-            <p>Schema‑constrained outputs; validators for JSON/XML; error‑aware re‑asks.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Code2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.format.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.format.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Policies</h4>
-            <p>Content filters, classification, and role‑based guardrails; audit trails.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.policies.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.policies.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Feedback</h4>
-            <p>User voting and correction capture; flywheel into retrievers and prompts.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <MessageSquare className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.feedback.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.feedback.desc'))}</p>
           </div>
           <div className="platform-item">
-            <h4>Edge/sovereign</h4>
-            <p>On‑prem synthesis with local indices; HSM custody and offline operation.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Server className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.edgeSovereign.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.synthesisGuardrails.items.edgeSovereign.desc'))}</p>
           </div>
         </div>
       </Section>
 
       <Section
-        title="Operations & KPIs"
-        description="Retrieval that improves with use"
+        title={t('pages.ragKnowledgeOrchestration.sections.operationsKpis.title') as string}
+        description={t('pages.ragKnowledgeOrchestration.sections.operationsKpis.subtitle') as string}
         variant="alt"
       >
-        <div className="platform-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="platform-item">
-            <h4>Groundedness</h4>
-            <p>Citation coverage and correctness; abstain rates when confidence is low.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.groundedness.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.groundedness.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>Freshness</h4>
-            <p>Index lag and decay; SLA on ingestion latency and invalidation.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.freshness.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.freshness.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>Latency & cost</h4>
-            <p>Per strategy and overall; router decisions vs outcomes to tune policies.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Zap className="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.latencyCost.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.latencyCost.desc'))}</p>
           </div>
+          
           <div className="platform-item">
-            <h4>User feedback</h4>
-            <p>Vote/acceptance signals and error classes feeding back to retraining.</p>
+            <div className="flex items-start gap-3 mb-3">
+              <Eye className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+              <h4>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.userFeedback.title'))}</h4>
+            </div>
+            <p>{String(t('pages.ragKnowledgeOrchestration.sections.operationsKpis.items.userFeedback.desc'))}</p>
           </div>
+        </div>
+      </Section>
+
+      <Section variant="dark">
+        <div className="cta-container">
+          <Link href="/contact" className="btn-primary large">
+            {String(t('pages.ragKnowledgeOrchestration.sections.cta'))} →
+          </Link>
         </div>
       </Section>
     </PageLayout>
   )
-} 
+}

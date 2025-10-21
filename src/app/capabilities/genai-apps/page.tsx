@@ -1,65 +1,34 @@
 "use client"
 
-import { PageLayout, Section } from '@/components/ui/page-layout'
-import { useI18n } from '@/lib/i18n/context'
+import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
 import Link from 'next/link'
-import { ArrowRight, Zap, Shield, Code, Cpu, CheckCircle } from 'lucide-react'
-
-const features = [
-  {
-    title: "Custom Model Development",
-    description: "Purpose-built generative models tailored to your specific use cases and data.",
-    icon: Code
-  },
-  {
-    title: "Enterprise Integration", 
-    description: "Seamless integration with existing enterprise systems and workflows.",
-    icon: Zap
-  },
-  {
-    title: "Safety & Governance",
-    description: "Built-in safety measures and governance frameworks for responsible AI deployment.",
-    icon: Shield
-  },
-  {
-    title: "Performance Optimization",
-    description: "Optimized for production performance with efficient inference and scaling.",
-    icon: Cpu
-  }
-]
-
-const useCases = [
-  "Content generation and automation",
-  "Code generation and development assistance", 
-  "Document processing and analysis",
-  "Customer service automation",
-  "Knowledge base creation",
-  "Language translation and localization",
-  "Creative design assistance",
-  "Data synthesis and augmentation"
-]
-
-const benefits = [
-  {
-    title: "Accelerated Development",
-    description: "Reduce time-to-market with pre-built components and proven architectures."
-  },
-  {
-    title: "Enterprise-Grade Security",
-    description: "Built-in security measures and compliance frameworks for enterprise deployment."
-  },
-  {
-    title: "Scalable Infrastructure", 
-    description: "Auto-scaling infrastructure that handles varying workloads efficiently."
-  },
-  {
-    title: "Continuous Improvement",
-    description: "Models that learn and improve over time with feedback and new data."
-  }
-]
+import { useI18n } from '@/lib/i18n/context'
+import { 
+  Database, 
+  Settings, 
+  Shield, 
+  FileCheck, 
+  Activity, 
+  Gauge,
+  Users,
+  Briefcase,
+  Code,
+  DollarSign,
+  BookOpen,
+  FileText,
+  Lock,
+  Server,
+  AlertCircle,
+  CheckCircle
+} from 'lucide-react'
 
 export default function GenAIAppsPage() {
   const { t } = useI18n()
+  
+  // Safe array extraction for TimelinePhase items
+  const slisSlosItems = t('pages.genaiApps.sections.reliability.phases.slisSlos.items', { returnObjects: true })
+  const changeMgmtItems = t('pages.genaiApps.sections.reliability.phases.changeMgmt.items', { returnObjects: true })
+  const costPerformanceItems = t('pages.genaiApps.sections.reliability.phases.costPerformance.items', { returnObjects: true })
   
   return (
     <PageLayout
@@ -70,123 +39,280 @@ export default function GenAIAppsPage() {
         { label: t('pages.genaiApps.breadcrumb'), href: '/capabilities/genai-apps' }
       ]}
     >
+      {/* Overview Section */}
       <Section
-        title="Enterprise Generative AI"
-        description="Build and deploy custom generative AI applications that transform how your organization creates, processes, and analyzes content."
+        title={t('pages.genaiApps.sections.overview.title')}
+        description={t('pages.genaiApps.sections.overview.subtitle')}
       >
-        <div className="grid-2">
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon
-            return (
-              <div key={index} className="card">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-gray-100 rounded-lg">
-                    <IconComponent className="w-6 h-6 text-gray-700" />
-                  </div>
-                  <h3 className="card-title">
-                    {feature.title}
-                  </h3>
-                </div>
-                <p className="card-description">
-                  {feature.description}
-                </p>
-              </div>
-            )
-          })}
+        <div className="content-prose space-y-6">
+          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            {t('pages.genaiApps.sections.overview.content.0')}
+          </p>
+          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            {t('pages.genaiApps.sections.overview.content.1')}
+          </p>
         </div>
       </Section>
 
-      <Section variant="alt">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Use Cases</h2>
-          <p className="section-description">
-            Transform your business processes with generative AI applications
+      {/* System Model Section */}
+      <Section
+        title={t('pages.genaiApps.sections.systemModel.title')}
+        variant="alt"
+      >
+        <div className="max-w-4xl mx-auto">
+          <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-8">
+            {t('pages.genaiApps.sections.systemModel.subtitle')}
           </p>
         </div>
-        
-        <div className="grid-4">
-          {useCases.map((useCase, index) => (
-            <div key={index} className="card text-center">
-              <div className="flex items-center justify-center mb-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-              </div>
-              <p className="text-sm font-medium text-gray-900">
-                {useCase}
-              </p>
+      </Section>
+
+      {/* Outcomes Section */}
+      <Section
+        title={t('pages.genaiApps.sections.outcomes.title')}
+        description={t('pages.genaiApps.sections.outcomes.subtitle')}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Gauge className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.outcomes.items.cycleTime.title')}</h4>
             </div>
-          ))}
-        </div>
-      </Section>
+            <p>{t('pages.genaiApps.sections.outcomes.items.cycleTime.desc')}</p>
+          </div>
 
-      <Section>
-        <div className="content-prose">
-          <h2>Implementation Approach</h2>
-          <p>
-            Our GenAI applications are built using a systematic approach that ensures reliability, 
-            security, and performance. We start with understanding your specific requirements and 
-            build custom solutions that integrate seamlessly with your existing infrastructure.
-          </p>
-
-          <h3>Discovery & Planning</h3>
-          <p>
-            We work with your team to identify the best opportunities for generative AI, assess 
-            your data readiness, and design an implementation roadmap that delivers value quickly 
-            while building toward long-term goals.
-          </p>
-
-          <h3>Custom Development</h3>
-          <p>
-            Our team develops custom generative models and applications tailored to your specific 
-            use cases. We use proven architectures and best practices to ensure your applications 
-            are reliable, secure, and scalable.
-          </p>
-
-          <h3>Deployment & Optimization</h3>
-          <p>
-            We deploy your applications with comprehensive monitoring and optimization frameworks. 
-            Our systems continuously learn and improve, ensuring your AI applications deliver 
-            increasing value over time.
-          </p>
-        </div>
-      </Section>
-
-      <Section variant="alt">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Key Benefits</h2>
-          <p className="section-description">
-            Why organizations choose our GenAI applications for their critical business processes
-          </p>
-        </div>
-        
-        <div className="grid-2">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="card">
-              <h3 className="card-title">
-                {benefit.title}
-              </h3>
-              <p className="card-description">
-                {benefit.description}
-              </p>
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.outcomes.items.quality.title')}</h4>
             </div>
-          ))}
+            <p>{t('pages.genaiApps.sections.outcomes.items.quality.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.outcomes.items.adoption.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.outcomes.items.adoption.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Reference Architecture Section */}
+      <Section
+        title={t('pages.genaiApps.sections.architecture.title')}
+        description={t('pages.genaiApps.sections.architecture.subtitle')}
+        variant="alt"
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Database className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.architecture.items.retrieval.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.architecture.items.retrieval.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Settings className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.architecture.items.tooling.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.architecture.items.tooling.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Server className="w-5 h-5 text-violet-600 dark:text-violet-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.architecture.items.memory.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.architecture.items.memory.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Shield className="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.architecture.items.policy.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.architecture.items.policy.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.architecture.items.evals.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.architecture.items.evals.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Activity className="w-5 h-5 text-cyan-600 dark:text-cyan-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.architecture.items.tracing.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.architecture.items.tracing.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Patterns Section */}
+      <Section
+        title={t('pages.genaiApps.sections.patterns.title')}
+        description={t('pages.genaiApps.sections.patterns.subtitle')}
+      >
+        <div className="platform-grid">
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Users className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.patterns.items.supportOps.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.patterns.items.supportOps.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Briefcase className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.patterns.items.salesGrowth.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.patterns.items.salesGrowth.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <Code className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.patterns.items.engineering.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.patterns.items.engineering.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <DollarSign className="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.patterns.items.finance.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.patterns.items.finance.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <BookOpen className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.patterns.items.knowledge.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.patterns.items.knowledge.desc')}</p>
+          </div>
+
+          <div className="platform-item">
+            <div className="flex items-start gap-3 mb-3">
+              <FileText className="w-5 h-5 text-slate-600 dark:text-slate-400 mt-0.5 flex-shrink-0" />
+              <h4>{t('pages.genaiApps.sections.patterns.items.backOffice.title')}</h4>
+            </div>
+            <p>{t('pages.genaiApps.sections.patterns.items.backOffice.desc')}</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Reliability & Operations Section */}
+      <Section
+        title={t('pages.genaiApps.sections.reliability.title')}
+        description={t('pages.genaiApps.sections.reliability.subtitle')}
+        variant="alt"
+      >
+        <div className="timeline-grid trio">
+          <TimelinePhase
+            title={t('pages.genaiApps.sections.reliability.phases.slisSlos.title')}
+            duration={t('pages.genaiApps.sections.reliability.phases.slisSlos.duration')}
+            items={Array.isArray(slisSlosItems) ? slisSlosItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.genaiApps.sections.reliability.phases.changeMgmt.title')}
+            duration={t('pages.genaiApps.sections.reliability.phases.changeMgmt.duration')}
+            items={Array.isArray(changeMgmtItems) ? changeMgmtItems : []}
+          />
+          <TimelinePhase
+            title={t('pages.genaiApps.sections.reliability.phases.costPerformance.title')}
+            duration={t('pages.genaiApps.sections.reliability.phases.costPerformance.duration')}
+            items={Array.isArray(costPerformanceItems) ? costPerformanceItems : []}
+          />
+        </div>
+      </Section>
+
+      {/* Security & Privacy Section */}
+      <Section
+        title={t('pages.genaiApps.sections.security.title')}
+        description={t('pages.genaiApps.sections.security.subtitle')}
+      >
+        <div className="platform-grid">
+          <div className="platform-item group hover:shadow-lg transition-all duration-300">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="p-2 bg-red-50 dark:bg-red-900/20 rounded-lg group-hover:bg-red-100 dark:group-hover:bg-red-900/30 transition-colors">
+                <Users className="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h4 className="text-xl font-semibold">{t('pages.genaiApps.sections.security.items.identity.title')}</h4>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">{t('pages.genaiApps.sections.security.items.identity.desc')}</p>
+          </div>
+
+          <div className="platform-item group hover:shadow-lg transition-all duration-300">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 transition-colors">
+                <Database className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h4 className="text-xl font-semibold">{t('pages.genaiApps.sections.security.items.data.title')}</h4>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">{t('pages.genaiApps.sections.security.items.data.desc')}</p>
+          </div>
+
+          <div className="platform-item group hover:shadow-lg transition-all duration-300">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="p-2 bg-purple-50 dark:bg-purple-900/20 rounded-lg group-hover:bg-purple-100 dark:group-hover:bg-purple-900/30 transition-colors">
+                <Shield className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              </div>
+              <h4 className="text-xl font-semibold">{t('pages.genaiApps.sections.security.items.supplyChain.title')}</h4>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">{t('pages.genaiApps.sections.security.items.supplyChain.desc')}</p>
+          </div>
+
+          <div className="platform-item group hover:shadow-lg transition-all duration-300">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="p-2 bg-orange-50 dark:bg-orange-900/20 rounded-lg group-hover:bg-orange-100 dark:group-hover:bg-orange-900/30 transition-colors">
+                <AlertCircle className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+              </div>
+              <h4 className="text-xl font-semibold">{t('pages.genaiApps.sections.security.items.monitoring.title')}</h4>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">{t('pages.genaiApps.sections.security.items.monitoring.desc')}</p>
+          </div>
+
+          <div className="platform-item group hover:shadow-lg transition-all duration-300">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="p-2 bg-green-50 dark:bg-green-900/20 rounded-lg group-hover:bg-green-100 dark:group-hover:bg-green-900/30 transition-colors">
+                <FileCheck className="w-6 h-6 text-green-600 dark:text-green-400" />
+              </div>
+              <h4 className="text-xl font-semibold">{t('pages.genaiApps.sections.security.items.compliance.title')}</h4>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">{t('pages.genaiApps.sections.security.items.compliance.desc')}</p>
+          </div>
+
+          <div className="platform-item group hover:shadow-lg transition-all duration-300">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/30 transition-colors">
+                <Lock className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+              </div>
+              <h4 className="text-xl font-semibold">{t('pages.genaiApps.sections.security.items.sovereign.title')}</h4>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">{t('pages.genaiApps.sections.security.items.sovereign.desc')}</p>
+          </div>
         </div>
       </Section>
 
       {/* CTA Section */}
       <Section variant="dark">
-        <div className="text-center">
-          <h2 className="text-3xl font-normal mb-8 text-white">
-            Ready to build your GenAI application?
-          </h2>
-          <p className="text-xl text-white opacity-90 max-w-2xl mx-auto mb-8">
-            Let's discuss how generative AI can transform your business processes and unlock new opportunities.
-          </p>
+        <div className="cta-container">
           <Link 
             href="/contact" 
-            className="btn-primary"
-            style={{ background: 'var(--primary-white)', color: 'var(--primary-black)' }}
+            className="btn-primary large inline-flex items-center gap-2 hover:gap-3 transition-all"
+            aria-label={t('pages.genaiApps.sections.cta')}
           >
-            Start your project →
+            {t('pages.genaiApps.sections.cta')} →
           </Link>
         </div>
       </Section>

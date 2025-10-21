@@ -2,53 +2,72 @@
 
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
+import { Zap, Target, Activity, Shield, Globe, Building2, MapPin } from 'lucide-react'
 
 export const HomePageContent = () => {
   const { t } = useI18n()
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1>{t('homepage.hero.title')}</h1>
-          <p>{t('homepage.hero.subtitle')}</p>
-          <div className="hero-actions">
-            <Link href="/capabilities" className="btn-primary">
-              {t('homepage.hero.cta1')} →
-            </Link>
-            <Link href="/research" className="btn-secondary">
-              {t('homepage.hero.cta2')} →
-            </Link>
-            <Link href="/contact" className="btn-secondary">
-              {t('homepage.hero.cta3')} →
-            </Link>
+      {/* Hero Section - Enhanced */}
+      <section className="hero-enhanced">
+        <div className="hero-enhanced-content">
+          <div className="hero-enhanced-text">
+            <h1 className="hero-enhanced-title">{t('homepage.hero.title')}</h1>
+            <p className="hero-enhanced-subtitle">{t('homepage.hero.subtitle')}</p>
+            <div className="hero-enhanced-actions">
+              <Link href="/capabilities" className="btn-primary-hero">
+                {t('homepage.hero.cta1')} →
+              </Link>
+              <Link href="/research" className="btn-secondary-hero">
+                {t('homepage.hero.cta2')} →
+              </Link>
+              <Link href="/contact" className="btn-secondary-hero">
+                {t('homepage.hero.cta3')} →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* What We Run For You - 2x2 Grid */}
       <section className="section section-alt">
         <div className="section-content">
-          <h2 className="section-title">{t('homepage.features.title')}</h2>
-          <p className="section-description">{t('homepage.features.subtitle')}</p>
+          <div className="section-header">
+            <h2 className="section-title">WHAT WE RUN FOR YOU</h2>
+            <p className="section-description">
+              Production-ready systems that deliver value from day one. Every component tested, monitored, and optimized for real-world deployment.
+            </p>
+          </div>
           
-          <div className="grid-4">
-            <div className="card">
-              <h3 className="card-title">{t('homepage.features.production.title')}</h3>
-              <p className="card-description">{t('homepage.features.production.description')}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="platform-item-enhanced">
+              <div className="platform-item-icon">
+                <Zap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="platform-item-title">{t('homepage.features.production.title')}</h3>
+              <p className="platform-item-description">{t('homepage.features.production.description')}</p>
             </div>
-            <div className="card">
-              <h3 className="card-title">{t('homepage.features.evaluation.title')}</h3>
-              <p className="card-description">{t('homepage.features.evaluation.description')}</p>
+            <div className="platform-item-enhanced">
+              <div className="platform-item-icon">
+                <Target className="w-6 h-6 text-green-600 dark:text-green-400" />
+              </div>
+              <h3 className="platform-item-title">{t('homepage.features.evaluation.title')}</h3>
+              <p className="platform-item-description">{t('homepage.features.evaluation.description')}</p>
             </div>
-            <div className="card">
-              <h3 className="card-title">{t('homepage.features.observability.title')}</h3>
-              <p className="card-description">{t('homepage.features.observability.description')}</p>
+            <div className="platform-item-enhanced">
+              <div className="platform-item-icon">
+                <Activity className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              </div>
+              <h3 className="platform-item-title">{t('homepage.features.observability.title')}</h3>
+              <p className="platform-item-description">{t('homepage.features.observability.description')}</p>
             </div>
-            <div className="card">
-              <h3 className="card-title">{t('homepage.features.security.title')}</h3>
-              <p className="card-description">{t('homepage.features.security.description')}</p>
+            <div className="platform-item-enhanced">
+              <div className="platform-item-icon">
+                <Shield className="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 className="platform-item-title">{t('homepage.features.security.title')}</h3>
+              <p className="platform-item-description">{t('homepage.features.security.description')}</p>
             </div>
           </div>
         </div>
@@ -87,29 +106,38 @@ export const HomePageContent = () => {
       {/* Global Presence */}
       <section className="section">
         <div className="section-content">
-          <div className="section-header text-center">
+          <div className="section-header">
             <h2 className="section-title">{t('homepage.global.title')}</h2>
             <p className="section-description">{t('homepage.global.subtitle')}</p>
           </div>
-          <div className="grid-3" style={{ marginBottom: '2rem' }}>
-            <div className="card">
-              <h3 className="card-title">{t('homepage.global.locations.northAmerica')}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="platform-item">
+              <div className="flex items-start gap-3 mb-3">
+                <Building2 className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                <h4>{t('homepage.global.locations.northAmerica')}</h4>
+              </div>
             </div>
-            <div className="card">
-              <h3 className="card-title">{t('homepage.global.locations.europe')}</h3>
+            <div className="platform-item">
+              <div className="flex items-start gap-3 mb-3">
+                <Globe className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                <h4>{t('homepage.global.locations.europe')}</h4>
+              </div>
             </div>
-            <div className="card">
-              <h3 className="card-title">{t('homepage.global.locations.middleEast')}</h3>
+            <div className="platform-item">
+              <div className="flex items-start gap-3 mb-3">
+                <MapPin className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+                <h4>{t('homepage.global.locations.middleEast')}</h4>
+              </div>
             </div>
           </div>
-          <p className="text-center" style={{ opacity: 0.7 }}>
+          <p className="text-center text-gray-600 dark:text-gray-400 text-lg">
             {t('homepage.global.sovereign')}
           </p>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="section" style={{ background: 'var(--primary-black)', color: 'var(--primary-white)' }}>
+      <section className="section section-dark-cta">
         <div className="section-content text-center">
           <h2 className="text-4xl font-normal mb-8">{t('homepage.contact.subtitle')}</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
@@ -117,8 +145,7 @@ export const HomePageContent = () => {
           </p>
           <Link 
             href="/contact" 
-            className="btn-primary" 
-            style={{ background: 'var(--primary-white)', color: 'var(--primary-black)' }}
+            className="btn-primary-inverted"
           >
             {t('homepage.contact.cta')} →
           </Link>
