@@ -261,9 +261,9 @@ export default function CapabilitiesPage() {
                     {pattern.title}
                   </h3>
                   <p className="platform-item-description">
-                    {pattern.description}
-                  </p>
-                </div>
+                  {pattern.description}
+                </p>
+              </div>
               )
             })}
           </div>

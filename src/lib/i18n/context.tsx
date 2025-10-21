@@ -10,7 +10,8 @@ type TranslationValue = string | Record<string, any>
 interface I18nContextType {
   locale: Locale
   setLocale: (locale: Locale) => void
-  t: (key: string, options?: { returnObjects?: boolean } | Record<string, string>) => string | TranslationValue
+  t: (key: string, options?: Record<string, string>) => string
+  tObject: (key: string) => TranslationValue
   translations: Record<string, TranslationValue>
   isLoading: boolean
 }
@@ -36,11 +37,8 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
   const [translations, setTranslations] = useState<Record<string, TranslationValue>>({})
   const [isLoading, setIsLoading] = useState(true)
   const [isInitialized, setIsInitialized] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    // Mark component as mounted (hydration complete)
-    setIsMounted(true)
     
     // Load from localStorage on mount and initialize translations immediately
     const initializeI18n = async () => {
@@ -95,7 +93,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('locale', newLocale)
   }
 
-  const t = (key: string, options?: { returnObjects?: boolean } | Record<string, string>): string | TranslationValue => {
+  const t = (key: string, options?: Record<string, string>): string => {
     const keys = key.split('.')
     let value: TranslationValue | undefined = translations
 
@@ -108,26 +106,39 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
       }
     }
 
-    // Check if returnObjects is requested
-    const returnObjects = options && 'returnObjects' in options ? options.returnObjects : false
-    
-    // If returnObjects is true, return the value as-is (could be object/array)
-    if (returnObjects && typeof value === 'object') {
-      return value
+    // Ensure we return a string
+    if (typeof value !== 'string') {
+      return key
     }
 
-    // Replace parameters if provided (only for string replacements)
-    if (typeof value === 'string' && options && !('returnObjects' in options)) {
+    // Replace parameters if provided
+    if (options) {
       return Object.entries(options).reduce((str, [key, val]) => {
         return str.replace(new RegExp(`{{${key}}}`, 'g'), val)
       }, value)
     }
 
-    return typeof value === 'string' ? value : key
+    return value
+  }
+
+  const tObject = (key: string): TranslationValue => {
+    const keys = key.split('.')
+    let value: TranslationValue | undefined = translations
+
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k as keyof typeof value]
+      } else {
+        // Translation not found, return empty object as fallback
+        return {}
+      }
+    }
+
+    return value || {}
   }
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t, translations, isLoading }}>
+    <I18nContext.Provider value={{ locale, setLocale, t, tObject, translations, isLoading }}>
       {children}
     </I18nContext.Provider>
   )

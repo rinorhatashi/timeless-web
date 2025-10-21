@@ -6,15 +6,15 @@ import { useI18n } from '@/lib/i18n/context'
 import { Activity, BarChart3, AlertCircle, Lock, Database, GitBranch, Shield, TrendingUp, FileCheck, Gauge, Layers, CheckCircle2, Search, Target, Box, Users, FileText, Zap, Play, ToggleLeft, AlertTriangle, Eye } from 'lucide-react'
 
 export default function LLMOpsObservabilityPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
   // Safe array extraction for TimelinePhase items
-  const requestItems = t('pages.llmopsObservability.sections.architecture.phases.request.items', { returnObjects: true })
-  const processingItems = t('pages.llmopsObservability.sections.architecture.phases.processing.items', { returnObjects: true })
-  const responseItems = t('pages.llmopsObservability.sections.architecture.phases.response.items', { returnObjects: true })
-  const preReleaseItems = t('pages.llmopsObservability.sections.runbook.phases.preRelease.items', { returnObjects: true })
-  const releaseItems = t('pages.llmopsObservability.sections.runbook.phases.release.items', { returnObjects: true })
-  const postReleaseItems = t('pages.llmopsObservability.sections.runbook.phases.postRelease.items', { returnObjects: true })
+  const requestItems = tObject('pages.llmopsObservability.sections.architecture.phases.request.items')
+  const processingItems = tObject('pages.llmopsObservability.sections.architecture.phases.processing.items')
+  const responseItems = tObject('pages.llmopsObservability.sections.architecture.phases.response.items')
+  const preReleaseItems = tObject('pages.llmopsObservability.sections.runbook.phases.preRelease.items')
+  const releaseItems = tObject('pages.llmopsObservability.sections.runbook.phases.release.items')
+  const postReleaseItems = tObject('pages.llmopsObservability.sections.runbook.phases.postRelease.items')
   
   return (
     <PageLayout

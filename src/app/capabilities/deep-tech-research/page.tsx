@@ -6,22 +6,22 @@ import { useI18n } from '@/lib/i18n/context'
 import { Microscope, Target, Layers, Cpu, Database, Brain, Shield, Zap, Globe, FileText, GitBranch, Beaker, Search, MapPin, Link as LinkIcon, Wrench, CheckCircle, Lock, Code, Binary, Network, Play, Video, Mic, Gauge, HardDrive, Box, Satellite, BarChart3, AlertTriangle, TrendingUp, BookOpen, Scale, Users, Package } from 'lucide-react'
 
 export default function DeepTechResearchPage() {
-  const { t, isLoading } = useI18n()
+  const { t, tObject, isLoading } = useI18n()
   
   if (isLoading) {
     return null // Loading skeleton is handled by loading.tsx
   }
   
   // Safe array extraction for TimelinePhase items
-  const hypothesisItems = t('pages.deepTechResearch.sections.methodology.phases.hypothesis.items', { returnObjects: true })
-  const implementationItems = t('pages.deepTechResearch.sections.methodology.phases.implementation.items', { returnObjects: true })
-  const evaluationItems = t('pages.deepTechResearch.sections.methodology.phases.evaluation.items', { returnObjects: true })
-  const safetyPolicyItems = t('pages.deepTechResearch.sections.safety.phases.policy.items', { returnObjects: true })
-  const safetyTuningItems = t('pages.deepTechResearch.sections.safety.phases.tuning.items', { returnObjects: true })
-  const safetyMonitoringItems = t('pages.deepTechResearch.sections.safety.phases.monitoring.items', { returnObjects: true })
-  const transferHardeningItems = t('pages.deepTechResearch.sections.transfer.phases.hardening.items', { returnObjects: true })
-  const transferIntegrationItems = t('pages.deepTechResearch.sections.transfer.phases.integration.items', { returnObjects: true })
-  const transferAdoptionItems = t('pages.deepTechResearch.sections.transfer.phases.adoption.items', { returnObjects: true })
+  const hypothesisItems = tObject('pages.deepTechResearch.sections.methodology.phases.hypothesis.items')
+  const implementationItems = tObject('pages.deepTechResearch.sections.methodology.phases.implementation.items')
+  const evaluationItems = tObject('pages.deepTechResearch.sections.methodology.phases.evaluation.items')
+  const safetyPolicyItems = tObject('pages.deepTechResearch.sections.safety.phases.policy.items')
+  const safetyTuningItems = tObject('pages.deepTechResearch.sections.safety.phases.tuning.items')
+  const safetyMonitoringItems = tObject('pages.deepTechResearch.sections.safety.phases.monitoring.items')
+  const transferHardeningItems = tObject('pages.deepTechResearch.sections.transfer.phases.hardening.items')
+  const transferIntegrationItems = tObject('pages.deepTechResearch.sections.transfer.phases.integration.items')
+  const transferAdoptionItems = tObject('pages.deepTechResearch.sections.transfer.phases.adoption.items')
   
   return (
     <PageLayout

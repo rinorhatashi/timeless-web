@@ -11,15 +11,15 @@ import {
 } from 'lucide-react'
 
 export default function BlockchainCryptographyPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
   // Safe array extraction for TimelinePhase items
-  const designItems = t('pages.blockchainCrypto.sections.zkPrivacy.phases.design.items', { returnObjects: true })
-  const implementationItems = t('pages.blockchainCrypto.sections.zkPrivacy.phases.implementation.items', { returnObjects: true })
-  const auditOpsItems = t('pages.blockchainCrypto.sections.zkPrivacy.phases.auditOps.items', { returnObjects: true })
-  const complianceItems = t('pages.blockchainCrypto.sections.complianceOperations.phases.compliance.items', { returnObjects: true })
-  const monitoringItems = t('pages.blockchainCrypto.sections.complianceOperations.phases.monitoring.items', { returnObjects: true })
-  const governanceItems = t('pages.blockchainCrypto.sections.complianceOperations.phases.governance.items', { returnObjects: true })
+  const designItems = tObject('pages.blockchainCrypto.sections.zkPrivacy.phases.design.items')
+  const implementationItems = tObject('pages.blockchainCrypto.sections.zkPrivacy.phases.implementation.items')
+  const auditOpsItems = tObject('pages.blockchainCrypto.sections.zkPrivacy.phases.auditOps.items')
+  const complianceItems = tObject('pages.blockchainCrypto.sections.complianceOperations.phases.compliance.items')
+  const monitoringItems = tObject('pages.blockchainCrypto.sections.complianceOperations.phases.monitoring.items')
+  const governanceItems = tObject('pages.blockchainCrypto.sections.complianceOperations.phases.governance.items')
 
   return (
     <PageLayout

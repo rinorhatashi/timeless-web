@@ -11,21 +11,21 @@ import {
 } from 'lucide-react'
 
 export default function SecurityCompliancePage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
-  const overviewContent = t('pages.securityCompliance.sections.overview.content', { returnObjects: true })
+  const overviewContent = tObject('pages.securityCompliance.sections.overview.content')
   const contentArray = Array.isArray(overviewContent) ? overviewContent : []
   
   // Safe array extraction for TimelinePhase items
-  const threatModelingItems = t('pages.securityCompliance.sections.engineering.phases.threatModeling.items', { returnObjects: true })
-  const testingItems = t('pages.securityCompliance.sections.engineering.phases.testing.items', { returnObjects: true })
-  const complianceOpsItems = t('pages.securityCompliance.sections.engineering.phases.complianceOps.items', { returnObjects: true })
-  const detectionsItems = t('pages.securityCompliance.sections.threatDetection.phases.detections.items', { returnObjects: true })
-  const operationsItems = t('pages.securityCompliance.sections.threatDetection.phases.operations.items', { returnObjects: true })
-  const continuityItems = t('pages.securityCompliance.sections.threatDetection.phases.continuity.items', { returnObjects: true })
-  const cloudNativeItems = t('pages.securityCompliance.sections.deployment.phases.cloudNative.items', { returnObjects: true })
-  const hybridItems = t('pages.securityCompliance.sections.deployment.phases.hybrid.items', { returnObjects: true })
-  const sovereignItems = t('pages.securityCompliance.sections.deployment.phases.sovereign.items', { returnObjects: true })
+  const threatModelingItems = tObject('pages.securityCompliance.sections.engineering.phases.threatModeling.items')
+  const testingItems = tObject('pages.securityCompliance.sections.engineering.phases.testing.items')
+  const complianceOpsItems = tObject('pages.securityCompliance.sections.engineering.phases.complianceOps.items')
+  const detectionsItems = tObject('pages.securityCompliance.sections.threatDetection.phases.detections.items')
+  const operationsItems = tObject('pages.securityCompliance.sections.threatDetection.phases.operations.items')
+  const continuityItems = tObject('pages.securityCompliance.sections.threatDetection.phases.continuity.items')
+  const cloudNativeItems = tObject('pages.securityCompliance.sections.deployment.phases.cloudNative.items')
+  const hybridItems = tObject('pages.securityCompliance.sections.deployment.phases.hybrid.items')
+  const sovereignItems = tObject('pages.securityCompliance.sections.deployment.phases.sovereign.items')
 
   return (
     <PageLayout
@@ -131,15 +131,14 @@ export default function SecurityCompliancePage() {
         variant="alt"
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.identity.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.identity.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               workloadIdentity: Fingerprint,
               accessControls: Lock,
               federation: Network,
               auditTrails: FileText,
               networkTrust: Shield,
-              secretsScope: Key
-            }
+              secretsScope: Key}
             const Icon = iconMap[key] || UserCheck
             
             return (
@@ -161,15 +160,14 @@ export default function SecurityCompliancePage() {
         description={t('pages.securityCompliance.sections.secrets.subtitle')}
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.secrets.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.secrets.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               vaults: Database,
               transit: Lock,
               atRest: HardDrive,
               signing: FileCheck,
               lifecycle: RefreshCw,
-              customerKeys: Key
-            }
+              customerKeys: Key}
             const Icon = iconMap[key] || Key
             
             return (
@@ -192,15 +190,14 @@ export default function SecurityCompliancePage() {
         variant="alt"
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.supplyChain.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.supplyChain.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               sbom: FileText,
               provenance: CheckCircle2,
               isolation: Shield,
               hardening: Layers,
               policyGates: FileWarning,
-              thirdParties: Users
-            }
+              thirdParties: Users}
             const Icon = iconMap[key] || FileCheck
             
             return (
@@ -222,15 +219,14 @@ export default function SecurityCompliancePage() {
         description={t('pages.securityCompliance.sections.appSecurity.subtitle')}
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.appSecurity.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.appSecurity.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               secureCoding: Code,
               apiHardening: Shield,
               dataValidation: CheckCircle2,
               secretsInCode: Key,
               aiLLMSecurity: Zap,
-              testing: Activity
-            }
+              testing: Activity}
             const Icon = iconMap[key] || Shield
             
             return (
@@ -253,15 +249,14 @@ export default function SecurityCompliancePage() {
         variant="alt"
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.cloudNetwork.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.cloudNetwork.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               baselines: Server,
               segmentation: Network,
               edge: Globe,
               storage: Database,
               kubernetes: Cog,
-              observability: Eye
-            }
+              observability: Eye}
             const Icon = iconMap[key] || Cloud
             
             return (
@@ -308,15 +303,14 @@ export default function SecurityCompliancePage() {
         variant="alt"
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.complianceEvidence.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.complianceEvidence.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               frameworks: Scale,
               evidence: FileCheck,
               tasks: Settings,
               vendors: Users,
               policies: BookOpen,
-              reporting: FileText
-            }
+              reporting: FileText}
             const Icon = iconMap[key] || CheckCircle2
             
             return (
@@ -338,15 +332,14 @@ export default function SecurityCompliancePage() {
         description={t('pages.securityCompliance.sections.privacy.subtitle')}
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.privacy.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.privacy.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               lifecycle: RefreshCw,
               techniques: Shield,
               subjectRights: UserCheck,
               llmPrivacy: Lock,
               dataSharing: Database,
-              privacyReviews: FileCheck
-            }
+              privacyReviews: FileCheck}
             const Icon = iconMap[key] || Shield
             
             return (
@@ -369,15 +362,14 @@ export default function SecurityCompliancePage() {
         variant="alt"
       >
         <div className="platform-grid">
-          {Object.entries(t('pages.securityCompliance.sections.kpis.items', { returnObjects: true }) as Record<string, { title: string; desc: string }>).map(([key, item]) => {
+          {Object.entries(tObject('pages.securityCompliance.sections.kpis.items') as Record<string, { title: string; desc: string }>).map(([key, item]) => {
             const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
               exposure: AlertTriangle,
               findings: FileWarning,
               incidents: Activity,
               compliance: CheckCircle2,
               education: BookOpen,
-              cost: TrendingUp
-            }
+              cost: TrendingUp}
             const Icon = iconMap[key] || BarChart3
             
             return (

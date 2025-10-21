@@ -23,12 +23,12 @@ import {
 } from 'lucide-react'
 
 export default function GenAIAppsPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
   // Safe array extraction for TimelinePhase items
-  const slisSlosItems = t('pages.genaiApps.sections.reliability.phases.slisSlos.items', { returnObjects: true })
-  const changeMgmtItems = t('pages.genaiApps.sections.reliability.phases.changeMgmt.items', { returnObjects: true })
-  const costPerformanceItems = t('pages.genaiApps.sections.reliability.phases.costPerformance.items', { returnObjects: true })
+  const slisSlosItems = tObject('pages.genaiApps.sections.reliability.phases.slisSlos.items')
+  const changeMgmtItems = tObject('pages.genaiApps.sections.reliability.phases.changeMgmt.items')
+  const costPerformanceItems = tObject('pages.genaiApps.sections.reliability.phases.costPerformance.items')
   
   return (
     <PageLayout

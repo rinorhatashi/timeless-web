@@ -7,15 +7,15 @@ import { useI18n } from '@/lib/i18n/context'
 import { Cpu, Settings, Eye, Zap, Wifi, Shield, Activity, Gauge, Lock, Database, BarChart3, RefreshCw, Clock, GitBranch, Target, FileText, Wrench, CheckCircle, Radio } from 'lucide-react'
 
 export default function EmbeddedEdgeAIPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
-  const overviewContent = t('pages.embeddedEdgeAI.sections.overview.content', { returnObjects: true })
+  const overviewContent = tObject('pages.embeddedEdgeAI.sections.overview.content')
   const contentArray = Array.isArray(overviewContent) ? overviewContent : []
   
   // Safe array extraction for TimelinePhase items
-  const updatePipelineItems = t('pages.embeddedEdgeAI.sections.otaFleet.phases.updatePipeline.items', { returnObjects: true })
-  const fleetHealthItems = t('pages.embeddedEdgeAI.sections.otaFleet.phases.fleetHealth.items', { returnObjects: true })
-  const securityPostureItems = t('pages.embeddedEdgeAI.sections.otaFleet.phases.securityPosture.items', { returnObjects: true })
+  const updatePipelineItems = tObject('pages.embeddedEdgeAI.sections.otaFleet.phases.updatePipeline.items')
+  const fleetHealthItems = tObject('pages.embeddedEdgeAI.sections.otaFleet.phases.fleetHealth.items')
+  const securityPostureItems = tObject('pages.embeddedEdgeAI.sections.otaFleet.phases.securityPosture.items')
 
   return (
     <PageLayout
@@ -29,7 +29,7 @@ export default function EmbeddedEdgeAIPage() {
       {/* Overview Section */}
       <Section
         title={t('pages.embeddedEdgeAI.sections.overview.title')}
-        subtitle={t('pages.embeddedEdgeAI.sections.overview.subtitle')}
+        description={t('pages.embeddedEdgeAI.sections.overview.subtitle')}
       >
         <div className="content-prose">
           {contentArray.map((paragraph: string, idx: number) => (
@@ -41,7 +41,7 @@ export default function EmbeddedEdgeAIPage() {
       {/* Stack Overview */}
       <Section
         title={t('pages.embeddedEdgeAI.sections.stackOverview.title')}
-        subtitle={t('pages.embeddedEdgeAI.sections.stackOverview.subtitle')}
+        description={t('pages.embeddedEdgeAI.sections.stackOverview.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
@@ -93,7 +93,7 @@ export default function EmbeddedEdgeAIPage() {
       {/* Optimization & Tooling */}
       <Section
         title={t('pages.embeddedEdgeAI.sections.optimization.title')}
-        subtitle={t('pages.embeddedEdgeAI.sections.optimization.subtitle')}
+        description={t('pages.embeddedEdgeAI.sections.optimization.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
@@ -130,7 +130,7 @@ export default function EmbeddedEdgeAIPage() {
       {/* Architecture Patterns */}
       <Section
         title={t('pages.embeddedEdgeAI.sections.architecturePatterns.title')}
-        subtitle={t('pages.embeddedEdgeAI.sections.architecturePatterns.subtitle')}
+        description={t('pages.embeddedEdgeAI.sections.architecturePatterns.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
@@ -182,7 +182,7 @@ export default function EmbeddedEdgeAIPage() {
       {/* Safety & Certification */}
       <Section
         title={t('pages.embeddedEdgeAI.sections.safetyCert.title')}
-        subtitle={t('pages.embeddedEdgeAI.sections.safetyCert.subtitle')}
+        description={t('pages.embeddedEdgeAI.sections.safetyCert.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
@@ -233,7 +233,7 @@ export default function EmbeddedEdgeAIPage() {
       {/* OTA & Fleet Operations */}
       <Section
         title={t('pages.embeddedEdgeAI.sections.otaFleet.title')}
-        subtitle={t('pages.embeddedEdgeAI.sections.otaFleet.subtitle')}
+        description={t('pages.embeddedEdgeAI.sections.otaFleet.subtitle')}
       >
         <div className="timeline-grid trio">
           <TimelinePhase
@@ -257,7 +257,7 @@ export default function EmbeddedEdgeAIPage() {
       {/* KPIs & Benchmarks */}
       <Section
         title={t('pages.embeddedEdgeAI.sections.kpis.title')}
-        subtitle={t('pages.embeddedEdgeAI.sections.kpis.subtitle')}
+        description={t('pages.embeddedEdgeAI.sections.kpis.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">

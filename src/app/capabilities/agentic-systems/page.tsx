@@ -11,18 +11,18 @@ import {
 } from 'lucide-react'
 
 export default function AgenticSystemsPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
   // Safe array extraction for TimelinePhase items
-  const goalItems = t('pages.agenticSystems.sections.planning.phases.goal.items', { returnObjects: true })
-  const planItems = t('pages.agenticSystems.sections.planning.phases.plan.items', { returnObjects: true })
-  const executeItems = t('pages.agenticSystems.sections.planning.phases.execute.items', { returnObjects: true })
-  const preventionItems = t('pages.agenticSystems.sections.policySafety.phases.prevention.items', { returnObjects: true })
-  const detectionItems = t('pages.agenticSystems.sections.policySafety.phases.detection.items', { returnObjects: true })
-  const recoveryItems = t('pages.agenticSystems.sections.policySafety.phases.recovery.items', { returnObjects: true })
-  const cloudNativeItems = t('pages.agenticSystems.sections.deploymentPatterns.phases.cloudNative.items', { returnObjects: true })
-  const hybridItems = t('pages.agenticSystems.sections.deploymentPatterns.phases.hybrid.items', { returnObjects: true })
-  const sovereignItems = t('pages.agenticSystems.sections.deploymentPatterns.phases.sovereign.items', { returnObjects: true })
+  const goalItems = tObject('pages.agenticSystems.sections.planning.phases.goal.items')
+  const planItems = tObject('pages.agenticSystems.sections.planning.phases.plan.items')
+  const executeItems = tObject('pages.agenticSystems.sections.planning.phases.execute.items')
+  const preventionItems = tObject('pages.agenticSystems.sections.policySafety.phases.prevention.items')
+  const detectionItems = tObject('pages.agenticSystems.sections.policySafety.phases.detection.items')
+  const recoveryItems = tObject('pages.agenticSystems.sections.policySafety.phases.recovery.items')
+  const cloudNativeItems = tObject('pages.agenticSystems.sections.deploymentPatterns.phases.cloudNative.items')
+  const hybridItems = tObject('pages.agenticSystems.sections.deploymentPatterns.phases.hybrid.items')
+  const sovereignItems = tObject('pages.agenticSystems.sections.deploymentPatterns.phases.sovereign.items')
 
   return (
     <PageLayout

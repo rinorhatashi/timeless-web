@@ -9,13 +9,13 @@ import {
 } from 'lucide-react'
 
 export default function ResponsibleAIPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
 
   // Safe array extraction for TimelinePhase items
-  const designItems = t('pages.responsibleAI.sections.lifecycleControls.phases.design.items', { returnObjects: true })
-  const buildItems = t('pages.responsibleAI.sections.lifecycleControls.phases.build.items', { returnObjects: true })
-  const operateItems = t('pages.responsibleAI.sections.lifecycleControls.phases.operate.items', { returnObjects: true })
-  const overviewContent = t('pages.responsibleAI.sections.overview.content', { returnObjects: true })
+  const designItems = tObject('pages.responsibleAI.sections.lifecycleControls.phases.design.items')
+  const buildItems = tObject('pages.responsibleAI.sections.lifecycleControls.phases.build.items')
+  const operateItems = tObject('pages.responsibleAI.sections.lifecycleControls.phases.operate.items')
+  const overviewContent = tObject('pages.responsibleAI.sections.overview.content')
 
   return (
     <PageLayout

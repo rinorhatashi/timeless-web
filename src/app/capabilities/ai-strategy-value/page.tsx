@@ -6,21 +6,21 @@ import { useI18n } from '@/lib/i18n/context'
 import { Target, TrendingUp, Layers, Database, Lock, Users, BarChart3, FileCheck, GitBranch, AlertCircle } from 'lucide-react'
 
 export default function AIStrategyValuePage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
   // Safe array extraction for TimelinePhase items
-  const diagnoseItems = t('pages.aiStrategyValue.sections.method.phases.diagnose.items', { returnObjects: true })
-  const prioritizeItems = t('pages.aiStrategyValue.sections.method.phases.prioritize.items', { returnObjects: true })
-  const stageFundItems = t('pages.aiStrategyValue.sections.method.phases.stageFund.items', { returnObjects: true })
-  const nowItems = t('pages.aiStrategyValue.sections.roadmap.phases.now.items', { returnObjects: true })
-  const nextItems = t('pages.aiStrategyValue.sections.roadmap.phases.next.items', { returnObjects: true })
-  const laterItems = t('pages.aiStrategyValue.sections.roadmap.phases.later.items', { returnObjects: true })
-  const raciOwnersItems = t('pages.aiStrategyValue.sections.governance.phases.raciOwners.items', { returnObjects: true })
-  const reviewsItems = t('pages.aiStrategyValue.sections.governance.phases.reviews.items', { returnObjects: true })
-  const controlsItems = t('pages.aiStrategyValue.sections.governance.phases.controls.items', { returnObjects: true })
-  const ownershipItems = t('pages.aiStrategyValue.sections.operatingModel.phases.ownership.items', { returnObjects: true })
-  const waysOfWorkingItems = t('pages.aiStrategyValue.sections.operatingModel.phases.waysOfWorking.items', { returnObjects: true })
-  const skillsEnablementItems = t('pages.aiStrategyValue.sections.operatingModel.phases.skillsEnablement.items', { returnObjects: true })
+  const diagnoseItems = tObject('pages.aiStrategyValue.sections.method.phases.diagnose.items')
+  const prioritizeItems = tObject('pages.aiStrategyValue.sections.method.phases.prioritize.items')
+  const stageFundItems = tObject('pages.aiStrategyValue.sections.method.phases.stageFund.items')
+  const nowItems = tObject('pages.aiStrategyValue.sections.roadmap.phases.now.items')
+  const nextItems = tObject('pages.aiStrategyValue.sections.roadmap.phases.next.items')
+  const laterItems = tObject('pages.aiStrategyValue.sections.roadmap.phases.later.items')
+  const raciOwnersItems = tObject('pages.aiStrategyValue.sections.governance.phases.raciOwners.items')
+  const reviewsItems = tObject('pages.aiStrategyValue.sections.governance.phases.reviews.items')
+  const controlsItems = tObject('pages.aiStrategyValue.sections.governance.phases.controls.items')
+  const ownershipItems = tObject('pages.aiStrategyValue.sections.operatingModel.phases.ownership.items')
+  const waysOfWorkingItems = tObject('pages.aiStrategyValue.sections.operatingModel.phases.waysOfWorking.items')
+  const skillsEnablementItems = tObject('pages.aiStrategyValue.sections.operatingModel.phases.skillsEnablement.items')
   
   return (
     <PageLayout

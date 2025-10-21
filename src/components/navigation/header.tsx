@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Search, Menu, X, ChevronDown, ArrowRight, Globe, ChevronRight, Settings } from 'lucide-react'
+import { Search, X, ChevronDown, ArrowRight, ChevronRight, Settings } from 'lucide-react'
 import { useI18n } from '@/lib/i18n/context'
 import { SettingsPanel } from '@/components/ui/settings-panel'
 

@@ -7,15 +7,15 @@ import { useI18n } from '@/lib/i18n/context'
 import { Boxes, GitBranch, Code2, Lock, Activity, DollarSign, Laptop, Package, Cloud, Settings, Shield, BarChart3, FileCode2, Workflow, Database, TrendingUp, Key, UserCheck, FileText, BookOpen, CheckCircle, Target, Gauge } from 'lucide-react'
 
 export default function PlatformEngineeringPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
-  const overviewContent = t('pages.platformEngineering.sections.overview.content', { returnObjects: true })
+  const overviewContent = tObject('pages.platformEngineering.sections.overview.content')
   const contentArray = Array.isArray(overviewContent) ? overviewContent : []
   
   // Safe array extraction for TimelinePhase items
-  const templatesItems = t('pages.platformEngineering.sections.devex.phases.templates.items', { returnObjects: true })
-  const automationItems = t('pages.platformEngineering.sections.devex.phases.automation.items', { returnObjects: true })
-  const insightsItems = t('pages.platformEngineering.sections.devex.phases.insights.items', { returnObjects: true })
+  const templatesItems = tObject('pages.platformEngineering.sections.devex.phases.templates.items')
+  const automationItems = tObject('pages.platformEngineering.sections.devex.phases.automation.items')
+  const insightsItems = tObject('pages.platformEngineering.sections.devex.phases.insights.items')
 
   return (
     <PageLayout
@@ -29,7 +29,7 @@ export default function PlatformEngineeringPage() {
       {/* Overview Section */}
       <Section
         title={t('pages.platformEngineering.sections.overview.title')}
-        subtitle={t('pages.platformEngineering.sections.overview.subtitle')}
+        description={t('pages.platformEngineering.sections.overview.subtitle')}
       >
         <div className="content-prose">
           {contentArray.map((paragraph: string, idx: number) => (
@@ -41,7 +41,7 @@ export default function PlatformEngineeringPage() {
       {/* Platform Capabilities */}
       <Section
         title={t('pages.platformEngineering.sections.capabilities.title')}
-        subtitle={t('pages.platformEngineering.sections.capabilities.subtitle')}
+        description={t('pages.platformEngineering.sections.capabilities.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
@@ -93,7 +93,7 @@ export default function PlatformEngineeringPage() {
       {/* Developer Experience */}
       <Section
         title={t('pages.platformEngineering.sections.devex.title')}
-        subtitle={t('pages.platformEngineering.sections.devex.subtitle')}
+        description={t('pages.platformEngineering.sections.devex.subtitle')}
       >
         <div className="timeline-grid trio">
           <TimelinePhase
@@ -117,7 +117,7 @@ export default function PlatformEngineeringPage() {
       {/* Reference Architecture */}
       <Section
         title={t('pages.platformEngineering.sections.refArch.title')}
-        subtitle={t('pages.platformEngineering.sections.refArch.subtitle')}
+        description={t('pages.platformEngineering.sections.refArch.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
@@ -169,7 +169,7 @@ export default function PlatformEngineeringPage() {
       {/* Golden Paths */}
       <Section
         title={t('pages.platformEngineering.sections.goldenPaths.title')}
-        subtitle={t('pages.platformEngineering.sections.goldenPaths.subtitle')}
+        description={t('pages.platformEngineering.sections.goldenPaths.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
@@ -206,7 +206,7 @@ export default function PlatformEngineeringPage() {
       {/* Security & Compliance */}
       <Section
         title={t('pages.platformEngineering.sections.security.title')}
-        subtitle={t('pages.platformEngineering.sections.security.subtitle')}
+        description={t('pages.platformEngineering.sections.security.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
@@ -258,7 +258,7 @@ export default function PlatformEngineeringPage() {
       {/* Reliability & Continuity */}
       <Section
         title={t('pages.platformEngineering.sections.reliability.title')}
-        subtitle={t('pages.platformEngineering.sections.reliability.subtitle')}
+        description={t('pages.platformEngineering.sections.reliability.subtitle')}
       >
         <div className="platform-grid">
           <div className="platform-item">
@@ -295,7 +295,7 @@ export default function PlatformEngineeringPage() {
       {/* FinOps & Cost Engineering */}
       <Section
         title={t('pages.platformEngineering.sections.finops.title')}
-        subtitle={t('pages.platformEngineering.sections.finops.subtitle')}
+        description={t('pages.platformEngineering.sections.finops.subtitle')}
         variant="alt"
       >
         <div className="platform-grid">
@@ -333,7 +333,7 @@ export default function PlatformEngineeringPage() {
       {/* Deliverables */}
       <Section
         title={t('pages.platformEngineering.sections.deliverables.title')}
-        subtitle={t('pages.platformEngineering.sections.deliverables.subtitle')}
+        description={t('pages.platformEngineering.sections.deliverables.subtitle')}
       >
         <div className="deliverables-grid">
           <div className="deliverable-item">

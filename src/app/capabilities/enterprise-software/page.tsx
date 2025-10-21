@@ -11,15 +11,15 @@ import {
 } from 'lucide-react'
 
 export default function EnterpriseSoftwarePage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
 
-  const overviewContent = t('pages.enterpriseSoftware.sections.overview.content', { returnObjects: true })
-  const archItems = t('pages.enterpriseSoftware.sections.practices.phases.architecture.items', { returnObjects: true })
-  const deliveryItems = t('pages.enterpriseSoftware.sections.practices.phases.delivery.items', { returnObjects: true })
-  const opsItems = t('pages.enterpriseSoftware.sections.practices.phases.operations.items', { returnObjects: true })
-  const slosItems = t('pages.enterpriseSoftware.sections.reliability.phases.slos.items', { returnObjects: true })
-  const capacityItems = t('pages.enterpriseSoftware.sections.reliability.phases.capacity.items', { returnObjects: true })
-  const resilienceItems = t('pages.enterpriseSoftware.sections.reliability.phases.resilience.items', { returnObjects: true })
+  const overviewContent = tObject('pages.enterpriseSoftware.sections.overview.content')
+  const archItems = tObject('pages.enterpriseSoftware.sections.practices.phases.architecture.items')
+  const deliveryItems = tObject('pages.enterpriseSoftware.sections.practices.phases.delivery.items')
+  const opsItems = tObject('pages.enterpriseSoftware.sections.practices.phases.operations.items')
+  const slosItems = tObject('pages.enterpriseSoftware.sections.reliability.phases.slos.items')
+  const capacityItems = tObject('pages.enterpriseSoftware.sections.reliability.phases.capacity.items')
+  const resilienceItems = tObject('pages.enterpriseSoftware.sections.reliability.phases.resilience.items')
   
   return (
     <PageLayout

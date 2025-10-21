@@ -11,21 +11,21 @@ import {
 } from 'lucide-react'
 
 export default function DataPlatformsPage() {
-  const { t } = useI18n()
+  const { t, tObject } = useI18n()
   
-  const overviewContent = t('pages.dataPlatforms.sections.overview.content', { returnObjects: true })
+  const overviewContent = tObject('pages.dataPlatforms.sections.overview.content')
   const contentArray = Array.isArray(overviewContent) ? overviewContent : []
   
   // Safe array extraction for TimelinePhase items
-  const consentItems = t('pages.dataPlatforms.sections.privacy.phases.consent.items', { returnObjects: true })
-  const privacyTechItems = t('pages.dataPlatforms.sections.privacy.phases.privacyTech.items', { returnObjects: true })
-  const cleanRoomsItems = t('pages.dataPlatforms.sections.privacy.phases.cleanRooms.items', { returnObjects: true })
-  const slosItems = t('pages.dataPlatforms.sections.reliability.phases.slos.items', { returnObjects: true })
-  const qualityItems = t('pages.dataPlatforms.sections.reliability.phases.quality.items', { returnObjects: true })
-  const drItems = t('pages.dataPlatforms.sections.reliability.phases.dr.items', { returnObjects: true })
-  const cloudNativeItems = t('pages.dataPlatforms.sections.deployment.phases.cloudNative.items', { returnObjects: true })
-  const hybridItems = t('pages.dataPlatforms.sections.deployment.phases.hybrid.items', { returnObjects: true })
-  const sovereignItems = t('pages.dataPlatforms.sections.deployment.phases.sovereign.items', { returnObjects: true })
+  const consentItems = tObject('pages.dataPlatforms.sections.privacy.phases.consent.items')
+  const privacyTechItems = tObject('pages.dataPlatforms.sections.privacy.phases.privacyTech.items')
+  const cleanRoomsItems = tObject('pages.dataPlatforms.sections.privacy.phases.cleanRooms.items')
+  const slosItems = tObject('pages.dataPlatforms.sections.reliability.phases.slos.items')
+  const qualityItems = tObject('pages.dataPlatforms.sections.reliability.phases.quality.items')
+  const drItems = tObject('pages.dataPlatforms.sections.reliability.phases.dr.items')
+  const cloudNativeItems = tObject('pages.dataPlatforms.sections.deployment.phases.cloudNative.items')
+  const hybridItems = tObject('pages.dataPlatforms.sections.deployment.phases.hybrid.items')
+  const sovereignItems = tObject('pages.dataPlatforms.sections.deployment.phases.sovereign.items')
 
   return (
     <PageLayout
