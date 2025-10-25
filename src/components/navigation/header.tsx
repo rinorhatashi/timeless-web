@@ -22,7 +22,7 @@ const languages = [
 // Mock search results for demonstration
 const mockSearchResults = [
   { title: 'AI Strategy & Value', description: 'Comprehensive AI strategy consulting and value assessment', category: 'Capabilities', href: '/capabilities/ai-strategy-value' },
-  { title: 'Agent Platform', description: 'Next-generation agent development platform', category: 'Platforms', href: '/platforms/agent-platform' },
+  { title: 'ADAO Platform', description: 'Autonomous Decentralized Autonomous Organization platform', category: 'Platforms', href: '/platforms/adao-platform' },
   { title: 'Healthcare Solutions', description: 'AI-powered healthcare and medical solutions', category: 'Industries', href: '/industries/health' },
   { title: 'Payment Solutions', description: 'Secure payment processing and fintech solutions', category: 'Solutions', href: '/solutions/payment-solutions' },
   { title: 'Agent Safety Aegis', description: 'Research on agent safety and reliability', category: 'Research', href: '/research/agent-safety-aegis' },
@@ -75,10 +75,7 @@ export const Header = () => {
       href: '/platforms',
       description: t('navigation.menu.platforms.description'),
       children: [
-        { label: t('navigation.menu.platforms.agentPlatform'), href: '/platforms/agent-platform' },
-        { label: t('navigation.menu.platforms.ragOrchestrator'), href: '/platforms/rag-orchestrator' },
-        { label: t('navigation.menu.platforms.raiSafetyStack'), href: '/platforms/rai-safety-stack' },
-        { label: t('navigation.menu.platforms.sovereignAIBlueprint'), href: '/platforms/sovereign-ai-blueprint' }
+        { label: t('navigation.menu.platforms.adaoPlatform'), href: '/platforms/adao-platform' }
       ]
     },
     {

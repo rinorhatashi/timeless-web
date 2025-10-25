@@ -3,36 +3,12 @@ import { ArrowRight, Zap, Shield, Target, Users, Building2, CheckCircle, Globe }
 
 const platforms = [
   {
-    title: 'Agent Platform',
-    description: 'Production-ready platform for building, deploying, and managing autonomous AI agents at scale.',
-    features: ['Agent orchestration', 'Safety protocols', 'Human oversight', 'Scalable deployment'],
+    title: 'ADAO Platform',
+    description: 'Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.',
+    features: ['Computer vision monitoring', 'Smart sensor networks', 'Decentralized governance', 'Blockchain integration'],
     status: 'Production Ready',
     icon: Users,
-    href: '/platforms/agent-platform'
-  },
-  {
-    title: 'RAG Orchestrator',
-    description: 'Enterprise-grade retrieval-augmented generation system with advanced knowledge management.',
-    features: ['Knowledge graphs', 'Document processing', 'Semantic search', 'Real-time updates'],
-    status: 'Production Ready',
-    icon: Target,
-    href: '/platforms/rag-orchestrator'
-  },
-  {
-    title: 'RAI Safety Stack',
-    description: 'Comprehensive responsible AI framework with built-in safety and compliance tools.',
-    features: ['Bias detection', 'Explainability', 'Ethical frameworks', 'Compliance automation'],
-    status: 'Production Ready',
-    icon: Shield,
-    href: '/platforms/rai-safety-stack'
-  },
-  {
-    title: 'Sovereign AI Blueprint',
-    description: 'On-premises and private cloud AI deployment framework for maximum data sovereignty.',
-    features: ['Private deployment', 'Data sovereignty', 'Regulatory compliance', 'Air-gapped systems'],
-    status: 'Production Ready',
-    icon: Globe,
-    href: '/platforms/sovereign-ai-blueprint'
+    href: '/platforms/adao-platform'
   }
 ]
 

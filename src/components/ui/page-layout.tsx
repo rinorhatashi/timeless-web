@@ -74,6 +74,7 @@ interface SectionProps {
   children: React.ReactNode
   className?: string
   variant?: 'default' | 'alt' | 'dark'
+  id?: string
 }
 
 export const Section: React.FC<SectionProps> = ({
@@ -81,10 +82,11 @@ export const Section: React.FC<SectionProps> = ({
   description,
   children,
   className = '',
-  variant = 'default'
+  variant = 'default',
+  id
 }) => {
   return (
-    <section className={`section section-${variant} ${className}`}>
+    <section id={id} className={`section section-${variant} ${className}`}>
       <div className="section-content">
         {(title || description) && (
           <div className="section-header">

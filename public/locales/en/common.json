@@ -37,11 +37,8 @@
       },
       "platforms": {
         "title": "Platforms",
-        "description": "Agent Platform, RAG Orchestrator, Safety Stack",
-        "agentPlatform": "Agent Platform",
-        "ragOrchestrator": "RAG Orchestrator",
-        "raiSafetyStack": "RAI Safety Stack",
-        "sovereignAIBlueprint": "Sovereign AI Blueprint"
+        "description": "ADAO Platform - Autonomous Decentralized Autonomous Organization",
+        "adaoPlatform": "ADAO Platform"
       },
       "industries": {
         "title": "Industries",
@@ -2440,10 +2437,10 @@
         "cta": "Design a secure web3 system"
       }
     },
-    "agentPlatform": {
-      "title": "Agent Platform",
-      "description": "Multi-agent orchestration platform for coordinated AI automation with human oversight.",
-      "breadcrumb": "Agent Platform"
+    "adaoPlatform": {
+      "title": "ADAO Platform",
+      "description": "Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.",
+      "breadcrumb": "ADAO Platform"
     },
     "ragOrchestrator": {
       "title": "RAG Orchestrator",
