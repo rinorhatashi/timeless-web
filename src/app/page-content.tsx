@@ -4,6 +4,8 @@ import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import { Zap, Target, Activity, Shield } from 'lucide-react'
 import { WorldMap } from '@/components/ui/world-map'
+import { PlatformSlider } from '@/components/ui/platform-slider'
+import { ElegantShowcase } from '@/components/ui/redesigned-sections'
 
 export const HomePageContent = () => {
   const { t } = useI18n()
@@ -30,6 +32,9 @@ export const HomePageContent = () => {
           </div>
         </div>
       </section>
+
+      {/* Platform Slider */}
+      <PlatformSlider />
 
       {/* What We Run For You - 2x2 Grid */}
       <section className="section section-alt">
@@ -74,35 +79,8 @@ export const HomePageContent = () => {
         </div>
       </section>
 
-      {/* Capabilities Highlight */}
-      <section className="section">
-        <div className="section-content">
-          <div className="section-header">
-            <h2 className="section-title">{t('homepage.capabilities.title')}</h2>
-            <p className="section-description">{t('homepage.capabilities.subtitle')}</p>
-          </div>
-          <div className="section-cta">
-            <Link href="/capabilities" className="btn-primary">
-              {t('homepage.capabilities.cta')} →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Industries */}
-      <section className="section section-alt">
-        <div className="section-content">
-          <div className="section-header">
-            <h2 className="section-title">{t('homepage.industries.title')}</h2>
-            <p className="section-description">{t('homepage.industries.subtitle')}</p>
-          </div>
-          <div className="section-cta">
-            <Link href="/industries" className="btn-primary">
-              {t('homepage.industries.cta')} →
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Elegant Capabilities and Industries Showcase */}
+      <ElegantShowcase />
 
       {/* Global Presence */}
       <section className="section">

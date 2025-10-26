@@ -2874,6 +2874,148 @@
       "cta": "View all industries",
       "description": "Proven implementations with compliance frameworks and scalability patterns."
     },
+    "platforms": {
+      "title": "Platforms",
+      "subtitle": "Production-ready platforms that deliver autonomous solutions and enterprise-grade intelligence.",
+      "navTitle": "Our Platforms",
+      "cta": "Explore Platform",
+      "play": "Play slideshow",
+      "pause": "Pause slideshow",
+      "adao": {
+        "title": "ADAO Platform",
+        "description": "Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology."
+      },
+      "nexus": {
+        "title": "Nexus AI Platform",
+        "description": "Advanced AI orchestration platform that seamlessly integrates multiple AI models and data sources for enterprise-scale intelligence."
+      }
+    },
+    "showcase": {
+      "capabilities": {
+        "title": "Capabilities",
+        "subtitle": "Battle-tested building blocks that power enterprise AI systems. Each capability is production-ready with proven patterns and real-world implementations.",
+        "cta": "Explore",
+        "viewAll": "View All Capabilities",
+        "aiStrategy": {
+          "title": "AI Strategy & Value",
+          "word": "Strategy"
+        },
+        "agenticSystems": {
+          "title": "Agentic Systems",
+          "word": "Autonomy"
+        },
+        "genaiApps": {
+          "title": "GenAI Applications",
+          "word": "Creation"
+        },
+        "ragKnowledge": {
+          "title": "RAG Knowledge Orchestration",
+          "word": "Intelligence"
+        },
+        "llmopsObservability": {
+          "title": "LLMOps & Observability",
+          "word": "Monitoring"
+        },
+        "responsibleAI": {
+          "title": "Responsible AI",
+          "word": "Ethics"
+        },
+        "sovereignAI": {
+          "title": "Sovereign/Private AI",
+          "word": "Privacy"
+        },
+        "talentEnablement": {
+          "title": "Talent & Enablement",
+          "word": "Growth"
+        },
+        "embeddedEdgeAI": {
+          "title": "Embedded & Edge AI",
+          "word": "Edge"
+        },
+        "dataPlatforms": {
+          "title": "Data Platforms",
+          "word": "Scale"
+        },
+        "securityCompliance": {
+          "title": "Security & Compliance",
+          "word": "Protection"
+        },
+        "roboticsRPA": {
+          "title": "Robotics & RPA",
+          "word": "Automation"
+        },
+        "platformEngineering": {
+          "title": "Platform Engineering",
+          "word": "Infrastructure"
+        },
+        "enterpriseSoftware": {
+          "title": "Enterprise Software",
+          "word": "Enterprise"
+        },
+        "blockchainCrypto": {
+          "title": "Blockchain & Cryptography",
+          "word": "Trust"
+        },
+        "gameSystems": {
+          "title": "Game Systems",
+          "word": "Gaming"
+        },
+        "hardwarePrototyping": {
+          "title": "Hardware Prototyping",
+          "word": "Hardware"
+        },
+        "deepTechResearch": {
+          "title": "Deep Tech Research",
+          "word": "Research"
+        }
+      },
+      "industries": {
+        "title": "Industries",
+        "subtitle": "Real-world implementations across diverse sectors. Each industry page showcases production programs with measurable outcomes and proven ROI.",
+        "cta": "Explore",
+        "viewAll": "Explore All Industries",
+        "healthcare": {
+          "title": "Healthcare",
+          "word": "Care"
+        },
+        "automotive": {
+          "title": "Automotive",
+          "word": "Mobility"
+        },
+        "manufacturing": {
+          "title": "Manufacturing",
+          "word": "Precision"
+        },
+        "energy": {
+          "title": "Energy",
+          "word": "Power"
+        },
+        "highTech": {
+          "title": "High Tech",
+          "word": "Innovation"
+        },
+        "publicSector": {
+          "title": "Public Sector",
+          "word": "Service"
+        },
+        "retailCPG": {
+          "title": "Retail & CPG",
+          "word": "Commerce"
+        },
+        "softwarePlatforms": {
+          "title": "Software Platforms",
+          "word": "Platforms"
+        },
+        "telcoMedia": {
+          "title": "Telco & Media",
+          "word": "Connectivity"
+        },
+        "agriculture": {
+          "title": "Agriculture",
+          "word": "Growth"
+        }
+      }
+    },
     "global": {
       "title": "Where we operate",
       "subtitle": "Global presence with local expertise. Our distributed teams ensure 24/7 coverage and deep market understanding.",

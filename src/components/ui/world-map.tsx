@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useI18n } from '@/lib/i18n/context'
+import { useTheme } from 'next-themes'
 
 interface Office {
   id: string
@@ -35,6 +36,7 @@ const offices: Office[] = [
 
 export const WorldMap = () => {
   const { t } = useI18n()
+  const { theme } = useTheme()
   const [hoveredOffice, setHoveredOffice] = useState<Office | null>(null)
 
   const handleOfficeHover = (office: Office) => {
@@ -90,7 +92,7 @@ export const WorldMap = () => {
       </div>
 
       {/* Map Container */}
-      <div className="relative w-full bg-black dark:bg-gray-950 rounded-2xl p-4 md:p-8 shadow-xl border border-gray-800 dark:border-gray-700 overflow-hidden">
+      <div className="relative w-full bg-white dark:bg-black rounded-2xl p-4 md:p-8 shadow-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
@@ -98,7 +100,7 @@ export const WorldMap = () => {
         </div>
 
         {/* Map wrapper */}
-        <div className="relative w-full aspect-[2000/857] bg-black dark:bg-gray-900 rounded-xl overflow-hidden">
+        <div className="relative w-full aspect-[2000/857] bg-white dark:bg-black rounded-xl overflow-hidden">
           {/* Professional World Map SVG */}
           <svg
             viewBox="0 0 2000 857"
@@ -141,7 +143,9 @@ export const WorldMap = () => {
                 height="857"
                 className="w-full h-full"
                 style={{ 
-                  filter: 'brightness(0.3) contrast(1.2) invert(1) hue-rotate(180deg)',
+                  filter: theme === 'dark' 
+                    ? 'brightness(0.3) contrast(1.2) invert(1) hue-rotate(180deg)' 
+                    : 'brightness(0.7) contrast(1.2) invert(0) hue-rotate(0deg)',
                 }}
               />
             </g>
@@ -276,7 +280,7 @@ export const WorldMap = () => {
             {offices.filter(o => o.region === 'North America').map(office => (
               <li 
                 key={office.id}
-                className="text-gray-300 pl-7 hover:text-blue-400 transition-colors cursor-pointer"
+                className="text-gray-600 dark:text-gray-300 pl-7 hover:text-blue-400 transition-colors cursor-pointer"
                 onMouseEnter={() => handleOfficeHover(office)}
                 onMouseLeave={handleOfficeLeave}
               >
@@ -295,7 +299,7 @@ export const WorldMap = () => {
             {offices.filter(o => o.region === 'Europe').map(office => (
               <li 
                 key={office.id}
-                className="text-gray-300 pl-7 hover:text-emerald-400 transition-colors cursor-pointer"
+                className="text-gray-600 dark:text-gray-300 pl-7 hover:text-emerald-400 transition-colors cursor-pointer"
                 onMouseEnter={() => handleOfficeHover(office)}
                 onMouseLeave={handleOfficeLeave}
               >
@@ -314,7 +318,7 @@ export const WorldMap = () => {
             {offices.filter(o => o.region === 'Middle East').map(office => (
               <li 
                 key={office.id}
-                className="text-gray-300 pl-7 hover:text-violet-400 transition-colors cursor-pointer"
+                className="text-gray-600 dark:text-gray-300 pl-7 hover:text-violet-400 transition-colors cursor-pointer"
                 onMouseEnter={() => handleOfficeHover(office)}
                 onMouseLeave={handleOfficeLeave}
               >
@@ -327,11 +331,11 @@ export const WorldMap = () => {
 
       {/* Sovereign Support Banner */}
       <div className="mt-10 text-center">
-        <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full border border-gray-700 shadow-sm">
-          <span className="text-base md:text-lg text-gray-300">
+        <div className="sovereign-banner">
+          <span className="sovereign-banner-text">
             Sovereign models supported:
           </span>
-          <span className="font-semibold text-white">EU · US · KSA</span>
+          <span className="sovereign-banner-countries">EU · US · KSA</span>
         </div>
       </div>
     </div>
