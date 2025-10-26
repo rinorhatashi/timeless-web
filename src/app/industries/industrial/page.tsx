@@ -5,7 +5,7 @@ import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Factory, Wrench, Eye, TrendingUp, CheckCircle, Shield, BarChart3, Package } from 'lucide-react'
+import { Wrench, Eye, TrendingUp, CheckCircle, Shield, BarChart3, Package } from 'lucide-react'
 
 const IndustrialPageContent = () => {
   const { t } = useI18n()

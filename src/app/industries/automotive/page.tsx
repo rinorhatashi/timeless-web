@@ -5,7 +5,7 @@ import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Car, Cpu, Wrench, Shield, CheckCircle, BarChart3, Clock, Zap } from 'lucide-react'
+import { Cpu, Wrench, Shield, CheckCircle, BarChart3, Clock, Zap } from 'lucide-react'
 
 const AutomotivePageContent = () => {
   const { t } = useI18n()

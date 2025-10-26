@@ -5,7 +5,7 @@ import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ShoppingBag, Users, TrendingUp, Package, CheckCircle, Shield, BarChart3, Sparkles } from 'lucide-react'
+import { Users, TrendingUp, Package, CheckCircle, Shield, Sparkles } from 'lucide-react'
 
 const RetailCPGPageContent = () => {
   const { t } = useI18n()

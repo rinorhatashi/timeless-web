@@ -5,7 +5,7 @@ import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Cloud, Code, Database, Zap, CheckCircle, Shield, Layers, GitBranch } from 'lucide-react'
+import { Cloud, Code, Zap, CheckCircle, Shield, Layers, GitBranch } from 'lucide-react'
 
 const SoftwarePlatformsPageContent = () => {
   const { t } = useI18n()

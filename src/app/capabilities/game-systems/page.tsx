@@ -18,7 +18,6 @@ import {
   Shield,
   Target,
   Radio,
-  Bitcoin,
   Wallet,
   ShoppingCart,
   Layers,

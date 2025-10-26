@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Lightbulb, FileText, Users, Target, Shield, Zap, Globe } from 'lucide-react'
+import { ArrowRight, FileText, Users, Target, Shield, Zap, Globe } from 'lucide-react'
 
 const researchAreas = [
   {

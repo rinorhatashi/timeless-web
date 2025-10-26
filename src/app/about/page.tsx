@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { PageLayout, Section, Card } from '@/components/ui/page-layout'
 import { Users, Building, Target, Award } from 'lucide-react'
 

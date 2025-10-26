@@ -13,11 +13,6 @@ interface NavigationItem {
   description?: string
 }
 
-const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' }
-]
 
 // Mock search results for demonstration
 const mockSearchResults = [
@@ -32,7 +27,7 @@ const mockSearchResults = [
 ]
 
 export const Header = () => {
-  const { locale, setLocale, t, isLoading } = useI18n()
+  const { t, isLoading } = useI18n()
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -42,7 +37,6 @@ export const Header = () => {
   const [mobileActiveSubmenu, setMobileActiveSubmenu] = useState<string | null>(null)
   const closeTimeoutRef = React.useRef<NodeJS.Timeout | null>(null)
   
-  const currentLanguage = languages.find(lang => lang.code === locale) || languages[0]
 
   // Navigation items using translations
   const navigationItems: NavigationItem[] = [

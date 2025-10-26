@@ -3,7 +3,7 @@
 import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
-import { Activity, BarChart3, AlertCircle, Lock, Database, GitBranch, Shield, TrendingUp, FileCheck, Gauge, Layers, CheckCircle2, Search, Target, Box, Users, FileText, Zap, Play, ToggleLeft, AlertTriangle, Eye } from 'lucide-react'
+import { Activity, BarChart3, AlertCircle, Lock, Database, GitBranch, Shield, TrendingUp, FileCheck, Gauge, Layers, CheckCircle2, Search, Target, Box, Users, FileText, ToggleLeft, AlertTriangle, Eye } from 'lucide-react'
 
 export default function LLMOpsObservabilityPage() {
   const { t, tObject } = useI18n()

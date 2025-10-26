@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { Message } from "./types";
 import { ChatMessage } from "./ChatMessage";
-import { Loader2 } from "lucide-react";
 
 interface ChatMessagesProps {
   messages: Message[];

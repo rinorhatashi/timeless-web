@@ -3,7 +3,7 @@
 import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
-import { Microscope, Target, Layers, Cpu, Database, Brain, Shield, Zap, Globe, FileText, GitBranch, Beaker, Search, MapPin, Link as LinkIcon, Wrench, CheckCircle, Lock, Code, Binary, Network, Play, Video, Mic, Gauge, HardDrive, Box, Satellite, BarChart3, AlertTriangle, TrendingUp, BookOpen, Scale, Users, Package } from 'lucide-react'
+import { Microscope, Target, Layers, Cpu, Database, Brain, Shield, Zap, Globe, FileText, GitBranch, Beaker, MapPin, Link as LinkIcon, Wrench, CheckCircle, Lock, Code, Binary, Network, Play, Video, Mic, Gauge, HardDrive, Satellite, BarChart3, AlertTriangle, TrendingUp, Scale, Users, Package } from 'lucide-react'
 
 export default function DeepTechResearchPage() {
   const { t, tObject, isLoading } = useI18n()

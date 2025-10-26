@@ -4,9 +4,8 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
 import { 
-  Shield, Lock, Server, Network, Eye, FileCheck, Key, HardDrive,
-  Database, Layers, Activity, CheckCircle2, AlertCircle, GitBranch,
-  Cloud, MapPin, Container, FileKey, Globe, ShieldCheck, Package
+  Shield, Lock, Server, Network, FileCheck, Key, HardDrive,
+  Activity, MapPin, Container, Globe, Package
 } from 'lucide-react'
 
 export default function SovereignPrivateAIPage() {

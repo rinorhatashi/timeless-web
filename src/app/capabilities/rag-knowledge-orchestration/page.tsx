@@ -11,7 +11,6 @@ import {
   Shield, 
   Activity, 
   Layers, 
-  Filter, 
   CheckCircle, 
   AlertTriangle, 
   TrendingUp,

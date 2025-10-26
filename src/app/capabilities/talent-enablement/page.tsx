@@ -4,18 +4,13 @@ import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
 import { 
-  Users, 
-  Wrench, 
   TrendingUp, 
   Target, 
   Code2, 
   Database, 
   Shield, 
   Settings, 
-  CheckCircle2,
-  BookOpen,
-  MessageSquare,
-  Lightbulb
+  CheckCircle2
 } from 'lucide-react'
 
 export default function TalentEnablementPage() {

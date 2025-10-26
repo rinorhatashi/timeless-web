@@ -1,6 +1,6 @@
 import { PageLayout, Section } from '@/components/ui/page-layout'
 import Link from 'next/link'
-import { ArrowRight, CreditCard, Shield, Zap, Globe, CheckCircle, Users, BarChart3, Lock } from 'lucide-react'
+import { CreditCard, Shield, Zap, Globe, CheckCircle, Users, BarChart3, Lock } from 'lucide-react'
 
 const features = [
   {

@@ -1,5 +1,5 @@
 import { PageLayout, Section, Card } from '@/components/ui/page-layout'
-import { Mail, Phone, MapPin, Calendar, MessageSquare, Users } from 'lucide-react'
+import { Mail, Calendar, MessageSquare } from 'lucide-react'
 import Image from 'next/image'
 import { WorldMap } from '@/components/ui/world-map'
 

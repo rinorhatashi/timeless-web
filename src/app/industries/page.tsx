@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Building2, Heart, Shield, Laptop, Zap, Car, Zap as Energy, Wheat, Phone, ShoppingBag, Globe, Landmark, CheckCircle } from 'lucide-react'
+import { ArrowRight, Building2, Heart, Shield, Laptop, Car, Zap as Energy, Wheat, Phone, ShoppingBag, Landmark, CheckCircle } from 'lucide-react'
 
 const industries = [
   {

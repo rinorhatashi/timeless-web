@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
 import { 
   Boxes, Play, Database, Wrench, Shield, Activity, Network, GitFork, Users, Settings, Lock, FileCheck,
-  FileCode, BookOpen, Brain, BarChart3, Target, CheckCircle2, AlertTriangle, RefreshCw,
-  Cloud, Server, Key, Eye, TestTube, DollarSign, GitBranch, UserCheck, FileText, Zap,
+  FileCode, BookOpen, Brain, BarChart3, Target, CheckCircle2, RefreshCw,
+  Server, Key, Eye, TestTube, DollarSign, GitBranch, UserCheck, FileText, Zap,
   Layers, PackageCheck, TrendingUp, Clock, ThumbsUp, Cpu, Code2, Lightbulb, Briefcase
 } from 'lucide-react'
 

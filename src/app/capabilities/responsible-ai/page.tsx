@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
 import { 
   Shield, FileCheck, AlertTriangle, Database, Brain, Wrench, Users, 
-  ClipboardList, Search, FileText, Eye, GraduationCap, CheckCircle2, Lock, Scale
+  ClipboardList, Search, FileText, Eye, GraduationCap, CheckCircle2, Scale
 } from 'lucide-react'
 
 export default function ResponsibleAIPage() {

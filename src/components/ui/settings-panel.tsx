@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
-import { X, Sun, Moon, Type, Plus, Minus, Globe, Check, Eye, Contrast, Focus } from 'lucide-react'
+import { X, Plus, Minus, Check } from 'lucide-react'
 import { useI18n } from '@/lib/i18n/context'
 
 interface SettingsPanelProps {

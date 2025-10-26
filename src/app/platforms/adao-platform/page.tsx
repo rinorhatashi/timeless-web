@@ -3,8 +3,7 @@
 import { PageLayout, Section } from '@/components/ui/page-layout'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
-import { ArrowRight, Eye, Cpu, Shield, Zap, CheckCircle, Users, Building2, Globe, Camera, Network, Coins, Lock, Home } from 'lucide-react'
-import { useState } from 'react'
+import { ArrowRight, Eye, Cpu, Shield, Zap, CheckCircle, Users, Camera, Network, Coins, Lock, Home } from 'lucide-react'
 
 const features = [
   {

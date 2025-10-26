@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
 import { 
   FileCode, Shield, Lock, Key, Database, Activity, AlertTriangle, 
-  CheckCircle2, Settings, Eye, FileCheck, Zap, BarChart3, TrendingUp,
+  CheckCircle2, Settings, Eye, FileCheck, Zap, TrendingUp,
   RefreshCw, FileText, Code2, GitBranch, Server, Cpu, Network,
-  DollarSign, Clock, Target, Layers, PackageCheck, Users
+  Target, Layers, PackageCheck
 } from 'lucide-react'
 
 export default function BlockchainCryptographyPage() {

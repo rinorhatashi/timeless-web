@@ -7,7 +7,7 @@ import {
   Shield, Lock, Key, FileCheck, AlertTriangle, Activity, Users, FileText, 
   Globe, Database, BarChart3, Cloud, Fingerprint, UserCheck, Network, 
   Server, HardDrive, Cog, Eye, RefreshCw, FileWarning, CheckCircle2,
-  Layers, GitBranch, Scale, BookOpen, Zap, TrendingUp, Settings, Code
+  Layers, Scale, BookOpen, Zap, TrendingUp, Settings, Code
 } from 'lucide-react'
 
 export default function SecurityCompliancePage() {

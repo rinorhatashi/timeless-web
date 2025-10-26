@@ -3,9 +3,9 @@
 import Link from 'next/link'
 import { 
   Target, Cpu, Zap, Shield, Heart, Car, Factory, GraduationCap, 
-  Users, Building2, Globe, Brain, Lock, Wrench, Gamepad2, 
-  Microchip, Layers, Search, BarChart3, Smartphone, Leaf, 
-  Zap as Energy, ShoppingCart, Tv, Briefcase
+  Users, Building2, Brain, Lock, Wrench, Gamepad2, 
+  Microchip, Layers, Search, BarChart3, Leaf, 
+  Zap as Energy, ShoppingCart, Tv
 } from 'lucide-react'
 import { useI18n } from '@/lib/i18n/context'
 
@@ -14,7 +14,7 @@ interface ShowcaseItem {
   title: string
   word: string
   href: string
-  icon: any
+  icon: React.ComponentType<{ className?: string }>
 }
 
 export const ElegantShowcase = () => {

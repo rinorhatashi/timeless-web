@@ -4,7 +4,7 @@ import { PageLayout, Section } from '@/components/ui/page-layout'
 import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
-import { ArrowLeft, FileText, TrendingUp, Users, Target, Download } from 'lucide-react'
+import { ArrowLeft, TrendingUp, Users, Target, Download } from 'lucide-react'
 
 const Report01PageContent = () => {
   const { t } = useI18n()

@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from 'react'
-import { useI18n } from '@/lib/i18n/context'
 import { useTheme } from 'next-themes'
 
 interface Office {
@@ -35,7 +34,6 @@ const offices: Office[] = [
 ]
 
 export const WorldMap = () => {
-  const { t } = useI18n()
   const { theme } = useTheme()
   const [hoveredOffice, setHoveredOffice] = useState<Office | null>(null)
 

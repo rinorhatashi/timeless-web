@@ -4,7 +4,7 @@ import { PageLayout, Section, TimelinePhase } from '@/components/ui/page-layout'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n/context'
 import { 
-  Database, Layers, Zap, Package, Shield, Activity, GitBranch, Cloud, Lock, TrendingUp, 
+  Database, Layers, Zap, Package, Shield, Activity, GitBranch, Lock, TrendingUp, 
   DollarSign, BarChart3, FileCode, Link as LinkIcon, Boxes, Server, Target, Key, Eye,
   CheckCircle2, AlertTriangle, RefreshCw, HardDrive, FileSearch, GitCompare, Gauge,
   Users, Settings, BarChart, Clock, Cpu, Network

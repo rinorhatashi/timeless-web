@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PageLayout, Section } from '@/components/ui/page-layout'
 import { TimelinePhase } from '@/components/ui/page-layout'
 import { useI18n } from '@/lib/i18n/context'
-import { Boxes, GitBranch, Code2, Lock, Activity, DollarSign, Laptop, Package, Cloud, Settings, Shield, BarChart3, FileCode2, Workflow, Database, TrendingUp, Key, UserCheck, FileText, BookOpen, CheckCircle, Target, Gauge } from 'lucide-react'
+import { Boxes, GitBranch, Code2, Lock, Activity, DollarSign, Laptop, Package, Cloud, Settings, Shield, BarChart3, FileCode2, Workflow, Database, TrendingUp, Key, UserCheck, BookOpen, CheckCircle, Target, Gauge } from 'lucide-react'
 
 export default function PlatformEngineeringPage() {
   const { t, tObject } = useI18n()

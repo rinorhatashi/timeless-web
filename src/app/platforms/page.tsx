@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Zap, Shield, Target, Users, Building2, CheckCircle, Globe } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Users, Building2, CheckCircle } from 'lucide-react'
 
 const platforms = [
   {

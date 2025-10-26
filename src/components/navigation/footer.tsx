@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import { ArrowRight, Mail, MapPin, Globe } from 'lucide-react'
+import { Mail, MapPin, Globe } from 'lucide-react'
 import { useI18n } from '@/lib/i18n/context'
 
 export const Footer = () => {

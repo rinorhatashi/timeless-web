@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PageLayout, Section } from '@/components/ui/page-layout'
 import { TimelinePhase } from '@/components/ui/page-layout'
 import { useI18n } from '@/lib/i18n/context'
-import { Cpu, Settings, Eye, Zap, Wifi, Shield, Activity, Gauge, Lock, Database, BarChart3, RefreshCw, Clock, GitBranch, Target, FileText, Wrench, CheckCircle, Radio } from 'lucide-react'
+import { Cpu, Settings, Eye, Zap, Wifi, Shield, Activity, Gauge, Lock, Database, RefreshCw, Clock, GitBranch, Target, FileText, Wrench, CheckCircle, Radio } from 'lucide-react'
 
 export default function EmbeddedEdgeAIPage() {
   const { t, tObject } = useI18n()

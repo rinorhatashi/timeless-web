@@ -5,7 +5,7 @@ import { ContentLoader } from '@/components/ui/content-loader'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Landmark, Users, Shield, FileText, CheckCircle, Lock, Database, Activity } from 'lucide-react'
+import { Users, Shield, FileText, CheckCircle, Lock, Database, Activity } from 'lucide-react'
 
 const PublicSectorPageContent = () => {
   const { t } = useI18n()
