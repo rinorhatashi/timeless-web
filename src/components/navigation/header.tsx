@@ -69,7 +69,9 @@ export const Header = () => {
       href: '/platforms',
       description: t('navigation.menu.platforms.description'),
       children: [
-        { label: t('navigation.menu.platforms.adaoPlatform'), href: '/platforms/adao-platform' }
+        { label: t('navigation.menu.platforms.adaoPlatform'), href: '/platforms/adao-platform' },
+        { label: t('navigation.menu.platforms.ritaPlatform'), href: '/platforms/rita-remote-care' },
+        { label: t('navigation.menu.platforms.marriottInspector'), href: '/platforms/marriott-inspector' }
       ]
     },
     {

@@ -3,131 +3,135 @@
 import { PageLayout, Section } from '@/components/ui/page-layout'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
-import { ArrowRight, Eye, Cpu, Shield, Zap, CheckCircle, Users, Camera, Network, Coins, Lock, Home } from 'lucide-react'
+import { ArrowRight, TrendingUp, Bot, DollarSign, Users, Lightbulb, Briefcase, Home, CheckCircle, BarChart3 } from 'lucide-react'
 
 const getFeatures = (t: any) => [
   {
-    title: t('pages.adaoPlatform.features.0.title'),
-    description: t('pages.adaoPlatform.features.0.description'),
-    icon: Eye
+    title: t('pages.marriottInspector.features.0.title'),
+    description: t('pages.marriottInspector.features.0.description'),
+    icon: Bot
   },
   {
-    title: t('pages.adaoPlatform.features.1.title'),
-    description: t('pages.adaoPlatform.features.1.description'),
-    icon: Network
+    title: t('pages.marriottInspector.features.1.title'),
+    description: t('pages.marriottInspector.features.1.description'),
+    icon: DollarSign
   },
   {
-    title: t('pages.adaoPlatform.features.2.title'),
-    description: t('pages.adaoPlatform.features.2.description'),
+    title: t('pages.marriottInspector.features.2.title'),
+    description: t('pages.marriottInspector.features.2.description'),
     icon: Users
   },
   {
-    title: t('pages.adaoPlatform.features.3.title'),
-    description: t('pages.adaoPlatform.features.3.description'),
-    icon: Coins
+    title: t('pages.marriottInspector.features.3.title'),
+    description: t('pages.marriottInspector.features.3.description'),
+    icon: TrendingUp
   }
 ]
 
 const getCapabilities = (t: any) => [
-  t('pages.adaoPlatform.capabilities.0'),
-  t('pages.adaoPlatform.capabilities.1'),
-  t('pages.adaoPlatform.capabilities.2'),
-  t('pages.adaoPlatform.capabilities.3'),
-  t('pages.adaoPlatform.capabilities.4'),
-  t('pages.adaoPlatform.capabilities.5'),
-  t('pages.adaoPlatform.capabilities.6'),
-  t('pages.adaoPlatform.capabilities.7')
+  t('pages.marriottInspector.capabilities.0'),
+  t('pages.marriottInspector.capabilities.1'),
+  t('pages.marriottInspector.capabilities.2'),
+  t('pages.marriottInspector.capabilities.3'),
+  t('pages.marriottInspector.capabilities.4'),
+  t('pages.marriottInspector.capabilities.5'),
+  t('pages.marriottInspector.capabilities.6'),
+  t('pages.marriottInspector.capabilities.7'),
+  t('pages.marriottInspector.capabilities.8'),
+  t('pages.marriottInspector.capabilities.9'),
+  t('pages.marriottInspector.capabilities.10'),
+  t('pages.marriottInspector.capabilities.11')
 ]
 
 const getUseCases = (t: any) => [
   {
-    title: t('pages.adaoPlatform.useCases.0.title'),
-    description: t('pages.adaoPlatform.useCases.0.description')
+    title: t('pages.marriottInspector.useCases.0.title'),
+    description: t('pages.marriottInspector.useCases.0.description')
   },
   {
-    title: t('pages.adaoPlatform.useCases.1.title'),
-    description: t('pages.adaoPlatform.useCases.1.description')
+    title: t('pages.marriottInspector.useCases.1.title'),
+    description: t('pages.marriottInspector.useCases.1.description')
   },
   {
-    title: t('pages.adaoPlatform.useCases.2.title'),
-    description: t('pages.adaoPlatform.useCases.2.description')
+    title: t('pages.marriottInspector.useCases.2.title'),
+    description: t('pages.marriottInspector.useCases.2.description')
   },
   {
-    title: t('pages.adaoPlatform.useCases.3.title'),
-    description: t('pages.adaoPlatform.useCases.3.description')
+    title: t('pages.marriottInspector.useCases.3.title'),
+    description: t('pages.marriottInspector.useCases.3.description')
   }
 ]
 
 const getBenefits = (t: any) => [
   {
-    title: t('pages.adaoPlatform.benefits.0.title'),
-    description: t('pages.adaoPlatform.benefits.0.description'),
-    icon: Zap
+    title: t('pages.marriottInspector.benefits.0.title'),
+    description: t('pages.marriottInspector.benefits.0.description'),
+    icon: TrendingUp
   },
   {
-    title: t('pages.adaoPlatform.benefits.1.title'),
-    description: t('pages.adaoPlatform.benefits.1.description'),
-    icon: Eye
+    title: t('pages.marriottInspector.benefits.1.title'),
+    description: t('pages.marriottInspector.benefits.1.description'),
+    icon: Bot
   },
   {
-    title: t('pages.adaoPlatform.benefits.2.title'),
-    description: t('pages.adaoPlatform.benefits.2.description'),
-    icon: Cpu
+    title: t('pages.marriottInspector.benefits.2.title'),
+    description: t('pages.marriottInspector.benefits.2.description'),
+    icon: BarChart3
   },
   {
-    title: t('pages.adaoPlatform.benefits.3.title'),
-    description: t('pages.adaoPlatform.benefits.3.description'),
-    icon: Users
+    title: t('pages.marriottInspector.benefits.3.title'),
+    description: t('pages.marriottInspector.benefits.3.description'),
+    icon: CheckCircle
   }
 ]
 
 const getTechnologyStack = (t: any) => [
   {
-    title: t('pages.adaoPlatform.technologyStack.0.title'),
-    description: t('pages.adaoPlatform.technologyStack.0.description'),
-    icon: Camera
+    title: t('pages.marriottInspector.technologyStack.0.title'),
+    description: t('pages.marriottInspector.technologyStack.0.description'),
+    icon: Lightbulb
   },
   {
-    title: t('pages.adaoPlatform.technologyStack.1.title'),
-    description: t('pages.adaoPlatform.technologyStack.1.description'),
-    icon: Network
+    title: t('pages.marriottInspector.technologyStack.1.title'),
+    description: t('pages.marriottInspector.technologyStack.1.description'),
+    icon: Bot
   },
   {
-    title: t('pages.adaoPlatform.technologyStack.2.title'),
-    description: t('pages.adaoPlatform.technologyStack.2.description'),
-    icon: Lock
+    title: t('pages.marriottInspector.technologyStack.2.title'),
+    description: t('pages.marriottInspector.technologyStack.2.description'),
+    icon: DollarSign
   },
   {
-    title: t('pages.adaoPlatform.technologyStack.3.title'),
-    description: t('pages.adaoPlatform.technologyStack.3.description'),
-    icon: Shield
+    title: t('pages.marriottInspector.technologyStack.3.title'),
+    description: t('pages.marriottInspector.technologyStack.3.description'),
+    icon: TrendingUp
   }
 ]
 
 const getTimelineSteps = (t: any) => [
   {
     step: "01",
-    title: t('pages.adaoPlatform.timeline.0.title'),
-    description: t('pages.adaoPlatform.timeline.0.description'),
-    icon: Eye
+    title: t('pages.marriottInspector.timeline.0.title'),
+    description: t('pages.marriottInspector.timeline.0.description'),
+    icon: BarChart3
   },
   {
     step: "02", 
-    title: t('pages.adaoPlatform.timeline.1.title'),
-    description: t('pages.adaoPlatform.timeline.1.description'),
-    icon: Zap
+    title: t('pages.marriottInspector.timeline.1.title'),
+    description: t('pages.marriottInspector.timeline.1.description'),
+    icon: Lightbulb
   },
   {
     step: "03",
-    title: t('pages.adaoPlatform.timeline.2.title'),
-    description: t('pages.adaoPlatform.timeline.2.description'),
-    icon: Users
+    title: t('pages.marriottInspector.timeline.2.title'),
+    description: t('pages.marriottInspector.timeline.2.description'),
+    icon: TrendingUp
   },
   {
     step: "04",
-    title: t('pages.adaoPlatform.timeline.3.title'),
-    description: t('pages.adaoPlatform.timeline.3.description'),
-    icon: Cpu
+    title: t('pages.marriottInspector.timeline.3.title'),
+    description: t('pages.marriottInspector.timeline.3.description'),
+    icon: CheckCircle
   }
 ]
 
@@ -137,14 +141,14 @@ const VideoPlayer = () => {
     <div className="relative w-full">
       <div className="aspect-video bg-gray-900 dark:bg-gray-100 rounded-xl overflow-hidden shadow-2xl">
         <iframe
-          src="https://player.vimeo.com/video/1130531521?h=49d71d6ebd&autoplay=1&loop=0&title=0&byline=0&portrait=0&controls=1&muted=1"
+          src="https://player.vimeo.com/video/1130884456?h=7317a60590&autoplay=1&loop=0&title=0&byline=0&portrait=0&controls=1&muted=1"
           width="100%"
           height="100%"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
           className="w-full h-full"
-          title="ADAO Platform Demo"
+          title="Marriott Inspector Demo"
           loading="lazy"
         ></iframe>
       </div>
@@ -152,7 +156,7 @@ const VideoPlayer = () => {
   )
 }
 
-export default function ADAOPlatformPage() {
+export default function MarriottInspectorPage() {
   const { t, isLoading } = useI18n()
   
   // Get translated data
@@ -167,11 +171,11 @@ export default function ADAOPlatformPage() {
   if (isLoading) {
     return (
       <PageLayout
-        title="ADAO Platform"
-        description="Autonomous Decentralized Autonomous Organization platform"
+        title="Marriott Inspector"
+        description="AI-powered business optimization platform"
         breadcrumbs={[
           { label: 'Platforms', href: '/platforms' },
-          { label: 'ADAO Platform', href: '/platforms/adao-platform' }
+          { label: 'Marriott Inspector', href: '/platforms/marriott-inspector' }
         ]}
       >
         <div className="flex items-center justify-center min-h-[400px]">
@@ -199,7 +203,7 @@ export default function ADAOPlatformPage() {
               {t('navigation.platforms')}
             </Link>
             <ArrowRight className="breadcrumb-separator" />
-            <span className="breadcrumb-item current">{t('pages.adaoPlatform.breadcrumb')}</span>
+            <span className="breadcrumb-item current">{t('pages.marriottInspector.breadcrumb')}</span>
           </nav>
         </div>
       </div>
@@ -212,20 +216,20 @@ export default function ADAOPlatformPage() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-5xl font-normal leading-tight">
-                  {t('pages.adaoPlatform.hero.title')}
+                  {t('pages.marriottInspector.hero.title')}
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  {t('pages.adaoPlatform.hero.subtitle')}
+                  {t('pages.marriottInspector.hero.subtitle')}
                 </p>
               </div>
               
               <div className="flex gap-4 pt-4">
                 <Link href="/contact" className="btn-primary">
-                  {t('pages.adaoPlatform.hero.cta1')}
+                  {t('pages.marriottInspector.hero.cta1')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="#how-it-works" className="btn-secondary">
-                  {t('pages.adaoPlatform.hero.cta2')}
+                  {t('pages.marriottInspector.hero.cta2')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -242,9 +246,9 @@ export default function ADAOPlatformPage() {
       {/* Platform Features - Compact Grid */}
       <Section variant="alt">
         <div className="text-center mb-8">
-          <h2 className="section-title">{t('pages.adaoPlatform.sections.features.title')}</h2>
+          <h2 className="section-title">{t('pages.marriottInspector.sections.features.title')}</h2>
           <p className="section-description">
-            {t('pages.adaoPlatform.sections.features.subtitle')}
+            {t('pages.marriottInspector.sections.features.subtitle')}
           </p>
         </div>
         
@@ -273,9 +277,9 @@ export default function ADAOPlatformPage() {
       {/* How It Works - Timeline */}
       <Section id="how-it-works">
         <div className="text-center mb-12">
-          <h2 className="section-title">{t('pages.adaoPlatform.sections.howItWorks.title')}</h2>
+          <h2 className="section-title">{t('pages.marriottInspector.sections.howItWorks.title')}</h2>
           <p className="section-description">
-            {t('pages.adaoPlatform.sections.howItWorks.subtitle')}
+            {t('pages.marriottInspector.sections.howItWorks.subtitle')}
           </p>
         </div>
         
@@ -335,9 +339,9 @@ export default function ADAOPlatformPage() {
       {/* Technology Stack - Compact */}
       <Section variant="alt">
         <div className="text-center mb-8">
-          <h2 className="section-title">{t('pages.adaoPlatform.sections.technologyStack.title')}</h2>
+          <h2 className="section-title">{t('pages.marriottInspector.sections.technologyStack.title')}</h2>
           <p className="section-description">
-            {t('pages.adaoPlatform.sections.technologyStack.subtitle')}
+            {t('pages.marriottInspector.sections.technologyStack.subtitle')}
           </p>
         </div>
         
@@ -366,9 +370,9 @@ export default function ADAOPlatformPage() {
       {/* Platform Capabilities - Compact */}
       <Section>
         <div className="text-center mb-8">
-          <h2 className="section-title">{t('pages.adaoPlatform.sections.capabilities.title')}</h2>
+          <h2 className="section-title">{t('pages.marriottInspector.sections.capabilities.title')}</h2>
           <p className="section-description">
-            {t('pages.adaoPlatform.sections.capabilities.subtitle')}
+            {t('pages.marriottInspector.sections.capabilities.subtitle')}
           </p>
         </div>
         
@@ -389,9 +393,9 @@ export default function ADAOPlatformPage() {
       {/* Use Cases - Compact */}
       <Section variant="alt">
         <div className="text-center mb-8">
-          <h2 className="section-title">{t('pages.adaoPlatform.sections.useCases.title')}</h2>
+          <h2 className="section-title">{t('pages.marriottInspector.sections.useCases.title')}</h2>
           <p className="section-description">
-            {t('pages.adaoPlatform.sections.useCases.subtitle')}
+            {t('pages.marriottInspector.sections.useCases.subtitle')}
           </p>
         </div>
         
@@ -412,9 +416,9 @@ export default function ADAOPlatformPage() {
       {/* Key Benefits - Compact */}
       <Section>
         <div className="text-center mb-8">
-          <h2 className="section-title">{t('pages.adaoPlatform.sections.benefits.title')}</h2>
+          <h2 className="section-title">{t('pages.marriottInspector.sections.benefits.title')}</h2>
           <p className="section-description">
-            {t('pages.adaoPlatform.sections.benefits.subtitle')}
+            {t('pages.marriottInspector.sections.benefits.subtitle')}
           </p>
         </div>
         
@@ -444,20 +448,21 @@ export default function ADAOPlatformPage() {
       <section className="section" style={{ background: 'var(--primary-black)', color: 'var(--primary-white)' }}>
         <div className="section-content text-center">
           <h2 className="text-3xl font-normal mb-6 text-white">
-            {t('pages.adaoPlatform.cta.title')}
+            {t('pages.marriottInspector.cta.title')}
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            {t('pages.adaoPlatform.cta.subtitle')}
+            {t('pages.marriottInspector.cta.subtitle')}
           </p>
           <Link 
             href="/contact" 
             className="btn-primary"
             style={{ background: 'var(--primary-white)', color: 'var(--primary-black)' }}
           >
-            {t('pages.adaoPlatform.cta.button')}
+            {t('pages.marriottInspector.cta.button')}
           </Link>
         </div>
       </section>
     </div>
   )
 }
+

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Zap, Shield, Users, Building2, CheckCircle } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Users, Building2, CheckCircle, Stethoscope, Briefcase } from 'lucide-react'
 
 const platforms = [
   {
@@ -9,6 +9,22 @@ const platforms = [
     status: 'Production Ready',
     icon: Users,
     href: '/platforms/adao-platform'
+  },
+  {
+    title: 'Rita Remote Care',
+    description: 'AI-powered remote patient monitoring platform with 400 FDA-approved biometric devices, providing analytical insights, medication reminders, and 24/7 clinical telehealth center connectivity.',
+    features: ['Biometric data collection', 'AI-powered insights', 'Medication management', 'Telehealth integration'],
+    status: 'Production Ready',
+    icon: Stethoscope,
+    href: '/platforms/rita-remote-care'
+  },
+  {
+    title: 'Marriott Inspector',
+    description: 'Complete end-to-end business review using AI agents and financial analytics to find and implement data-driven optimizations for increased profitability.',
+    features: ['AI agent teams', 'Financial analytics', 'Business optimization', 'Automated implementation'],
+    status: 'Production Ready',
+    icon: Briefcase,
+    href: '/platforms/marriott-inspector'
   }
 ]
 

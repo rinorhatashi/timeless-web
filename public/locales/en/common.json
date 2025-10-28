@@ -38,7 +38,9 @@
       "platforms": {
         "title": "Platforms",
         "description": "ADAO Platform - Autonomous Decentralized Autonomous Organization",
-        "adaoPlatform": "ADAO Platform"
+        "adaoPlatform": "ADAO Platform",
+        "ritaPlatform": "Rita Remote Care",
+        "marriottInspector": "Marriott Inspector"
       },
       "industries": {
         "title": "Industries",
@@ -2440,7 +2442,436 @@
     "adaoPlatform": {
       "title": "ADAO Platform",
       "description": "Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.",
-      "breadcrumb": "ADAO Platform"
+      "breadcrumb": "ADAO Platform",
+      "hero": {
+        "title": "ADAO Platform",
+        "subtitle": "Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.",
+        "cta1": "Start Your ADAO Journey",
+        "cta2": "Learn More"
+      },
+      "sections": {
+        "features": {
+          "title": "Platform Features",
+          "subtitle": "Advanced technology stack that enables autonomous community management and governance"
+        },
+        "howItWorks": {
+          "title": "How ADAO Platform Works",
+          "subtitle": "A four-step process that transforms community management from reactive to proactive"
+        },
+        "technologyStack": {
+          "title": "Technology Stack",
+          "subtitle": "Cutting-edge technologies that power autonomous community management"
+        },
+        "capabilities": {
+          "title": "Platform Capabilities",
+          "subtitle": "Comprehensive features for autonomous community and property management"
+        },
+        "useCases": {
+          "title": "Use Cases",
+          "subtitle": "Real-world applications of ADAO Platform across different property types"
+        },
+        "benefits": {
+          "title": "Key Benefits",
+          "subtitle": "Why communities choose ADAO Platform for autonomous management"
+        }
+      },
+      "cta": {
+        "title": "Ready to revolutionize your community?",
+        "subtitle": "Experience progress at the speed of consensus with our ADAO Platform. Transform your neighborhood, venue, or property with autonomous management powered by Timeless.",
+        "button": "Start your ADAO journey →"
+      },
+      "features": [
+        {
+          "title": "Computer Vision Monitoring",
+          "description": "Advanced computer vision systems that automatically detect physical damage and infrastructure issues in real-time."
+        },
+        {
+          "title": "Smart Sensor Networks",
+          "description": "Comprehensive sensor networks that monitor internal systems and detect faults before they become problems."
+        },
+        {
+          "title": "Decentralized Governance",
+          "description": "Community-driven decision making with transparent voting mechanisms and equal representation."
+        },
+        {
+          "title": "Blockchain Integration",
+          "description": "Secure blockchain technology for transparent transactions, smart contracts, and immutable records."
+        }
+      ],
+      "capabilities": [
+        "Autonomous entry and access control",
+        "Real-time infrastructure monitoring",
+        "Community governance tokens",
+        "Transparent treasury management",
+        "Smart contract automation",
+        "Computer vision damage detection",
+        "Sensor-based fault detection",
+        "Decentralized decision making"
+      ],
+      "useCases": [
+        {
+          "title": "Neighborhood Management",
+          "description": "Transform residential communities with autonomous monitoring, maintenance, and governance systems."
+        },
+        {
+          "title": "Large-Scale Venues",
+          "description": "Implement autonomous management for stadiums, convention centers, and entertainment complexes."
+        },
+        {
+          "title": "Hotel Properties",
+          "description": "Enhance guest experience with automated systems for access, maintenance, and service delivery."
+        },
+        {
+          "title": "Corporate Campuses",
+          "description": "Streamline corporate facility management with intelligent monitoring and automated maintenance."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Progress at Speed of Consensus",
+          "description": "Decisions are made in moments by the community, not months in boardrooms."
+        },
+        {
+          "title": "Complete Transparency",
+          "description": "Every transaction and decision is transparent and visible to all community members."
+        },
+        {
+          "title": "Autonomous Operations",
+          "description": "From entry to maintenance, everything operates autonomously without human intervention."
+        },
+        {
+          "title": "Equal Representation",
+          "description": "One governance token per person ensures equal voting power for all community members."
+        }
+      ],
+      "technologyStack": [
+        {
+          "title": "Computer Vision",
+          "description": "AI-powered visual monitoring that spots physical damage and infrastructure issues automatically"
+        },
+        {
+          "title": "Smart Sensors",
+          "description": "Network of intelligent sensors that detect internal faults and system anomalies"
+        },
+        {
+          "title": "Blockchain Technology",
+          "description": "Secure, transparent blockchain infrastructure for governance and financial transactions"
+        },
+        {
+          "title": "Smart Contracts",
+          "description": "Automated contract execution for maintenance, payments, and governance processes"
+        }
+      ],
+      "timeline": [
+        {
+          "title": "Autonomous Detection",
+          "description": "Computer vision and smart sensors continuously monitor infrastructure, automatically detecting damage and system faults in real-time."
+        },
+        {
+          "title": "Instant Proposal Generation",
+          "description": "When issues are detected, the system instantly generates detailed proposals with problem analysis, solutions, and cost estimates."
+        },
+        {
+          "title": "Community Governance",
+          "description": "Community members review proposals and vote using governance tokens, ensuring equal representation and transparent decision-making."
+        },
+        {
+          "title": "Automated Execution",
+          "description": "Approved decisions trigger smart contracts that automatically process payments, notify contractors, and initiate work immediately."
+        }
+      ]
+    },
+    "ritaPlatform": {
+      "title": "Rita Remote Care",
+      "description": "An artificial intelligence medical aid platform that gathers and calculates biometric data, providing analytical insights, medication reminders, and appointment scheduling.",
+      "breadcrumb": "Rita Remote Care",
+      "hero": {
+        "title": "Rita Remote Care",
+        "subtitle": "An artificial intelligence medical aid platform that gathers and calculates biometric data, providing analytical insights, medication reminders, and appointment scheduling. ViaNova delivers personalized kits to patients with 400 FDA-approved biometric devices integrated with tablets and connected to a 24/7 clinical telehealth center.",
+        "cta1": "Start Your Rita Journey",
+        "cta2": "Learn More"
+      },
+      "sections": {
+        "features": {
+          "title": "Platform Features",
+          "subtitle": "Advanced AI-powered technology for comprehensive remote patient monitoring and care coordination"
+        },
+        "howItWorks": {
+          "title": "How Rita Works",
+          "subtitle": "A comprehensive four-step process that transforms remote patient care through continuous monitoring and intelligent insights"
+        },
+        "technologyStack": {
+          "title": "Technology Stack",
+          "subtitle": "Cutting-edge technologies that power intelligent remote patient care"
+        },
+        "capabilities": {
+          "title": "Platform Capabilities",
+          "subtitle": "Comprehensive features for remote patient monitoring and healthcare delivery"
+        },
+        "useCases": {
+          "title": "Use Cases",
+          "subtitle": "Real-world applications of Rita Remote Care across different healthcare scenarios"
+        },
+        "benefits": {
+          "title": "Key Benefits",
+          "subtitle": "Why healthcare providers and patients choose Rita Remote Care"
+        }
+      },
+      "cta": {
+        "title": "Ready to revolutionize remote patient care?",
+        "subtitle": "Experience intelligent healthcare delivery with Rita Remote Care. Transform patient outcomes and reduce costs with AI-powered remote monitoring from Timeless.",
+        "button": "Start your Rita journey →"
+      },
+      "features": [
+        {
+          "title": "Biometric Data Collection",
+          "description": "Advanced integration with 400 FDA-approved biometric devices monitoring vital signs, activity levels, and health metrics in real-time."
+        },
+        {
+          "title": "AI-Powered Insights",
+          "description": "Intelligent analysis of patient data providing clinical insights and early warning systems for healthcare providers."
+        },
+        {
+          "title": "Medication Management",
+          "description": "Automated medication reminders and tracking to ensure adherence and prevent missed doses."
+        },
+        {
+          "title": "Telehealth Integration",
+          "description": "Seamless video visit scheduling with 24/7 access to clinical telehealth centers and family monitoring."
+        }
+      ],
+      "capabilities": [
+        "400 FDA-approved biometric devices",
+        "Real-time health monitoring",
+        "Medication reminders and tracking",
+        "Appointment scheduling and management",
+        "Video visit coordination",
+        "Family member connectivity",
+        "Clinical telehealth center access",
+        "Personalized daily health plans",
+        "Emergency room visit reduction",
+        "Hospital readmission prevention",
+        "Reduced hospital stay duration",
+        "Cost-effective patient care"
+      ],
+      "useCases": [
+        {
+          "title": "Chronic Disease Management",
+          "description": "Enable proactive management of chronic conditions with continuous monitoring and timely interventions."
+        },
+        {
+          "title": "Post-Hospital Care",
+          "description": "Reduce readmissions through comprehensive post-discharge monitoring and care coordination."
+        },
+        {
+          "title": "Elder Care & Independent Living",
+          "description": "Support elderly patients with medication management and health monitoring to maintain independence."
+        },
+        {
+          "title": "Remote Patient Monitoring",
+          "description": "Extend clinical reach to underserved areas with comprehensive remote care capabilities."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Reduced Emergency Visits",
+          "description": "Proactive monitoring and early interventions significantly reduce emergency room visits."
+        },
+        {
+          "title": "Lower Healthcare Costs",
+          "description": "AI-powered insights and preventive care lead to substantial cost reductions for patients."
+        },
+        {
+          "title": "Better Patient Outcomes",
+          "description": "Continuous monitoring and timely alerts ensure better health management and improved outcomes."
+        },
+        {
+          "title": "Family Peace of Mind",
+          "description": "24/7 connectivity keeps family members informed and connected to their loved one's health journey."
+        }
+      ],
+      "technologyStack": [
+        {
+          "title": "Biometric Integration",
+          "description": "Seamless connection with 400 FDA-approved devices monitoring blood pressure, temperature, activity, weight, blood sugar, and more"
+        },
+        {
+          "title": "Artificial Intelligence",
+          "description": "Advanced AI algorithms that analyze data and provide actionable health insights"
+        },
+        {
+          "title": "Personalized Care Plans",
+          "description": "AI-driven daily health plans with simple, effective reminders tailored to each patient"
+        },
+        {
+          "title": "Telehealth Infrastructure",
+          "description": "Integrated telehealth platform connecting patients with clinical centers and family members"
+        }
+      ],
+      "timeline": [
+        {
+          "title": "Continuous Monitoring",
+          "description": "Rita continuously gathers biometric data from 400 FDA-approved devices, tracking vital signs, activity levels, and health metrics throughout the day and night."
+        },
+        {
+          "title": "AI Analysis & Insights",
+          "description": "Advanced algorithms analyze biometric data in real-time, identifying patterns, trends, and potential health issues before they become emergencies."
+        },
+        {
+          "title": "Personalized Care Delivery",
+          "description": "Rita provides personalized daily health plans with medication reminders, activity recommendations, and health guidance tailored to each patient's needs."
+        },
+        {
+          "title": "Clinical Coordination",
+          "description": "Automatic scheduling and coordination of appointments, video visits, and telehealth consultations with healthcare providers."
+        }
+      ]
+    },
+    "marriottInspector": {
+      "title": "Marriott Inspector",
+      "description": "Complete end-to-end business review using AI agents and financial analytics to find and implement data-driven optimizations for increased profitability.",
+      "breadcrumb": "Marriott Inspector",
+      "hero": {
+        "title": "Marriott Inspector",
+        "subtitle": "Complete end-to-end business review using AI agents and financial analytics to find and implement data-driven optimizations for increased profitability. Our Cognitive Enterprise Intelligence (CEI) system deploys 24/7 digital employees that analyze your business, identify opportunities, and implement improvements automatically.",
+        "cta1": "Start Your Analysis",
+        "cta2": "Learn More"
+      },
+      "sections": {
+        "features": {
+          "title": "Platform Features",
+          "subtitle": "Advanced AI-powered business optimization through intelligent agent deployment and financial analytics"
+        },
+        "howItWorks": {
+          "title": "How Marriott Inspector Works",
+          "subtitle": "A three-stage process that transforms your business from analysis to optimization through intelligent automation"
+        },
+        "technologyStack": {
+          "title": "Technology Stack",
+          "subtitle": "Cutting-edge technologies that power intelligent business optimization and profitability"
+        },
+        "capabilities": {
+          "title": "Platform Capabilities",
+          "subtitle": "Comprehensive features for business analysis, optimization, and automated implementation"
+        },
+        "useCases": {
+          "title": "Use Cases",
+          "subtitle": "Real-world applications of Marriott Inspector across different business types and industries"
+        },
+        "benefits": {
+          "title": "Key Benefits",
+          "subtitle": "Why businesses choose Marriott Inspector for intelligent optimization"
+        }
+      },
+      "cta": {
+        "title": "Ready to optimize your business profitability?",
+        "subtitle": "Experience the power of Cognitive Enterprise Intelligence with Marriott Inspector. Transform your operations, reduce costs, and increase profitability with AI-powered business optimization from Timeless.",
+        "button": "Start your analysis →"
+      },
+      "features": [
+        {
+          "title": "AI Agent Teams",
+          "description": "Deploy teams of autonomous AI agents that work 24/7 as digital employees, handling specific tasks efficiently without holidays or breaks."
+        },
+        {
+          "title": "Financial Analytics",
+          "description": "Advanced analytics engines that review payroll, finances, workflows, and operations to identify cost-cutting opportunities."
+        },
+        {
+          "title": "Employee Interviews",
+          "description": "Intelligent agent systems that interview employees discreetly and securely to gain detailed insights into business operations."
+        },
+        {
+          "title": "Automated Implementation",
+          "description": "Seamless integration and automated implementation of recommendations into your company's ecosystem with 24/7 support."
+        }
+      ],
+      "capabilities": [
+        "24/7 digital employee agents",
+        "End-to-end business analysis",
+        "Financial analytics and optimization",
+        "Workflow and operations review",
+        "Employee interview automation",
+        "Cost-cutting recommendations",
+        "Productivity enhancement solutions",
+        "Automated implementation",
+        "Secured system integration",
+        "Payroll and finance analysis",
+        "Actionable reporting",
+        "The Inspector Guarantee"
+      ],
+      "useCases": [
+        {
+          "title": "Office-Based Companies",
+          "description": "Complete business analysis and optimization for office environments, identifying inefficiencies and implementing automated solutions."
+        },
+        {
+          "title": "Manufacturing Operations",
+          "description": "Optimize production workflows, reduce operational costs, and enhance productivity through intelligent agent deployment."
+        },
+        {
+          "title": "Retail Businesses",
+          "description": "Analyze operations, customer workflows, and inventory management to identify profit-boosting opportunities."
+        },
+        {
+          "title": "Service Organizations",
+          "description": "Review processes, staffing, and resource allocation to maximize efficiency and profitability."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Increased Profitability",
+          "description": "Data-driven optimizations identify and implement opportunities to make your business more profitable."
+        },
+        {
+          "title": "24/7 AI Agents",
+          "description": "Deploy digital employees that work around the clock without breaks, holidays, or wage discussions."
+        },
+        {
+          "title": "Complete Business Review",
+          "description": "Comprehensive analysis covering payroll, finances, workflows, operations, and employee insights."
+        },
+        {
+          "title": "The Inspector Guarantee",
+          "description": "Our commitment to your financial prosperity with continuous support throughout your optimization journey."
+        }
+      ],
+      "technologyStack": [
+        {
+          "title": "Cognitive Enterprise Intelligence (CEI)",
+          "description": "Advanced AI system that combines intelligent agents and financial analytics for comprehensive business optimization"
+        },
+        {
+          "title": "Multi-Agent Systems",
+          "description": "Teams of specialized agents working simultaneously to tackle multiple tasks across your business"
+        },
+        {
+          "title": "Financial Analytics Engine",
+          "description": "Deep analysis of financial data, payroll, and operations to identify cost-cutting and profit-boosting opportunities"
+        },
+        {
+          "title": "Automated Implementation",
+          "description": "Seamless integration and automated deployment of optimization recommendations into your business ecosystem"
+        }
+      ],
+      "timeline": [
+        {
+          "title": "Stage One: Analysis",
+          "description": "Inspector asks targeted questions to understand your company, then deploys agents that discreetly connect to your systems. The agents review payroll, finances, workflows, operations, and even interview employees to gain detailed insights on optimization opportunities."
+        },
+        {
+          "title": "Stage Two: Reporting",
+          "description": "You receive a clear, actionable report with cost-cutting, automation, and productivity-raising ideas based on agent findings. We walk you through everything we discovered, showing exactly how every part of your company is performing."
+        },
+        {
+          "title": "Stage Three: Implementation",
+          "description": "After your final sign-off, Inspector gets to work implementing recommendations. It seamlessly integrates into your company's ecosystem and provides 24/7 support to ensure continuous optimization."
+        },
+        {
+          "title": "Continuous Optimization",
+          "description": "Inspector provides ongoing monitoring and optimization, ensuring your business maintains peak profitability and efficiency with The Inspector Guarantee of continuous support."
+        }
+      ]
     },
     "ragOrchestrator": {
       "title": "RAG Orchestrator",
