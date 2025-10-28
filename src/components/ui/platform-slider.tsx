@@ -56,7 +56,6 @@ export const PlatformSlider = () => {
   }
 
   const nextPlatform = platforms[(currentIndex + 1) % platforms.length]
-  const prevPlatform = platforms[(currentIndex - 1 + platforms.length) % platforms.length]
 
   return (
     <section className="section section-alt">

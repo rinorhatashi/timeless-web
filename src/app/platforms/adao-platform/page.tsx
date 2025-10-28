@@ -5,7 +5,7 @@ import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
 import { ArrowRight, Eye, Cpu, Shield, Zap, CheckCircle, Users, Camera, Network, Coins, Lock, Home } from 'lucide-react'
 
-const getFeatures = (t: any) => [
+const getFeatures = (t: (key: string) => string) => [
   {
     title: t('pages.adaoPlatform.features.0.title'),
     description: t('pages.adaoPlatform.features.0.description'),
@@ -28,7 +28,7 @@ const getFeatures = (t: any) => [
   }
 ]
 
-const getCapabilities = (t: any) => [
+const getCapabilities = (t: (key: string) => string) => [
   t('pages.adaoPlatform.capabilities.0'),
   t('pages.adaoPlatform.capabilities.1'),
   t('pages.adaoPlatform.capabilities.2'),
@@ -39,7 +39,7 @@ const getCapabilities = (t: any) => [
   t('pages.adaoPlatform.capabilities.7')
 ]
 
-const getUseCases = (t: any) => [
+const getUseCases = (t: (key: string) => string) => [
   {
     title: t('pages.adaoPlatform.useCases.0.title'),
     description: t('pages.adaoPlatform.useCases.0.description')
@@ -58,7 +58,7 @@ const getUseCases = (t: any) => [
   }
 ]
 
-const getBenefits = (t: any) => [
+const getBenefits = (t: (key: string) => string) => [
   {
     title: t('pages.adaoPlatform.benefits.0.title'),
     description: t('pages.adaoPlatform.benefits.0.description'),
@@ -81,7 +81,7 @@ const getBenefits = (t: any) => [
   }
 ]
 
-const getTechnologyStack = (t: any) => [
+const getTechnologyStack = (t: (key: string) => string) => [
   {
     title: t('pages.adaoPlatform.technologyStack.0.title'),
     description: t('pages.adaoPlatform.technologyStack.0.description'),
@@ -104,7 +104,7 @@ const getTechnologyStack = (t: any) => [
   }
 ]
 
-const getTimelineSteps = (t: any) => [
+const getTimelineSteps = (t: (key: string) => string) => [
   {
     step: "01",
     title: t('pages.adaoPlatform.timeline.0.title'),

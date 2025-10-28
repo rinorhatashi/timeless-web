@@ -3,9 +3,9 @@
 import { PageLayout, Section } from '@/components/ui/page-layout'
 import { useI18n } from '@/lib/i18n/context'
 import Link from 'next/link'
-import { ArrowRight, Heart, Activity, Pill, Calendar, Video, Shield, TrendingDown, Clock, Home, User, Smartphone, Stethoscope, CheckCircle } from 'lucide-react'
+import { ArrowRight, Heart, Activity, Pill, Calendar, Video, Shield, TrendingDown, Clock, Home, User, Smartphone, CheckCircle } from 'lucide-react'
 
-const getFeatures = (t: any) => [
+const getFeatures = (t: (key: string) => string) => [
   {
     title: t('pages.ritaPlatform.features.0.title'),
     description: t('pages.ritaPlatform.features.0.description'),
@@ -28,7 +28,7 @@ const getFeatures = (t: any) => [
   }
 ]
 
-const getCapabilities = (t: any) => [
+const getCapabilities = (t: (key: string) => string) => [
   t('pages.ritaPlatform.capabilities.0'),
   t('pages.ritaPlatform.capabilities.1'),
   t('pages.ritaPlatform.capabilities.2'),
@@ -43,7 +43,7 @@ const getCapabilities = (t: any) => [
   t('pages.ritaPlatform.capabilities.11')
 ]
 
-const getUseCases = (t: any) => [
+const getUseCases = (t: (key: string) => string) => [
   {
     title: t('pages.ritaPlatform.useCases.0.title'),
     description: t('pages.ritaPlatform.useCases.0.description')
@@ -62,7 +62,7 @@ const getUseCases = (t: any) => [
   }
 ]
 
-const getBenefits = (t: any) => [
+const getBenefits = (t: (key: string) => string) => [
   {
     title: t('pages.ritaPlatform.benefits.0.title'),
     description: t('pages.ritaPlatform.benefits.0.description'),
@@ -85,7 +85,7 @@ const getBenefits = (t: any) => [
   }
 ]
 
-const getTechnologyStack = (t: any) => [
+const getTechnologyStack = (t: (key: string) => string) => [
   {
     title: t('pages.ritaPlatform.technologyStack.0.title'),
     description: t('pages.ritaPlatform.technologyStack.0.description'),
@@ -108,7 +108,7 @@ const getTechnologyStack = (t: any) => [
   }
 ]
 
-const getTimelineSteps = (t: any) => [
+const getTimelineSteps = (t: (key: string) => string) => [
   {
     step: "01",
     title: t('pages.ritaPlatform.timeline.0.title'),
