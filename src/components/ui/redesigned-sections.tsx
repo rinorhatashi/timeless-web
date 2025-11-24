@@ -278,7 +278,6 @@ export const ElegantShowcase = () => {
                   </div>
                   <div className="showcase-content">
                     <h3 className="showcase-title">{industry.title}</h3>
-                    <div className="showcase-tag">#{industry.word}</div>
                   </div>
                 </Link>
               )
