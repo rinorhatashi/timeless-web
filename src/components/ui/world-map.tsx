@@ -22,7 +22,6 @@ const offices: Office[] = [
   
   // Europe
   { id: 'london', name: 'London', country: 'UK', region: 'Europe', coordinates: { x: 990, y: 280 } },
-  { id: 'stuttgart', name: 'Stuttgart', country: 'Germany', region: 'Europe', coordinates: { x: 1020, y: 290 } },
   { id: 'vienna', name: 'Vienna', country: 'Austria', region: 'Europe', coordinates: { x: 1050, y: 300 } },
   { id: 'zurich', name: 'Zurich', country: 'Switzerland', region: 'Europe', coordinates: { x: 1024, y: 310 } },
   { id: 'pristina', name: 'Pristina', country: 'Kosovo', region: 'Europe', coordinates: { x: 1080, y: 320 } },
@@ -76,11 +75,11 @@ export const WorldMap = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-3 gap-4 md:gap-8 mb-12 max-w-4xl mx-auto">
         <div className="text-center">
-          <div className="text-3xl md:text-5xl font-light text-gray-900 dark:text-white mb-2">12</div>
+          <div className="text-3xl md:text-5xl font-light text-gray-900 dark:text-white mb-2">11</div>
           <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Locations</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl md:text-5xl font-light text-gray-900 dark:text-white mb-2">8</div>
+          <div className="text-3xl md:text-5xl font-light text-gray-900 dark:text-white mb-2">7</div>
           <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Countries</div>
         </div>
         <div className="text-center">

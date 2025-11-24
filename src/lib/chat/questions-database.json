@@ -148,7 +148,7 @@
       "category": "company",
       "question": "Where are you located?",
       "keywords": ["location", "office", "where", "address", "offices"],
-      "answer": "Timeless operates globally with presence in:\n\n📍 North America: New York, San Francisco, Washington DC, Toronto\n📍 Europe: London, Stuttgart, Vienna, Zurich, Pristina\n📍 Middle East: Riyadh, Abu Dhabi, Tel Aviv\n\n12 locations • 8 countries • 250+ people\n\nWe support sovereign models for EU, US, and KSA.",
+      "answer": "Timeless operates globally with presence in:\n\n📍 North America: New York, San Francisco, Washington DC, Toronto\n📍 Europe: London, Vienna, Zurich, Pristina\n📍 Middle East: Riyadh, Abu Dhabi, Tel Aviv\n\n11 locations • 7 countries • 250+ people\n\nWe support sovereign models for EU, US, and KSA.",
       "links": [
         { "text": "Contact Us", "url": "/contact" }
       ],

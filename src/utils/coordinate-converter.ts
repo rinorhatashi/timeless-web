@@ -33,7 +33,6 @@ const cityData: CityCoordinates[] = [
   
   // Europe
   { name: 'London', lat: 51.5074, lng: -0.1278, svgX: 0, svgY: 0 },
-  { name: 'Stuttgart', lat: 48.7758, lng: 9.1829, svgX: 0, svgY: 0 },
   { name: 'Vienna', lat: 48.2082, lng: 16.3738, svgX: 0, svgY: 0 },
   { name: 'Zurich', lat: 47.3769, lng: 8.5417, svgX: 0, svgY: 0 },
   { name: 'Pristina', lat: 42.6629, lng: 21.1655, svgX: 0, svgY: 0 },
