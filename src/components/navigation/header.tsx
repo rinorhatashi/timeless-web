@@ -21,7 +21,6 @@ const mockSearchResults = [
   { title: 'Healthcare Solutions', description: 'AI-powered healthcare and medical solutions', category: 'Industries', href: '/industries/health' },
   { title: 'Payment Solutions', description: 'Secure payment processing and fintech solutions', category: 'Solutions', href: '/solutions/payment-solutions' },
   { title: 'Agent Safety Aegis', description: 'Research on agent safety and reliability', category: 'Research', href: '/research/agent-safety-aegis' },
-  { title: 'Investment Portfolio', description: 'Our venture investments and partnerships', category: 'Ventures', href: '/ventures' },
   { title: 'Industry Reports', description: 'Comprehensive industry analysis and insights', category: 'Insights', href: '/insights/reports' },
   { title: 'Our Team', description: 'Meet the Timeless team and leadership', category: 'About', href: '/about/team' }
 ]
@@ -117,11 +116,6 @@ export const Header = () => {
       ]
     },
     {
-      label: t('navigation.ventures'),
-      href: '/ventures',
-      description: t('navigation.menu.ventures.description')
-    },
-    {
       label: t('navigation.insights'),
       href: '/insights',
       description: t('navigation.menu.insights.description'),
@@ -147,7 +141,6 @@ export const Header = () => {
     { label: t('navigation.industries'), value: 'industries' },
     { label: t('navigation.solutions'), value: 'solutions' },
     { label: t('navigation.research'), value: 'research' },
-    { label: t('navigation.ventures'), value: 'ventures' },
     { label: t('navigation.insights'), value: 'insights' },
     { label: t('navigation.about'), value: 'about' }
   ]

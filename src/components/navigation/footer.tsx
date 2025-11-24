@@ -12,7 +12,6 @@ export const Footer = () => {
     { label: t('navigation.platforms'), href: '/platforms' },
     { label: t('navigation.solutions'), href: '/solutions' },
     { label: t('navigation.research'), href: '/research' },
-    { label: t('navigation.ventures'), href: '/ventures' }
   ]
 
   const companyLinks = [
