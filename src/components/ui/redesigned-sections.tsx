@@ -244,7 +244,7 @@ export const ElegantShowcase = () => {
                   </div>
                   <div className="showcase-content">
                     <h3 className="showcase-title">{capability.title}</h3>
-                    <div className="showcase-tag">#{capability.word}</div>
+                    <div className="showcase-tag">{capability.word}</div>
                   </div>
                 </Link>
               )
