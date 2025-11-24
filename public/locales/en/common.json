@@ -40,7 +40,7 @@
         "description": "Agentic DAO Platform - Autonomous Decentralized Autonomous Organization",
         "adaoPlatform": "Agentic DAO Platform",
         "ritaPlatform": "Rita Remote Care",
-        "marriottInspector": "Marriott Inspector"
+        "marriottInspector": "Mariete Inspector"
       },
       "industries": {
         "title": "Industries",
@@ -2728,11 +2728,11 @@
       ]
     },
     "marriottInspector": {
-      "title": "Marriott Inspector",
+      "title": "Mariete Inspector",
       "description": "Complete end-to-end business review using AI agents and financial analytics to find and implement data-driven optimizations for increased profitability.",
-      "breadcrumb": "Marriott Inspector",
+      "breadcrumb": "Mariete Inspector",
       "hero": {
-        "title": "Marriott Inspector",
+        "title": "Mariete Inspector",
         "subtitle": "Complete end-to-end business review using AI agents and financial analytics to find and implement data-driven optimizations for increased profitability. Our Cognitive Enterprise Intelligence (CEI) system deploys 24/7 digital employees that analyze your business, identify opportunities, and implement improvements automatically.",
         "cta1": "Start Your Analysis",
         "cta2": "Learn More"
@@ -2743,7 +2743,7 @@
           "subtitle": "Advanced AI-powered business optimization through intelligent agent deployment and financial analytics"
         },
         "howItWorks": {
-          "title": "How Marriott Inspector Works",
+          "title": "How Mariete Inspector Works",
           "subtitle": "A three-stage process that transforms your business from analysis to optimization through intelligent automation"
         },
         "technologyStack": {
@@ -2756,16 +2756,16 @@
         },
         "useCases": {
           "title": "Use Cases",
-          "subtitle": "Real-world applications of Marriott Inspector across different business types and industries"
+          "subtitle": "Real-world applications of Mariete Inspector across different business types and industries"
         },
         "benefits": {
           "title": "Key Benefits",
-          "subtitle": "Why businesses choose Marriott Inspector for intelligent optimization"
+          "subtitle": "Why businesses choose Mariete Inspector for intelligent optimization"
         }
       },
       "cta": {
         "title": "Ready to optimize your business profitability?",
-        "subtitle": "Experience the power of Cognitive Enterprise Intelligence with Marriott Inspector. Transform your operations, reduce costs, and increase profitability with AI-powered business optimization from Timeless.",
+        "subtitle": "Experience the power of Cognitive Enterprise Intelligence with Mariete Inspector. Transform your operations, reduce costs, and increase profitability with AI-powered business optimization from Timeless.",
         "button": "Start your analysis →"
       },
       "features": [

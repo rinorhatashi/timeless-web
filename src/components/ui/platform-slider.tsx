@@ -34,7 +34,7 @@ export const PlatformSlider = () => {
     },
     {
       id: 'marriott',
-      title: 'Marriott Inspector',
+      title: 'Mariete Inspector',
       description: 'Complete end-to-end business review using AI agents and financial analytics to find and implement data-driven optimizations for increased profitability.',
       videoUrl: 'https://player.vimeo.com/video/1130884456?h=7317a60590&autoplay=1&loop=0&title=0&byline=0&portrait=0&controls=1&muted=1',
       href: '/platforms/marriott-inspector'

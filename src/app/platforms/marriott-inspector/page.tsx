@@ -148,7 +148,7 @@ const VideoPlayer = () => {
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
           className="w-full h-full"
-          title="Marriott Inspector Demo"
+          title="Mariete Inspector Demo"
           loading="lazy"
         ></iframe>
       </div>
@@ -156,7 +156,7 @@ const VideoPlayer = () => {
   )
 }
 
-export default function MarriottInspectorPage() {
+export default function MarieteInspectorPage() {
   const { t, isLoading } = useI18n()
   
   // Get translated data
@@ -171,11 +171,11 @@ export default function MarriottInspectorPage() {
   if (isLoading) {
     return (
       <PageLayout
-        title="Marriott Inspector"
+        title="Mariete Inspector"
         description="AI-powered business optimization platform"
         breadcrumbs={[
           { label: 'Platforms', href: '/platforms' },
-          { label: 'Marriott Inspector', href: '/platforms/marriott-inspector' }
+          { label: 'Mariete Inspector', href: '/platforms/marriott-inspector' }
         ]}
       >
         <div className="flex items-center justify-center min-h-[400px]">

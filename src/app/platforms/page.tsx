@@ -19,7 +19,7 @@ const platforms = [
     href: '/platforms/rita-remote-care'
   },
   {
-    title: 'Marriott Inspector',
+    title: 'Mariete Inspector',
     description: 'Complete end-to-end business review using AI agents and financial analytics to find and implement data-driven optimizations for increased profitability.',
     features: ['AI agent teams', 'Financial analytics', 'Business optimization', 'Automated implementation'],
     status: 'Production Ready',
