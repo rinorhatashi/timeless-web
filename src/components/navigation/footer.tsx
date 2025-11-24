@@ -126,7 +126,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <div className="footer-copyright">
-            {t('footer.copyright')}
+            © {new Date().getFullYear()} Timeless. All rights reserved.
           </div>
           <div className="footer-legal">
             {legalLinks.map((link, index) => (
