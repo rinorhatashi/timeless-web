@@ -18,7 +18,7 @@ const offices: Office[] = [
   { id: 'sf', name: 'San Francisco', country: 'USA', region: 'North America', coordinates: { x: 240, y: 350 } },
   { id: 'nyc', name: 'New York', country: 'USA', region: 'North America', coordinates: { x: 440, y: 320 } },
   { id: 'dc', name: 'Washington DC', country: 'USA', region: 'North America', coordinates: { x: 460, y: 340 } },
-  { id: 'toronto', name: 'Toronto', country: 'Canada', region: 'North America', coordinates: { x: 420, y: 300 } },
+  { id: 'winnipeg', name: 'Winnipeg', country: 'Canada', region: 'North America', coordinates: { x: 360, y: 280 } },
   
   // Europe
   { id: 'london', name: 'London', country: 'UK', region: 'Europe', coordinates: { x: 990, y: 280 } },

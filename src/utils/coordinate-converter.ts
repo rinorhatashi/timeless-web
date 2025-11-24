@@ -29,7 +29,7 @@ const cityData: CityCoordinates[] = [
   { name: 'San Francisco', lat: 37.7749, lng: -122.4194, svgX: 0, svgY: 0 },
   { name: 'New York', lat: 40.7128, lng: -74.0060, svgX: 0, svgY: 0 },
   { name: 'Washington DC', lat: 38.9072, lng: -77.0369, svgX: 0, svgY: 0 },
-  { name: 'Toronto', lat: 43.6532, lng: -79.3832, svgX: 0, svgY: 0 },
+  { name: 'Winnipeg', lat: 49.8951, lng: -97.1384, svgX: 0, svgY: 0 },
   
   // Europe
   { name: 'London', lat: 51.5074, lng: -0.1278, svgX: 0, svgY: 0 },
