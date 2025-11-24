@@ -20,7 +20,7 @@ export const PlatformSlider = () => {
   const platforms: Platform[] = [
     {
       id: 'adao',
-      title: 'ADAO Platform',
+      title: 'Agentic DAO Platform',
       description: 'Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.',
       videoUrl: 'https://player.vimeo.com/video/1130531521?h=49d71d6ebd&autoplay=1&loop=0&title=0&byline=0&portrait=0&controls=1&muted=1',
       href: '/platforms/adao-platform'

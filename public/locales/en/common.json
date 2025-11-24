@@ -37,8 +37,8 @@
       },
       "platforms": {
         "title": "Platforms",
-        "description": "ADAO Platform - Autonomous Decentralized Autonomous Organization",
-        "adaoPlatform": "ADAO Platform",
+        "description": "Agentic DAO Platform - Autonomous Decentralized Autonomous Organization",
+        "adaoPlatform": "Agentic DAO Platform",
         "ritaPlatform": "Rita Remote Care",
         "marriottInspector": "Marriott Inspector"
       },
@@ -2440,13 +2440,13 @@
       }
     },
     "adaoPlatform": {
-      "title": "ADAO Platform",
+      "title": "Agentic DAO Platform",
       "description": "Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.",
-      "breadcrumb": "ADAO Platform",
+      "breadcrumb": "Agentic DAO Platform",
       "hero": {
-        "title": "ADAO Platform",
+        "title": "Agentic DAO Platform",
         "subtitle": "Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.",
-        "cta1": "Start Your ADAO Journey",
+        "cta1": "Start Your Agentic DAO Journey",
         "cta2": "Learn More"
       },
       "sections": {
@@ -2455,7 +2455,7 @@
           "subtitle": "Advanced technology stack that enables autonomous community management and governance"
         },
         "howItWorks": {
-          "title": "How ADAO Platform Works",
+          "title": "How Agentic DAO Platform Works",
           "subtitle": "A four-step process that transforms community management from reactive to proactive"
         },
         "technologyStack": {
@@ -2468,17 +2468,17 @@
         },
         "useCases": {
           "title": "Use Cases",
-          "subtitle": "Real-world applications of ADAO Platform across different property types"
+          "subtitle": "Real-world applications of Agentic DAO Platform across different property types"
         },
         "benefits": {
           "title": "Key Benefits",
-          "subtitle": "Why communities choose ADAO Platform for autonomous management"
+          "subtitle": "Why communities choose Agentic DAO Platform for autonomous management"
         }
       },
       "cta": {
         "title": "Ready to revolutionize your community?",
-        "subtitle": "Experience progress at the speed of consensus with our ADAO Platform. Transform your neighborhood, venue, or property with autonomous management powered by Timeless.",
-        "button": "Start your ADAO journey →"
+        "subtitle": "Experience progress at the speed of consensus with our Agentic DAO Platform. Transform your neighborhood, venue, or property with autonomous management powered by Timeless.",
+        "button": "Start your Agentic DAO journey →"
       },
       "features": [
         {
@@ -3313,7 +3313,7 @@
       "play": "Play slideshow",
       "pause": "Pause slideshow",
       "adao": {
-        "title": "ADAO Platform",
+        "title": "Agentic DAO Platform",
         "description": "Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology."
       },
       "nexus": {

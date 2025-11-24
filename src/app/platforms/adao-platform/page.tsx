@@ -144,7 +144,7 @@ const VideoPlayer = () => {
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
           className="w-full h-full"
-          title="ADAO Platform Demo"
+          title="Agentic DAO Platform Demo"
           loading="lazy"
         ></iframe>
       </div>
@@ -152,7 +152,7 @@ const VideoPlayer = () => {
   )
 }
 
-export default function ADAOPlatformPage() {
+export default function AgenticDAOPlatformPage() {
   const { t, isLoading } = useI18n()
   
   // Get translated data
@@ -167,11 +167,11 @@ export default function ADAOPlatformPage() {
   if (isLoading) {
     return (
       <PageLayout
-        title="ADAO Platform"
+        title="Agentic DAO Platform"
         description="Autonomous Decentralized Autonomous Organization platform"
         breadcrumbs={[
           { label: 'Platforms', href: '/platforms' },
-          { label: 'ADAO Platform', href: '/platforms/adao-platform' }
+          { label: 'Agentic DAO Platform', href: '/platforms/adao-platform' }
         ]}
       >
         <div className="flex items-center justify-center min-h-[400px]">

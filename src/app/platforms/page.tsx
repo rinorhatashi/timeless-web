@@ -3,7 +3,7 @@ import { ArrowRight, Zap, Shield, Users, Building2, CheckCircle, Stethoscope, Br
 
 const platforms = [
   {
-    title: 'ADAO Platform',
+    title: 'Agentic DAO Platform',
     description: 'Autonomous Decentralized Autonomous Organization platform that revolutionizes neighborhood and property management through computer vision, smart sensors, and blockchain technology.',
     features: ['Computer vision monitoring', 'Smart sensor networks', 'Decentralized governance', 'Blockchain integration'],
     status: 'Production Ready',

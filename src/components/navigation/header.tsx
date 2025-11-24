@@ -17,7 +17,7 @@ interface NavigationItem {
 // Mock search results for demonstration
 const mockSearchResults = [
   { title: 'AI Strategy & Value', description: 'Comprehensive AI strategy consulting and value assessment', category: 'Capabilities', href: '/capabilities/ai-strategy-value' },
-  { title: 'ADAO Platform', description: 'Autonomous Decentralized Autonomous Organization platform', category: 'Platforms', href: '/platforms/adao-platform' },
+  { title: 'Agentic DAO Platform', description: 'Autonomous Decentralized Autonomous Organization platform', category: 'Platforms', href: '/platforms/adao-platform' },
   { title: 'Healthcare Solutions', description: 'AI-powered healthcare and medical solutions', category: 'Industries', href: '/industries/health' },
   { title: 'Payment Solutions', description: 'Secure payment processing and fintech solutions', category: 'Solutions', href: '/solutions/payment-solutions' },
   { title: 'Agent Safety Aegis', description: 'Research on agent safety and reliability', category: 'Research', href: '/research/agent-safety-aegis' },
