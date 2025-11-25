@@ -158,7 +158,23 @@ export const Header = () => {
     // Add a delay before closing to allow smooth transitions to dropdown
     closeTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null)
-    }, 200)
+    }, 300)
+  }
+
+  const handleDropdownMouseEnter = (label: string) => {
+    // Clear any pending close timeout when entering dropdown
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
+    setActiveDropdown(label)
+  }
+
+  const handleDropdownMouseLeave = () => {
+    // Add a delay before closing
+    closeTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 300)
   }
 
   // Cleanup timeout on unmount
@@ -299,8 +315,8 @@ export const Header = () => {
                 {item.children && activeDropdown === item.label && (
                   <div 
                     className="nav-dropdown"
-                    onMouseEnter={() => setActiveDropdown(item.label)}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={() => handleDropdownMouseEnter(item.label)}
+                    onMouseLeave={handleDropdownMouseLeave}
                   >
                     {/* Header with main page link */}
                     <div className="dropdown-header">
